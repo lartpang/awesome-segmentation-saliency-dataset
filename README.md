@@ -1,9 +1,136 @@
 # Saliency-Detection-Dataset
-# 常用显著性监测数据集
 
 > Please **cite related paper** if you **use their dataset**
 
-根据一些综述论文, 总结一下显著性监测数据集.
+根据一些论文, 总结了一下显著性监测数据集.
+
+* [Saliency-Detection-Dataset](#saliency-detection-dataset)
+  * [HS-SOD: Hyperspectral Image Dataset for Benchmarking on Salient Object Detection](#hs-sod-hyperspectral-image-dataset-for-benchmarking-on-salient-object-detection)
+    * [链接](#链接)
+    * [介绍](#介绍)
+    * [结构](#结构)
+    * [评估](#评估)
+  * [Salient Object Detection: A Survey](#salient-object-detection-a-survey)
+    * [MSRA](#msra)
+      * [链接](#链接-1)
+      * [介绍](#介绍-1)
+    * [SED1/2](#sed12)
+      * [链接](#链接-2)
+      * [介绍](#介绍-2)
+    * [ASD(MSRA1000 / MSRA1K)](#asdmsra1000--msra1k)
+      * [链接](#链接-3)
+      * [介绍](#介绍-3)
+    * [DUT-OMRON](#dut-omron)
+      * [链接](#链接-4)
+      * [介绍](#介绍-4)
+    * [SOD](#sod)
+      * [链接](#链接-5)
+      * [介绍](#介绍-5)
+    * [iCoSeg](#icoseg)
+      * [链接](#链接-6)
+      * [介绍](#介绍-6)
+    * [Infrared](#infrared)
+      * [链接](#链接-7)
+      * [介绍](#介绍-7)
+    * [ImgSal](#imgsal)
+      * [链接](#链接-8)
+      * [介绍](#介绍-8)
+    * [ECSSD/CSSD](#ecssdcssd)
+      * [链接](#链接-9)
+      * [介绍](#介绍-9)
+    * [THUR15K](#thur15k)
+      * [链接](#链接-10)
+      * [介绍](#介绍-10)
+    * [Bruce-A](#bruce-a)
+      * [链接](#链接-11)
+      * [介绍](#介绍-11)
+    * [Judd-A](#judd-a)
+      * [链接](#链接-12)
+      * [介绍](#介绍-12)
+    * [PASCAL-S](#pascal-s)
+      * [链接](#链接-13)
+      * [介绍](#介绍-13)
+    * [UCSB](#ucsb)
+      * [链接](#链接-14)
+      * [介绍](#介绍-14)
+    * [OSIE](#osie)
+      * [链接](#链接-15)
+      * [介绍](#介绍-15)
+    * [RSD(PKU-RSD)](#rsdpku-rsd)
+      * [链接](#链接-16)
+      * [介绍](#介绍-16)
+    * [STC](#stc)
+      * [链接](#链接-17)
+      * [介绍](#介绍-17)
+  * [Review of Visual Saliency Detection with Comprehensive Information](#review-of-visual-saliency-detection-with-comprehensive-information)
+    * [ACSD](#acsd)
+      * [链接](#链接-18)
+      * [介绍](#介绍-18)
+    * [XPIE](#xpie)
+      * [链接](#链接-19)
+      * [介绍](#介绍-19)
+    * [NLPR](#nlpr)
+      * [链接](#链接-20)
+      * [介绍](#介绍-20)
+    * [NJUD](#njud)
+      * [链接](#链接-21)
+      * [介绍](#介绍-21)
+    * [Image Pair](#image-pair)
+      * [链接](#链接-22)
+      * [介绍](#介绍-22)
+    * [Cosal2015](#cosal2015)
+      * [链接](#链接-23)
+      * [介绍](#介绍-23)
+    * [INCT2016](#inct2016)
+      * [链接](#链接-24)
+      * [介绍](#介绍-24)
+    * [RGBDCoseg183](#rgbdcoseg183)
+      * [链接](#链接-25)
+      * [介绍](#介绍-25)
+    * [06RGBDCosal150](#06rgbdcosal150)
+      * [链接](#链接-26)
+      * [介绍](#介绍-26)
+    * [SegTrackV1/V2](#segtrackv1v2)
+      * [链接](#链接-27)
+      * [介绍](#介绍-27)
+    * [ViSal](#visal)
+      * [链接](#链接-28)
+      * [介绍](#介绍-28)
+    * [MCL](#mcl)
+      * [链接](#链接-29)
+      * [介绍](#介绍-29)
+    * [DAVIS](#davis)
+      * [链接](#链接-30)
+      * [介绍](#介绍-30)
+    * [UVSD](#uvsd)
+      * [链接](#链接-31)
+      * [介绍](#介绍-31)
+    * [VOS](#vos)
+      * [链接](#链接-32)
+      * [介绍](#介绍-32)
+  * [alphamatting.com](#alphamattingcom)
+    * [链接](#链接-33)
+    * [介绍](#介绍-33)
+  * [**Composition-1k: Deep Image Matting](#composition-1k-deep-image-matting)
+    * [链接](#链接-34)
+    * [介绍](#介绍-34)
+  * [Semantic Human Matting](#semantic-human-matting)
+    * [链接](#链接-35)
+    * [介绍](#介绍-35)
+  * [SOC: Salient Objects in Clutter: Bringing Salient Object Detection to the Foreground](#soc-salient-objects-in-clutter-bringing-salient-object-detection-to-the-foreground)
+    * [链接](#链接-36)
+    * [介绍](#介绍-36)
+    * [评估](#评估-1)
+  * [HKU-IS: Visual Saliency Based on Multiscale Deep Features](#hku-is-visual-saliency-based-on-multiscale-deep-features)
+    * [链接](#链接-37)
+    * [介绍](#介绍-37)
+  * [DAVIS: A Benchmark Dataset and Evaluation Methodology for Video Object Segmentation](#davis-a-benchmark-dataset-and-evaluation-methodology-for-video-object-segmentation)
+    * [链接](#链接-38)
+    * [介绍](#介绍-38)
+  * [aNYU: Dense Semantic Image Segmentation with Objects and Attributes](#anyu-dense-semantic-image-segmentation-with-objects-and-attributes)
+    * [链接](#链接-39)
+    * [介绍](#介绍-39)
+  * [其他的一些数据集来源(待详细分析)](#其他的一些数据集来源待详细分析)
 
 ## HS-SOD: [Hyperspectral Image Dataset for Benchmarking on Salient Object Detection](https://arxiv.org/abs/1806.11314)
 
@@ -11,9 +138,9 @@
 
 ### 链接
 
-- 项目: <https://github.com/gistairc/HS-SOD>
-- 下载: <http://data.airc.aist.go.jp/HS-SOD/HS-SOD.zip> 5.6G
-- 论文: <https://arxiv.org/abs/1806.11314>
+* 项目: <https://github.com/gistairc/HS-SOD>
+* 下载: <http://data.airc.aist.go.jp/HS-SOD/HS-SOD.zip> 5.6G
+* 论文: <https://arxiv.org/abs/1806.11314>
 
 ### 介绍
 
@@ -21,9 +148,9 @@
 >
 > 这些数据是在东京港口码头公司的许可下，在日本东京台场的东京海滨城市公园收集的。我们在2017年8月至9月期间的几天内收集了数据，当时天气晴朗或部分多云。在每个数据收集日，使用三脚架固定相机以最小化图像上的运动失真。我们尝试根据日光条件尽可能地保持相机设置的曝光时间和增益，同时保持像素值饱和度或图像可见性。作为数据集用户的参考，我们提供相机设置，例如文本文件中每个图像的曝光时间和增益值以及相应的数据。我们也没有对捕获的波段应用标准化。它可以提高前景和背景区域之间色彩对比度更高的高光谱图像的质量;但是，它也可能降低数据集在显着对象检测任务上进行基准测试的难度。
 >
-> 在获得各种高光谱图像后，我们从大约50个不同的场景中选择了60个图像，条件是：i）我们去除了由于场景中的运动引起的失真图像（取决于曝光时间，一个图像可能需要几秒钟才能用于相机），ii）我们考虑了几个方面，如显着物体大小的变化，图像上物体的空间位置，显着物体的数量，前景 - 背景对比度，iii）一些图像具有相同的场景但物体位置，物距或数量对象各不相同。
+> 在获得各种高光谱图像后，我们从大约50个不同的场景中选择了60个图像，条件是：i）我们去除了由于场景中的运动引起的失真图像（取决于曝光时间，一个图像可能需要几秒钟才能用于相机），ii）我们考虑了几个方面，如显着物体大小的变化，图像上物体的空间位置，显着物体的数量，前景 * 背景对比度，iii）一些图像具有相同的场景但物体位置，物距或数量对象各不相同。
 >
-> 为了便于显着物体检测任务，我们在可见光谱周围裁剪光谱带，并在传感器暗噪声校正后以“.mat”文件格式保存每个场景的超立方体。如[21]中所定义，可见光谱具有380-780nm的良好可接受范围，但也可以使用[3,4]中的400-700nm范围。为了保持范围广泛和灵活性，想要使用数据集的人，我们在[21]中为我们的数据集选择了380 - 780 nm的定义范围，尽管在人类视觉系统的这些范围的边界处视觉刺激可能较弱。然后，我们使用高光谱图像渲染sRGB彩色图像，通过标记显着对象的边界来创建地面真实显着对象二进制图像。
+> 为了便于显着物体检测任务，我们在可见光谱周围裁剪光谱带，并在传感器暗噪声校正后以“.mat”文件格式保存每个场景的超立方体。如[21]中所定义，可见光谱具有380-780nm的良好可接受范围，但也可以使用[3,4]中的400-700nm范围。为了保持范围广泛和灵活性，想要使用数据集的人，我们在[21]中为我们的数据集选择了380 * 780 nm的定义范围，尽管在人类视觉系统的这些范围的边界处视觉刺激可能较弱。然后，我们使用高光谱图像渲染sRGB彩色图像，通过标记显着对象的边界来创建地面真实显着对象二进制图像。
 
 ### 结构
 
@@ -49,10 +176,10 @@
 
 #### 链接
 
-- 论文: [T. Liu, J. Sun, N. Zheng, X. Tang, and H.-Y. Shum, “Learningto detect a salient object,” inCVPR, 2007, pp. 1–8](http://mmlab.ie.cuhk.edu.hk/2007/CVPR07_detect.pdf)
-- 南开大学媒体计算实验室: https://mmcheng.net/zh/msra10k/
-- MSRA10K(formally named as THUS10000; [195MB](http://mftp.mmcheng.net/Data/MSRA10K_Imgs_GT.zip): images + binary masks): Pixel accurate salient object labeling for **10000 images** from MSRA dataset. Please cite our paper [https://mmcheng.net/SalObj/] if you use it. Saliency maps and salient object region segmentation for other 20+ alternative methods are also available ([百度网盘](http://pan.baidu.com/s/1dEaQqlF#path=%252FShare%252FSalObjRes)).
-- MSRA-B ([111MB](http://mftp.mmcheng.net/Data/MSRA-B.zip): images + binary masks): Pixel accurate salient object labeling for **5000 images** from MSRA-B dataset. Please cite the corresponding paper [https://mmcheng.net/drfi/] if you use it.
+* 论文: [T. Liu, J. Sun, N. Zheng, X. Tang, and H.-Y. Shum, “Learningto detect a salient object,” inCVPR, 2007, pp. 1–8](http://mmlab.ie.cuhk.edu.hk/2007/CVPR07_detect.pdf)
+* 南开大学媒体计算实验室: <https://mmcheng.net/zh/msra10k/>
+* MSRA10K(formally named as THUS10000; [195MB](http://mftp.mmcheng.net/Data/MSRA10K_Imgs_GT.zip): images + binary masks): Pixel accurate salient object labeling for **10000 images** from MSRA dataset. Please cite our paper [https://mmcheng.net/SalObj/] if you use it. Saliency maps and salient object region segmentation for other 20+ alternative methods are also available ([百度网盘](http://pan.baidu.com/s/1dEaQqlF#path=%252FShare%252FSalObjRes)).
+* MSRA-B ([111MB](http://mftp.mmcheng.net/Data/MSRA-B.zip): images + binary masks): Pixel accurate salient object labeling for **5000 images** from MSRA-B dataset. Please cite the corresponding paper [https://mmcheng.net/drfi/] if you use it.
 
 #### 介绍
 
@@ -68,15 +195,15 @@
 
 ### SED1/2
 
-**单目标**
+* 单目标
 
 ![img](./assets/2018-12-29-18-38-59.png)
 
-**双目标**
+* 双目标
 
 ![img](./assets/2018-12-29-18-39-30.png)
 
-**真值**
+* 真值
 
 给出的是每个图像由三个不同的人类对象分割的结果.
 
@@ -84,10 +211,10 @@
 
 #### 链接
 
-- [A. Borji, M.-M. Cheng, H. Jiang, and J. Li, “Salient objectdetection: A benchmark,”IEEE TIP, vol. 24, no. 12, pp. 5706–5722, 2015.](https://arxiv.org/abs/1501.02741)
-- [Image Segmentation by Probabilistic Bottom-Up Aggregation and Cue Integration](http://www.wisdom.weizmann.ac.il/~meirav/Segmentation_Alpert_Galun_Brandt_Basri.pdf)
-- 项目: <http://www.wisdom.weizmann.ac.il/~vision/Seg_Evaluation_DB/index.html>
-- 下载: <http://www.wisdom.weizmann.ac.il/~vision/Seg_Evaluation_DB/dl.html>
+* [A. Borji, M.-M. Cheng, H. Jiang, and J. Li, “Salient objectdetection: A benchmark,”IEEE TIP, vol. 24, no. 12, pp. 5706–5722, 2015.](https://arxiv.org/abs/1501.02741)
+* [Image Segmentation by Probabilistic Bottom-Up Aggregation and Cue Integration](http://www.wisdom.weizmann.ac.il/~meirav/Segmentation_Alpert_Galun_Brandt_Basri.pdf)
+* 项目: <http://www.wisdom.weizmann.ac.il/~vision/Seg_Evaluation_DB/index.html>
+* 下载: <http://www.wisdom.weizmann.ac.il/~vision/Seg_Evaluation_DB/dl.html>
 
 #### 介绍
 
@@ -97,17 +224,17 @@
 
 #### 链接
 
-- T. Liu, J. Sun, N.-N. Zheng, X. Tang, and H.-Y. Shum, “[Learning to detect a salient object](http://research.microsoft.com/en-us/um/people/jiansun/salientobject/salient_object.htm),” in *Proc. IEEE Conf. Comput. Vis. Pattern Recognit.*, 2007, pp. 1–8.
-- R. Achanta, S. Hemami, F. Estrada, and S. Süsstrunk, “[Frequency-tuned salient region detection](http://ivrlwww.epfl.ch/supplementary_material/RK_CVPR09/),” in *Proc. IEEE Conf. Comput. Vis. Pattern Recognit.*, 2009, pp. 1597–1604.
-- 下载: http://download.csdn.net/detail/wanyq07/9839322
+* T. Liu, J. Sun, N.-N. Zheng, X. Tang, and H.-Y. Shum, “[Learning to detect a salient object](http://research.microsoft.com/en-us/um/people/jiansun/salientobject/salient_object.htm),” in *Proc. IEEE Conf. Comput. Vis. Pattern Recognit.*, 2007, pp. 1–8.
+* R. Achanta, S. Hemami, F. Estrada, and S. Süsstrunk, “[Frequency-tuned salient region detection](http://ivrlwww.epfl.ch/supplementary_material/RK_CVPR09/),” in *Proc. IEEE Conf. Comput. Vis. Pattern Recognit.*, 2009, pp. 1597–1604.
+* 下载: <http://download.csdn.net/detail/wanyq07/9839322>
 
 #### 介绍
 
 这个数据集包含有1000张图（MSRA1000）这个数据库来自于[A two-stage approach to saliency detection inimages](https://www.researchgate.net/publication/224312323_A_two-stage_approach_to_saliency_detection_in_images) 该数据库的说明以及一些算法（IT, MZ, GB, SR, AC,IG ) 的结果可以在[Frequency-tuned Salient Region Detection](http://ivrlwww.epfl.ch/supplementary_material/RK_CVPR09/index.html) (FT算法 => 这里改进的数据集叫做ACSD, 相关可见[ACSD](#ACSD)部分)下载，此外其中还包含了这1000张测试图的真值图。
 
-> 因为基于MSRA的图片数据集, 在孙剑走了之后, MARA上就没了他的页面, 相关的资源也就找不到了. CSDN一篇博客的一个分享: 
+> 因为基于MSRA的图片数据集, 在孙剑走了之后, MARA上就没了他的页面, 相关的资源也就找不到了. CSDN一篇博客的一个分享:
 >
-> 原图下载地址：[MSRA图像数据集（1000幅含真实标注） ](http://download.csdn.net/detail/tuconghuan/8357509)
+> 原图下载地址：[MSRA图像数据集（1000幅含真实标注）](http://download.csdn.net/detail/tuconghuan/8357509)
 >
 > 上面下载到的标注图尺寸被统一改为512*512，所以这里在给个地址：[ASD尺寸一致](http://download.csdn.net/detail/zzb4702/9559378)
 
@@ -117,9 +244,9 @@
 
 #### 链接
 
-- 论文: C. Yang, L. Zhang, H. Lu, X. Ruan, and M.-H. Yang, “[Saliency detection via graph-based manifold ranking](http://saliencydetection.net/dut-omron/),” in *Proc. IEEE Conf. Comput. Vis. Pattern Recognit.*, 2013, pp. 3166–3173.
-- 项目: http://saliencydetection.net/dut-omron/#outline-container-org0e04792
-- 下载: http://saliencydetection.net/dut-omron/download/DUT-OMRON-image.zip
+* 论文: C. Yang, L. Zhang, H. Lu, X. Ruan, and M.-H. Yang, “[Saliency detection via graph-based manifold ranking](http://saliencydetection.net/dut-omron/),” in *Proc. IEEE Conf. Comput. Vis. Pattern Recognit.*, 2013, pp. 3166–3173.
+* 项目: <http://saliencydetection.net/dut-omron/#outline-container-org0e04792>
+* 下载: <http://saliencydetection.net/dut-omron/download/DUT-OMRON-image.zip>
 
 #### 介绍
 
@@ -133,9 +260,9 @@
 
 #### 链接
 
-- 项目: http://elderlab.yorku.ca/SOD/
-- 下载(官方): http://elderlab.yorku.ca/SOD/SOD.zip
-- 下载(百度云): https://pan.baidu.com/s/1IMElTPwD4yTo2TMSRU-keQ
+* 项目: <http://elderlab.yorku.ca/SOD/>
+* 下载(官方): <http://elderlab.yorku.ca/SOD/SOD.zip>
+* 下载(百度云): <https://pan.baidu.com/s/1IMElTPwD4yTo2TMSRU-keQ>
 
 #### 介绍
 
@@ -143,18 +270,17 @@
 >
 > 对于BSD中使用的300个图像的每个图像，都有一个.mat文件可以由Matlab打开。加载每个mat文件会将一个名为“SES”的结构读入内存，该结构是从SOD中每个主题的会话中收集的数据数组.
 >
-> Note that the original images are available from the Berkely Segmentation Dataset at: [http://www.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/segbench/ ](http://www.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/segbench/)
+> Note that the original images are available from the Berkely Segmentation Dataset at: [http://www.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/segbench/](http://www.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/segbench/)
 
 ### iCoSeg
-
-> http://chenlab.ece.cornell.edu/projects/touch-coseg/iCoseg_dataset.pdf
 
 ![1546085516505](./assets/1546085516505.png)
 
 #### 链接
 
-- 项目: http://chenlab.ece.cornell.edu/projects/touch-coseg/
-- 下载: http://chenlab.ece.cornell.edu/projects/touch-coseg/CMU_Cornell_iCoseg_dataset.zip
+* 论文: <http://chenlab.ece.cornell.edu/projects/touch-coseg/iCoseg_dataset.pdf>
+* 项目: <http://chenlab.ece.cornell.edu/projects/touch-coseg/>
+* 下载: <http://chenlab.ece.cornell.edu/projects/touch-coseg/CMU_Cornell_iCoseg_dataset.zip>
 
 #### 介绍
 
@@ -164,9 +290,9 @@
 
 #### 链接
 
-- 项目: https://ivrl.epfl.ch/research-2/research-downloads/supplementary_material-cvpr11-index-html/
-- 论文: http://infoscience.epfl.ch/record/167478
-- 下载: http://ivrgwww.epfl.ch/supplementary_material/cvpr11/nirscene1.zip
+* 项目: <https://ivrl.epfl.ch/research-2/research-downloads/supplementary_material-cvpr11-index-html/>
+* 论文: <http://infoscience.epfl.ch/record/167478>
+* 下载: <http://ivrgwww.epfl.ch/supplementary_material/cvpr11/nirscene1.zip>
 
 #### 介绍
 
@@ -178,8 +304,8 @@
 
 #### 链接
 
-- 项目: https://sites.google.com/site/jianlinudt/saliency-database
-- 作者主页: http://www.escience.cn/people/jianli/DataBase.html
+* 项目: <https://sites.google.com/site/jianlinudt/saliency-database>
+* 作者主页: <http://www.escience.cn/people/jianli/DataBase.html>
 
 #### 介绍
 
@@ -201,11 +327,11 @@
 
 #### 链接
 
-- 项目: 
+* 项目:
 
-- 下载: http://www.cse.cuhk.edu.hk/leojia/projects/hsaliency/dataset.html
+* 下载: <http://www.cse.cuhk.edu.hk/leojia/projects/hsaliency/dataset.html>
 
-    - ECSSD (1000 images)
+    * ECSSD (1000 images)
 
         [ECSSD images (64.6MB)](http://www.cse.cuhk.edu.hk/leojia/projects/hsaliency/data/ECSSD/images.zip)
 
@@ -213,9 +339,9 @@
 
         [Results of HS [1] on ECSSD [2] (13.1MB)](http://www.cse.cuhk.edu.hk/leojia/projects/hsaliency/data/ECSSD/our_result_HS.zip)
 
-        [Results of CHS on ECSSD [2] (8.39MB)](http://www.cse.cuhk.edu.hk/leojia/projects/hsaliency/data/ECSSD/our_result_CHS.zip) 
+        [Results of CHS on ECSSD [2] (8.39MB)](http://www.cse.cuhk.edu.hk/leojia/projects/hsaliency/data/ECSSD/our_result_CHS.zip)
 
-    - CSSD (200 images)
+    * CSSD (200 images)
 
         [CSSD images (18.7MB)](http://www.cse.cuhk.edu.hk/leojia/projects/hsaliency/data/CSSD/images.zip)[CSSD groud truth masks (0.75MB)](http://www.cse.cuhk.edu.hk/leojia/projects/hsaliency/data/CSSD/ground_truth_mask.zip)
 
@@ -233,9 +359,9 @@
 
 #### 链接
 
-- 论文: https://mmcheng.net/zh/gsal/
-- 下载: https://mmcheng.net/mftp/Data/THUR15000.zip
-    - 百度云: https://pan.baidu.com/s/1u-E-8ujnxBz0mdmXsJglvg
+* 论文: <https://mmcheng.net/zh/gsal/>
+* 下载: <https://mmcheng.net/mftp/Data/THUR15000.zip>
+    * 百度云: <https://pan.baidu.com/s/1u-E-8ujnxBz0mdmXsJglvg>
 
 #### 介绍
 
@@ -249,7 +375,7 @@
 
 #### 链接
 
-- 论文: https://papers.nips.cc/paper/2830-saliency-based-on-information-maximization.pdf
+* 论文: <https://papers.nips.cc/paper/2830-saliency-based-on-information-maximization.pdf>
 
 #### 介绍
 
@@ -259,7 +385,7 @@
 
 #### 链接
 
-- 论文: http://people.csail.mit.edu/torralba/publications/wherepeoplelook.pdf
+* 论文: <http://people.csail.mit.edu/torralba/publications/wherepeoplelook.pdf>
 
 #### 介绍
 
@@ -269,9 +395,9 @@
 
 #### 链接
 
-- 项目: https://ccvl.jhu.edu/datasets/
-- 下载: https://pan.baidu.com/s/1DZcfwCYdeMW4EGawhXQyig
-    - 种子: http://academictorrents.com/download/6c49defd6f0e417c039637475cde638d1363037e.torrent
+* 项目: <https://ccvl.jhu.edu/datasets/>
+* 下载: <https://pan.baidu.com/s/1DZcfwCYdeMW4EGawhXQyig>
+    * 种子: <http://academictorrents.com/download/6c49defd6f0e417c039637475cde638d1363037e.torrent>
 
 #### 介绍
 
@@ -281,8 +407,8 @@
 
 #### 链接
 
-- 论文: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3954044/
-- 下载: https://labs.psych.ucsb.edu/eckstein/miguel/research_pages/saliencydata.html
+* 论文: <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3954044/>
+* 下载: <https://labs.psych.ucsb.edu/eckstein/miguel/research_pages/saliencydata.html>
 
 #### 介绍
 
@@ -292,7 +418,7 @@
 
 #### 链接
 
-- 论文: https://jov.arvojournals.org/article.aspx?articleid=2193943
+* 论文: <https://jov.arvojournals.org/article.aspx?articleid=2193943>
 
 #### 介绍
 
@@ -304,9 +430,9 @@
 
 #### 链接
 
-- 论文: [J. Li, Y. Tian, T. Huang, and W. Gao, “A dataset and evaluation methodology for visual saliency in video,” in IEEE ICME, 2009, pp. 442–445](https://ieeexplore.ieee.org/document/5202529)
-- 项目: https://pkuml.org/resources/dataset.html
-- 下载: https://pkuml.org/resources/pku-rsd.html
+* 论文: [J. Li, Y. Tian, T. Huang, and W. Gao, “A dataset and evaluation methodology for visual saliency in video,” in IEEE ICME, 2009, pp. 442–445](https://ieeexplore.ieee.org/document/5202529)
+* 项目: <https://pkuml.org/resources/dataset.html>
+* 下载: <https://pkuml.org/resources/pku-rsd.html>
 
 #### 介绍
 
@@ -316,12 +442,12 @@
 
 #### 链接
 
-- 论文: [Y. Wu, N. Zheng, Z. Yuan, H. Jiang, and T. Liu, “Detection of salient objects with focused attention based on spatial and temporal coherence,” Chinese Science Bulletin, vol. 56, pp. 1055–1062, 2011.](https://pdfs.semanticscholar.org/3347/c330ac5586020ebea60823b1fd4e8d68e936.pdf?_ga=2.181072804.269179473.1546092428-61549168.1544104573)
-- 下载: This dataset is freely available from the author
+* 论文: [Y. Wu, N. Zheng, Z. Yuan, H. Jiang, and T. Liu, “Detection of salient objects with focused attention based on spatial and temporal coherence,” Chinese Science Bulletin, vol. 56, pp. 1055–1062, 2011.](https://pdfs.semanticscholar.org/3347/c330ac5586020ebea60823b1fd4e8d68e936.pdf?_ga=2.181072804.269179473.1546092428-61549168.1544104573)
+* 下载: This dataset is freely available from the author
 
 #### 介绍
 
-> 对视频内容的理解和分析对于众多应用程序来说至关重要，包括视频摘要，检索，导航和编辑。此过程的一个重要部分是检测视频片段中的显着（通常意味着重要和有趣）对象。与现有方法不同，我们提出了一种将显着性测量与空间和时间相干性相结合的方法。空间和时间一致性的整合受到人类视觉中关注焦点的启发。在所提出的方法中，低级视觉分组线索的空间相干性（例如外观和运动）有助于每帧对象 - 背景分离，而对象属性的时间一致性（例如形状和外观）确保一致物体随时间定位，因此该方法对于意外的环境变化和相机振动是鲁棒的。在**开发了基于粗到细多尺度动态规划的有效优化策略之后，我们使用可与本文一起免费获得的具有挑战性的数据集来评估我们的方法**。我们展示了两种类型的一致性的有效性和互补性，并证明它们可以显着提高视频中显着对象检测的性能。
+> 对视频内容的理解和分析对于众多应用程序来说至关重要，包括视频摘要，检索，导航和编辑。此过程的一个重要部分是检测视频片段中的显着（通常意味着重要和有趣）对象。与现有方法不同，我们提出了一种将显着性测量与空间和时间相干性相结合的方法。空间和时间一致性的整合受到人类视觉中关注焦点的启发。在所提出的方法中，低级视觉分组线索的空间相干性（例如外观和运动）有助于每帧对象 * 背景分离，而对象属性的时间一致性（例如形状和外观）确保一致物体随时间定位，因此该方法对于意外的环境变化和相机振动是鲁棒的。在**开发了基于粗到细多尺度动态规划的有效优化策略之后，我们使用可与本文一起免费获得的具有挑战性的数据集来评估我们的方法**。我们展示了两种类型的一致性的有效性和互补性，并证明它们可以显着提高视频中显着对象检测的性能。
 
 ## [Review of Visual Saliency Detection with Comprehensive Information](https://arxiv.org/abs/1803.03391)
 
@@ -333,9 +459,9 @@
 
 #### 链接
 
-- 论文: [R. Achanta, S. Hemami, F. Estrada, and S. Ssstrunk, “Frequency-tuned salient region detection,” in CVPR, 2009, pp. 1597–1604](https://infoscience.epfl.ch/record/135217/files/1708.pdf)
-- 项目: https://ivrl.epfl.ch/research-2/research-current/research-saliency/supplementary_material-rk_cvpr09-index-html/
-- 下载: 官网只提供了[真值标注的下载](https://ivrl.epfl.ch/wp-content/uploads/2018/08/binarymasks.zip).
+* 论文: [R. Achanta, S. Hemami, F. Estrada, and S. Ssstrunk, “Frequency-tuned salient region detection,” in CVPR, 2009, pp. 1597–1604](https://infoscience.epfl.ch/record/135217/files/1708.pdf)
+* 项目: <https://ivrl.epfl.ch/research-2/research-current/research-saliency/supplementary_material-rk_cvpr09-index-html/>
+* 下载: 官网只提供了[真值标注的下载](https://ivrl.epfl.ch/wp-content/uploads/2018/08/binarymasks.zip).
 
 #### 介绍
 
@@ -349,9 +475,10 @@
 
 #### 链接
 
-- 链接: [C.  Xia,  J.  Li,  X.  Chen,  A.  Zheng,  and  Y.  Zhang,  “What  is  and  what is not a salient object? Learning salient object detector by ensembling linear exemplar regressors,” in CVPR , 2017, pp. 4142–4150.](https://www.researchgate.net/publication/320971838_What_is_and_What_is_Not_a_Salient_Object_Learning_Salient_Object_Detector_by_Ensembling_Linear_Exemplar_Regressors)
-- 项目: http://cvteam.net/
-- 下载: http://cvteam.net/projects/CVPR17-ELE/XPIE.tar.gz
+* 链接: [C.  Xia,  J.  Li,  X.  Chen,  A.  Zheng,  and  Y.  Zhang,  “What  is  and  what is not a salient object? Learning salient object detector by ensembling linear exemplar regressors,” in CVPR , 2017, pp. 4142–4150.](https://www.researchgate.net/publication/320971838_What_is_and_What_is_Not_a_Salient_Object_Learning_Salient_Object_Detector_by_Ensembling_Linear_Exemplar_Regressors)
+* 团队: cvteam
+* 项目: <http://cvteam.net/>
+* 下载: <http://cvteam.net/projects/CVPR17-ELE/XPIE.tar.gz>
 
 #### 介绍
 
@@ -367,9 +494,9 @@
 
 #### 链接
 
-- 论文: [H.  Peng,  B.  Li,  W.  Xiong,  W.  Hu,  and  R.  Ji,  “RGBD  salient  object detection: A benchmark and algorithms,” in ECCV, 2014, pp. 92–109](https://docs.google.com/uc?authuser=0&id=0B1wzzt1_uP1rb250d0t6dVFXWG8&export=download)
-- 项目: https://sites.google.com/site/rgbdsaliency/home
-- 下载: https://sites.google.com/site/rgbdsaliency/dataset
+* 论文: [H.  Peng,  B.  Li,  W.  Xiong,  W.  Hu,  and  R.  Ji,  “RGBD  salient  object detection: A benchmark and algorithms,” in ECCV, 2014, pp. 92–109](https://docs.google.com/uc?authuser=0&id=0B1wzzt1_uP1rb250d0t6dVFXWG8&export=download)
+* 项目: <https://sites.google.com/site/rgbdsaliency/home>
+* 下载: <https://sites.google.com/site/rgbdsaliency/dataset>
 
 #### 介绍
 
@@ -381,14 +508,14 @@
 
 #### 链接
 
-- 论文: [R.  Ju,  Y.  Liu,  T.  Ren,  L.  Ge,  and  G.  Wu,  “Depth-aware  salient object  detection  using  anisotropic  center-surround  difference,” Signal Process.: Image Commun., vol. 38, pp. 115–126, 2015.](http://mcg.nju.edu.cn/publication/2014/icip14-jur.pdf)
-- 团队: [MGG](http://mcg.nju.edu.cn/index.html) 
-- 项目: http://mcg.nju.edu.cn/publication/2014/icip14-jur/index.html
-- 下载: http://mcg.nju.edu.cn/dataset/nju2000.zip
+* 论文: [R.  Ju,  Y.  Liu,  T.  Ren,  L.  Ge,  and  G.  Wu,  “Depth-aware  salient object  detection  using  anisotropic  center-surround  difference,” Signal Process.: Image Commun., vol. 38, pp. 115–126, 2015.](http://mcg.nju.edu.cn/publication/2014/icip14-jur.pdf)
+* 团队: [MGG](http://mcg.nju.edu.cn/index.html)
+* 项目: <http://mcg.nju.edu.cn/publication/2014/icip14-jur/index.html>
+* 下载: <http://mcg.nju.edu.cn/dataset/nju2000.zip>
 
 #### 介绍
 
-> 以前关于显着性检测的大多数工作都专用于二维图像。最近，已经表明3D视觉信息为显着性分析提供了强大的线索。在本文中，我们提出了一种基于各向异性中心 - 环绕差异的深度图像的新型显着性方法。我们不是依赖于绝对深度，而是通过它在周围环境中的突出程度来确定一个点的显着性，这使得全局深度结构成为一个整体。此外，基于depthand位置的两个常见的先验用于细化。在O（N）的复杂度内提出的方法工作以及对1000多个立体图像的数据集的评估表明我们的方法优于现有技术。
+> 以前关于显着性检测的大多数工作都专用于二维图像。最近，已经表明3D视觉信息为显着性分析提供了强大的线索。在本文中，我们提出了一种基于各向异性中心 * 环绕差异的深度图像的新型显着性方法。我们不是依赖于绝对深度，而是通过它在周围环境中的突出程度来确定一个点的显着性，这使得全局深度结构成为一个整体。此外，基于depthand位置的两个常见的先验用于细化。在O（N）的复杂度内提出的方法工作以及对1000多个立体图像的数据集的评估表明我们的方法优于现有技术。
 >
 > 我们收集来自互联网的立体图像，3D电影和富士W3立体相机拍摄的照片。由于2D图像上的标记结果可能与real 3D环境中的标记结果略有不同，我们使用NVidia 3D Vision在3D显示环境中执行掩模标记。我们首先收集超过20000个立体图像。接下来，按照[20]中的程序，我们选择5913个图像，每个图像包含中等大小的显着对象。之后，邀请四位志愿者为突出物体面具贴上标签。**最后，选择了1382个高质量和一致标记的图像进行评估**。
 >
@@ -469,7 +596,7 @@
 ### 链接
 
 | **Download:**        | Low resolution                                               | High resolution                                              |
-| -------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| -------------------* | -----------------------------------------------------------* | -----------------------------------------------------------* |
 | Input images         | [input_training_lowres.zip](http://alphamatting.com/datasets/zip/input_training_lowres.zip) | [input_training_highres.zip](http://alphamatting.com/datasets/zip/input_training_highres.zip) |
 | User input (trimaps) | [trimap_training_lowres.zip](http://alphamatting.com/datasets/zip/trimap_training_lowres.zip) | [trimap_training_highres.zip](http://alphamatting.com/datasets/zip/trimap_training_highres.zip) |
 | Ground truth alpha   | [gt_training_lowres.zip](http://alphamatting.com/datasets/zip/gt_training_lowres.zip) | [gt_training_highres.zip](http://alphamatting.com/datasets/zip/gt_training_highres.zip) |
@@ -484,12 +611,12 @@
 
 ### 链接
 
-- 项目: https://sites.google.com/view/deepimagematting
-- 下载: Please contact Brian Price (bprice@adobe.com) for the dataset. 
+* 项目: <https://sites.google.com/view/deepimagematting>
+* 下载: Please contact Brian Price (bprice@adobe.com) for the dataset.
 
 ### 介绍
 
-> 抠图是一个基本的计算机视觉问题，有许多应用。当图像具有相似的前景色和背景色或复杂的纹理时，先前的算法具有差的性能。主要原因是先前的方法 1）仅使用低级功能和2）缺乏高级上下文。在本文中，我们提出了一种新的基于深度学习的算法，可以解决这两个问题。我们的深层模型有两个部分。第一部分是深度卷积编码器 - 解码器网络，它将图像和相应的trimap作为输入并预测图像的alpha遮罩。第二部分是一个小的卷积网络，它改进了第一个网络的alpha遮罩预测，以获得更准确的alpha值和更清晰的边缘。此外，**我们还创建了一个大型图像抠图数据集，包括49300个训练图像和1000个测试图像**。我们在抠图基准，我们的测试集和各种真实图像上评估我们的算法。实验结果清楚地证明了我们的算法优于以前的方法。
+> 抠图是一个基本的计算机视觉问题，有许多应用。当图像具有相似的前景色和背景色或复杂的纹理时，先前的算法具有差的性能。主要原因是先前的方法 1）仅使用低级功能和2）缺乏高级上下文。在本文中，我们提出了一种新的基于深度学习的算法，可以解决这两个问题。我们的深层模型有两个部分。第一部分是深度卷积编码器 * 解码器网络，它将图像和相应的trimap作为输入并预测图像的alpha遮罩。第二部分是一个小的卷积网络，它改进了第一个网络的alpha遮罩预测，以获得更准确的alpha值和更清晰的边缘。此外，**我们还创建了一个大型图像抠图数据集，包括49300个训练图像和1000个测试图像**。我们在抠图基准，我们的测试集和各种真实图像上评估我们的算法。实验结果清楚地证明了我们的算法优于以前的方法。
 >
 > 我们使用合成创建一个大规模的消光数据集。仔细提取具有简单背景上的对象的图像并将其合成到新的背景图像上以创建具有49300（45500）个训练图像和1000个测试图像的数据集。
 >
@@ -505,16 +632,16 @@
 
 ![dataset](./assets/2018-12-27-11-47-26.png)
 
-- 论文: https://arxiv.org/abs/1809.01354
-- 项目: 未知
-- 下载: 未知
+* 论文: <https://arxiv.org/abs/1809.01354>
+* 项目: 未知
+* 下载: 未知
 
 ### 介绍
 
-> - alpha matting 的資料庫樣本過少，對於深度學習來說首要條件就是資料樣本要多
-> - Shen et al. 此資料庫是透過 CF 以及 KNN 的方式所製造的， 因此有可能該資料庫有bias，不採用。（這部分可搜尋幾個關鍵字： deep learning dataset bias）。
-> - DIM 的資料庫雖然有 493 個物件， 但是物件中包含人物的只有 202 個。
-> - Our dataset 從電子商務網站中搜集圖片，將35,513個人物透過人工標注他的Annotation，此資料集有遵循DIM的方法收集。
+> * alpha matting 的資料庫樣本過少，對於深度學習來說首要條件就是資料樣本要多
+> * Shen et al. 此資料庫是透過 CF 以及 KNN 的方式所製造的， 因此有可能該資料庫有bias，不採用。（這部分可搜尋幾個關鍵字： deep learning dataset bias）。
+> * DIM 的資料庫雖然有 493 個物件， 但是物件中包含人物的只有 202 個。
+> * Our dataset 從電子商務網站中搜集圖片，將35,513個人物透過人工標注他的Annotation，此資料集有遵循DIM的方法收集。
 >
 > https://medium.com/@xiaosean5408/%E6%B7%98%E5%AF%B6%E7%B6%B2%E7%9A%84%E4%BA%BA%E7%89%A9%E6%8F%90%E5%8F%96%E8%AB%96%E6%96%87%E7%B0%A1%E4%BB%8B-semantic-human-matting-52591c3f8e0c
 
@@ -528,14 +655,14 @@
 
 ### 链接
 
-- 项目: <http://dpfan.net/SOCBenchmark/>
-- 中文pdf: http://dpfan.net/wp-content/uploads/SOCBenchmarkCN.pdf
-- 英文pdf: http://dpfan.net/wp-content/uploads/2018/04/SOCBenchmark.pdf
-- 下载:
-    - Overall 6K SOC Dataset  (730.2MB)  [Baidu](https://pan.baidu.com/s/1J8_CF7zE1zApqgAR9eS1Dw)[Google](https://drive.google.com/file/d/1hfo33A7diED2dikTpN9o4KnZTxizGdLr/view?usp=sharing)
-    - 3.6K SOC Training Set (441.32MB) [Here](http://dpfan.net/wp-content/uploads/TrainSet.zip)[Baidu](https://pan.baidu.com/s/1Mao0piUuqVXAzmJoNtrtAw)[Google](https://drive.google.com/open?id=16jlzeJJ1tawyBLBN5fRiWbh2y_F0iSyP)
-    - 1.2K  SOC Validation Set (146.56MB) [Here](http://dpfan.net/wp-content/uploads/ValSet.zip)[Baidu](https://pan.baidu.com/s/1mOmiezCpkr5NCQk8ecvGiQ)[Google](https://drive.google.com/open?id=1vAfP8fCAo2a2KwgsmYLn8r8Rk4Lk7Urr)
-    - 1.2K  SOC Test Set (141.86MB) [Here](http://dpfan.net/wp-content/uploads/TestSet.zip)[Baidu](https://pan.baidu.com/s/10y-dx9HCPQm9fnp-Brswgw)[Google](https://drive.google.com/open?id=1ZdKrsk-S4J6KQyjx-cPeL0HoKXy7CCxG)
+* 项目: <http://dpfan.net/SOCBenchmark/>
+* 中文pdf: <http://dpfan.net/wp-content/uploads/SOCBenchmarkCN.pdf>
+* 英文pdf: <http://dpfan.net/wp-content/uploads/2018/04/SOCBenchmark.pdf>
+* 下载:
+    * Overall 6K SOC Dataset  (730.2MB)  [Baidu](https://pan.baidu.com/s/1J8_CF7zE1zApqgAR9eS1Dw)[Google](https://drive.google.com/file/d/1hfo33A7diED2dikTpN9o4KnZTxizGdLr/view?usp=sharing)
+    * 3.6K SOC Training Set (441.32MB) [Here](http://dpfan.net/wp-content/uploads/TrainSet.zip)[Baidu](https://pan.baidu.com/s/1Mao0piUuqVXAzmJoNtrtAw)[Google](https://drive.google.com/open?id=16jlzeJJ1tawyBLBN5fRiWbh2y_F0iSyP)
+    * 1.2K  SOC Validation Set (146.56MB) [Here](http://dpfan.net/wp-content/uploads/ValSet.zip)[Baidu](https://pan.baidu.com/s/1mOmiezCpkr5NCQk8ecvGiQ)[Google](https://drive.google.com/open?id=1vAfP8fCAo2a2KwgsmYLn8r8Rk4Lk7Urr)
+    * 1.2K  SOC Test Set (141.86MB) [Here](http://dpfan.net/wp-content/uploads/TestSet.zip)[Baidu](https://pan.baidu.com/s/10y-dx9HCPQm9fnp-Brswgw)[Google](https://drive.google.com/open?id=1ZdKrsk-S4J6KQyjx-cPeL0HoKXy7CCxG)
 
 ### 介绍
 
@@ -549,10 +676,10 @@
 
 ### 链接
 
-- 项目: https://i.cs.hku.hk/~gbli/deep_saliency.html
-- 下载:
-    - [**Google Drive**](https://drive.google.com/open?id=0BxNhBO0S5JCRQ1N6V25VeVh6cHc&authuser=0) 
-    - [**Baidu Yun**](http://pan.baidu.com/s/1c0EpNfM)
+* 项目: <https://i.cs.hku.hk/~gbli/deep_saliency.html>
+* 下载:
+    * [**Google Drive**](https://drive.google.com/open?id=0BxNhBO0S5JCRQ1N6V25VeVh6cHc&authuser=0)
+    * [**Baidu Yun**](http://pan.baidu.com/s/1c0EpNfM)
 
 ### 介绍
 
@@ -572,10 +699,10 @@
 
 ### 链接
 
-- 项目: https://kylezheng.org/research-projects/densesegattobj/
-- 下载: 
-    - NYU: http://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html
-    - aNYU: http://www.robots.ox.ac.uk/~szheng/aNYU/aNYU.tar.gz
+* 项目: <https://kylezheng.org/research-projects/densesegattobj/>
+* 下载:
+    * NYU: <http://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html>
+    * aNYU: <http://www.robots.ox.ac.uk/~szheng/aNYU/aNYU.tar.gz>
 
 ### 介绍
 
@@ -583,11 +710,11 @@
 
 ## 其他的一些数据集来源(待详细分析)
 
-- MediaEval Benchmark http://www.multimediaeval.org/datasets/
-- TC-11 Online Resources http://tc11.cvc.uab.es/datasets/type/
-- CVonline: Image Databases http://homepages.inf.ed.ac.uk/rbf/CVonline/Imagedbase.htm 
-    - 中文: https://blog.csdn.net/zhaoliang027/article/details/83376167
-- Mit Saliency Benchmark http://saliency.mit.edu/datasets.html
-    - [Download the MIT300 dataset images.](http://saliency.mit.edu/BenchmarkIMAGES.zip)
-    - [Download the CAT2000 test images.](http://saliency.mit.edu/testSet.zip)
-    - [Download the CAT2000 train images with fixations.](http://saliency.mit.edu/trainSet.zip)
+* MediaEval Benchmark http://www.multimediaeval.org/datasets/
+* TC-11 Online Resources http://tc11.cvc.uab.es/datasets/type/
+* CVonline: Image Databases http://homepages.inf.ed.ac.uk/rbf/CVonline/Imagedbase.htm
+    * 中文: https://blog.csdn.net/zhaoliang027/article/details/83376167
+* Mit Saliency Benchmark http://saliency.mit.edu/datasets.html
+    * [Download the MIT300 dataset images.](http://saliency.mit.edu/BenchmarkIMAGES.zip)
+    * [Download the CAT2000 test images.](http://saliency.mit.edu/testSet.zip)
+    * [Download the CAT2000 train images with fixations.](http://saliency.mit.edu/trainSet.zip)
