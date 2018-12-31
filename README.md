@@ -708,6 +708,34 @@
 
 > 我们的第一组实验是关于来自NYU V2 dataset [32] 2的RGB图像。如图3所示，我们添加了8个附加属性标签，即木制，彩绘，棉花，玻璃，光面，塑料，闪亮和纹理。我们要求3个注释者在每个分割地面真实区域上分配材料，表面属性属性。Wethen将3名工作者的多数票作为我们的8个附加属性标签。我们将此扩展数据集称为attribute NYU（aNYU）数据集。**该数据集从28个不同的室内场景中收集了1449个图像。**在我们的实验中，我们选择了具有足够数量实例的15个对象类和8个属性来训练unary potential。此外，**我们随机地将数据集分成训练集的725个图像，验证集的100个，以及测试集的624个。**
 
+## Supervisely人像数据集
+
+![img](https://static.leiphone.com/uploads/new/article/740_740/201804/5acb1719a6252.png?imageMogr2/format/jpg/quality/90)
+
+### 链接
+
+* 项目: <https://supervise.ly/>
+
+### 介绍
+
+> - 数据集**由5711张图片组成，有6884个高质量的标注的人体实例**。
+> - 下面的所有步骤在Supervisely内部完成的，没有任何编码。
+> - 更重要的是，这些步骤是被我内部的注释器执行的，没有任何机器学习专业知识。数据科学家仅仅只是控制和管理这过程。
+> - 注释组由两名成员组成并且这整个过程只花了4天。
+
+## [Automatic Portrait Segmentation for Image Stylization](http://xiaoyongshen.me/webpage_portrait/papers/portrait_eg16.pdf)
+
+![1546173669466](assets/1546173669466.png)
+
+### 链接
+
+* 项目: <http://xiaoyongshen.me/webpage_portrait/index.html>
+* 下载: Please download from [OneDrive](https://1drv.ms/u/s!ApwdOxIIFBH19TzDv7nRfH5ZsMNL) or [Baiduyun](http://pan.baidu.com/s/1bQ4yHC). 
+
+### 介绍
+
+> 肖像画是摄影和绘画的主要艺术形式。在大多数情况下，艺术家试图使主体从周围突出，例如，使其更亮或更锐利。在数字世界中，通过使用适合于图像语义的照相或绘画滤镜处理肖像图像，可以实现类似的效果。虽然存在许多成功的用户指导方法来描绘该主题，但缺乏全自动技术并且产生不令人满意的结果。我们的论文首先通过引入专用于肖像的新自动分割算法来解决这个问题。然后，我们在此结果的基础上，描述了几个利用我们的自动分割算法生成高质量肖像的肖像滤镜。
+
 ## 其他的一些数据集来源(待详细分析)
 
 * MediaEval Benchmark http://www.multimediaeval.org/datasets/
