@@ -130,6 +130,12 @@
   * [aNYU: Dense Semantic Image Segmentation with Objects and Attributes](#anyu-dense-semantic-image-segmentation-with-objects-and-attributes)
     * [链接](#链接-39)
     * [介绍](#介绍-39)
+  * [Supervisely人像数据集](#supervisely人像数据集)
+    * [链接](#链接-40)
+    * [介绍](#介绍-40)
+  * [Automatic Portrait Segmentation for Image Stylization](#automatic-portrait-segmentation-for-image-stylization)
+    * [链接](#链接-41)
+    * [介绍](#介绍-41)
   * [其他的一些数据集来源(待详细分析)](#其他的一些数据集来源待详细分析)
 
 ## HS-SOD: [Hyperspectral Image Dataset for Benchmarking on Salient Object Detection](https://arxiv.org/abs/1806.11314)
@@ -730,7 +736,7 @@
 ### 链接
 
 * 项目: <http://xiaoyongshen.me/webpage_portrait/index.html>
-* 下载: Please download from [OneDrive](https://1drv.ms/u/s!ApwdOxIIFBH19TzDv7nRfH5ZsMNL) or [Baiduyun](http://pan.baidu.com/s/1bQ4yHC). 
+* 下载: Please download from [OneDrive](https://1drv.ms/u/s!ApwdOxIIFBH19TzDv7nRfH5ZsMNL) or [Baiduyun](http://pan.baidu.com/s/1bQ4yHC).
 
 ### 介绍
 
