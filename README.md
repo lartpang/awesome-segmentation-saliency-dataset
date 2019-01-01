@@ -729,7 +729,7 @@
 > - 更重要的是，这些步骤是被我内部的注释器执行的，没有任何机器学习专业知识。数据科学家仅仅只是控制和管理这过程。
 > - 注释组由两名成员组成并且这整个过程只花了4天。
 
-## [Automatic Portrait Segmentation for Image Stylization](http://xiaoyongshen.me/webpage_portrait/papers/portrait_eg16.pdf)
+## PFCN: [Automatic Portrait Segmentation for Image Stylization](http://xiaoyongshen.me/webpage_portrait/papers/portrait_eg16.pdf)
 
 ![1546173669466](assets/1546173669466.png)
 
