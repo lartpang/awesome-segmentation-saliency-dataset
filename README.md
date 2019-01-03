@@ -133,9 +133,12 @@
   * [Supervisely人像数据集](#supervisely人像数据集)
     * [链接](#链接-40)
     * [介绍](#介绍-40)
-  * [Automatic Portrait Segmentation for Image Stylization](#automatic-portrait-segmentation-for-image-stylization)
+  * [PFCN: Automatic Portrait Segmentation for Image Stylization](#pfcn-automatic-portrait-segmentation-for-image-stylization)
     * [链接](#链接-41)
     * [介绍](#介绍-41)
+  * [Deep Automatic Portrait Matting](#deep-automatic-portrait-matting)
+    * [链接](#链接-42)
+    * [介绍](#介绍-42)
   * [其他的一些数据集来源(待详细分析)](#其他的一些数据集来源待详细分析)
 
 ## HS-SOD: [Hyperspectral Image Dataset for Benchmarking on Salient Object Detection](https://arxiv.org/abs/1806.11314)
@@ -724,10 +727,10 @@
 
 ### 介绍
 
-> - 数据集**由5711张图片组成，有6884个高质量的标注的人体实例**。
-> - 下面的所有步骤在Supervisely内部完成的，没有任何编码。
-> - 更重要的是，这些步骤是被我内部的注释器执行的，没有任何机器学习专业知识。数据科学家仅仅只是控制和管理这过程。
-> - 注释组由两名成员组成并且这整个过程只花了4天。
+> * 数据集 **由5711张图片组成，有6884个高质量的标注的人体实例**。
+> * 下面的所有步骤在Supervisely内部完成的，没有任何编码。
+> * 更重要的是，这些步骤是被我内部的注释器执行的，没有任何机器学习专业知识。数据科学家仅仅只是控制和管理这过程。
+> * 注释组由两名成员组成并且这整个过程只花了4天。
 
 ## PFCN: [Automatic Portrait Segmentation for Image Stylization](http://xiaoyongshen.me/webpage_portrait/papers/portrait_eg16.pdf)
 
@@ -735,6 +738,7 @@
 
 ### 链接
 
+* 论文: <http://xiaoyongshen.me/webpage_portrait/papers/portrait_eg16.pdf>
 * 项目: <http://xiaoyongshen.me/webpage_portrait/index.html>
 * 下载: Please download from [OneDrive](https://1drv.ms/u/s!ApwdOxIIFBH19TzDv7nRfH5ZsMNL) or [Baiduyun](http://pan.baidu.com/s/1bQ4yHC).
 
@@ -742,13 +746,59 @@
 
 > 肖像画是摄影和绘画的主要艺术形式。在大多数情况下，艺术家试图使主体从周围突出，例如，使其更亮或更锐利。在数字世界中，通过使用适合于图像语义的照相或绘画滤镜处理肖像图像，可以实现类似的效果。虽然存在许多成功的用户指导方法来描绘该主题，但缺乏全自动技术并且产生不令人满意的结果。我们的论文首先通过引入专用于肖像的新自动分割算法来解决这个问题。然后，我们在此结果的基础上，描述了几个利用我们的自动分割算法生成高质量肖像的肖像滤镜。
 
+## [Deep Automatic Portrait Matting](http://www.cse.cuhk.edu.hk/~leojia/projects/automatting/papers/deepmatting.pdf)
+
+![img](assets/2019-01-01-19-31-55.png)
+
+### 链接
+
+* 论文: <http://www.cse.cuhk.edu.hk/~leojia/projects/automatting/papers/deepmatting.pdf>
+* 项目: <http://www.cse.cuhk.edu.hk/~leojia/projects/automatting/>
+    * 作者对应的页面: http://xiaoyongshen.me/webpages/webpage_automatting/
+* 下载: [Data(zip, 1.15GB)] Please send Email to <goodshenxy@gmail.com> to request it.
+    * 作者自己公开了: https://1drv.ms/u/s!ApwdOxIIFBH19Ts5EuFd9gVJrKTo
+
+### 介绍
+
+> 我们提出了一种用于性状图像的自动图像消光方法。该方法不需要用户交互，这在大多数先前的方法中是必不可少的。为了实现这一目标，提出了一种新的端到端卷积神经网络（CNN）框架，其采用肖像图像的输入。它输出matting的结果。我们的方法不仅考虑图像语义预测，还考虑像素级图像matte优化。一个新的肖像image dataset与我们标记的matting基础事实构成。我们的自动方法通过最先进的方法获得了可比较的结果，该方法需要指定的前景和背景区域或像素。
+>
+> 我们从Flickr收集了肖像图像。然后选择它们以确保肖像具有各种年龄，颜色，衣服，配饰，发型，头部位置，背景场景等。matting区域主要是由于景深引起的头发和柔软边缘。裁剪所有图像，使得面部矩形具有相似的尺寸。通过选定的肖像图像，我们创建了具有密集用户交互的alpha matte，以确保它们具有高质量。
+>
+> 首先，我们标记每个图像放大到局部区域的三元组。
+>
+> 然后我们计算mattes, 使用闭式matting[1]和KNN matting[2]。
+>
+> 每个图像的两个计算遮罩覆盖背景图像以手动检查质量。我们为数据集选择更好的一个。如果两个mattes都不符合我们的高标准，结果将被丢弃。必要时，小错误可以通过Photoshop[31]来解决。在此标签处理后，我们收集了2,000张高质量遮罩图像。这些图像被随机分成训练和测试集，分别具有1,700和300个图像。
+
+## Large-scale Fashion (DeepFashion) Database
+
+![img](http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion/intro.jpg)
+
+### 链接
+
+* 项目: <http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion.html>
+* 组织: [Multimedia Laboratory, ](http://mmlab.ie.cuhk.edu.hk/)[The Chinese University of Hong Kong](http://www.cuhk.edu.hk/english/index.html)
+* 下载: http://pan.baidu.com/s/1i43pnZR (更多细节请见项目主页)
+
+### 介绍
+
+> 我们提供DeepFashion数据库，这是一个大型服装数据库，它有几个吸引人的特性：
+>
+> * 首先，DeepFashion包含超过800,000种不同的时尚图像，从精美的商店图像到无约束的消费者照片。
+> * 其次，DeepFashion注释了丰富的服装商品信息。此数据集中的每个图像都标有50个类别，1,000个描述性属性，边界框和服装标记。
+> * 第三，DeepFashion包含超过300,000个交叉姿势/跨域图像对。使用DeepFashion数据库开发了四个基准，包括属性预测，消费者到商店的衣服检索，店内衣服检索和地标检测。
+>
+> 这些基准的数据和注释也可以用作以下计算机视觉任务的训练和测试集，例如衣服检测，衣服识别和图像检索。请阅读“下载说明”以访问数据集。
+
 ## 其他的一些数据集来源(待详细分析)
 
 * MediaEval Benchmark http://www.multimediaeval.org/datasets/
 * TC-11 Online Resources http://tc11.cvc.uab.es/datasets/type/
 * CVonline: Image Databases http://homepages.inf.ed.ac.uk/rbf/CVonline/Imagedbase.htm
-    * 中文: https://blog.csdn.net/zhaoliang027/article/details/83376167
+   * 中文: https://blog.csdn.net/zhaoliang027/article/details/83376167
 * Mit Saliency Benchmark http://saliency.mit.edu/datasets.html
-    * [Download the MIT300 dataset images.](http://saliency.mit.edu/BenchmarkIMAGES.zip)
-    * [Download the CAT2000 test images.](http://saliency.mit.edu/testSet.zip)
-    * [Download the CAT2000 train images with fixations.](http://saliency.mit.edu/trainSet.zip)
+   * [Download the MIT300 dataset images.](http://saliency.mit.edu/BenchmarkIMAGES.zip)
+   * [Download the CAT2000 test images.](http://saliency.mit.edu/testSet.zip)
+   * [Download the CAT2000 train images with fixations.](http://saliency.mit.edu/trainSet.zip)
+* CUHK Multimedia Laboratory 有一些数据集: <http://mmlab.ie.cuhk.edu.hk/datasets.html>
+
