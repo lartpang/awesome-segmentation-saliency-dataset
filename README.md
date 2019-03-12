@@ -51,6 +51,7 @@
   * [Large-scale Fashion (DeepFashion) Database](#large-scale-fashion-deepfashion-database)
   * [Clothing Parsing](#clothing-parsing)
   * [HumanParsing-Dataset](#humanparsing-dataset)
+  * [Look into Person (LIP)](#look-into-person-lip)
   * [Taobao Commodity Dataset](#taobao-commodity-dataset)
   * [Object Extraction Dataset](#object-extraction-dataset)
   * [Clothing Co-Parsing (CCP) Dataset](#clothing-co-parsing-ccp-dataset)
@@ -524,6 +525,19 @@ HS-SOD.zip file contains three folders:
 * 下载:  <http://pan.baidu.com/s/1qY8bToS> *passwd：kjgk*
 
 > This human parsing dataset includes the detailed pixel-wise annotations for fashion images, which is proposed in our TPAMI paper “Deep Human Parsing with Active Template Regression”, and ICCV 2015 paper “Human Parsing with Contextualized Convolutional Neural Network”. This dataset contains 7700 images.We use 6000 images for training,1000 for testing and 700 as the validation set.
+
+## Look into Person (LIP)
+
+![img](assets/2019-03-12-11-18-29.png)
+
+* 项目: <http://sysu-hcp.net/lip/overview.php>
+* 下载: 不同任务有不同部分, 具体可见[Dataset](http://sysu-hcp.net/lip/overview.php)页面
+
+> Look into Person (LIP) is a new large-scale dataset, focus on semantic understanding of person. Following are the detailed descriptions.
+>
+> The dataset contains 50,000 images with elaborated pixel-wise annotations with 19 semantic human part labels and 2D human poses with 16 key points.
+>
+> The annotated 50,000 images are cropped person instances from COCO dataset with size larger than 50 * 50.The images collected from the real-world scenarios contain human appearing with challenging poses and views, heavily occlusions, various appearances and low-resolutions. We are working on collecting and annotating more images to increase diversity.
 
 ## Taobao Commodity Dataset
 
