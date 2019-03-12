@@ -50,7 +50,10 @@
   * [Deep Automatic Portrait Matting](#deep-automatic-portrait-matting)
   * [Large-scale Fashion (DeepFashion) Database](#large-scale-fashion-deepfashion-database)
   * [Clothing Parsing](#clothing-parsing)
-  * [ATR: HumanParsing-Dataset](#atr-humanparsing-dataset)
+  * [HumanParsing-Dataset](#humanparsing-dataset)
+  * [Taobao Commodity Dataset](#taobao-commodity-dataset)
+  * [Object Extraction Dataset](#object-extraction-dataset)
+  * [Clothing Co-Parsing (CCP) Dataset](#clothing-co-parsing-ccp-dataset)
   * [其他的一些数据集来源(待详细分析)](#其他的一些数据集来源待详细分析)
   * [参考论文](#参考论文)
 
@@ -501,19 +504,57 @@ HS-SOD.zip file contains three folders:
 
 ## Clothing Parsing
 
+![img](http://vision.is.tohoku.ac.jp/~kyamagu/research/clothing_parsing/clothing.png)
+
 * 项目 :
     * <http://vision.is.tohoku.ac.jp/~kyamagu/research/clothing_parsing/>
     * <http://vision.is.tohoku.ac.jp/~kyamagu/research/paperdoll/>
 
-## ATR: HumanParsing-Dataset
+> In this paper we demonstrate an effective method for parsing clothing in fashion photographs, an extremely challenging problem due to the large number of possible garment items, variations in configuration, garment appearance, layering, and occlusion. In addition, we provide a large novel dataset and tools for labeling garment items, to enable future research on clothing estimation. Finally, we present intriguing initial results on using clothing estimates to improve pose identification, and demonstrate a prototype application for pose-independent visual garment retrieval.
+
+## HumanParsing-Dataset
+
+![img](http://sysu-hcp.net/lip/img/scroll/home3.png)
 
 * 项目:
     * <https://github.com/lemondan/HumanParsing-Dataset>
     * <http://www.sysu-hcp.net/deep-human-parsing/>
     * <https://vuhcs.github.io/>
+* 组织: <http://sysu-hcp.net/>
 * 下载:  <http://pan.baidu.com/s/1qY8bToS> *passwd：kjgk*
 
-> We present a new large-scale dataset focusing on semantic understanding of person. The dataset is an order of magnitude larger and more challenge than similar previous attempts that **contains 50,000 images with elaborated pixel-wise annotations** with **19 semantic human part labels** and **2D human poses with 16 key points**. The images collected from the real-world scenarios contain human appearing with challenging poses and views, heavily occlusions, various appearances and low-resolutions. This challenge and benchmark are fully supported by the Human-Cyber-Physical Intelligence Integration Lab of Sun Yat-sen University.
+> This human parsing dataset includes the detailed pixel-wise annotations for fashion images, which is proposed in our TPAMI paper “Deep Human Parsing with Active Template Regression”, and ICCV 2015 paper “Human Parsing with Contextualized Convolutional Neural Network”. This dataset contains 7700 images.We use 6000 images for training,1000 for testing and 700 as the validation set.
+
+## Taobao Commodity Dataset
+
+![img](http://www.sysu-hcp.net/wp-content/uploads/2016/03/ImageAndMask.png)
+
+* 项目: <http://www.sysu-hcp.net/taobao-commodity-dataset/>
+* 下载:
+    * <http://www.sysu-hcp.net/wp-content/uploads/2016/03/Imgs_TCD.zip>
+    * <http://www.sysu-hcp.net/wp-content/uploads/2016/03/Mask_TCD.zip>
+
+> TCD contains 800 commodity images (dresses, jeans, T-shirts, shoes and hats) from the shops on the Taobao website. The ground truth masks of the TCD dataset are obtained by inviting common sellers of Taobao website to annotate their commodities, i.e., masking salient objects that they want to show from their exhibition. These images include all kind   s of commodity with and without human models, thus having complex backgrounds and scenes with highly complex foregrounds. Pixel-accurate ground truth masks are given. These images including all kinds of commodities with and without human models have complex backgrounds and scenes with large foregrounds for evaluation. Figure 1 illustrates some of them.
+
+## Object Extraction Dataset
+
+![img](https://objectextraction.github.io/imgs/images_masks.png)
+
+* 项目: <https://objectextraction.github.io/>
+
+> This Object Extraction newly collected by us contains 10183 images with groundtruth segmentation masks. We selected the images from the PASCAL, iCoseg, Internet dataset as well as other data (most of them are about people and clothes) from the web. We randomly split the dataset with 8230 images for training and 1953 images for testing.
+
+## Clothing Co-Parsing (CCP) Dataset
+
+![img](assets/2019-03-12-11-12-28.png)
+
+* 项目: <https://github.com/bearpaw/clothing-co-parsing>
+
+> Clothing Co-Parsing (CCP) dataset is a new clothing database including elaborately annotated clothing items.
+> 2, 098 high-resolution street fashion photos with totally 59 tags
+> Wide range of styles, accessaries, garments, and pose
+> All images are with image-level annotations
+> 1000+ images are with pixel-level annotations
 
 ## 其他的一些数据集来源(待详细分析)
 
