@@ -1,15 +1,13 @@
-# Saliency-Detection-Dataset
+# Segmentation/Saliency-Dataset
 
 > Please **cite related paper** if you **use their dataset**
 
-根据一些论文, 总结了一下显著性监测数据集.
-
-* [Saliency-Detection-Dataset](#saliency-detection-dataset)
-  * [HS-SOD: Hyperspectral Image Dataset for Benchmarking on Salient Object Detection](#hs-sod-hyperspectral-image-dataset-for-benchmarking-on-salient-object-detection)
+* [Segmentation/Saliency-Dataset](#segmentationsaliency-dataset)
   * [MSRA](#msra)
   * [SED1/2](#sed12)
-  * [ASD(MSRA1000 / MSRA1K)](#asdmsra1000--msra1k)
+  * [ASD(MSRA1000/MSRA1K)](#asdmsra1000msra1k)
   * [DUT-OMRON](#dut-omron)
+  * [DUTS](#duts)
   * [SOD](#sod)
   * [iCoSeg](#icoseg)
   * [Infrared](#infrared)
@@ -27,19 +25,8 @@
   * [XPIE](#xpie)
   * [NLPR](#nlpr)
   * [NJUD](#njud)
-  * [Image Pair](#image-pair)
-  * [Cosal2015](#cosal2015)
-  * [INCT2016](#inct2016)
-  * [RGBDCoseg183](#rgbdcoseg183)
-  * [06RGBDCosal150](#06rgbdcosal150)
-  * [SegTrackV1/V2](#segtrackv1v2)
-  * [ViSal](#visal)
-  * [MCL](#mcl)
-  * [DAVIS](#davis)
-  * [UVSD](#uvsd)
-  * [VOS](#vos)
   * [alphamatting.com](#alphamattingcom)
-  * [**Composition-1k: Deep Image Matting](#composition-1k-deep-image-matting)
+  * [Composition-1k: Deep Image Matting](#composition-1k-deep-image-matting)
   * [Semantic Human Matting](#semantic-human-matting)
   * [SOC: Salient Objects in Clutter: Bringing Salient Object Detection to the Foreground](#soc-salient-objects-in-clutter-bringing-salient-object-detection-to-the-foreground)
   * [HKU-IS: Visual Saliency Based on Multiscale Deep Features](#hku-is-visual-saliency-based-on-multiscale-deep-features)
@@ -55,38 +42,29 @@
   * [Taobao Commodity Dataset](#taobao-commodity-dataset)
   * [Object Extraction Dataset](#object-extraction-dataset)
   * [Clothing Co-Parsing (CCP) Dataset](#clothing-co-parsing-ccp-dataset)
-  * [其他的一些数据集来源(待详细分析)](#其他的一些数据集来源待详细分析)
-  * [参考论文](#参考论文)
-
-## HS-SOD: [Hyperspectral Image Dataset for Benchmarking on Salient Object Detection](https://arxiv.org/abs/1806.11314)
-
-![img](https://github.com/gistairc/HS-SOD/raw/master/images/poster-QoMEX2018.png)
-
-* 项目: <https://github.com/gistairc/HS-SOD>
-* 下载: <http://data.airc.aist.go.jp/HS-SOD/HS-SOD.zip> 5.6G
-* 论文: <https://arxiv.org/abs/1806.11314>
-
-> 使用有监督或无监督的方法对着色对象进行了显着的物体检测。最近，一些研究表明，通过在来自天然景观的高光谱图像的可见光谱中使用光谱特征，也可以实现有效的显着对象检测。然而，这些关于高光谱显着物体检测的模型使用从各种在线公共数据集中选择的极少数数据进行测试，这些数据不是为了物体检测目的而特别创建的。因此，在这里，我们的目标是通过发布**具有60个高光谱图像的集合的高光谱显着物体检测数据集**以及**相应的地面实况二值图像**和**代表性的彩色图像（sRGB）**来指导该领域。我们在数据收集过程中考虑了几个方面，例如对象大小的变化，对象的数量，前景-背景对比度，图像上的对象位置等。然后，我们为每个高光谱数据准备了真值二进制图像，其中显著性目标被标记为图像。最后，我们使用曲线下面积（AUC）度量对文献中一些现有的高光谱显着性检测模型进行了性能评估。
->
-> 这些数据是在东京港口码头公司的许可下，在日本东京台场的东京海滨城市公园收集的。我们在2017年8月至9月期间的几天内收集了数据，当时天气晴朗或部分多云。在每个数据收集日，使用三脚架固定相机以最小化图像上的运动失真。我们尝试根据日光条件尽可能地保持相机设置的曝光时间和增益，同时保持像素值饱和度或图像可见性。作为数据集用户的参考，我们提供相机设置，例如文本文件中每个图像的曝光时间和增益值以及相应的数据。我们也没有对捕获的波段应用标准化。它可以提高前景和背景区域之间色彩对比度更高的高光谱图像的质量;但是，它也可能降低数据集在显着对象检测任务上进行基准测试的难度。
->
-> 在获得各种高光谱图像后，我们从大约50个不同的场景中选择了60个图像，条件是：i）我们去除了由于场景中的运动引起的失真图像（取决于曝光时间，一个图像可能需要几秒钟才能用于相机），ii）我们考虑了几个方面，如显着物体大小的变化，图像上物体的空间位置，显着物体的数量，前景 * 背景对比度，iii）一些图像具有相同的场景但物体位置，物距或数量对象各不相同。
->
-> 为了便于显着物体检测任务，我们在可见光谱周围裁剪光谱带，并在传感器暗噪声校正后以“.mat”文件格式保存每个场景的超立方体。如[21]中所定义，可见光谱具有380-780nm的良好可接受范围，但也可以使用[3,4]中的400-700nm范围。为了保持范围广泛和灵活性，想要使用数据集的人，我们在[21]中为我们的数据集选择了380 * 780 nm的定义范围，尽管在人类视觉系统的这些范围的边界处视觉刺激可能较弱。然后，我们使用高光谱图像渲染sRGB彩色图像，通过标记显着对象的边界来创建地面真实显着对象二进制图像。
-
-HS-SOD.zip file contains three folders:
-
-1. hyperspectral: containing 60 hyperspectral images with #spatial rows:768 #spatial columns:1024 #spectral channels:81 (data only within visible spectrum: 380 nm -720 nm)
-2. color: 60 color images of hyperspectral dataset rendered in sRGB for visualization
-3. ground-truth: 60 ground-truth binary images for salient objects
-
-![eva](./assets/2018-12-28-22-16-20.png)
-
----
-
-![img](./assets/2018-12-29-17-06-42.png)
-
-> 详细评估: <https://mmcheng.net/zh/salobjbenchmark/> (这里展示了{THUR15K, JuddDB, DUT-OMRON, SED2, MSRA10K, ECSSD}六种数据集的一个榜单).
+  * [HS-SOD: Hyperspectral Image Dataset for Benchmarking on Salient Object Detection](#hs-sod-hyperspectral-image-dataset-for-benchmarking-on-salient-object-detection)
+  * [Baidu People segmentation dataset](#baidu-people-segmentation-dataset)
+  * [Image Pair](#image-pair)
+  * [Cosal2015](#cosal2015)
+  * [INCT2016](#inct2016)
+  * [RGBDCoseg183](#rgbdcoseg183)
+  * [06RGBDCosal150](#06rgbdcosal150)
+  * [SegTrackV1/V2](#segtrackv1v2)
+  * [ViSal](#visal)
+  * [MCL](#mcl)
+  * [DAVIS](#davis)
+  * [UVSD](#uvsd)
+  * [VOS](#vos)
+  * [数据集站点](#数据集站点)
+    * [研究机构](#研究机构)
+    * [资源站点](#资源站点)
+      * [TC-11 Online Resources](#tc-11-online-resources)
+      * [CVonline: Image Databases](#cvonline-image-databases)
+      * [MediaEval Benchmark](#mediaeval-benchmark)
+      * [Mit Saliency Benchmark](#mit-saliency-benchmark)
+  * [参考](#参考)
+    * [Salient Object Detection: A Survey](#salient-object-detection-a-survey)
+    * [Review of Visual Saliency Detection with Comprehensive Information](#review-of-visual-saliency-detection-with-comprehensive-information)
 
 ## MSRA
 
@@ -130,7 +108,7 @@ HS-SOD.zip file contains three folders:
 
 > 这项工作的目的是为图像分割研究提供经验和科学依据。评估分割算法产生的结果具有挑战性，因为很难提出提供基础真实分割的规范测试集。这部分是因为在日常复杂图像中手动描绘片段可能是费力的。此外，人们往往倾向于将语义考虑纳入其分段中，这超出了数据驱动的分割算法的范围。因此，许多现有算法仅显示很少的分割结果。为了评估由不同算法产生的分割，我们编制了一个数据库，目前**包含200个灰度图像以及真实标注分割**。该数据库专门设计用于避免潜在的模糊，仅通过仅通过强度，纹理或其他低水平线索合并清晰描绘前景中与其周围环境不同的一个或两个物体的图像。通过要求人类对象手动地将灰度图像（还提供颜色源）分成两个或三个类别来获得地面真实分割，其中**每个图像由三个不同的人类对象分割**。通过评估其与真实分割的一致性及其碎片量来评估分割。与此数据库评估一起，我们提供了用于评估给定分割算法的代码。这样，不同的分割算法可能具有可比较的结果以获得更多细节，请参阅“评估测试”部分。
 
-## ASD(MSRA1000 / MSRA1K)
+## ASD(MSRA1000/MSRA1K)
 
 * T. Liu, J. Sun, N.-N. Zheng, X. Tang, and H.-Y. Shum, “[Learning to detect a salient object](http://research.microsoft.com/en-us/um/people/jiansun/salientobject/salient_object.htm),” in *Proc. IEEE Conf. Comput. Vis. Pattern Recognit.*, 2007, pp. 1–8.
 * R. Achanta, S. Hemami, F. Estrada, and S. Süsstrunk, “[Frequency-tuned salient region detection](http://ivrlwww.epfl.ch/supplementary_material/RK_CVPR09/),” in *Proc. IEEE Conf. Comput. Vis. Pattern Recognit.*, 2009, pp. 1597–1604.
@@ -155,6 +133,18 @@ HS-SOD.zip file contains three folders:
 > 数据库包括从超过140,000张图像中手动选择的5,168个高质量图像。我们将图像的大小调整为宽为400或高为400像素，其中另一条边小于400.我们数据库的图像具有一个或多个显着对象和相对复杂的背景。我们共有25名参与者，用于汇总真值，每个图像有五个参与者标签。他们都有正常或矫正到正常的视力并且意识到我们实验的目标。我们为提出的数据库构建像素方面的真实标注, 边界框, 和眼睛固定标注真值。
 >
 > 我们的数据集是唯一一个具有眼睛固定，边界框和像素方面的大规模真实标注的数据集。与ASD和MSRA数据集以及其他一些眼睛固定数据集（即MIT和NUSEF数据集）相比，数据集中的图像更加困难，因此更具挑战性，并为相关的显着性研究提供了更多的改进空间。
+
+## DUTS
+
+* 项目: <http://saliencydetection.net/duts/>
+
+> ... we contribute a large scale data set named DUTS, **containing 10,553 training images and 5,019 test images**. All training images are collected from the ImageNet DET training/val sets, while test images are collected from the ImageNet DET test set and the SUN data set.
+>
+> Both the training and test set contain very challenging scenarios for saliency detection. Accurate pixel-level ground truths are manually annotated by 50 subjects.
+>
+> To our knowledge, DUTS is currently **the largest saliency detection benchmark** with the explicit training/test evaluation protocol.
+>
+> For fair comparison in the future research, the training set of DUTS serves as a good candidate for learning DNNs, while the test set and other public data sets can be used for evaluation.
 
 ## SOD
 
@@ -207,19 +197,15 @@ HS-SOD.zip file contains three folders:
 
 ## ECSSD/CSSD
 
-**ECSSD**
-
 ![dataset overview](http://www.cse.cuhk.edu.hk/leojia/projects/hsaliency/figures/dataset_large_new4.jpg)
 
 * 下载: <http://www.cse.cuhk.edu.hk/leojia/projects/hsaliency/dataset.html>
     * ECSSD (1000 images)
-        [ECSSD images (64.6MB)](http://www.cse.cuhk.edu.hk/leojia/projects/hsaliency/data/ECSSD/images.zip)
-        [ECSSD ground truth masks (1.78MB)](http://www.cse.cuhk.edu.hk/leojia/projects/hsaliency/data/ECSSD/ground_truth_mask.zip) (Updated on 9 April, 2015)
-        [Results of HS [1] on ECSSD [2] (13.1MB)](http://www.cse.cuhk.edu.hk/leojia/projects/hsaliency/data/ECSSD/our_result_HS.zip)
-        [Results of CHS on ECSSD [2] (8.39MB)](http://www.cse.cuhk.edu.hk/leojia/projects/hsaliency/data/ECSSD/our_result_CHS.zip)
+        * [ECSSD images (64.6MB)](http://www.cse.cuhk.edu.hk/leojia/projects/hsaliency/data/ECSSD/images.zip)
+        * [ECSSD ground truth masks (1.78MB)](http://www.cse.cuhk.edu.hk/leojia/projects/hsaliency/data/ECSSD/ground_truth_mask.zip) (Updated on 9 April, 2015)
     * CSSD (200 images)
-        [CSSD images (18.7MB)](http://www.cse.cuhk.edu.hk/leojia/projects/hsaliency/data/CSSD/images.zip)[CSSD groud truth masks (0.75MB)](http://www.cse.cuhk.edu.hk/leojia/projects/hsaliency/data/CSSD/ground_truth_mask.zip)
-        [Results of HS [1] on CSSD (2.48MB)](http://www.cse.cuhk.edu.hk/leojia/projects/hsaliency/data/CSSD/our_result.zip)
+        * [CSSD images (18.7MB)](http://www.cse.cuhk.edu.hk/leojia/projects/hsaliency/data/CSSD/images.zip)
+        * [CSSD groud truth masks (0.75MB)](http://www.cse.cuhk.edu.hk/leojia/projects/hsaliency/data/CSSD/ground_truth_mask.zip)
 
 其中CSSD包含了200张图，而ECSSD是前者的扩展集包含有1000张图
 
@@ -244,8 +230,6 @@ HS-SOD.zip file contains three folders:
 * 论文: <https://papers.nips.cc/paper/2830-saliency-based-on-information-maximization.pdf>
 
 ## Judd-A
-
-> Eye tracking data
 
 * 论文: <http://people.csail.mit.edu/torralba/publications/wherepeoplelook.pdf>
 
@@ -287,10 +271,6 @@ HS-SOD.zip file contains three folders:
 
 > 对视频内容的理解和分析对于众多应用程序来说至关重要，包括视频摘要，检索，导航和编辑。此过程的一个重要部分是检测视频片段中的显着（通常意味着重要和有趣）对象。与现有方法不同，我们提出了一种将显着性测量与空间和时间相干性相结合的方法。空间和时间一致性的整合受到人类视觉中关注焦点的启发。在所提出的方法中，低级视觉分组线索的空间相干性（例如外观和运动）有助于每帧对象 * 背景分离，而对象属性的时间一致性（例如形状和外观）确保一致物体随时间定位，因此该方法对于意外的环境变化和相机振动是鲁棒的。在**开发了基于粗到细多尺度动态规划的有效优化策略之后，我们使用可与本文一起免费获得的具有挑战性的数据集来评估我们的方法**。我们展示了两种类型的一致性的有效性和互补性，并证明它们可以显着提高视频中显着对象检测的性能。
 
----
-
-![dataset](./assets/2018-12-27-11-05-49.png)
-
 ## ACSD
 
 ![1546135560011](./assets/1546135560011.png)
@@ -314,7 +294,7 @@ HS-SOD.zip file contains three folders:
 
 > 找出什么是什么和什么不是显着对象可以有助于在显着对象检测（SOD）中开发更好的特征和模型。在本文中，我们研究了在构建新的SOD数据集时选择和丢弃的图像，发现许多相似的候选者，复杂形状和低对象性是很多非显着对象的三个主要属性。此外，对象可能具有使其显着的不同属性。因此，我们通过整合lin-ear示例回归量来提出一种新颖的显着物体探测器。我们首先使用边界先验选择可靠的前景和背景种子，然后采用局部线性嵌入（LLE）进行流形保持前景传播。以这种方式，可以对大致突出的对象生成前景图，并且使用类似的候选对象来抑制非显着对象。此外，我们提取形状，前景和注意描述符来表征被提取的对象提议，并且训练线性样本回归器来编码如何检测特定图像中的显着提议。最后，各种线性样本回归器被组合以形成适应各种情况的单个检测器。5个数据集和新SOD数据集的广泛实验结果表明，我们的方法优于9种最先进的方法。
 >
-> 为了全面解释什么是什么和什么不是显着对象，一个可行的解决方案是通过观察包含在数据集中或从数据集中丢弃的图像中的对象的主要特征来研究构建新SOD数据集的整个过程。从这些观察中，我们可以推断显着和非显着对象的关键属性以及基于图像的SOD数据集中可能存在的主观偏差。**为此，我们构建了一个大的SOD数据集（称为XPIE）并记录构建过程中的所有细节。我们首先从三个来源收集三种图像，包括Panoramio [30]，ImageNet [11]和两个固定数据集[7,18]。该系列是全自动的，以避免引入太多的主观偏见。之后，我们调整每个图像的大小，使其最大边长为300像素，并丢弃所有最小边长小于128像素的灰度或彩色图像。最后，我们在三个图像子集中获得29,600个彩色图像。分别表示为Set-P，Set-I, Set-E. Set-P 包含8,800具有地理信息的感兴趣地点的图像（例如，GPS和标签），具有对象标签的Set-I包含19,600图像，以及Set-E包含1,200个人类固定图像**.
+> 为了全面解释什么是什么和什么不是显着对象，一个可行的解决方案是通过观察包含在数据集中或从数据集中丢弃的图像中的对象的主要特征来研究构建新SOD数据集的整个过程。从这些观察中，我们可以推断显着和非显着对象的关键属性以及基于图像的SOD数据集中可能存在的主观偏差。**为此，我们构建了一个大的SOD数据集（称为XPIE）并记录构建过程中的所有细节。我们首先从三个来源收集三种图像，包括Panoramio，ImageNet和两个固定数据集。该系列是全自动的，以避免引入太多的主观偏见。之后，我们调整每个图像的大小，使其最大边长为300像素，并丢弃所有最小边长小于128像素的灰度或彩色图像。最后，我们在三个图像子集中获得29,600个彩色图像。分别表示为Set-P，Set-I, Set-E. Set-P 包含8,800具有地理信息的感兴趣地点的图像（例如，GPS和标签），具有对象标签的Set-I包含19,600图像，以及Set-E包含1,200个人类固定图像**.
 >
 > 对于这些图像，我们要求两位工程师通过两个阶段对其进行注释。在第一阶段，图像被分配一个二进制标记：'是'用于包含非明确对象，否则为'否'。在第一阶段之后，我们将21,002张图片标记为“是”，并且8,598图像标记为“否”。在第二阶段，这两位工程师进一步要求手动标记标记为“是”的10,000张图像中的显着对象的准确边界。注意我们有10名志愿者参与整个过程，以检查注释的质量。**最后，我们获得了10,000张图像的二进制掩码**。
 
@@ -343,39 +323,27 @@ HS-SOD.zip file contains three folders:
 >
 > 我们采用广泛使用的精确回忆曲线来评估我们方法的性能。具体来说，我们使用从0到255的逐渐增加的阈值从显着图中获取二进制图像，并与地面显着对象掩模进行比较以获得精度和回忆。我们选择三种最先进的方法来处理彩色图像，即CNTX [9]，RC [10]，PCA [11]和三种显着性方法，即CURV [16]，SS [13]，DP [14]进行比较。此外，深度图像直接用于显着性图（命名为DEPTH）以评估深度先验
 
----
-
-## Image Pair
-## Cosal2015
-## INCT2016
-## RGBDCoseg183
-## 06RGBDCosal150
-## SegTrackV1/V2
-## ViSal
-## MCL
-## DAVIS
-## UVSD
-## VOS
-
----
-
-## [alphamatting.com](http://alphamatting.com/datasets.php)
+## alphamatting.com
 
 ![1546154705536](./assets/1546154705536.png)
 
-| **Download:**        | Low resolution                                               | High resolution                                              |
-| -------------------* | -----------------------------------------------------------* | -----------------------------------------------------------* |
+* 项目: <http://alphamatting.com/datasets.php>
+
+
+| Download | Low resolution | High resolution |
+| --- | --- | --- |
 | Input images         | [input_training_lowres.zip](http://alphamatting.com/datasets/zip/input_training_lowres.zip) | [input_training_highres.zip](http://alphamatting.com/datasets/zip/input_training_highres.zip) |
 | User input (trimaps) | [trimap_training_lowres.zip](http://alphamatting.com/datasets/zip/trimap_training_lowres.zip) | [trimap_training_highres.zip](http://alphamatting.com/datasets/zip/trimap_training_highres.zip) |
 | Ground truth alpha   | [gt_training_lowres.zip](http://alphamatting.com/datasets/zip/gt_training_lowres.zip) | [gt_training_highres.zip](http://alphamatting.com/datasets/zip/gt_training_highres.zip) |
 
 > 这是图像matting方法的现有基准。它**包括8个测试图像，每个图像有3个不同的三维图形**，即“small”，“large”和“user”
 
-## **Composition-1k: [Deep Image Matting](https://arxiv.org/abs/1703.03872)
+## Composition-1k: Deep Image Matting
 
 ![1546154519720](./assets/1546154519720.png)
 
 * 项目: <https://sites.google.com/view/deepimagematting>
+* 论文: <https://arxiv.org/abs/1703.03872>
 * 下载: Please contact Brian Price (bprice@adobe.com) for the dataset.
 
 > 抠图是一个基本的计算机视觉问题，有许多应用。当图像具有相似的前景色和背景色或复杂的纹理时，先前的算法具有差的性能。主要原因是先前的方法 1）仅使用低级功能和2）缺乏高级上下文。在本文中，我们提出了一种新的基于深度学习的算法，可以解决这两个问题。我们的深层模型有两个部分。第一部分是深度卷积编码器 * 解码器网络，它将图像和相应的trimap作为输入并预测图像的alpha遮罩。第二部分是一个小的卷积网络，它改进了第一个网络的alpha遮罩预测，以获得更准确的alpha值和更清晰的边缘。此外，**我们还创建了一个大型图像抠图数据集，包括49300个训练图像和1000个测试图像**。我们在抠图基准，我们的测试集和各种真实图像上评估我们的算法。实验结果清楚地证明了我们的算法优于以前的方法。
@@ -386,15 +354,13 @@ HS-SOD.zip file contains three folders:
 >
 > 我们将评估3个数据集上的方法。1）我们评估alphamatting.com数据集，这是图像matting方法的现有基准。它**包括8个测试图像，每个图像有3个不同的三维图形**，即“小”，“大”和“用户”。2）由于alphamatting.com数据集中对象的大小和范围有限，**我们提出了Composition-1k测试集。我们基于作品的数据集包括1000个图像和50个独特的前景。此数据集具有更广泛的对象类型和背景场景。**3）为了测量我们在自然图像上的表现，我们还收集了包括31个自然图像的第三个数据集。
 
-## [Semantic Human Matting](https://arxiv.org/abs/1809.01354)
+## Semantic Human Matting
 
 ![1546156688347](./assets/1546156688347.png)
 
 ![dataset](./assets/2018-12-27-11-47-26.png)
 
 * 论文: <https://arxiv.org/abs/1809.01354>
-* 项目: 未知
-* 下载: 未知
 
 > * alpha matting 的資料庫樣本過少，對於深度學習來說首要條件就是資料樣本要多
 > * Shen et al. 此資料庫是透過 CF 以及 KNN 的方式所製造的， 因此有可能該資料庫有bias，不採用。（這部分可搜尋幾個關鍵字： deep learning dataset bias）。
@@ -403,7 +369,7 @@ HS-SOD.zip file contains three folders:
 >
 > https://medium.com/@xiaosean5408/%E6%B7%98%E5%AF%B6%E7%B6%B2%E7%9A%84%E4%BA%BA%E7%89%A9%E6%8F%90%E5%8F%96%E8%AB%96%E6%96%87%E7%B0%A1%E4%BB%8B-semantic-human-matting-52591c3f8e0c
 
-## SOC: [Salient Objects in Clutter: Bringing Salient Object Detection to the Foreground](http://dpfan.net/wp-content/uploads/2018/04/SOCBenchmark.pdf)
+## SOC: Salient Objects in Clutter: Bringing Salient Object Detection to the Foreground
 
 ![1546081178458](./assets/1546081178458.png)
 
@@ -419,27 +385,38 @@ HS-SOD.zip file contains three folders:
     * 1.2K  SOC Test Set (141.86MB) [Here](http://dpfan.net/wp-content/uploads/TestSet.zip)[Baidu](https://pan.baidu.com/s/10y-dx9HCPQm9fnp-Brswgw)[Google](https://drive.google.com/open?id=1ZdKrsk-S4J6KQyjx-cPeL0HoKXy7CCxG)
 
 > 在本文中，我们提供了显着对象检测（SOD）模型的综合评估。我们的分析确定了现有SOD数据集的严重设计偏差，假设每个图像在低杂波中包含至少一个明显突出的显着对象。这是一个不切实际的假设。在现有数据集上进行评估时，设计偏差导致了最先进的SOD模型的饱和高性能。然而，当应用于现实世界的日常场景时，这些模型仍然远远不能令人满意。根据我们的分析，我们首先确定了全面和平衡的数据集应该实现的7个关键方面。然后，我们提出一个新的高质量数据集并更新以前的显着性基准。具体来说，我们的数据集称为SOC，Salient Objects in Clutter，**包括来自日常对象类别的显着和非显着对象的图像**。除了对象类别注释之外，每个突出图像都伴随着反映现实世界场景中常见挑战的属性（例如，外观变化，杂乱），并且可以帮助 1）更深入地了解SOD问题，2）调查专业人员和SOD模型的缺点，3）从不同的角度客观地评估模型。最后，我们在SOC数据集上报告基于属性的性能评估。我们相信，我们的数据集和结果将为未来的显着物体检测研究开辟新的方向。
-
+>
 > 请注意，测试集仅包含图像且没有真值。我们将很快创建SOC Benchmark网站，您可以上传您的结果以获得我们网站的最终得分。此外，您可以先将验证集用作测试集。
 
-## HKU-IS: [Visual Saliency Based on Multiscale Deep Features](http://i.cs.hku.hk/~yzyu/publication/mdfsaliency-cvpr15.pdf)
+## HKU-IS: Visual Saliency Based on Multiscale Deep Features
 
 * 项目: <https://i.cs.hku.hk/~gbli/deep_saliency.html>
+* 论文: <http://i.cs.hku.hk/~yzyu/publication/mdfsaliency-cvpr15.pdf>
 * 下载:
-    * [**Google Drive**](https://drive.google.com/open?id=0BxNhBO0S5JCRQ1N6V25VeVh6cHc&authuser=0)
-    * [**Baidu Yun**](http://pan.baidu.com/s/1c0EpNfM)
+    * [Google Drive](https://drive.google.com/open?id=0BxNhBO0S5JCRQ1N6V25VeVh6cHc&authuser=0)
+    * [Baidu Yun](http://pan.baidu.com/s/1c0EpNfM)
 
 > 数据集包含4447个具有显着对象的像素注释的图像
 >
 > 视觉显着性是包括计算机视觉在内的认知和计算科学中的一个基本问题。在本文中，我们发现可以从使用深度卷积神经网络（CNN）提取的多尺度特征中学习高质量的视觉显着性模型。视觉识别任务的成功。为了学习这样的显着性模型，我们引入了一种神经网络结构，它在CNN顶部具有完全连接的层，负责三个不同尺度的特征提取。然后，我们提出一种改进方法来增强我们的显着性结果的空间一致性。最后，针对不同级别的图像分割计算的聚合多个显着性图可以进一步提高性能，从而产生比由单个分割产生的显着性图更好的显着性图。为了促进对视觉显着性模型的进一步研究和评估，**我们还构建了一个新的大型数据库，包括4447个具有挑战性的图像及其像素显着性注释**。
 
-## DAVIS: [A Benchmark Dataset and Evaluation Methodology for Video Object Segmentation](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Perazzi_A_Benchmark_Dataset_CVPR_2016_paper.pdf)
+## DAVIS: A Benchmark Dataset and Evaluation Methodology for Video Object Segmentation
 
-## aNYU: [Dense Semantic Image Segmentation with Objects and Attributes](http://kylezheng.org/densesegattobjdataset/denseseg4objatt_CVPR2014_Kyle.pdf)
+![img](assets/2019-03-13-11-01-47.png)
+
+* 项目:
+    * 竞赛主页: <https://davischallenge.org/index.html>
+* 论文: <https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Perazzi_A_Benchmark_Dataset_CVPR_2016_paper.pdf>
+* 下载:
+    * [DAVIS 2016](https://davischallenge.org/davis2016/code.html) In each video sequence a single instance is annotated.
+    * [DAVIS 2017](https://davischallenge.org/davis2017/code.html) In each video sequence multiple instances are annotated.
+
+## aNYU: Dense Semantic Image Segmentation with Objects and Attributes
 
 ![1546153000959](./assets/1546153000959.png)
 
 * 项目: <https://kylezheng.org/research-projects/densesegattobj/>
+* 论文: <http://kylezheng.org/densesegattobjdataset/denseseg4objatt_CVPR2014_Kyle.pdf>
 * 下载:
     * NYU: <http://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html>
     * aNYU: <http://www.robots.ox.ac.uk/~szheng/aNYU/aNYU.tar.gz>
@@ -457,7 +434,7 @@ HS-SOD.zip file contains three folders:
 > * 更重要的是，这些步骤是被我内部的注释器执行的，没有任何机器学习专业知识。数据科学家仅仅只是控制和管理这过程。
 > * 注释组由两名成员组成并且这整个过程只花了4天。
 
-## PFCN: [Automatic Portrait Segmentation for Image Stylization](http://xiaoyongshen.me/webpage_portrait/papers/portrait_eg16.pdf)
+## PFCN: Automatic Portrait Segmentation for Image Stylization
 
 ![1546173669466](assets/1546173669466.png)
 
@@ -467,14 +444,16 @@ HS-SOD.zip file contains three folders:
 
 > 肖像画是摄影和绘画的主要艺术形式。在大多数情况下，艺术家试图使主体从周围突出，例如，使其更亮或更锐利。在数字世界中，通过使用适合于图像语义的照相或绘画滤镜处理肖像图像，可以实现类似的效果。虽然存在许多成功的用户指导方法来描绘该主题，但缺乏全自动技术并且产生不令人满意的结果。我们的论文首先通过引入专用于肖像的新自动分割算法来解决这个问题。然后，我们在此结果的基础上，描述了几个利用我们的自动分割算法生成高质量肖像的肖像滤镜。
 
-## [Deep Automatic Portrait Matting](http://www.cse.cuhk.edu.hk/~leojia/projects/automatting/papers/deepmatting.pdf)
+## Deep Automatic Portrait Matting
 
 ![img](assets/2019-01-01-19-31-55.png)
 
 * 论文: <http://www.cse.cuhk.edu.hk/~leojia/projects/automatting/papers/deepmatting.pdf>
-* 项目: <http://www.cse.cuhk.edu.hk/~leojia/projects/automatting/>
-    * 作者对应的页面: http://xiaoyongshen.me/webpages/webpage_automatting/
-* 下载: [Data(zip, 1.15GB)] Please send Email to <goodshenxy@gmail.com> to request it.
+* 项目:
+    * <http://www.cse.cuhk.edu.hk/~leojia/projects/automatting/>
+    * <http://xiaoyongshen.me/webpages/webpage_automatting/>
+* 下载:
+    * [Data(zip, 1.15GB)] Please send Email to <goodshenxy@gmail.com> to request it.
     * 作者自己公开了: https://1drv.ms/u/s!ApwdOxIIFBH19Ts5EuFd9gVJrKTo
 
 > 我们提出了一种用于性状图像的自动图像matting方法。该方法不需要用户交互，这在大多数先前的方法中是必不可少的。为了实现这一目标，提出了一种新的端到端卷积神经网络（CNN）框架，其采用肖像图像的输入。它输出matting的结果。我们的方法不仅考虑图像语义预测，还考虑像素级图像matte优化。一个新的肖像image dataset与我们标记的matting基础事实构成。我们的自动方法通过最先进的方法获得了可比较的结果，该方法需要指定的前景和背景区域或像素。
@@ -492,7 +471,9 @@ HS-SOD.zip file contains three folders:
 ![img](http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion/intro.jpg)
 
 * 项目: <http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion.html>
-* 组织: [Multimedia Laboratory, ](http://mmlab.ie.cuhk.edu.hk/)[The Chinese University of Hong Kong](http://www.cuhk.edu.hk/english/index.html)
+* 组织:
+    * [Multimedia Laboratory](http://mmlab.ie.cuhk.edu.hk/)
+    * [The Chinese University of Hong Kong](http://www.cuhk.edu.hk/english/index.html)
 * 下载: http://pan.baidu.com/s/1i43pnZR (更多细节请见项目主页)
 
 > 我们提供DeepFashion数据库，这是一个大型服装数据库，它有几个吸引人的特性：
@@ -570,19 +551,89 @@ HS-SOD.zip file contains three folders:
 > All images are with image-level annotations
 > 1000+ images are with pixel-level annotations
 
-## 其他的一些数据集来源(待详细分析)
+## HS-SOD: Hyperspectral Image Dataset for Benchmarking on Salient Object Detection
 
-* MediaEval Benchmark http://www.multimediaeval.org/datasets/
-* TC-11 Online Resources http://tc11.cvc.uab.es/datasets/type/
-* CVonline: Image Databases http://homepages.inf.ed.ac.uk/rbf/CVonline/Imagedbase.htm
-   * 中文: https://blog.csdn.net/zhaoliang027/article/details/83376167
-* Mit Saliency Benchmark http://saliency.mit.edu/datasets.html
-   * [Download the MIT300 dataset images.](http://saliency.mit.edu/BenchmarkIMAGES.zip)
-   * [Download the CAT2000 test images.](http://saliency.mit.edu/testSet.zip)
-   * [Download the CAT2000 train images with fixations.](http://saliency.mit.edu/trainSet.zip)
-* CUHK Multimedia Laboratory 有一些数据集: <http://mmlab.ie.cuhk.edu.hk/datasets.html>
+![img](https://github.com/gistairc/HS-SOD/raw/master/images/poster-QoMEX2018.png)
 
-## 参考论文
+![eva](./assets/2018-12-28-22-16-20.png)
 
-* [Salient Object Detection: A Survey](https://arxiv.org/abs/1411.5878)
-* [Review of Visual Saliency Detection with Comprehensive Information](https://arxiv.org/abs/1803.03391)
+* 项目: <https://github.com/gistairc/HS-SOD>
+* 下载: <http://data.airc.aist.go.jp/HS-SOD/HS-SOD.zip> 5.6G
+* 论文: <https://arxiv.org/abs/1806.11314>
+
+> 使用有监督或无监督的方法对着色对象进行了显着的物体检测。最近，一些研究表明，通过在来自天然景观的高光谱图像的可见光谱中使用光谱特征，也可以实现有效的显着对象检测。然而，这些关于高光谱显着物体检测的模型使用从各种在线公共数据集中选择的极少数数据进行测试，这些数据不是为了物体检测目的而特别创建的。因此，在这里，我们的目标是通过发布**具有60个高光谱图像的集合的高光谱显着物体检测数据集**以及**相应的地面实况二值图像**和**代表性的彩色图像（sRGB）**来指导该领域。我们在数据收集过程中考虑了几个方面，例如对象大小的变化，对象的数量，前景-背景对比度，图像上的对象位置等。然后，我们为每个高光谱数据准备了真值二进制图像，其中显著性目标被标记为图像。最后，我们使用曲线下面积（AUC）度量对文献中一些现有的高光谱显着性检测模型进行了性能评估。
+>
+> 这些数据是在东京港口码头公司的许可下，在日本东京台场的东京海滨城市公园收集的。我们在2017年8月至9月期间的几天内收集了数据，当时天气晴朗或部分多云。在每个数据收集日，使用三脚架固定相机以最小化图像上的运动失真。我们尝试根据日光条件尽可能地保持相机设置的曝光时间和增益，同时保持像素值饱和度或图像可见性。作为数据集用户的参考，我们提供相机设置，例如文本文件中每个图像的曝光时间和增益值以及相应的数据。我们也没有对捕获的波段应用标准化。它可以提高前景和背景区域之间色彩对比度更高的高光谱图像的质量;但是，它也可能降低数据集在显着对象检测任务上进行基准测试的难度。
+>
+> 在获得各种高光谱图像后，我们从大约50个不同的场景中选择了60个图像，条件是：i）我们去除了由于场景中的运动引起的失真图像（取决于曝光时间，一个图像可能需要几秒钟才能用于相机），ii）我们考虑了几个方面，如显着物体大小的变化，图像上物体的空间位置，显着物体的数量，前景 * 背景对比度，iii）一些图像具有相同的场景但物体位置，物距或数量对象各不相同。
+>
+> 为了便于显着物体检测任务，我们在可见光谱周围裁剪光谱带，并在传感器暗噪声校正后以“.mat”文件格式保存每个场景的超立方体。如[21]中所定义，可见光谱具有380-780nm的良好可接受范围，但也可以使用[3,4]中的400-700nm范围。为了保持范围广泛和灵活性，想要使用数据集的人，我们在[21]中为我们的数据集选择了380 * 780 nm的定义范围，尽管在人类视觉系统的这些范围的边界处视觉刺激可能较弱。然后，我们使用高光谱图像渲染sRGB彩色图像，通过标记显着对象的边界来创建地面真实显着对象二进制图像。
+
+HS-SOD.zip file contains three folders:
+
+1. hyperspectral: containing 60 hyperspectral images with #spatial rows:768 #spatial columns:1024 #spectral channels:81 (data only within visible spectrum: 380 nm -720 nm)
+2. color: 60 color images of hyperspectral dataset rendered in sRGB for visualization
+3. ground-truth: 60 ground-truth binary images for salient objects
+
+## Baidu People segmentation dataset
+
+* 下载: <http://www.cbsr.ia.ac.cn/users/ynyu/dataset/>
+
+> 这个数据集主要是用于人体整体分割。它由5387张训练图片组成，但是测试图片没有公布。因此训练时可以从5387中随机挑选500张作为验证集，然后4887张作为训练集。参考论文《Early Hierarchical Contexts Learned by CNN for image segmentation》。
+>
+> 原文：https://blog.csdn.net/mou_it/article/details/82225505
+
+## Image Pair
+## Cosal2015
+## INCT2016
+## RGBDCoseg183
+## 06RGBDCosal150
+## SegTrackV1/V2
+## ViSal
+## MCL
+## DAVIS
+## UVSD
+## VOS
+
+## 数据集站点
+
+### 研究机构
+
+* 百度研究院: <https://ai.baidu.com/broad/introduction>
+* 中山大学人机物智能融合实验室: <http://www.sysu-hcp.net/resources/>
+* 大连理工大学IIAU-LAB: <http://ice.dlut.edu.cn/lu/publications.html>
+* CUHK Multimedia Laboratory: <http://mmlab.ie.cuhk.edu.hk/datasets.html>
+
+### 资源站点
+
+#### TC-11 Online Resources
+
+* 项目: <http://tc11.cvc.uab.es/datasets/type/>
+
+#### CVonline: Image Databases
+
+* 项目: <http://homepages.inf.ed.ac.uk/rbf/CVonline/Imagedbase.htm>
+* 中文: <https://blog.csdn.net/zhaoliang027/article/details/83376167>
+
+#### MediaEval Benchmark
+
+* 项目: <http://www.multimediaeval.org/datasets/>
+
+#### Mit Saliency Benchmark
+
+* 项目: <http://saliency.mit.edu/datasets.html>
+* [Download the MIT300 dataset images.](http://saliency.mit.edu/BenchmarkIMAGES.zip)
+* [Download the CAT2000 test images.](http://saliency.mit.edu/testSet.zip)
+* [Download the CAT2000 train images with fixations.](http://saliency.mit.edu/trainSet.zip)
+
+## 参考
+
+### [Salient Object Detection: A Survey](https://arxiv.org/abs/1411.5878)
+
+![img](./assets/2018-12-29-17-06-42.png)
+
+详细评估: <https://mmcheng.net/zh/salobjbenchmark/> (这里展示了{THUR15K, JuddDB, DUT-OMRON, SED2, MSRA10K, ECSSD}六种数据集的一个榜单).
+
+### [Review of Visual Saliency Detection with Comprehensive Information](https://arxiv.org/abs/1803.03391)
+
+![dataset](./assets/2018-12-27-11-05-49.png)
