@@ -1,72 +1,70 @@
-# Segmentation/Saliency-Dataset
+# Segmentation and Saliency-Dataset
+
+[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
 > Please **cite related paper** if you **use their dataset**
+> Every item need some images, links, and introductions...
 
-* [Segmentation/Saliency-Dataset](#segmentationsaliency-dataset)
-  * [MSRA](#msra)
-  * [SED1/2](#sed12)
-  * [ASD(MSRA1000/MSRA1K)](#asdmsra1000msra1k)
-  * [DUT-OMRON](#dut-omron)
-  * [DUTS](#duts)
-  * [SOD](#sod)
-  * [iCoSeg](#icoseg)
-  * [Infrared](#infrared)
-  * [ImgSal](#imgsal)
-  * [ECSSD/CSSD](#ecssdcssd)
-  * [THUR15K](#thur15k)
-  * [Bruce-A](#bruce-a)
-  * [Judd-A](#judd-a)
-  * [PASCAL-S](#pascal-s)
-  * [UCSB](#ucsb)
-  * [OSIE](#osie)
-  * [RSD(PKU-RSD)](#rsdpku-rsd)
-  * [STC](#stc)
-  * [ACSD](#acsd)
-  * [XPIE](#xpie)
-  * [NLPR](#nlpr)
-  * [NJUD](#njud)
-  * [alphamatting.com](#alphamattingcom)
-  * [Composition-1k: Deep Image Matting](#composition-1k-deep-image-matting)
-  * [Semantic Human Matting](#semantic-human-matting)
-  * [SOC: Salient Objects in Clutter: Bringing Salient Object Detection to the Foreground](#soc-salient-objects-in-clutter-bringing-salient-object-detection-to-the-foreground)
-  * [HKU-IS: Visual Saliency Based on Multiscale Deep Features](#hku-is-visual-saliency-based-on-multiscale-deep-features)
-  * [DAVIS: A Benchmark Dataset and Evaluation Methodology for Video Object Segmentation](#davis-a-benchmark-dataset-and-evaluation-methodology-for-video-object-segmentation)
-  * [aNYU: Dense Semantic Image Segmentation with Objects and Attributes](#anyu-dense-semantic-image-segmentation-with-objects-and-attributes)
-  * [Supervisely人像数据集](#supervisely人像数据集)
-  * [PFCN: Automatic Portrait Segmentation for Image Stylization](#pfcn-automatic-portrait-segmentation-for-image-stylization)
-  * [Deep Automatic Portrait Matting](#deep-automatic-portrait-matting)
-  * [Large-scale Fashion (DeepFashion) Database](#large-scale-fashion-deepfashion-database)
-  * [Clothing Parsing](#clothing-parsing)
-  * [HumanParsing-Dataset](#humanparsing-dataset)
-  * [Look into Person (LIP)](#look-into-person-lip)
-  * [Taobao Commodity Dataset](#taobao-commodity-dataset)
-  * [Object Extraction Dataset](#object-extraction-dataset)
-  * [Clothing Co-Parsing (CCP) Dataset](#clothing-co-parsing-ccp-dataset)
-  * [HS-SOD: Hyperspectral Image Dataset for Benchmarking on Salient Object Detection](#hs-sod-hyperspectral-image-dataset-for-benchmarking-on-salient-object-detection)
-  * [Baidu People segmentation dataset](#baidu-people-segmentation-dataset)
-  * [Image Pair](#image-pair)
-  * [Cosal2015](#cosal2015)
-  * [INCT2016](#inct2016)
-  * [RGBDCoseg183](#rgbdcoseg183)
-  * [06RGBDCosal150](#06rgbdcosal150)
-  * [SegTrackV1/V2](#segtrackv1v2)
-  * [ViSal](#visal)
-  * [MCL](#mcl)
-  * [DAVIS](#davis)
-  * [UVSD](#uvsd)
-  * [VOS](#vos)
-  * [数据集站点](#数据集站点)
-    * [研究机构](#研究机构)
-    * [资源站点](#资源站点)
-      * [TC-11 Online Resources](#tc-11-online-resources)
-      * [CVonline: Image Databases](#cvonline-image-databases)
-      * [MediaEval Benchmark](#mediaeval-benchmark)
-      * [Mit Saliency Benchmark](#mit-saliency-benchmark)
-  * [参考](#参考)
+* [Segmentation and Saliency-Dataset](#segmentation-and-saliency-dataset)
+  * [Saliency Detection](#saliency-detection)
+    * [MSRA](#msra)
+    * [SED1/2](#sed12)
+    * [ASD(MSRA1000/MSRA1K)](#asdmsra1000msra1k)
+    * [DUT-OMRON](#dut-omron)
+    * [DUTS](#duts)
+    * [SOD](#sod)
+    * [iCoSeg](#icoseg)
+    * [Infrared[need help]](#infraredneed-help)
+    * [ImgSal](#imgsal)
+    * [ECSSD/CSSD](#ecssdcssd)
+    * [THUR15K](#thur15k)
+    * [Bruce-A[need help]](#bruce-aneed-help)
+    * [Judd-A[need help]](#judd-aneed-help)
+    * [PASCAL-S](#pascal-s)
+    * [UCSB[need help]](#ucsbneed-help)
+    * [OSIE[need help]](#osieneed-help)
+    * [RSD(PKU-RSD)](#rsdpku-rsd)
+    * [STC[need help]](#stcneed-help)
+    * [ACSD](#acsd)
+    * [XPIE](#xpie)
+    * [NLPR](#nlpr)
+    * [NJUD](#njud)
+    * [SOC](#soc)
+    * [HKU-IS[need help]](#hku-isneed-help)
+    * [HS-SOD](#hs-sod)
+    * [need your help...](#need-your-help)
+  * [Segmentation](#segmentation)
+    * [General[need help]](#generalneed-help)
+      * [DAVIS](#davis)
+      * [aNYU](#anyu)
+    * [About Person](#about-person)
+      * [Supervisely人像数据集](#supervisely人像数据集)
+      * [Clothing Parsing](#clothing-parsing)
+      * [HumanParsing-Dataset](#humanparsing-dataset)
+      * [Look into Person (LIP)](#look-into-person-lip)
+      * [Taobao Commodity Dataset](#taobao-commodity-dataset)
+      * [Object Extraction Dataset](#object-extraction-dataset)
+      * [Clothing Co-Parsing (CCP) Dataset](#clothing-co-parsing-ccp-dataset)
+      * [Baidu People segmentation dataset[need help]](#baidu-people-segmentation-datasetneed-help)
+  * [Matting](#matting)
+    * [alphamatting.com](#alphamattingcom)
+    * [Composition-1k: Deep Image Matting](#composition-1k-deep-image-matting)
+    * [Semantic Human Matting](#semantic-human-matting)
+    * [PFCN](#pfcn)
+    * [Deep Automatic Portrait Matting](#deep-automatic-portrait-matting)
+  * [Other](#other)
+    * [Large-scale Fashion (DeepFashion) Database](#large-scale-fashion-deepfashion-database)
+  * [Reference](#reference)
     * [Salient Object Detection: A Survey](#salient-object-detection-a-survey)
     * [Review of Visual Saliency Detection with Comprehensive Information](#review-of-visual-saliency-detection-with-comprehensive-information)
+  * [More[need help]](#moreneed-help)
+    * [Similiar Projects](#similiar-projects)
+    * [Research Institutes](#research-institutes)
+    * [Resource Websites](#resource-websites)
 
-## MSRA
+## Saliency Detection
+
+### MSRA
 
 ![img](https://mmcheng.net/wp-content/uploads/2014/07/MSRA10K.jpg)
 
@@ -85,7 +83,7 @@
 >
 > 标记一致性。对于每个要标记的图像，我们请用户绘制一个矩形，该矩形包围图像中最大的对象根据他/她自己的理解。由不同用户标记的矩形通常不相同。为了减少标签的不一致性，我们从多个用户绘制的矩形中选择一个“真实”标签。
 
-## SED1/2
+### SED1/2
 
 * 单目标
 
@@ -108,7 +106,7 @@
 
 > 这项工作的目的是为图像分割研究提供经验和科学依据。评估分割算法产生的结果具有挑战性，因为很难提出提供基础真实分割的规范测试集。这部分是因为在日常复杂图像中手动描绘片段可能是费力的。此外，人们往往倾向于将语义考虑纳入其分段中，这超出了数据驱动的分割算法的范围。因此，许多现有算法仅显示很少的分割结果。为了评估由不同算法产生的分割，我们编制了一个数据库，目前**包含200个灰度图像以及真实标注分割**。该数据库专门设计用于避免潜在的模糊，仅通过仅通过强度，纹理或其他低水平线索合并清晰描绘前景中与其周围环境不同的一个或两个物体的图像。通过要求人类对象手动地将灰度图像（还提供颜色源）分成两个或三个类别来获得地面真实分割，其中**每个图像由三个不同的人类对象分割**。通过评估其与真实分割的一致性及其碎片量来评估分割。与此数据库评估一起，我们提供了用于评估给定分割算法的代码。这样，不同的分割算法可能具有可比较的结果以获得更多细节，请参阅“评估测试”部分。
 
-## ASD(MSRA1000/MSRA1K)
+### ASD(MSRA1000/MSRA1K)
 
 * T. Liu, J. Sun, N.-N. Zheng, X. Tang, and H.-Y. Shum, “[Learning to detect a salient object](http://research.microsoft.com/en-us/um/people/jiansun/salientobject/salient_object.htm),” in *Proc. IEEE Conf. Comput. Vis. Pattern Recognit.*, 2007, pp. 1–8.
 * R. Achanta, S. Hemami, F. Estrada, and S. Süsstrunk, “[Frequency-tuned salient region detection](http://ivrlwww.epfl.ch/supplementary_material/RK_CVPR09/),” in *Proc. IEEE Conf. Comput. Vis. Pattern Recognit.*, 2009, pp. 1597–1604.
@@ -122,9 +120,9 @@
 >
 > 上面下载到的标注图尺寸被统一改为512*512，所以这里在给个地址：[ASD尺寸一致](http://download.csdn.net/detail/zzb4702/9559378)
 
-## DUT-OMRON
+### DUT-OMRON
 
-![cover.jpg](http://saliencydetection.net/dut-omron/imgs/cover.jpg)
+![img](assets/2019-03-22-18-45-56.png)
 
 * 论文: C. Yang, L. Zhang, H. Lu, X. Ruan, and M.-H. Yang, “[Saliency detection via graph-based manifold ranking](http://saliencydetection.net/dut-omron/),” in *Proc. IEEE Conf. Comput. Vis. Pattern Recognit.*, 2013, pp. 3166–3173.
 * 项目: <http://saliencydetection.net/dut-omron/#outline-container-org0e04792>
@@ -134,7 +132,7 @@
 >
 > 我们的数据集是唯一一个具有眼睛固定，边界框和像素方面的大规模真实标注的数据集。与ASD和MSRA数据集以及其他一些眼睛固定数据集（即MIT和NUSEF数据集）相比，数据集中的图像更加困难，因此更具挑战性，并为相关的显着性研究提供了更多的改进空间。
 
-## DUTS
+### DUTS
 
 * 项目: <http://saliencydetection.net/duts/>
 
@@ -146,9 +144,9 @@
 >
 > For fair comparison in the future research, the training set of DUTS serves as a good candidate for learning DNNs, while the test set and other public data sets can be used for evaluation.
 
-## SOD
+### SOD
 
-![img](http://elderlab.yorku.ca/SOD/SODweb.jpg)
+![img](assets/2019-03-22-18-46-40.png)
 
 * 项目: <http://elderlab.yorku.ca/SOD/>
 * 下载(官方): <http://elderlab.yorku.ca/SOD/SOD.zip>
@@ -160,7 +158,7 @@
 >
 > Note that the original images are available from the Berkely Segmentation Dataset at: [http://www.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/segbench/](http://www.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/segbench/)
 
-## iCoSeg
+### iCoSeg
 
 ![1546085516505](./assets/1546085516505.png)
 
@@ -170,7 +168,7 @@
 
 > 我们引入了38组（643幅图像）中最大的公开可用的 co-segmentation，以及像素标注真值。
 
-## Infrared
+### Infrared[need help]
 
 * 项目: <https://ivrl.epfl.ch/research-2/research-downloads/supplementary_material-cvpr11-index-html/>
 * 论文: <http://infoscience.epfl.ch/record/167478>
@@ -178,7 +176,7 @@
 
 > 我们使用对传统SLR相机的简单修改来捕获数百个彩色（RGB）和近红外（NIR）场景的图像。我们表明，近红外信息的添加导致场景识别任务中的性能显着提高，并且当使用适当的4维颜色表示时，改进仍然更大。特别地，我们提出了MSIFT-一种多光谱SIFT描述符，当与基于内核的分类器结合时，超过了现有技术的场景识别技术（例如GIST）及其多光谱扩展的性能。我们使用数百个RGB-NIR场景图像的新数据集对我们的算法进行了广泛的测试，并对Torralba的场景分类数据集进行了基准测试。
 
-## ImgSal
+### ImgSal
 
 ![1546087781641](./assets/1546087781641.png)
 
@@ -195,9 +193,9 @@
 >
 > 图像集使用Google以及参考最近的文献收集了包含235张图像的数据库。此数据库中的图像为480 x 640像素，分为6类：1）50个具有大显着区域的图像;2）具有中间显着区域的80幅图像;3）具有小显着区域的60幅图像;4）背景杂乱的15幅图像;5）带有重复干扰物的15张图像;6）具有大和小显着区域的15个图像。
 
-## ECSSD/CSSD
+### ECSSD/CSSD
 
-![dataset overview](http://www.cse.cuhk.edu.hk/leojia/projects/hsaliency/figures/dataset_large_new4.jpg)
+![img](assets/2019-03-22-18-47-32.png)
 
 * 下载: <http://www.cse.cuhk.edu.hk/leojia/projects/hsaliency/dataset.html>
     * ECSSD (1000 images)
@@ -211,7 +209,7 @@
 
 > 虽然MSRA-1000的图像内容种类繁多，但背景结构主要是简单而流畅。为了表示自然图像通常落入的情况，我们将[1]中的复杂场景显着性数据集（CSSD）扩展到包含1000个图像的更大数据集（ECSSD）[2]，其中包含许多语义上有意义但结构复杂的图像用于评估。这些图像是从互联网上获取的，并要求5名助手制作地面真相面具。上面显示了几个带有相应掩模的例子。
 
-## THUR15K
+### THUR15K
 
 ![1546088375285](./assets/1546088375285.png)
 
@@ -225,15 +223,15 @@
 >
 > 我们引入了分类图像的标记数据集，用于评估基于草图的图像检索。我们为5个关键字中的每一个下载了大约3000张图像：“蝴蝶”，“咖啡杯”，“狗跳”，“长颈鹿”和“平面”，一起包括大约15000张图像。**对于每个图像，如果存在具有与查询关键字匹配的正确内容的非模糊对象并且对象的大部分可见，则我们标记这样的对象区域。与MSRA10K类似，显着区域以像素级别标记。我们只标记几乎完全可见的对象的显着对象区域，因为部分遮挡的对象对形状匹配不太有用。与MSRA10K不同，THUR15K数据集不包含为数据集中的每个图像标记的显着区域，即，一些图像可能没有任何显着区域。该数据集用于评估基于形状的图像检索性能。**
 
-## Bruce-A
+### Bruce-A[need help]
 
 * 论文: <https://papers.nips.cc/paper/2830-saliency-based-on-information-maximization.pdf>
 
-## Judd-A
+### Judd-A[need help]
 
 * 论文: <http://people.csail.mit.edu/torralba/publications/wherepeoplelook.pdf>
 
-## PASCAL-S
+### PASCAL-S
 
 ![img](https://ccvl.jhu.edu/datasets/assets/pascal_salient_object.jpg)
 
@@ -243,18 +241,18 @@
 
 > 对来自PASCAL VOC的850张图像子集的自由修复。收集8个主题，3s观看时间，Eyelink II眼动仪。大多数算法的性能表明PASCAL-S比大多数显着性数据集偏差更小。
 
-## UCSB
+### UCSB[need help]
 
 * 论文: <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3954044/>
 * 下载: <https://labs.psych.ucsb.edu/eckstein/miguel/research_pages/saliencydata.html>
 
-## OSIE
+### OSIE[need help]
 
 * 论文: <https://jov.arvojournals.org/article.aspx?articleid=2193943>
 
 > 大量先前的模型用于预测人们在自然场景中的外观，侧重于像素级图像属性。为了弥合计算显着性模型的预测能力与人类行为之间的语义差距，我们提出了一种新的显着性体系结构，它将信息分为三个层次：像素级图像属性，对象级属性和语义级属性。通常忽略对象和语义级别信息，或者仅讨论少数样本对象类别，其中缩放到大量对象类别是不可行的，也不是神经合理的。为了解决这个问题，这项工作构建了一个基本属性的原则词汇表来描述对象和语义级信息，从而不限制有限数量的对象类别。我们**建立了一个包含500个图像的新数据集，其中包含15个观察者的眼动追踪数据和5,551个具有精细轮廓和12个语义属性的分段对象的注释数据**（可在论文中公开获得）。实验结果证明了对象和语义级信息在预测视觉注意力方面的重要性。
 
-## RSD(PKU-RSD)
+### RSD(PKU-RSD)
 
 ![samples of RSD](https://pkuml.org/wp-content/uploads/2014/12/samples-of-RSD-1024x271.png)
 
@@ -264,14 +262,14 @@
 
 > 我们构建了这个PKU-RSD（区域显着性数据集）数据集，可以捕获时空视觉显着性，用于评估不同的视频显着性模型。该数据集包含431个短视频，其涵盖各种场景（监视，广告，新闻，卡通，电影等）以及由23个主题手动标记的采样关键帧中的显着对象的相应注释结果。
 
-## STC
+### STC[need help]
 
 * 论文: [Y. Wu, N. Zheng, Z. Yuan, H. Jiang, and T. Liu, “Detection of salient objects with focused attention based on spatial and temporal coherence,” Chinese Science Bulletin, vol. 56, pp. 1055–1062, 2011.](https://pdfs.semanticscholar.org/3347/c330ac5586020ebea60823b1fd4e8d68e936.pdf?_ga=2.181072804.269179473.1546092428-61549168.1544104573)
 * 下载: This dataset is freely available from the author
 
-> 对视频内容的理解和分析对于众多应用程序来说至关重要，包括视频摘要，检索，导航和编辑。此过程的一个重要部分是检测视频片段中的显着（通常意味着重要和有趣）对象。与现有方法不同，我们提出了一种将显着性测量与空间和时间相干性相结合的方法。空间和时间一致性的整合受到人类视觉中关注焦点的启发。在所提出的方法中，低级视觉分组线索的空间相干性（例如外观和运动）有助于每帧对象 * 背景分离，而对象属性的时间一致性（例如形状和外观）确保一致物体随时间定位，因此该方法对于意外的环境变化和相机振动是鲁棒的。在**开发了基于粗到细多尺度动态规划的有效优化策略之后，我们使用可与本文一起免费获得的具有挑战性的数据集来评估我们的方法**。我们展示了两种类型的一致性的有效性和互补性，并证明它们可以显着提高视频中显着对象检测的性能。
+> 对视频内容的理解和分析对于众多应用程序来说至关重要，包括视频摘要，检索，导航和编辑。此过程的一个重要部分是检测视频片段中的显着（通常意味着重要和有趣）对象。与现有方法不同，我们提出了一种将显着性测量与空间和时间相干性相结合的方法。空间和时间一致性的整合受到人类视觉中关注焦点的启发。在所提出的方法中，低级视觉分组线索的空间相干性（例如外观和运动）有助于每帧对象背景分离，而对象属性的时间一致性（例如形状和外观）确保一致物体随时间定位，因此该方法对于意外的环境变化和相机振动是鲁棒的。在**开发了基于粗到细多尺度动态规划的有效优化策略之后，我们使用可与本文一起免费获得的具有挑战性的数据集来评估我们的方法**。我们展示了两种类型的一致性的有效性和互补性，并证明它们可以显着提高视频中显着对象检测的性能。
 
-## ACSD
+### ACSD
 
 ![1546135560011](./assets/1546135560011.png)
 
@@ -283,7 +281,7 @@
 
 > 我们从[Z. Wang and B. Li. A two-stage approach to saliency detection in images. ICASSP 2008.]中提出的1000个图像中获得了一个真实数据库。[Z. Wang and B. Li. A two-stage approach to saliency detection in images. ICASSP 2008.]中的基本事实是在显着区域周围的用户绘制的矩形。这是不准确的，并将多个对象合二为一。我们手动分割用户绘制的矩形内的显着对象以获得二进制掩码，如下所示。这样的掩膜既准确又允许我们清楚地处理多个显着对象。
 
-## XPIE
+### XPIE
 
 ![1546137404871](./assets/1546137404871.png)
 
@@ -298,7 +296,7 @@
 >
 > 对于这些图像，我们要求两位工程师通过两个阶段对其进行注释。在第一阶段，图像被分配一个二进制标记：'是'用于包含非明确对象，否则为'否'。在第一阶段之后，我们将21,002张图片标记为“是”，并且8,598图像标记为“否”。在第二阶段，这两位工程师进一步要求手动标记标记为“是”的10,000张图像中的显着对象的准确边界。注意我们有10名志愿者参与整个过程，以检查注释的质量。**最后，我们获得了10,000张图像的二进制掩码**。
 
-## NLPR
+### NLPR
 
 ![1546138815074](./assets/1546138815074.png)
 
@@ -308,7 +306,7 @@
 
 > 虽然深度信息在人类视觉系统中起着重要作用，但在现有的视觉显着性计算模型中尚未得到很好的探索。在这项工作中，**我们首先引入了一个大规模的RGBD图像数据集，以解决目前RGBD显着对象检测研究中数据不足的问题**。为了确保大多数现有的RGB显着模型在RGBD场景中仍然足够，我们继续提供一个简单的融合框架，将现有的RGB产生的显着性与新的深度诱导显着性相结合，前者是从现有的RGB模型中估算的，而前者是后者基于提出的多上下文对比模型。此外，还提出了一种专门的多阶段RGBD模型，其考虑了来自低级特征对比度，中级区域分组和高级先验增强的深度和外观线索。大量实验表明，我们的模型能够准确定位RGBD图像中的显着对象，并为目标对象分配一致的显着性值。
 
-## NJUD
+### NJUD
 
 ![1546139249376](./assets/1546139249376.png)
 
@@ -323,7 +321,192 @@
 >
 > 我们采用广泛使用的精确回忆曲线来评估我们方法的性能。具体来说，我们使用从0到255的逐渐增加的阈值从显着图中获取二进制图像，并与地面显着对象掩模进行比较以获得精度和回忆。我们选择三种最先进的方法来处理彩色图像，即CNTX [9]，RC [10]，PCA [11]和三种显着性方法，即CURV [16]，SS [13]，DP [14]进行比较。此外，深度图像直接用于显着性图（命名为DEPTH）以评估深度先验
 
-## alphamatting.com
+### SOC
+
+![1546081178458](./assets/1546081178458.png)
+
+![1546081446332](./assets/1546081446332.png)
+
+* 项目: <http://dpfan.net/SOCBenchmark/>
+* 论文：[Salient Objects in Clutter: Bringing Salient Object Detection to the Foreground](http://dpfan.net/wp-content/uploads/2018/04/SOCBenchmark.pdf)
+    * 中文: <http://dpfan.net/wp-content/uploads/SOCBenchmarkCN.pdf>
+* 下载:
+    * Overall 6K SOC Dataset  (730.2MB)  [Baidu](https://pan.baidu.com/s/1J8_CF7zE1zApqgAR9eS1Dw)[Google](https://drive.google.com/file/d/1hfo33A7diED2dikTpN9o4KnZTxizGdLr/view?usp=sharing)
+    * 3.6K SOC Training Set (441.32MB) [Here](http://dpfan.net/wp-content/uploads/TrainSet.zip)[Baidu](https://pan.baidu.com/s/1Mao0piUuqVXAzmJoNtrtAw)[Google](https://drive.google.com/open?id=16jlzeJJ1tawyBLBN5fRiWbh2y_F0iSyP)
+    * 1.2K  SOC Validation Set (146.56MB) [Here](http://dpfan.net/wp-content/uploads/ValSet.zip)[Baidu](https://pan.baidu.com/s/1mOmiezCpkr5NCQk8ecvGiQ)[Google](https://drive.google.com/open?id=1vAfP8fCAo2a2KwgsmYLn8r8Rk4Lk7Urr)
+    * 1.2K  SOC Test Set (141.86MB) [Here](http://dpfan.net/wp-content/uploads/TestSet.zip)[Baidu](https://pan.baidu.com/s/10y-dx9HCPQm9fnp-Brswgw)[Google](https://drive.google.com/open?id=1ZdKrsk-S4J6KQyjx-cPeL0HoKXy7CCxG)
+
+> 在本文中，我们提供了显着对象检测（SOD）模型的综合评估。我们的分析确定了现有SOD数据集的严重设计偏差，假设每个图像在低杂波中包含至少一个明显突出的显着对象。这是一个不切实际的假设。在现有数据集上进行评估时，设计偏差导致了最先进的SOD模型的饱和高性能。然而，当应用于现实世界的日常场景时，这些模型仍然远远不能令人满意。根据我们的分析，我们首先确定了全面和平衡的数据集应该实现的7个关键方面。然后，我们提出一个新的高质量数据集并更新以前的显着性基准。具体来说，我们的数据集称为SOC，Salient Objects in Clutter，**包括来自日常对象类别的显着和非显着对象的图像**。除了对象类别注释之外，每个突出图像都伴随着反映现实世界场景中常见挑战的属性（例如，外观变化，杂乱），并且可以帮助 1）更深入地了解SOD问题，2）调查专业人员和SOD模型的缺点，3）从不同的角度客观地评估模型。最后，我们在SOC数据集上报告基于属性的性能评估。我们相信，我们的数据集和结果将为未来的显着物体检测研究开辟新的方向。
+>
+> 请注意，测试集仅包含图像且没有真值。我们将很快创建SOC Benchmark网站，您可以上传您的结果以获得我们网站的最终得分。此外，您可以先将验证集用作测试集。
+
+### HKU-IS[need help]
+
+* 项目: <https://i.cs.hku.hk/~gbli/deep_saliency.html>
+* 论文: [Visual Saliency Based on Multiscale Deep Features](http://i.cs.hku.hk/~yzyu/publication/mdfsaliency-cvpr15.pdf)
+* 下载:
+    * [Google Drive](https://drive.google.com/open?id=0BxNhBO0S5JCRQ1N6V25VeVh6cHc&authuser=0)
+    * [Baidu Yun](http://pan.baidu.com/s/1c0EpNfM)
+
+> 数据集包含4447个具有显着对象的像素注释的图像
+>
+> 视觉显着性是包括计算机视觉在内的认知和计算科学中的一个基本问题。在本文中，我们发现可以从使用深度卷积神经网络（CNN）提取的多尺度特征中学习高质量的视觉显着性模型。视觉识别任务的成功。为了学习这样的显着性模型，我们引入了一种神经网络结构，它在CNN顶部具有完全连接的层，负责三个不同尺度的特征提取。然后，我们提出一种改进方法来增强我们的显着性结果的空间一致性。最后，针对不同级别的图像分割计算的聚合多个显着性图可以进一步提高性能，从而产生比由单个分割产生的显着性图更好的显着性图。为了促进对视觉显着性模型的进一步研究和评估，**我们还构建了一个新的大型数据库，包括4447个具有挑战性的图像及其像素显着性注释**。
+
+### HS-SOD
+
+![img](https://github.com/gistairc/HS-SOD/raw/master/images/poster-QoMEX2018.png)
+
+![eva](./assets/2018-12-28-22-16-20.png)
+
+* 项目: <https://github.com/gistairc/HS-SOD>
+* 下载: <http://data.airc.aist.go.jp/HS-SOD/HS-SOD.zip> 5.6G
+* 论文: [Hyperspectral Image Dataset for Benchmarking on Salient Object Detection](https://arxiv.org/abs/1806.11314)
+
+> 使用有监督或无监督的方法对着色对象进行了显着的物体检测。最近，一些研究表明，通过在来自天然景观的高光谱图像的可见光谱中使用光谱特征，也可以实现有效的显着对象检测。然而，这些关于高光谱显着物体检测的模型使用从各种在线公共数据集中选择的极少数数据进行测试，这些数据不是为了物体检测目的而特别创建的。因此，在这里，我们的目标是通过发布**具有60个高光谱图像的集合的高光谱显着物体检测数据集**以及**相应的地面实况二值图像**和**代表性的彩色图像（sRGB）**来指导该领域。我们在数据收集过程中考虑了几个方面，例如对象大小的变化，对象的数量，前景-背景对比度，图像上的对象位置等。然后，我们为每个高光谱数据准备了真值二进制图像，其中显著性目标被标记为图像。最后，我们使用曲线下面积（AUC）度量对文献中一些现有的高光谱显着性检测模型进行了性能评估。
+>
+> 这些数据是在东京港口码头公司的许可下，在日本东京台场的东京海滨城市公园收集的。我们在2017年8月至9月期间的几天内收集了数据，当时天气晴朗或部分多云。在每个数据收集日，使用三脚架固定相机以最小化图像上的运动失真。我们尝试根据日光条件尽可能地保持相机设置的曝光时间和增益，同时保持像素值饱和度或图像可见性。作为数据集用户的参考，我们提供相机设置，例如文本文件中每个图像的曝光时间和增益值以及相应的数据。我们也没有对捕获的波段应用标准化。它可以提高前景和背景区域之间色彩对比度更高的高光谱图像的质量;但是，它也可能降低数据集在显着对象检测任务上进行基准测试的难度。
+>
+> 在获得各种高光谱图像后，我们从大约50个不同的场景中选择了60个图像，条件是：i）我们去除了由于场景中的运动引起的失真图像（取决于曝光时间，一个图像可能需要几秒钟才能用于相机），ii）我们考虑了几个方面，如显着物体大小的变化，图像上物体的空间位置，显着物体的数量，前景 * 背景对比度，iii）一些图像具有相同的场景但物体位置，物距或数量对象各不相同。
+>
+> 为了便于显着物体检测任务，我们在可见光谱周围裁剪光谱带，并在传感器暗噪声校正后以“.mat”文件格式保存每个场景的超立方体。如[21]中所定义，可见光谱具有380-780nm的良好可接受范围，但也可以使用[3,4]中的400-700nm范围。为了保持范围广泛和灵活性，想要使用数据集的人，我们在[21]中为我们的数据集选择了380 * 780 nm的定义范围，尽管在人类视觉系统的这些范围的边界处视觉刺激可能较弱。然后，我们使用高光谱图像渲染sRGB彩色图像，通过标记显着对象的边界来创建地面真实显着对象二进制图像。
+
+HS-SOD.zip file contains three folders:
+
+1. hyperspectral: containing 60 hyperspectral images with #spatial rows:768 #spatial columns:1024 #spectral channels:81 (data only within visible spectrum: 380 nm -720 nm)
+2. color: 60 color images of hyperspectral dataset rendered in sRGB for visualization
+3. ground-truth: 60 ground-truth binary images for salient objects
+
+### need your help...
+
+* Image Pair
+* Cosal2015
+* INCT2016
+* RGBDCoseg183
+* 06RGBDCosal150
+* SegTrackV1/V2
+* ViSal
+* MCL
+* UVSD
+* VOS
+
+## Segmentation
+
+### General[need help]
+
+#### DAVIS
+
+![img](assets/2019-03-13-11-01-47.png)
+
+* 项目:
+    * 竞赛主页: <https://davischallenge.org/index.html>
+* 论文: [A Benchmark Dataset and Evaluation Methodology for Video Object Segmentation](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Perazzi_A_Benchmark_Dataset_CVPR_2016_paper.pdf)
+* 下载:
+    * [DAVIS 2016](https://davischallenge.org/davis2016/code.html) In each video sequence a single instance is annotated.
+    * [DAVIS 2017](https://davischallenge.org/davis2017/code.html) In each video sequence multiple instances are annotated.
+
+#### aNYU
+
+![img](./assets/1546153000959.png)
+
+* 项目: <https://kylezheng.org/research-projects/densesegattobj/>
+* 论文: [Dense Semantic Image Segmentation with Objects and Attributes](http://kylezheng.org/densesegattobjdataset/denseseg4objatt_CVPR2014_Kyle.pdf)
+* 下载:
+    * NYU: <http://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html>
+    * aNYU: <http://www.robots.ox.ac.uk/~szheng/aNYU/aNYU.tar.gz>
+
+> 我们的第一组实验是关于来自NYU V2 dataset的RGB图像。如图3所示，我们添加了8个附加属性标签，即木制，彩绘，棉花，玻璃，光面，塑料，闪亮和纹理。我们要求3个注释者在每个分割地面真实区域上分配材料，表面属性属性。Wethen将3名工作者的多数票作为我们的8个附加属性标签。我们将此扩展数据集称为attribute NYU（aNYU）数据集。**该数据集从28个不同的室内场景中收集了1449个图像。**在我们的实验中，我们选择了具有足够数量实例的15个对象类和8个属性来训练unary potential。此外，**我们随机地将数据集分成训练集的725个图像，验证集的100个，以及测试集的624个。**
+
+### About Person
+
+#### Supervisely人像数据集
+
+![img](https://static.leiphone.com/uploads/new/article/740_740/201804/5acb1719a6252.png?imageMogr2/format/jpg/quality/90)
+
+* 项目: <https://supervise.ly/>
+
+> * 数据集 **由5711张图片组成，有6884个高质量的标注的人体实例**。
+> * 下面的所有步骤在Supervisely内部完成的，没有任何编码。
+> * 更重要的是，这些步骤是被我内部的注释器执行的，没有任何机器学习专业知识。数据科学家仅仅只是控制和管理这过程。
+> * 注释组由两名成员组成并且这整个过程只花了4天。
+
+#### Clothing Parsing
+
+![img](http://vision.is.tohoku.ac.jp/~kyamagu/research/clothing_parsing/clothing.png)
+
+* 项目 :
+    * <http://vision.is.tohoku.ac.jp/~kyamagu/research/clothing_parsing/>
+    * <http://vision.is.tohoku.ac.jp/~kyamagu/research/paperdoll/>
+
+> In this paper we demonstrate an effective method for parsing clothing in fashion photographs, an extremely challenging problem due to the large number of possible garment items, variations in configuration, garment appearance, layering, and occlusion. In addition, we provide a large novel dataset and tools for labeling garment items, to enable future research on clothing estimation. Finally, we present intriguing initial results on using clothing estimates to improve pose identification, and demonstrate a prototype application for pose-independent visual garment retrieval.
+
+#### HumanParsing-Dataset
+
+![img](assets/2019-03-22-19-14-03.png)
+
+* 项目:
+    * <https://github.com/lemondan/HumanParsing-Dataset>
+    * <http://www.sysu-hcp.net/deep-human-parsing/>
+    * <https://vuhcs.github.io/>
+* 组织: <http://sysu-hcp.net/>
+* 下载:  <http://pan.baidu.com/s/1qY8bToS> *passwd：kjgk*
+
+> This human parsing dataset includes the detailed pixel-wise annotations for fashion images, which is proposed in our TPAMI paper “Deep Human Parsing with Active Template Regression”, and ICCV 2015 paper “Human Parsing with Contextualized Convolutional Neural Network”. This dataset contains 7700 images.We use 6000 images for training,1000 for testing and 700 as the validation set.
+
+#### Look into Person (LIP)
+
+![img](assets/2019-03-12-11-18-29.png)
+
+* 项目: <http://sysu-hcp.net/lip/overview.php>
+* 下载: 不同任务有不同部分, 具体可见[Dataset](http://sysu-hcp.net/lip/overview.php)页面
+
+> Look into Person (LIP) is a new large-scale dataset, focus on semantic understanding of person. Following are the detailed descriptions.
+>
+> The dataset contains 50,000 images with elaborated pixel-wise annotations with 19 semantic human part labels and 2D human poses with 16 key points.
+>
+> The annotated 50,000 images are cropped person instances from COCO dataset with size larger than 50 * 50.The images collected from the real-world scenarios contain human appearing with challenging poses and views, heavily occlusions, various appearances and low-resolutions. We are working on collecting and annotating more images to increase diversity.
+
+#### Taobao Commodity Dataset
+
+![img](assets/2019-03-22-19-09-55.png)
+
+* 项目: <http://www.sysu-hcp.net/taobao-commodity-dataset/>
+* 下载:
+    * <http://www.sysu-hcp.net/wp-content/uploads/2016/03/Imgs_TCD.zip>
+    * <http://www.sysu-hcp.net/wp-content/uploads/2016/03/Mask_TCD.zip>
+
+> TCD contains 800 commodity images (dresses, jeans, T-shirts, shoes and hats) from the shops on the Taobao website. The ground truth masks of the TCD dataset are obtained by inviting common sellers of Taobao website to annotate their commodities, i.e., masking salient objects that they want to show from their exhibition. These images include all kind   s of commodity with and without human models, thus having complex backgrounds and scenes with highly complex foregrounds. Pixel-accurate ground truth masks are given. These images including all kinds of commodities with and without human models have complex backgrounds and scenes with large foregrounds for evaluation. Figure 1 illustrates some of them.
+
+#### Object Extraction Dataset
+
+![img](https://objectextraction.github.io/imgs/images_masks.png)
+
+* 项目: <https://objectextraction.github.io/>
+
+> This Object Extraction newly collected by us contains 10183 images with groundtruth segmentation masks. We selected the images from the PASCAL, iCoseg, Internet dataset as well as other data (most of them are about people and clothes) from the web. We randomly split the dataset with 8230 images for training and 1953 images for testing.
+
+#### Clothing Co-Parsing (CCP) Dataset
+
+![img](assets/2019-03-12-11-12-28.png)
+
+* 项目: <https://github.com/bearpaw/clothing-co-parsing>
+
+> Clothing Co-Parsing (CCP) dataset is a new clothing database including elaborately annotated clothing items.
+> 2, 098 high-resolution street fashion photos with totally 59 tags
+> Wide range of styles, accessaries, garments, and pose
+> All images are with image-level annotations
+> 1000+ images are with pixel-level annotations
+
+#### Baidu People segmentation dataset[need help]
+
+* 下载: <http://www.cbsr.ia.ac.cn/users/ynyu/dataset/>
+
+> 这个数据集主要是用于人体整体分割。它由5387张训练图片组成，但是测试图片没有公布。因此训练时可以从5387中随机挑选500张作为验证集，然后4887张作为训练集。参考论文《Early Hierarchical Contexts Learned by CNN for image segmentation》。
+>
+> 原文：https://blog.csdn.net/mou_it/article/details/82225505
+
+## Matting
+
+### alphamatting.com
 
 ![1546154705536](./assets/1546154705536.png)
 
@@ -338,7 +521,7 @@
 
 > 这是图像matting方法的现有基准。它**包括8个测试图像，每个图像有3个不同的三维图形**，即“small”，“large”和“user”
 
-## Composition-1k: Deep Image Matting
+### Composition-1k: Deep Image Matting
 
 ![1546154519720](./assets/1546154519720.png)
 
@@ -354,7 +537,7 @@
 >
 > 我们将评估3个数据集上的方法。1）我们评估alphamatting.com数据集，这是图像matting方法的现有基准。它**包括8个测试图像，每个图像有3个不同的三维图形**，即“小”，“大”和“用户”。2）由于alphamatting.com数据集中对象的大小和范围有限，**我们提出了Composition-1k测试集。我们基于作品的数据集包括1000个图像和50个独特的前景。此数据集具有更广泛的对象类型和背景场景。**3）为了测量我们在自然图像上的表现，我们还收集了包括31个自然图像的第三个数据集。
 
-## Semantic Human Matting
+### Semantic Human Matting
 
 ![1546156688347](./assets/1546156688347.png)
 
@@ -369,82 +552,17 @@
 >
 > https://medium.com/@xiaosean5408/%E6%B7%98%E5%AF%B6%E7%B6%B2%E7%9A%84%E4%BA%BA%E7%89%A9%E6%8F%90%E5%8F%96%E8%AB%96%E6%96%87%E7%B0%A1%E4%BB%8B-semantic-human-matting-52591c3f8e0c
 
-## SOC: Salient Objects in Clutter: Bringing Salient Object Detection to the Foreground
-
-![1546081178458](./assets/1546081178458.png)
-
-![1546081446332](./assets/1546081446332.png)
-
-* 项目: <http://dpfan.net/SOCBenchmark/>
-* 中文pdf: <http://dpfan.net/wp-content/uploads/SOCBenchmarkCN.pdf>
-* 英文pdf: <http://dpfan.net/wp-content/uploads/2018/04/SOCBenchmark.pdf>
-* 下载:
-    * Overall 6K SOC Dataset  (730.2MB)  [Baidu](https://pan.baidu.com/s/1J8_CF7zE1zApqgAR9eS1Dw)[Google](https://drive.google.com/file/d/1hfo33A7diED2dikTpN9o4KnZTxizGdLr/view?usp=sharing)
-    * 3.6K SOC Training Set (441.32MB) [Here](http://dpfan.net/wp-content/uploads/TrainSet.zip)[Baidu](https://pan.baidu.com/s/1Mao0piUuqVXAzmJoNtrtAw)[Google](https://drive.google.com/open?id=16jlzeJJ1tawyBLBN5fRiWbh2y_F0iSyP)
-    * 1.2K  SOC Validation Set (146.56MB) [Here](http://dpfan.net/wp-content/uploads/ValSet.zip)[Baidu](https://pan.baidu.com/s/1mOmiezCpkr5NCQk8ecvGiQ)[Google](https://drive.google.com/open?id=1vAfP8fCAo2a2KwgsmYLn8r8Rk4Lk7Urr)
-    * 1.2K  SOC Test Set (141.86MB) [Here](http://dpfan.net/wp-content/uploads/TestSet.zip)[Baidu](https://pan.baidu.com/s/10y-dx9HCPQm9fnp-Brswgw)[Google](https://drive.google.com/open?id=1ZdKrsk-S4J6KQyjx-cPeL0HoKXy7CCxG)
-
-> 在本文中，我们提供了显着对象检测（SOD）模型的综合评估。我们的分析确定了现有SOD数据集的严重设计偏差，假设每个图像在低杂波中包含至少一个明显突出的显着对象。这是一个不切实际的假设。在现有数据集上进行评估时，设计偏差导致了最先进的SOD模型的饱和高性能。然而，当应用于现实世界的日常场景时，这些模型仍然远远不能令人满意。根据我们的分析，我们首先确定了全面和平衡的数据集应该实现的7个关键方面。然后，我们提出一个新的高质量数据集并更新以前的显着性基准。具体来说，我们的数据集称为SOC，Salient Objects in Clutter，**包括来自日常对象类别的显着和非显着对象的图像**。除了对象类别注释之外，每个突出图像都伴随着反映现实世界场景中常见挑战的属性（例如，外观变化，杂乱），并且可以帮助 1）更深入地了解SOD问题，2）调查专业人员和SOD模型的缺点，3）从不同的角度客观地评估模型。最后，我们在SOC数据集上报告基于属性的性能评估。我们相信，我们的数据集和结果将为未来的显着物体检测研究开辟新的方向。
->
-> 请注意，测试集仅包含图像且没有真值。我们将很快创建SOC Benchmark网站，您可以上传您的结果以获得我们网站的最终得分。此外，您可以先将验证集用作测试集。
-
-## HKU-IS: Visual Saliency Based on Multiscale Deep Features
-
-* 项目: <https://i.cs.hku.hk/~gbli/deep_saliency.html>
-* 论文: <http://i.cs.hku.hk/~yzyu/publication/mdfsaliency-cvpr15.pdf>
-* 下载:
-    * [Google Drive](https://drive.google.com/open?id=0BxNhBO0S5JCRQ1N6V25VeVh6cHc&authuser=0)
-    * [Baidu Yun](http://pan.baidu.com/s/1c0EpNfM)
-
-> 数据集包含4447个具有显着对象的像素注释的图像
->
-> 视觉显着性是包括计算机视觉在内的认知和计算科学中的一个基本问题。在本文中，我们发现可以从使用深度卷积神经网络（CNN）提取的多尺度特征中学习高质量的视觉显着性模型。视觉识别任务的成功。为了学习这样的显着性模型，我们引入了一种神经网络结构，它在CNN顶部具有完全连接的层，负责三个不同尺度的特征提取。然后，我们提出一种改进方法来增强我们的显着性结果的空间一致性。最后，针对不同级别的图像分割计算的聚合多个显着性图可以进一步提高性能，从而产生比由单个分割产生的显着性图更好的显着性图。为了促进对视觉显着性模型的进一步研究和评估，**我们还构建了一个新的大型数据库，包括4447个具有挑战性的图像及其像素显着性注释**。
-
-## DAVIS: A Benchmark Dataset and Evaluation Methodology for Video Object Segmentation
-
-![img](assets/2019-03-13-11-01-47.png)
-
-* 项目:
-    * 竞赛主页: <https://davischallenge.org/index.html>
-* 论文: <https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Perazzi_A_Benchmark_Dataset_CVPR_2016_paper.pdf>
-* 下载:
-    * [DAVIS 2016](https://davischallenge.org/davis2016/code.html) In each video sequence a single instance is annotated.
-    * [DAVIS 2017](https://davischallenge.org/davis2017/code.html) In each video sequence multiple instances are annotated.
-
-## aNYU: Dense Semantic Image Segmentation with Objects and Attributes
-
-![1546153000959](./assets/1546153000959.png)
-
-* 项目: <https://kylezheng.org/research-projects/densesegattobj/>
-* 论文: <http://kylezheng.org/densesegattobjdataset/denseseg4objatt_CVPR2014_Kyle.pdf>
-* 下载:
-    * NYU: <http://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html>
-    * aNYU: <http://www.robots.ox.ac.uk/~szheng/aNYU/aNYU.tar.gz>
-
-> 我们的第一组实验是关于来自NYU V2 dataset [32] 2的RGB图像。如图3所示，我们添加了8个附加属性标签，即木制，彩绘，棉花，玻璃，光面，塑料，闪亮和纹理。我们要求3个注释者在每个分割地面真实区域上分配材料，表面属性属性。Wethen将3名工作者的多数票作为我们的8个附加属性标签。我们将此扩展数据集称为attribute NYU（aNYU）数据集。**该数据集从28个不同的室内场景中收集了1449个图像。**在我们的实验中，我们选择了具有足够数量实例的15个对象类和8个属性来训练unary potential。此外，**我们随机地将数据集分成训练集的725个图像，验证集的100个，以及测试集的624个。**
-
-## Supervisely人像数据集
-
-![img](https://static.leiphone.com/uploads/new/article/740_740/201804/5acb1719a6252.png?imageMogr2/format/jpg/quality/90)
-
-* 项目: <https://supervise.ly/>
-
-> * 数据集 **由5711张图片组成，有6884个高质量的标注的人体实例**。
-> * 下面的所有步骤在Supervisely内部完成的，没有任何编码。
-> * 更重要的是，这些步骤是被我内部的注释器执行的，没有任何机器学习专业知识。数据科学家仅仅只是控制和管理这过程。
-> * 注释组由两名成员组成并且这整个过程只花了4天。
-
-## PFCN: Automatic Portrait Segmentation for Image Stylization
+### PFCN
 
 ![1546173669466](assets/1546173669466.png)
 
-* 论文: <http://xiaoyongshen.me/webpage_portrait/papers/portrait_eg16.pdf>
 * 项目: <http://xiaoyongshen.me/webpage_portrait/index.html>
+* 论文: [Automatic Portrait Segmentation for Image Stylization](http://xiaoyongshen.me/webpage_portrait/papers/portrait_eg16.pdf)
 * 下载: Please download from [OneDrive](https://1drv.ms/u/s!ApwdOxIIFBH19TzDv7nRfH5ZsMNL) or [Baiduyun](http://pan.baidu.com/s/1bQ4yHC).
 
 > 肖像画是摄影和绘画的主要艺术形式。在大多数情况下，艺术家试图使主体从周围突出，例如，使其更亮或更锐利。在数字世界中，通过使用适合于图像语义的照相或绘画滤镜处理肖像图像，可以实现类似的效果。虽然存在许多成功的用户指导方法来描绘该主题，但缺乏全自动技术并且产生不令人满意的结果。我们的论文首先通过引入专用于肖像的新自动分割算法来解决这个问题。然后，我们在此结果的基础上，描述了几个利用我们的自动分割算法生成高质量肖像的肖像滤镜。
 
-## Deep Automatic Portrait Matting
+### Deep Automatic Portrait Matting
 
 ![img](assets/2019-01-01-19-31-55.png)
 
@@ -466,9 +584,11 @@
 >
 > 每个图像的两个计算遮罩覆盖背景图像以手动检查质量。我们为数据集选择更好的一个。如果两个mattes都不符合我们的高标准，结果将被丢弃。必要时，小错误可以通过Photoshop[31]来解决。在此标签处理后，我们收集了2,000张高质量遮罩图像。这些图像被随机分成训练和测试集，分别具有1,700和300个图像。
 
-## Large-scale Fashion (DeepFashion) Database
+## Other
 
-![img](http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion/intro.jpg)
+### Large-scale Fashion (DeepFashion) Database
+
+![img](assets/2019-03-22-18-57-36.png)
 
 * 项目: <http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion.html>
 * 组织:
@@ -484,149 +604,7 @@
 >
 > 这些基准的数据和注释也可以用作以下计算机视觉任务的训练和测试集，例如衣服检测，衣服识别和图像检索。请阅读“下载说明”以访问数据集。
 
-## Clothing Parsing
-
-![img](http://vision.is.tohoku.ac.jp/~kyamagu/research/clothing_parsing/clothing.png)
-
-* 项目 :
-    * <http://vision.is.tohoku.ac.jp/~kyamagu/research/clothing_parsing/>
-    * <http://vision.is.tohoku.ac.jp/~kyamagu/research/paperdoll/>
-
-> In this paper we demonstrate an effective method for parsing clothing in fashion photographs, an extremely challenging problem due to the large number of possible garment items, variations in configuration, garment appearance, layering, and occlusion. In addition, we provide a large novel dataset and tools for labeling garment items, to enable future research on clothing estimation. Finally, we present intriguing initial results on using clothing estimates to improve pose identification, and demonstrate a prototype application for pose-independent visual garment retrieval.
-
-## HumanParsing-Dataset
-
-![img](http://sysu-hcp.net/lip/img/scroll/home3.png)
-
-* 项目:
-    * <https://github.com/lemondan/HumanParsing-Dataset>
-    * <http://www.sysu-hcp.net/deep-human-parsing/>
-    * <https://vuhcs.github.io/>
-* 组织: <http://sysu-hcp.net/>
-* 下载:  <http://pan.baidu.com/s/1qY8bToS> *passwd：kjgk*
-
-> This human parsing dataset includes the detailed pixel-wise annotations for fashion images, which is proposed in our TPAMI paper “Deep Human Parsing with Active Template Regression”, and ICCV 2015 paper “Human Parsing with Contextualized Convolutional Neural Network”. This dataset contains 7700 images.We use 6000 images for training,1000 for testing and 700 as the validation set.
-
-## Look into Person (LIP)
-
-![img](assets/2019-03-12-11-18-29.png)
-
-* 项目: <http://sysu-hcp.net/lip/overview.php>
-* 下载: 不同任务有不同部分, 具体可见[Dataset](http://sysu-hcp.net/lip/overview.php)页面
-
-> Look into Person (LIP) is a new large-scale dataset, focus on semantic understanding of person. Following are the detailed descriptions.
->
-> The dataset contains 50,000 images with elaborated pixel-wise annotations with 19 semantic human part labels and 2D human poses with 16 key points.
->
-> The annotated 50,000 images are cropped person instances from COCO dataset with size larger than 50 * 50.The images collected from the real-world scenarios contain human appearing with challenging poses and views, heavily occlusions, various appearances and low-resolutions. We are working on collecting and annotating more images to increase diversity.
-
-## Taobao Commodity Dataset
-
-![img](http://www.sysu-hcp.net/wp-content/uploads/2016/03/ImageAndMask.png)
-
-* 项目: <http://www.sysu-hcp.net/taobao-commodity-dataset/>
-* 下载:
-    * <http://www.sysu-hcp.net/wp-content/uploads/2016/03/Imgs_TCD.zip>
-    * <http://www.sysu-hcp.net/wp-content/uploads/2016/03/Mask_TCD.zip>
-
-> TCD contains 800 commodity images (dresses, jeans, T-shirts, shoes and hats) from the shops on the Taobao website. The ground truth masks of the TCD dataset are obtained by inviting common sellers of Taobao website to annotate their commodities, i.e., masking salient objects that they want to show from their exhibition. These images include all kind   s of commodity with and without human models, thus having complex backgrounds and scenes with highly complex foregrounds. Pixel-accurate ground truth masks are given. These images including all kinds of commodities with and without human models have complex backgrounds and scenes with large foregrounds for evaluation. Figure 1 illustrates some of them.
-
-## Object Extraction Dataset
-
-![img](https://objectextraction.github.io/imgs/images_masks.png)
-
-* 项目: <https://objectextraction.github.io/>
-
-> This Object Extraction newly collected by us contains 10183 images with groundtruth segmentation masks. We selected the images from the PASCAL, iCoseg, Internet dataset as well as other data (most of them are about people and clothes) from the web. We randomly split the dataset with 8230 images for training and 1953 images for testing.
-
-## Clothing Co-Parsing (CCP) Dataset
-
-![img](assets/2019-03-12-11-12-28.png)
-
-* 项目: <https://github.com/bearpaw/clothing-co-parsing>
-
-> Clothing Co-Parsing (CCP) dataset is a new clothing database including elaborately annotated clothing items.
-> 2, 098 high-resolution street fashion photos with totally 59 tags
-> Wide range of styles, accessaries, garments, and pose
-> All images are with image-level annotations
-> 1000+ images are with pixel-level annotations
-
-## HS-SOD: Hyperspectral Image Dataset for Benchmarking on Salient Object Detection
-
-![img](https://github.com/gistairc/HS-SOD/raw/master/images/poster-QoMEX2018.png)
-
-![eva](./assets/2018-12-28-22-16-20.png)
-
-* 项目: <https://github.com/gistairc/HS-SOD>
-* 下载: <http://data.airc.aist.go.jp/HS-SOD/HS-SOD.zip> 5.6G
-* 论文: <https://arxiv.org/abs/1806.11314>
-
-> 使用有监督或无监督的方法对着色对象进行了显着的物体检测。最近，一些研究表明，通过在来自天然景观的高光谱图像的可见光谱中使用光谱特征，也可以实现有效的显着对象检测。然而，这些关于高光谱显着物体检测的模型使用从各种在线公共数据集中选择的极少数数据进行测试，这些数据不是为了物体检测目的而特别创建的。因此，在这里，我们的目标是通过发布**具有60个高光谱图像的集合的高光谱显着物体检测数据集**以及**相应的地面实况二值图像**和**代表性的彩色图像（sRGB）**来指导该领域。我们在数据收集过程中考虑了几个方面，例如对象大小的变化，对象的数量，前景-背景对比度，图像上的对象位置等。然后，我们为每个高光谱数据准备了真值二进制图像，其中显著性目标被标记为图像。最后，我们使用曲线下面积（AUC）度量对文献中一些现有的高光谱显着性检测模型进行了性能评估。
->
-> 这些数据是在东京港口码头公司的许可下，在日本东京台场的东京海滨城市公园收集的。我们在2017年8月至9月期间的几天内收集了数据，当时天气晴朗或部分多云。在每个数据收集日，使用三脚架固定相机以最小化图像上的运动失真。我们尝试根据日光条件尽可能地保持相机设置的曝光时间和增益，同时保持像素值饱和度或图像可见性。作为数据集用户的参考，我们提供相机设置，例如文本文件中每个图像的曝光时间和增益值以及相应的数据。我们也没有对捕获的波段应用标准化。它可以提高前景和背景区域之间色彩对比度更高的高光谱图像的质量;但是，它也可能降低数据集在显着对象检测任务上进行基准测试的难度。
->
-> 在获得各种高光谱图像后，我们从大约50个不同的场景中选择了60个图像，条件是：i）我们去除了由于场景中的运动引起的失真图像（取决于曝光时间，一个图像可能需要几秒钟才能用于相机），ii）我们考虑了几个方面，如显着物体大小的变化，图像上物体的空间位置，显着物体的数量，前景 * 背景对比度，iii）一些图像具有相同的场景但物体位置，物距或数量对象各不相同。
->
-> 为了便于显着物体检测任务，我们在可见光谱周围裁剪光谱带，并在传感器暗噪声校正后以“.mat”文件格式保存每个场景的超立方体。如[21]中所定义，可见光谱具有380-780nm的良好可接受范围，但也可以使用[3,4]中的400-700nm范围。为了保持范围广泛和灵活性，想要使用数据集的人，我们在[21]中为我们的数据集选择了380 * 780 nm的定义范围，尽管在人类视觉系统的这些范围的边界处视觉刺激可能较弱。然后，我们使用高光谱图像渲染sRGB彩色图像，通过标记显着对象的边界来创建地面真实显着对象二进制图像。
-
-HS-SOD.zip file contains three folders:
-
-1. hyperspectral: containing 60 hyperspectral images with #spatial rows:768 #spatial columns:1024 #spectral channels:81 (data only within visible spectrum: 380 nm -720 nm)
-2. color: 60 color images of hyperspectral dataset rendered in sRGB for visualization
-3. ground-truth: 60 ground-truth binary images for salient objects
-
-## Baidu People segmentation dataset
-
-* 下载: <http://www.cbsr.ia.ac.cn/users/ynyu/dataset/>
-
-> 这个数据集主要是用于人体整体分割。它由5387张训练图片组成，但是测试图片没有公布。因此训练时可以从5387中随机挑选500张作为验证集，然后4887张作为训练集。参考论文《Early Hierarchical Contexts Learned by CNN for image segmentation》。
->
-> 原文：https://blog.csdn.net/mou_it/article/details/82225505
-
-## Image Pair
-## Cosal2015
-## INCT2016
-## RGBDCoseg183
-## 06RGBDCosal150
-## SegTrackV1/V2
-## ViSal
-## MCL
-## DAVIS
-## UVSD
-## VOS
-
-## 数据集站点
-
-### 研究机构
-
-* 百度研究院: <https://ai.baidu.com/broad/introduction>
-* 中山大学人机物智能融合实验室: <http://www.sysu-hcp.net/resources/>
-* 大连理工大学IIAU-LAB: <http://ice.dlut.edu.cn/lu/publications.html>
-* CUHK Multimedia Laboratory: <http://mmlab.ie.cuhk.edu.hk/datasets.html>
-
-### 资源站点
-
-#### TC-11 Online Resources
-
-* 项目: <http://tc11.cvc.uab.es/datasets/type/>
-
-#### CVonline: Image Databases
-
-* 项目: <http://homepages.inf.ed.ac.uk/rbf/CVonline/Imagedbase.htm>
-* 中文: <https://blog.csdn.net/zhaoliang027/article/details/83376167>
-
-#### MediaEval Benchmark
-
-* 项目: <http://www.multimediaeval.org/datasets/>
-
-#### Mit Saliency Benchmark
-
-* 项目: <http://saliency.mit.edu/datasets.html>
-* [Download the MIT300 dataset images.](http://saliency.mit.edu/BenchmarkIMAGES.zip)
-* [Download the CAT2000 test images.](http://saliency.mit.edu/testSet.zip)
-* [Download the CAT2000 train images with fixations.](http://saliency.mit.edu/trainSet.zip)
-
-## 参考
+## Reference
 
 ### [Salient Object Detection: A Survey](https://arxiv.org/abs/1411.5878)
 
@@ -637,3 +615,27 @@ HS-SOD.zip file contains three folders:
 ### [Review of Visual Saliency Detection with Comprehensive Information](https://arxiv.org/abs/1803.03391)
 
 ![dataset](./assets/2018-12-27-11-05-49.png)
+
+## More[need help]
+
+### Similiar Projects
+
+* [awesome-semantic-segmentation](https://github.com/mrgloom/awesome-semantic-segmentation)
+
+### Research Institutes
+
+* 百度研究院: <https://ai.baidu.com/broad/introduction>
+* 中山大学人机物智能融合实验室: <http://www.sysu-hcp.net/resources/>
+* 大连理工大学IIAU-LAB: <http://ice.dlut.edu.cn/lu/publications.html>
+* CUHK Multimedia Laboratory: <http://mmlab.ie.cuhk.edu.hk/datasets.html>
+
+### Resource Websites
+
+* TC-11 Online Resources: <http://tc11.cvc.uab.es/datasets/type/>
+* CVonline: Image Databases: <http://homepages.inf.ed.ac.uk/rbf/CVonline/Imagedbase.htm>
+    * 中文: <https://blog.csdn.net/zhaoliang027/article/details/83376167>
+* MediaEval Benchmark: <http://www.multimediaeval.org/datasets/>
+* Mit Saliency Benchmark: <http://saliency.mit.edu/datasets.html>
+* Datasets for machine learning: <https://www.datasetlist.com/>
+* UCI machine learning repository:<https://archive.ics.uci.edu/ml/datasets.html>
+* Kaggle datasets：<https://www.kaggle.com/datasets>
