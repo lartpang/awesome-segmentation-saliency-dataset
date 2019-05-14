@@ -7,7 +7,7 @@
 > Every item need some images, links, and introductions... I need your help... :smile:
 
 * [Another Awesome Dataset List](#another-awesome-dataset-list)
-  * [Saliency Detection](#saliency-detection)
+  * [RGB-Saliency Detection](#rgb-saliency-detection)
     * [MSRA](#msra)
     * [SED1/2](#sed12)
     * [ASD(MSRA1000/MSRA1K)](#asdmsra1000msra1k)
@@ -28,12 +28,16 @@
     * [STC[need help]](#stcneed-help)
     * [ACSD](#acsd)
     * [XPIE](#xpie)
-    * [NLPR](#nlpr)
-    * [NJUD](#njud)
     * [SOC](#soc)
     * [HKU-IS[need help]](#hku-isneed-help)
     * [HS-SOD](#hs-sod)
-    * [need your help...](#need-your-help)
+  * [RGBD-Saliency Detection](#rgbd-saliency-detection)
+    * [NLPR/RGBD1000](#nlprrgbd1000)
+    * [NJU400/2000](#nju4002000)
+    * [STEREO/SSB](#stereossb)
+    * [LFSD[nead img]](#lfsdnead-img)
+    * [RGBD135/DES[need img]](#rgbd135desneed-img)
+  * [need your help...](#need-your-help)
   * [Segmentation](#segmentation)
     * [General[need help]](#generalneed-help)
       * [DAVIS](#davis)
@@ -63,7 +67,7 @@
     * [Research Institutes](#research-institutes)
     * [Resource Websites](#resource-websites)
 
-## Saliency Detection
+## RGB-Saliency Detection
 
 ### MSRA
 
@@ -297,31 +301,6 @@
 >
 > 对于这些图像，我们要求两位工程师通过两个阶段对其进行注释。在第一阶段，图像被分配一个二进制标记：'是'用于包含非明确对象，否则为'否'。在第一阶段之后，我们将21,002张图片标记为“是”，并且8,598图像标记为“否”。在第二阶段，这两位工程师进一步要求手动标记标记为“是”的10,000张图像中的显着对象的准确边界。注意我们有10名志愿者参与整个过程，以检查注释的质量。**最后，我们获得了10,000张图像的二进制掩码**。
 
-### NLPR
-
-![1546138815074](./assets/1546138815074.png)
-
-* 论文: [H.  Peng,  B.  Li,  W.  Xiong,  W.  Hu,  and  R.  Ji,  “RGBD  salient  object detection: A benchmark and algorithms,” in ECCV, 2014, pp. 92–109](https://docs.google.com/uc?authuser=0&id=0B1wzzt1_uP1rb250d0t6dVFXWG8&export=download)
-* 项目: <https://sites.google.com/site/rgbdsaliency/home>
-* 下载: <https://sites.google.com/site/rgbdsaliency/dataset>
-
-> 虽然深度信息在人类视觉系统中起着重要作用，但在现有的视觉显着性计算模型中尚未得到很好的探索。在这项工作中，**我们首先引入了一个大规模的RGBD图像数据集，以解决目前RGBD显着对象检测研究中数据不足的问题**。为了确保大多数现有的RGB显着模型在RGBD场景中仍然足够，我们继续提供一个简单的融合框架，将现有的RGB产生的显着性与新的深度诱导显着性相结合，前者是从现有的RGB模型中估算的，而前者是后者基于提出的多上下文对比模型。此外，还提出了一种专门的多阶段RGBD模型，其考虑了来自低级特征对比度，中级区域分组和高级先验增强的深度和外观线索。大量实验表明，我们的模型能够准确定位RGBD图像中的显着对象，并为目标对象分配一致的显着性值。
-
-### NJUD
-
-![1546139249376](./assets/1546139249376.png)
-
-* 论文: [R.  Ju,  Y.  Liu,  T.  Ren,  L.  Ge,  and  G.  Wu,  “Depth-aware  salient object  detection  using  anisotropic  center-surround  difference,” Signal Process.: Image Commun., vol. 38, pp. 115–126, 2015.](http://mcg.nju.edu.cn/publication/2014/icip14-jur.pdf)
-* 团队: [MGG](http://mcg.nju.edu.cn/index.html)
-* 项目: <http://mcg.nju.edu.cn/publication/2014/icip14-jur/index.html>
-* 下载: <http://mcg.nju.edu.cn/dataset/nju2000.zip>
-
-> 以前关于显着性检测的大多数工作都专用于二维图像。最近，已经表明3D视觉信息为显着性分析提供了强大的线索。在本文中，我们提出了一种基于各向异性中心 * 环绕差异的深度图像的新型显着性方法。我们不是依赖于绝对深度，而是通过它在周围环境中的突出程度来确定一个点的显着性，这使得全局深度结构成为一个整体。此外，基于depthand位置的两个常见的先验用于细化。在O（N）的复杂度内提出的方法工作以及对1000多个立体图像的数据集的评估表明我们的方法优于现有技术。
->
-> 我们收集来自互联网的立体图像，3D电影和富士W3立体相机拍摄的照片。由于2D图像上的标记结果可能与real 3D环境中的标记结果略有不同，我们使用NVidia 3D Vision在3D显示环境中执行掩模标记。我们首先收集超过20000个立体图像。接下来，按照[20]中的程序，我们选择5913个图像，每个图像包含中等大小的显着对象。之后，邀请四位志愿者为突出物体面具贴上标签。**最后，选择了1382个高质量和一致标记的图像进行评估**。
->
-> 我们采用广泛使用的精确回忆曲线来评估我们方法的性能。具体来说，我们使用从0到255的逐渐增加的阈值从显着图中获取二进制图像，并与地面显着对象掩模进行比较以获得精度和回忆。我们选择三种最先进的方法来处理彩色图像，即CNTX [9]，RC [10]，PCA [11]和三种显着性方法，即CURV [16]，SS [13]，DP [14]进行比较。此外，深度图像直接用于显着性图（命名为DEPTH）以评估深度先验
-
 ### SOC
 
 ![1546081178458](./assets/1546081178458.png)
@@ -377,7 +356,67 @@ HS-SOD.zip file contains three folders:
 2. color: 60 color images of hyperspectral dataset rendered in sRGB for visualization
 3. ground-truth: 60 ground-truth binary images for salient objects
 
-### need your help...
+## RGBD-Saliency Detection
+
+### NLPR/RGBD1000
+
+![1546138815074](./assets/1546138815074.png)
+
+* 论文: [Rgbd salient object detection: a benchmark and algorithms](https://docs.google.com/uc?authuser=0&id=0B1wzzt1_uP1rb250d0t6dVFXWG8&export=download)
+* 项目: <https://sites.google.com/site/rgbdsaliency/home>
+* 下载: <https://sites.google.com/site/rgbdsaliency/dataset>
+
+> NLPR is also called RGBD1000 dataset which including 1,000 images. There may exist multiple salient objects in each image. The structured light depth images are obtained by the Microsoft Kinect under different illumination conditions.
+>
+> 虽然深度信息在人类视觉系统中起着重要作用，但在现有的视觉显着性计算模型中尚未得到很好的探索。在这项工作中，**我们首先引入了一个大规模的RGBD图像数据集，以解决目前RGBD显着目标检测研究中数据不足的问题**。为了确保大多数现有的RGB显着模型在RGBD场景中仍然足够，我们继续提供一个简单的融合框架，将现有的RGB产生的显着性与新的深度诱导显着性相结合，前者是从现有的RGB模型中估算的，而前者是后者基于提出的多上下文对比模型。此外，还提出了一种专门的多阶段RGBD模型，其考虑了来自低级特征对比度，中级区域分组和高级先验增强的深度和外观线索。大量实验表明，我们的模型能够准确定位RGBD图像中的显着对象，并为目标对象分配一致的显着性值。
+
+### NJU400/2000
+
+![1546139249376](./assets/1546139249376.png)
+
+* 论文:
+  * [NJU400: Depth saliency based on anisotropic center-surround difference](http://mcg.nju.edu.cn/publication/2014/icip14-jur.pdf)
+  * [NJU2000: Depth-aware salient object detection using anisotropic center-surround difference](http://mcg.nju.edu.cn/publication/2015/spic15-jur.pdf)
+* 团队: [MGG](http://mcg.nju.edu.cn/index.html)
+* 项目: <http://mcg.nju.edu.cn/publication/2014/icip14-jur/index.html>
+* 下载：
+  * <http://mcg.nju.edu.cn/resource.html>
+  * <http://mcg.nju.edu.cn/dataset/nju400.zip>
+  * <http://mcg.nju.edu.cn/dataset/nju2000.zip>
+
+> NJU2000 contains 2003 stereo image pairs with diverse objects and complex, challenging scenarios, along with ground-truth map. The stereo images are gathered from 3D movies, the Internet, and photographs taken by a Fuji W3 stereo camera.
+
+### STEREO/SSB
+
+![](assets/2019-05-13-19-48-20.png)
+
+* 论文: [Leveraging stereopsis for saliency analysis](http://web.cecs.pdx.edu/~fliu/papers/cvpr2012.pdf)
+* 项目: <http://web.cecs.pdx.edu/~fliu/>
+* 下载: 请到主页寻找，需要联系作者。
+
+> SSB is also called STEREO dataset, which consists of 1000 pairs of binocular images.
+
+### LFSD[nead img]
+
+* 论文：Saliency detection on light field
+* 项目：<https://sites.duke.edu/nianyi/publication/saliency-detection-on-light-field/>
+* 下载：请到主页寻找，需要联系作者。
+
+> LFSD is a small dataset which contains 100 images with depth information and human labeled ground truths. The depth information was obtained via the Lytro light field camera.
+
+### RGBD135/DES[need img]
+
+* 论文：[Depth enhanced saliency detection method](http://delivery.acm.org/10.1145/2640000/2632866/p23-cheng.pdf?ip=202.118.97.210&id=2632866&acc=ACTIVE%20SERVICE&key=BF85BBA5741FDC6E%2E5FC7500D8F9CB386%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&__acm__=1557798709_a26e3faff3faccad6d62e02d79d1921a)
+* 项目：<https://github.com/HzFu/DES_code>
+* 下载：项目主页提供了下面的下载链接诶：
+    * <https://onedrive.live.com/redir?resid=F3A8A31ABFAC51B0!256&authkey=!AC4-yOEjn0bgrCQ&ithint=file%2crar>
+    * <https://pan.baidu.com/s/1pLv2B8n>
+
+> RGBD135 is also named DES which consists of seven indoor scenes and contains 135 indoor images collected by Microsoft Kinect.
+
+## need your help...
+
+> 有些数据集已经忘记了出处，大家有见过的，希望可以补充下。
 
 * Image Pair
 * Cosal2015
