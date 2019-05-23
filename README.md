@@ -7,37 +7,43 @@
 > Every item need some images, links, and introductions... I need your help... :smile:
 
 * [Another Awesome Dataset List](#another-awesome-dataset-list)
-  * [RGB-Saliency Detection](#rgb-saliency-detection)
-    * [MSRA](#msra)
-    * [SED1/2](#sed12)
-    * [ASD(MSRA1000/MSRA1K)](#asdmsra1000msra1k)
-    * [DUT-OMRON](#dut-omron)
-    * [DUTS](#duts)
-    * [SOD](#sod)
-    * [iCoSeg](#icoseg)
-    * [Infrared[need help]](#infraredneed-help)
-    * [ImgSal](#imgsal)
-    * [ECSSD/CSSD](#ecssdcssd)
-    * [THUR15K](#thur15k)
-    * [Bruce-A[need help]](#bruce-aneed-help)
-    * [Judd-A[need help]](#judd-aneed-help)
-    * [PASCAL-S](#pascal-s)
-    * [UCSB[need help]](#ucsbneed-help)
-    * [OSIE[need help]](#osieneed-help)
-    * [RSD(PKU-RSD)](#rsdpku-rsd)
-    * [STC[need help]](#stcneed-help)
-    * [ACSD](#acsd)
-    * [XPIE](#xpie)
-    * [SOC](#soc)
-    * [HKU-IS[need help]](#hku-isneed-help)
-    * [HS-SOD](#hs-sod)
-  * [RGBD-Saliency Detection](#rgbd-saliency-detection)
-    * [NLPR/RGBD1000](#nlprrgbd1000)
-    * [NJU400/2000](#nju4002000)
-    * [STEREO/SSB](#stereossb)
-    * [LFSD[nead img]](#lfsdnead-img)
-    * [RGBD135/DES[need img]](#rgbd135desneed-img)
-  * [need your help...](#need-your-help)
+  * [Saliency](#saliency)
+    * [RGB-Saliency Detection](#rgb-saliency-detection)
+      * [MSRA](#msra)
+      * [SED1/2](#sed12)
+      * [ASD(MSRA1000/MSRA1K)](#asdmsra1000msra1k)
+      * [DUT-OMRON](#dut-omron)
+      * [DUTS](#duts)
+      * [SOD](#sod)
+      * [iCoSeg](#icoseg)
+      * [Infrared[need help]](#infraredneed-help)
+      * [ImgSal](#imgsal)
+      * [ECSSD/CSSD](#ecssdcssd)
+      * [THUR15K](#thur15k)
+      * [Bruce-A[need help]](#bruce-aneed-help)
+      * [Judd-A[need help]](#judd-aneed-help)
+      * [PASCAL-S](#pascal-s)
+      * [UCSB[need help]](#ucsbneed-help)
+      * [OSIE[need help]](#osieneed-help)
+      * [ACSD](#acsd)
+      * [XPIE](#xpie)
+      * [SOC](#soc)
+      * [HKU-IS[need help]](#hku-isneed-help)
+      * [HS-SOD](#hs-sod)
+    * [Video Saliency Detection](#video-saliency-detection)
+      * [RSD(PKU-RSD)](#rsdpku-rsd)
+      * [STC[need help]](#stcneed-help)
+    * [RGBD-Saliency Detection](#rgbd-saliency-detection)
+      * [NLPR/RGBD1000](#nlprrgbd1000)
+      * [NJU400/2000](#nju4002000)
+      * [STEREO/SSB](#stereossb)
+      * [LFSD[nead img]](#lfsdnead-img)
+      * [RGBD135/DES](#rgbd135des)
+    * [RGBT-Saliency Detection [need more information...]](#rgbt-saliency-detection-need-more-information)
+      * [VT1000 Dataset](#vt1000-dataset)
+      * [VT821 Dataset](#vt821-dataset)
+    * [Other Saliency Dataset](#other-saliency-dataset)
+      * [KAIST Salient Pedestrian Dataset](#kaist-salient-pedestrian-dataset)
   * [Segmentation](#segmentation)
     * [General[need help]](#generalneed-help)
       * [DAVIS](#davis)
@@ -59,6 +65,7 @@
     * [Deep Automatic Portrait Matting](#deep-automatic-portrait-matting)
   * [Other](#other)
     * [Large-scale Fashion (DeepFashion) Database](#large-scale-fashion-deepfashion-database)
+  * [need your help...](#need-your-help)
   * [Reference](#reference)
     * [Salient Object Detection: A Survey](#salient-object-detection-a-survey)
     * [Review of Visual Saliency Detection with Comprehensive Information](#review-of-visual-saliency-detection-with-comprehensive-information)
@@ -67,9 +74,11 @@
     * [Research Institutes](#research-institutes)
     * [Resource Websites](#resource-websites)
 
-## RGB-Saliency Detection
+## Saliency
 
-### MSRA
+### RGB-Saliency Detection
+
+#### MSRA
 
 ![img](https://mmcheng.net/wp-content/uploads/2014/07/MSRA10K.jpg)
 
@@ -88,7 +97,7 @@
 >
 > 标记一致性。对于每个要标记的图像，我们请用户绘制一个矩形，该矩形包围图像中最大的对象根据他/她自己的理解。由不同用户标记的矩形通常不相同。为了减少标签的不一致性，我们从多个用户绘制的矩形中选择一个“真实”标签。
 
-### SED1/2
+#### SED1/2
 
 * 单目标
 
@@ -111,7 +120,7 @@
 
 > 这项工作的目的是为图像分割研究提供经验和科学依据。评估分割算法产生的结果具有挑战性，因为很难提出提供基础真实分割的规范测试集。这部分是因为在日常复杂图像中手动描绘片段可能是费力的。此外，人们往往倾向于将语义考虑纳入其分段中，这超出了数据驱动的分割算法的范围。因此，许多现有算法仅显示很少的分割结果。为了评估由不同算法产生的分割，我们编制了一个数据库，目前**包含200个灰度图像以及真实标注分割**。该数据库专门设计用于避免潜在的模糊，仅通过仅通过强度，纹理或其他低水平线索合并清晰描绘前景中与其周围环境不同的一个或两个物体的图像。通过要求人类对象手动地将灰度图像（还提供颜色源）分成两个或三个类别来获得地面真实分割，其中**每个图像由三个不同的人类对象分割**。通过评估其与真实分割的一致性及其碎片量来评估分割。与此数据库评估一起，我们提供了用于评估给定分割算法的代码。这样，不同的分割算法可能具有可比较的结果以获得更多细节，请参阅“评估测试”部分。
 
-### ASD(MSRA1000/MSRA1K)
+#### ASD(MSRA1000/MSRA1K)
 
 * T. Liu, J. Sun, N.-N. Zheng, X. Tang, and H.-Y. Shum, “[Learning to detect a salient object](http://research.microsoft.com/en-us/um/people/jiansun/salientobject/salient_object.htm),” in *Proc. IEEE Conf. Comput. Vis. Pattern Recognit.*, 2007, pp. 1–8.
 * R. Achanta, S. Hemami, F. Estrada, and S. Süsstrunk, “[Frequency-tuned salient region detection](http://ivrlwww.epfl.ch/supplementary_material/RK_CVPR09/),” in *Proc. IEEE Conf. Comput. Vis. Pattern Recognit.*, 2009, pp. 1597–1604.
@@ -125,7 +134,7 @@
 >
 > 上面下载到的标注图尺寸被统一改为512*512，所以这里在给个地址：[ASD尺寸一致](http://download.csdn.net/detail/zzb4702/9559378)
 
-### DUT-OMRON
+#### DUT-OMRON
 
 ![img](assets/2019-03-22-18-45-56.png)
 
@@ -137,7 +146,7 @@
 >
 > 我们的数据集是唯一一个具有眼睛固定，边界框和像素方面的大规模真实标注的数据集。与ASD和MSRA数据集以及其他一些眼睛固定数据集（即MIT和NUSEF数据集）相比，数据集中的图像更加困难，因此更具挑战性，并为相关的显着性研究提供了更多的改进空间。
 
-### DUTS
+#### DUTS
 
 * 项目: <http://saliencydetection.net/duts/>
 
@@ -149,7 +158,7 @@
 >
 > For fair comparison in the future research, the training set of DUTS serves as a good candidate for learning DNNs, while the test set and other public data sets can be used for evaluation.
 
-### SOD
+#### SOD
 
 ![img](assets/2019-03-22-18-46-40.png)
 
@@ -163,7 +172,7 @@
 >
 > Note that the original images are available from the Berkely Segmentation Dataset at: [http://www.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/segbench/](http://www.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/segbench/)
 
-### iCoSeg
+#### iCoSeg
 
 ![1546085516505](./assets/1546085516505.png)
 
@@ -173,7 +182,7 @@
 
 > 我们引入了38组（643幅图像）中最大的公开可用的 co-segmentation，以及像素标注真值。
 
-### Infrared[need help]
+#### Infrared[need help]
 
 * 项目: <https://ivrl.epfl.ch/research-2/research-downloads/supplementary_material-cvpr11-index-html/>
 * 论文: <http://infoscience.epfl.ch/record/167478>
@@ -181,7 +190,7 @@
 
 > 我们使用对传统SLR相机的简单修改来捕获数百个彩色（RGB）和近红外（NIR）场景的图像。我们表明，近红外信息的添加导致场景识别任务中的性能显着提高，并且当使用适当的4维颜色表示时，改进仍然更大。特别地，我们提出了MSIFT-一种多光谱SIFT描述符，当与基于内核的分类器结合时，超过了现有技术的场景识别技术（例如GIST）及其多光谱扩展的性能。我们使用数百个RGB-NIR场景图像的新数据集对我们的算法进行了广泛的测试，并对Torralba的场景分类数据集进行了基准测试。
 
-### ImgSal
+#### ImgSal
 
 ![1546087781641](./assets/1546087781641.png)
 
@@ -198,7 +207,7 @@
 >
 > 图像集使用Google以及参考最近的文献收集了包含235张图像的数据库。此数据库中的图像为480 x 640像素，分为6类：1）50个具有大显着区域的图像;2）具有中间显着区域的80幅图像;3）具有小显着区域的60幅图像;4）背景杂乱的15幅图像;5）带有重复干扰物的15张图像;6）具有大和小显着区域的15个图像。
 
-### ECSSD/CSSD
+#### ECSSD/CSSD
 
 ![img](assets/2019-03-22-18-47-32.png)
 
@@ -214,7 +223,7 @@
 
 > 虽然MSRA-1000的图像内容种类繁多，但背景结构主要是简单而流畅。为了表示自然图像通常落入的情况，我们将[1]中的复杂场景显着性数据集（CSSD）扩展到包含1000个图像的更大数据集（ECSSD）[2]，其中包含许多语义上有意义但结构复杂的图像用于评估。这些图像是从互联网上获取的，并要求5名助手制作地面真相面具。上面显示了几个带有相应掩模的例子。
 
-### THUR15K
+#### THUR15K
 
 ![1546088375285](./assets/1546088375285.png)
 
@@ -228,15 +237,15 @@
 >
 > 我们引入了分类图像的标记数据集，用于评估基于草图的图像检索。我们为5个关键字中的每一个下载了大约3000张图像：“蝴蝶”，“咖啡杯”，“狗跳”，“长颈鹿”和“平面”，一起包括大约15000张图像。**对于每个图像，如果存在具有与查询关键字匹配的正确内容的非模糊对象并且对象的大部分可见，则我们标记这样的对象区域。与MSRA10K类似，显着区域以像素级别标记。我们只标记几乎完全可见的对象的显着对象区域，因为部分遮挡的对象对形状匹配不太有用。与MSRA10K不同，THUR15K数据集不包含为数据集中的每个图像标记的显着区域，即，一些图像可能没有任何显着区域。该数据集用于评估基于形状的图像检索性能。**
 
-### Bruce-A[need help]
+#### Bruce-A[need help]
 
 * 论文: <https://papers.nips.cc/paper/2830-saliency-based-on-information-maximization.pdf>
 
-### Judd-A[need help]
+#### Judd-A[need help]
 
 * 论文: <http://people.csail.mit.edu/torralba/publications/wherepeoplelook.pdf>
 
-### PASCAL-S
+#### PASCAL-S
 
 ![img](https://ccvl.jhu.edu/datasets/assets/pascal_salient_object.jpg)
 
@@ -246,35 +255,18 @@
 
 > 对来自PASCAL VOC的850张图像子集的自由修复。收集8个主题，3s观看时间，Eyelink II眼动仪。大多数算法的性能表明PASCAL-S比大多数显着性数据集偏差更小。
 
-### UCSB[need help]
+#### UCSB[need help]
 
 * 论文: <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3954044/>
 * 下载: <https://labs.psych.ucsb.edu/eckstein/miguel/research_pages/saliencydata.html>
 
-### OSIE[need help]
+#### OSIE[need help]
 
 * 论文: <https://jov.arvojournals.org/article.aspx?articleid=2193943>
 
 > 大量先前的模型用于预测人们在自然场景中的外观，侧重于像素级图像属性。为了弥合计算显着性模型的预测能力与人类行为之间的语义差距，我们提出了一种新的显着性体系结构，它将信息分为三个层次：像素级图像属性，对象级属性和语义级属性。通常忽略对象和语义级别信息，或者仅讨论少数样本对象类别，其中缩放到大量对象类别是不可行的，也不是神经合理的。为了解决这个问题，这项工作构建了一个基本属性的原则词汇表来描述对象和语义级信息，从而不限制有限数量的对象类别。我们**建立了一个包含500个图像的新数据集，其中包含15个观察者的眼动追踪数据和5,551个具有精细轮廓和12个语义属性的分段对象的注释数据**（可在论文中公开获得）。实验结果证明了对象和语义级信息在预测视觉注意力方面的重要性。
 
-### RSD(PKU-RSD)
-
-![samples of RSD](https://pkuml.org/wp-content/uploads/2014/12/samples-of-RSD-1024x271.png)
-
-* 论文: [J. Li, Y. Tian, T. Huang, and W. Gao, “A dataset and evaluation methodology for visual saliency in video,” in IEEE ICME, 2009, pp. 442–445](https://ieeexplore.ieee.org/document/5202529)
-* 项目: <https://pkuml.org/resources/dataset.html>
-* 下载: <https://pkuml.org/resources/pku-rsd.html>
-
-> 我们构建了这个PKU-RSD（区域显着性数据集）数据集，可以捕获时空视觉显着性，用于评估不同的视频显着性模型。该数据集包含431个短视频，其涵盖各种场景（监视，广告，新闻，卡通，电影等）以及由23个主题手动标记的采样关键帧中的显着对象的相应注释结果。
-
-### STC[need help]
-
-* 论文: [Y. Wu, N. Zheng, Z. Yuan, H. Jiang, and T. Liu, “Detection of salient objects with focused attention based on spatial and temporal coherence,” Chinese Science Bulletin, vol. 56, pp. 1055–1062, 2011.](https://pdfs.semanticscholar.org/3347/c330ac5586020ebea60823b1fd4e8d68e936.pdf?_ga=2.181072804.269179473.1546092428-61549168.1544104573)
-* 下载: This dataset is freely available from the author
-
-> 对视频内容的理解和分析对于众多应用程序来说至关重要，包括视频摘要，检索，导航和编辑。此过程的一个重要部分是检测视频片段中的显着（通常意味着重要和有趣）对象。与现有方法不同，我们提出了一种将显着性测量与空间和时间相干性相结合的方法。空间和时间一致性的整合受到人类视觉中关注焦点的启发。在所提出的方法中，低级视觉分组线索的空间相干性（例如外观和运动）有助于每帧对象背景分离，而对象属性的时间一致性（例如形状和外观）确保一致物体随时间定位，因此该方法对于意外的环境变化和相机振动是鲁棒的。在**开发了基于粗到细多尺度动态规划的有效优化策略之后，我们使用可与本文一起免费获得的具有挑战性的数据集来评估我们的方法**。我们展示了两种类型的一致性的有效性和互补性，并证明它们可以显着提高视频中显着对象检测的性能。
-
-### ACSD
+#### ACSD
 
 ![1546135560011](./assets/1546135560011.png)
 
@@ -286,7 +278,7 @@
 
 > 我们从[Z. Wang and B. Li. A two-stage approach to saliency detection in images. ICASSP 2008.]中提出的1000个图像中获得了一个真实数据库。[Z. Wang and B. Li. A two-stage approach to saliency detection in images. ICASSP 2008.]中的基本事实是在显着区域周围的用户绘制的矩形。这是不准确的，并将多个对象合二为一。我们手动分割用户绘制的矩形内的显着对象以获得二进制掩码，如下所示。这样的掩膜既准确又允许我们清楚地处理多个显着对象。
 
-### XPIE
+#### XPIE
 
 ![1546137404871](./assets/1546137404871.png)
 
@@ -301,7 +293,7 @@
 >
 > 对于这些图像，我们要求两位工程师通过两个阶段对其进行注释。在第一阶段，图像被分配一个二进制标记：'是'用于包含非明确对象，否则为'否'。在第一阶段之后，我们将21,002张图片标记为“是”，并且8,598图像标记为“否”。在第二阶段，这两位工程师进一步要求手动标记标记为“是”的10,000张图像中的显着对象的准确边界。注意我们有10名志愿者参与整个过程，以检查注释的质量。**最后，我们获得了10,000张图像的二进制掩码**。
 
-### SOC
+#### SOC
 
 ![1546081178458](./assets/1546081178458.png)
 
@@ -320,7 +312,7 @@
 >
 > 请注意，测试集仅包含图像且没有真值。我们将很快创建SOC Benchmark网站，您可以上传您的结果以获得我们网站的最终得分。此外，您可以先将验证集用作测试集。
 
-### HKU-IS[need help]
+#### HKU-IS[need help]
 
 * 项目: <https://i.cs.hku.hk/~gbli/deep_saliency.html>
 * 论文: [Visual Saliency Based on Multiscale Deep Features](http://i.cs.hku.hk/~yzyu/publication/mdfsaliency-cvpr15.pdf)
@@ -332,7 +324,7 @@
 >
 > 视觉显着性是包括计算机视觉在内的认知和计算科学中的一个基本问题。在本文中，我们发现可以从使用深度卷积神经网络（CNN）提取的多尺度特征中学习高质量的视觉显着性模型。视觉识别任务的成功。为了学习这样的显着性模型，我们引入了一种神经网络结构，它在CNN顶部具有完全连接的层，负责三个不同尺度的特征提取。然后，我们提出一种改进方法来增强我们的显着性结果的空间一致性。最后，针对不同级别的图像分割计算的聚合多个显着性图可以进一步提高性能，从而产生比由单个分割产生的显着性图更好的显着性图。为了促进对视觉显着性模型的进一步研究和评估，**我们还构建了一个新的大型数据库，包括4447个具有挑战性的图像及其像素显着性注释**。
 
-### HS-SOD
+#### HS-SOD
 
 ![img](https://github.com/gistairc/HS-SOD/raw/master/images/poster-QoMEX2018.png)
 
@@ -356,9 +348,28 @@ HS-SOD.zip file contains three folders:
 2. color: 60 color images of hyperspectral dataset rendered in sRGB for visualization
 3. ground-truth: 60 ground-truth binary images for salient objects
 
-## RGBD-Saliency Detection
+### Video Saliency Detection
 
-### NLPR/RGBD1000
+#### RSD(PKU-RSD)
+
+![samples of RSD](https://pkuml.org/wp-content/uploads/2014/12/samples-of-RSD-1024x271.png)
+
+* 论文: [J. Li, Y. Tian, T. Huang, and W. Gao, “A dataset and evaluation methodology for visual saliency in video,” in IEEE ICME, 2009, pp. 442–445](https://ieeexplore.ieee.org/document/5202529)
+* 项目: <https://pkuml.org/resources/dataset.html>
+* 下载: <https://pkuml.org/resources/pku-rsd.html>
+
+> 我们构建了这个PKU-RSD（区域显着性数据集）数据集，可以捕获时空视觉显着性，用于评估不同的视频显着性模型。该数据集包含431个短视频，其涵盖各种场景（监视，广告，新闻，卡通，电影等）以及由23个主题手动标记的采样关键帧中的显着对象的相应注释结果。
+
+#### STC[need help]
+
+* 论文: [Y. Wu, N. Zheng, Z. Yuan, H. Jiang, and T. Liu, “Detection of salient objects with focused attention based on spatial and temporal coherence,” Chinese Science Bulletin, vol. 56, pp. 1055–1062, 2011.](https://pdfs.semanticscholar.org/3347/c330ac5586020ebea60823b1fd4e8d68e936.pdf?_ga=2.181072804.269179473.1546092428-61549168.1544104573)
+* 下载: This dataset is freely available from the author
+
+> 对视频内容的理解和分析对于众多应用程序来说至关重要，包括视频摘要，检索，导航和编辑。此过程的一个重要部分是检测视频片段中的显着（通常意味着重要和有趣）对象。与现有方法不同，我们提出了一种将显着性测量与空间和时间相干性相结合的方法。空间和时间一致性的整合受到人类视觉中关注焦点的启发。在所提出的方法中，低级视觉分组线索的空间相干性（例如外观和运动）有助于每帧对象背景分离，而对象属性的时间一致性（例如形状和外观）确保一致物体随时间定位，因此该方法对于意外的环境变化和相机振动是鲁棒的。在**开发了基于粗到细多尺度动态规划的有效优化策略之后，我们使用可与本文一起免费获得的具有挑战性的数据集来评估我们的方法**。我们展示了两种类型的一致性的有效性和互补性，并证明它们可以显着提高视频中显着对象检测的性能。
+
+### RGBD-Saliency Detection
+
+#### NLPR/RGBD1000
 
 ![1546138815074](./assets/1546138815074.png)
 
@@ -370,7 +381,7 @@ HS-SOD.zip file contains three folders:
 >
 > 虽然深度信息在人类视觉系统中起着重要作用，但在现有的视觉显着性计算模型中尚未得到很好的探索。在这项工作中，**我们首先引入了一个大规模的RGBD图像数据集，以解决目前RGBD显着目标检测研究中数据不足的问题**。为了确保大多数现有的RGB显着模型在RGBD场景中仍然足够，我们继续提供一个简单的融合框架，将现有的RGB产生的显着性与新的深度诱导显着性相结合，前者是从现有的RGB模型中估算的，而前者是后者基于提出的多上下文对比模型。此外，还提出了一种专门的多阶段RGBD模型，其考虑了来自低级特征对比度，中级区域分组和高级先验增强的深度和外观线索。大量实验表明，我们的模型能够准确定位RGBD图像中的显着对象，并为目标对象分配一致的显着性值。
 
-### NJU400/2000
+#### NJU400/2000
 
 ![1546139249376](./assets/1546139249376.png)
 
@@ -386,7 +397,7 @@ HS-SOD.zip file contains three folders:
 
 > NJU2000 contains 2003 stereo image pairs with diverse objects and complex, challenging scenarios, along with ground-truth map. The stereo images are gathered from 3D movies, the Internet, and photographs taken by a Fuji W3 stereo camera.
 
-### STEREO/SSB
+#### STEREO/SSB
 
 ![](assets/2019-05-13-19-48-20.png)
 
@@ -396,7 +407,7 @@ HS-SOD.zip file contains three folders:
 
 > SSB is also called STEREO dataset, which consists of 1000 pairs of binocular images.
 
-### LFSD[nead img]
+#### LFSD[nead img]
 
 * 论文：Saliency detection on light field
 * 项目：<https://sites.duke.edu/nianyi/publication/saliency-detection-on-light-field/>
@@ -404,7 +415,13 @@ HS-SOD.zip file contains three folders:
 
 > LFSD is a small dataset which contains 100 images with depth information and human labeled ground truths. The depth information was obtained via the Lytro light field camera.
 
-### RGBD135/DES[need img]
+#### RGBD135/DES
+
+![image](assets/2019-05-23-10-44-38.png)
+
+![depth](assets/2019-05-23-10-44-15.png)
+
+![mask](assets/2019-05-23-10-44-59.png)
 
 * 论文：[Depth enhanced saliency detection method](http://delivery.acm.org/10.1145/2640000/2632866/p23-cheng.pdf?ip=202.118.97.210&id=2632866&acc=ACTIVE%20SERVICE&key=BF85BBA5741FDC6E%2E5FC7500D8F9CB386%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&__acm__=1557798709_a26e3faff3faccad6d62e02d79d1921a)
 * 项目：<https://github.com/HzFu/DES_code>
@@ -414,20 +431,45 @@ HS-SOD.zip file contains three folders:
 
 > RGBD135 is also named DES which consists of seven indoor scenes and contains 135 indoor images collected by Microsoft Kinect.
 
-## need your help...
+### RGBT-Saliency Detection [need more information...]
 
-> 有些数据集已经忘记了出处，大家有见过的，希望可以补充下。
+#### VT1000 Dataset
 
-* Image Pair
-* Cosal2015
-* INCT2016
-* RGBDCoseg183
-* 06RGBDCosal150
-* SegTrackV1/V2
-* ViSal
-* MCL
-* UVSD
-* VOS
+![image](assets/2019-05-23-10-49-47.png)
+
+![thermal](assets/2019-05-23-10-50-23.png)
+
+![mask](assets/2019-05-23-10-50-02.png)
+
+* 论文：RGB-T Image Saliency Detection via Collaborative Graph Learning
+* 项目：http://chenglongli.cn/people/lcl/dataset-code.html
+* 下载：具体信息可见项目主页
+    * https://drive.google.com/file/d/1NCPFNeiy1n6uY74L0FDInN27p6N_VCSd/view?usp=sharing
+    * https://pan.baidu.com/s/1eGQJhvnKnqV1KJ1GY_63NA
+
+#### VT821 Dataset
+
+![image](assets/2019-05-23-10-50-42.png)
+
+![mask](assets/2019-05-23-10-51-00.png)
+
+* 论文：A Unified RGB-T Saliency Detection Benchmark: Dataset, Baselines, Analysis and A Novel Approach
+* 项目：http://chenglongli.cn/people/lcl/dataset-code.html
+* 下载：具体信息可见项目主页
+    * https://drive.google.com/file/d/0B4fH4G1f-jjNR3NtQUkwWjFFREk/view?usp=sharing
+    * http://pan.baidu.com/s/1bpEaeQV
+
+### Other Saliency Dataset
+
+#### KAIST Salient Pedestrian Dataset
+
+![](assets/2019-05-23-10-53-57.png)
+
+* 论文：Pedestrian Detection from Thermal Images using Saliency Maps
+* 项目：https://github.com/Information-Fusion-Lab-Umass/Salient-Pedestrian-Detection
+* 下载：具体详见项目页面
+
+> We select 1702 images from the training set of the KAIST Multispectral Pedestrian dataset, by sampling every 15th image from all the images captured during the day and every 10thimage from all the images captured during the night, which contain pedestrians. These images were selected in order to have approximately the same number of images captured on both times of the day (913 day images and 789 night images), containing 4170 instances of pedestrians. We manually annotate these images using the VGG Image Annotator tool to generate the ground truth saliency masks based on the location of the bounding boxes on pedestrians in the original dataset. Additionally, we create a set of 362 images with similar annotations from the test set to validate our deep saliency detection networks, with 193 day images and 169 night images, containing 1029 instances of pedestrians.
 
 ## Segmentation
 
@@ -643,6 +685,21 @@ HS-SOD.zip file contains three folders:
 > * 第三，DeepFashion包含超过300,000个交叉姿势/跨域图像对。使用DeepFashion数据库开发了四个基准，包括属性预测，消费者到商店的衣服检索，店内衣服检索和地标检测。
 >
 > 这些基准的数据和注释也可以用作以下计算机视觉任务的训练和测试集，例如衣服检测，衣服识别和图像检索。请阅读“下载说明”以访问数据集。
+
+## need your help...
+
+> 有些数据集已经忘记了出处，大家有见过的，希望可以补充下。
+
+* Image Pair
+* Cosal2015
+* INCT2016
+* RGBDCoseg183
+* 06RGBDCosal150
+* SegTrackV1/V2
+* ViSal
+* MCL
+* UVSD
+* VOS
 
 ## Reference
 
