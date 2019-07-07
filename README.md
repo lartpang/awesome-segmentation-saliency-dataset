@@ -2,90 +2,104 @@
 
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
+:sparkling_heart::
+* AI开发者神器！谷歌重磅推出数据集搜索 Dataset Search: https://mp.weixin.qq.com/s/ErbwXAz-_AJrmUGMHZIcwg
+* Making it easier to discover datasets: https://www.blog.google/products/search/making-it-easier-discover-datasets/
+
 > Please **cite related paper** if you **use their dataset**
 >
 > Every item need some images, links, and introductions... I need your help... :smile:
 
-* [Another Awesome Dataset List](#another-awesome-dataset-list)
-  * [Saliency](#saliency)
-    * [RGB-Saliency Detection](#rgb-saliency-detection)
-      * [MSRA](#msra)
-      * [SED1/2](#sed12)
-      * [ASD(MSRA1000/MSRA1K)](#asdmsra1000msra1k)
-      * [DUT-OMRON](#dut-omron)
-      * [DUTS](#duts)
-      * [SOD](#sod)
-      * [iCoSeg](#icoseg)
-      * [Infrared[need help]](#infraredneed-help)
-      * [ImgSal](#imgsal)
-      * [ECSSD/CSSD](#ecssdcssd)
-      * [THUR15K](#thur15k)
-      * [Bruce-A[need help]](#bruce-aneed-help)
-      * [Judd-A[need help]](#judd-aneed-help)
-      * [PASCAL-S](#pascal-s)
-      * [UCSB[need help]](#ucsbneed-help)
-      * [OSIE[need help]](#osieneed-help)
-      * [ACSD](#acsd)
-      * [XPIE](#xpie)
-      * [SOC](#soc)
-      * [HKU-IS[need help]](#hku-isneed-help)
-      * [HS-SOD](#hs-sod)
-    * [Video Saliency Detection](#video-saliency-detection)
-      * [RSD(PKU-RSD)](#rsdpku-rsd)
-      * [STC[need help]](#stcneed-help)
-    * [RGBD-Saliency Detection](#rgbd-saliency-detection)
-      * [NLPR/RGBD1000](#nlprrgbd1000)
-      * [NJU400/2000](#nju4002000)
-      * [STEREO/SSB](#stereossb)
-      * [LFSD[nead img]](#lfsdnead-img)
-      * [RGBD135/DES](#rgbd135des)
-    * [RGBT-Saliency Detection [need more information...]](#rgbt-saliency-detection-need-more-information)
-      * [VT1000 Dataset](#vt1000-dataset)
-      * [VT821 Dataset](#vt821-dataset)
-    * [Other Saliency Dataset](#other-saliency-dataset)
-      * [KAIST Salient Pedestrian Dataset](#kaist-salient-pedestrian-dataset)
-  * [Segmentation](#segmentation)
-    * [General[need help]](#generalneed-help)
-      * [DAVIS](#davis)
-      * [aNYU](#anyu)
-    * [About Person](#about-person)
-      * [Supervisely人像数据集](#supervisely人像数据集)
-      * [Clothing Parsing](#clothing-parsing)
-      * [HumanParsing-Dataset](#humanparsing-dataset)
-      * [Look into Person (LIP)](#look-into-person-lip)
-      * [Taobao Commodity Dataset](#taobao-commodity-dataset)
-      * [Object Extraction Dataset](#object-extraction-dataset)
-      * [Clothing Co-Parsing (CCP) Dataset](#clothing-co-parsing-ccp-dataset)
-      * [Baidu People segmentation dataset[need help]](#baidu-people-segmentation-datasetneed-help)
-  * [Matting](#matting)
-    * [alphamatting.com](#alphamattingcom)
-    * [Composition-1k: Deep Image Matting](#composition-1k-deep-image-matting)
-    * [Semantic Human Matting](#semantic-human-matting)
-    * [PFCN](#pfcn)
-    * [Deep Automatic Portrait Matting](#deep-automatic-portrait-matting)
-  * [Other](#other)
-    * [Large-scale Fashion (DeepFashion) Database](#large-scale-fashion-deepfashion-database)
-  * [need your help...](#need-your-help)
-  * [Reference](#reference)
-    * [Salient Object Detection: A Survey](#salient-object-detection-a-survey)
-    * [Review of Visual Saliency Detection with Comprehensive Information](#review-of-visual-saliency-detection-with-comprehensive-information)
-  * [More[need help]](#moreneed-help)
-    * [Similiar Projects](#similiar-projects)
-    * [Research Institutes](#research-institutes)
-    * [Resource Websites](#resource-websites)
+- [Another Awesome Dataset List](#Another-Awesome-Dataset-List)
+  - [Saliency](#Saliency)
+    - [RGB-Saliency Detection](#RGB-Saliency-Detection)
+      - [MSRA(MSRA10K/MSRA-B)](#MSRAMSRA10KMSRA-B)
+      - [SED1/2](#SED12)
+      - [ASD(MSRA1000/MSRA1K)[need some images]](#ASDMSRA1000MSRA1Kneed-some-images)
+      - [DUT-OMRON](#DUT-OMRON)
+      - [DUTS](#DUTS)
+      - [HKU-IS[need some iamges]](#HKU-ISneed-some-iamges)
+      - [SOD](#SOD)
+      - [iCoSeg](#iCoSeg)
+      - [Infrared[need help]](#Infraredneed-help)
+      - [ImgSal](#ImgSal)
+      - [ECSSD/CSSD](#ECSSDCSSD)
+      - [THUR15K](#THUR15K)
+      - [Bruce-A[need help]](#Bruce-Aneed-help)
+      - [Judd-A[need help]](#Judd-Aneed-help)
+      - [PASCAL-S](#PASCAL-S)
+      - [UCSB[need help]](#UCSBneed-help)
+      - [OSIE[need help]](#OSIEneed-help)
+      - [ACSD](#ACSD)
+    - [Other Special SOD Datasets](#Other-Special-SOD-Datasets)
+      - [XPIE](#XPIE)
+      - [SOC](#SOC)
+      - [SOS/MOS[need some images]](#SOSMOSneed-some-images)
+      - [ILSO[need some images]](#ILSOneed-some-images)
+      - [HS-SOD](#HS-SOD)
+    - [Video Saliency Detection](#Video-Saliency-Detection)
+      - [RSD(PKU-RSD)](#RSDPKU-RSD)
+      - [STC[need help]](#STCneed-help)
+    - [RGBD-Saliency Detection](#RGBD-Saliency-Detection)
+      - [NLPR/RGBD1000](#NLPRRGBD1000)
+      - [NJU400/2000](#NJU4002000)
+      - [STEREO/SSB](#STEREOSSB)
+      - [LFSD[nead img]](#LFSDnead-img)
+      - [RGBD135/DES](#RGBD135DES)
+    - [RGBT-Saliency Detection [need more information...]](#RGBT-Saliency-Detection-need-more-information)
+      - [VT1000 Dataset](#VT1000-Dataset)
+      - [VT821 Dataset](#VT821-Dataset)
+    - [Other Saliency Dataset](#Other-Saliency-Dataset)
+      - [KAIST Salient Pedestrian Dataset](#KAIST-Salient-Pedestrian-Dataset)
+  - [Segmentation](#Segmentation)
+    - [General[need help]](#Generalneed-help)
+      - [DAVIS](#DAVIS)
+      - [aNYU](#aNYU)
+    - [About Person](#About-Person)
+      - [Supervisely人像数据集](#Supervisely%E4%BA%BA%E5%83%8F%E6%95%B0%E6%8D%AE%E9%9B%86)
+      - [Clothing Parsing](#Clothing-Parsing)
+      - [HumanParsing-Dataset](#HumanParsing-Dataset)
+      - [Look into Person (LIP)](#Look-into-Person-LIP)
+      - [Taobao Commodity Dataset](#Taobao-Commodity-Dataset)
+      - [Object Extraction Dataset](#Object-Extraction-Dataset)
+      - [Clothing Co-Parsing (CCP) Dataset](#Clothing-Co-Parsing-CCP-Dataset)
+      - [Baidu People segmentation dataset[need help]](#Baidu-People-segmentation-datasetneed-help)
+  - [Matting](#Matting)
+    - [alphamatting.com](#alphamattingcom)
+    - [Composition-1k: Deep Image Matting](#Composition-1k-Deep-Image-Matting)
+    - [Semantic Human Matting](#Semantic-Human-Matting)
+    - [PFCN](#PFCN)
+    - [Deep Automatic Portrait Matting](#Deep-Automatic-Portrait-Matting)
+  - [Other](#Other)
+    - [Large-scale Fashion (DeepFashion) Database](#Large-scale-Fashion-DeepFashion-Database)
+  - [need your help...](#need-your-help)
+  - [Reference](#Reference)
+    - [Salient Object Detection: A Survey](#Salient-Object-Detection-A-Survey)
+    - [Review of Visual Saliency Detection with Comprehensive Information](#Review-of-Visual-Saliency-Detection-with-Comprehensive-Information)
+    - [Salient Object Detection in the Deep Learning Era: An In-Depth Survey](#Salient-Object-Detection-in-the-Deep-Learning-Era-An-In-Depth-Survey)
+  - [More](#More)
+    - [Similiar Projects](#Similiar-Projects)
+    - [Research Institutes](#Research-Institutes)
+    - [Resource Websites](#Resource-Websites)
 
 ## Saliency
 
 ### RGB-Saliency Detection
 
-#### MSRA
+#### MSRA(MSRA10K/MSRA-B)
 
 ![img](https://mmcheng.net/wp-content/uploads/2014/07/MSRA10K.jpg)
 
 * 论文: [T. Liu, J. Sun, N. Zheng, X. Tang, and H.-Y. Shum, “Learningto detect a salient object,” inCVPR, 2007, pp. 1–8](http://mmlab.ie.cuhk.edu.hk/2007/CVPR07_detect.pdf)
-* 南开大学媒体计算实验室: <https://mmcheng.net/zh/msra10k/>
-* MSRA10K(formally named as THUS10000; [195MB](http://mftp.mmcheng.net/Data/MSRA10K_Imgs_GT.zip): images + binary masks): Pixel accurate salient object labeling for **10000 images** from MSRA dataset. Please cite our paper [https://mmcheng.net/SalObj/] if you use it. Saliency maps and salient object region segmentation for other 20+ alternative methods are also available ([百度网盘](http://pan.baidu.com/s/1dEaQqlF#path=%252FShare%252FSalObjRes)).
-* MSRA-B ([111MB](http://mftp.mmcheng.net/Data/MSRA-B.zip): images + binary masks): Pixel accurate salient object labeling for **5000 images** from MSRA-B dataset. Please cite the corresponding paper [https://mmcheng.net/drfi/] if you use it.
+* 主页：南开大学媒体计算实验室: <https://mmcheng.net/zh/msra10k/>
+* 下载：
+    * MSRA10K(formally named as THUS10000; [195MB](http://mftp.mmcheng.net/Data/MSRA10K_Imgs_GT.zip): images + binary masks):
+        * Pixel accurate salient object labeling for **10000 images** from MSRA dataset.
+        * Please cite our paper [https://mmcheng.net/SalObj/] if you use it.
+        * Saliency maps and salient object region segmentation for other 20+ alternative methods are also available ([百度网盘](http://pan.baidu.com/s/1dEaQqlF#path=%252FShare%252FSalObjRes)).
+    * MSRA-B ([111MB](http://mftp.mmcheng.net/Data/MSRA-B.zip): images + binary masks):
+        * Pixel accurate salient object labeling for **5000 images** from MSRA-B dataset.
+        * Please cite the corresponding paper [https://mmcheng.net/drfi/] if you use it.
 
 > 我们通过检测输入图像中的显着对象来研究视觉注意力。我们将显着对象检测表示为图像分割问题，我们将显着对象与图像背景分开。我们提出了一系列新颖的特征，包括多尺度对比度，中心环绕直方图和颜色空间分布，以在本地，区域和全局描述显着对象。学习条件随机场以有效地组合这些特征以用于显着对象检测。我们还构建了一个**包含由多个用户标记的数以万计的完全标记图像的图像数据库**。据我们所知，它是第一个用于视觉注意算法定量评估的大型图像数据库。我们在此图像数据库上验证了我们的方法，该数据库在本文中是公开的。
 >
@@ -120,19 +134,18 @@
 
 > 这项工作的目的是为图像分割研究提供经验和科学依据。评估分割算法产生的结果具有挑战性，因为很难提出提供基础真实分割的规范测试集。这部分是因为在日常复杂图像中手动描绘片段可能是费力的。此外，人们往往倾向于将语义考虑纳入其分段中，这超出了数据驱动的分割算法的范围。因此，许多现有算法仅显示很少的分割结果。为了评估由不同算法产生的分割，我们编制了一个数据库，目前**包含200个灰度图像以及真实标注分割**。该数据库专门设计用于避免潜在的模糊，仅通过仅通过强度，纹理或其他低水平线索合并清晰描绘前景中与其周围环境不同的一个或两个物体的图像。通过要求人类对象手动地将灰度图像（还提供颜色源）分成两个或三个类别来获得地面真实分割，其中**每个图像由三个不同的人类对象分割**。通过评估其与真实分割的一致性及其碎片量来评估分割。与此数据库评估一起，我们提供了用于评估给定分割算法的代码。这样，不同的分割算法可能具有可比较的结果以获得更多细节，请参阅“评估测试”部分。
 
-#### ASD(MSRA1000/MSRA1K)
+#### ASD(MSRA1000/MSRA1K)[need some images]
 
-* T. Liu, J. Sun, N.-N. Zheng, X. Tang, and H.-Y. Shum, “[Learning to detect a salient object](http://research.microsoft.com/en-us/um/people/jiansun/salientobject/salient_object.htm),” in *Proc. IEEE Conf. Comput. Vis. Pattern Recognit.*, 2007, pp. 1–8.
-* R. Achanta, S. Hemami, F. Estrada, and S. Süsstrunk, “[Frequency-tuned salient region detection](http://ivrlwww.epfl.ch/supplementary_material/RK_CVPR09/),” in *Proc. IEEE Conf. Comput. Vis. Pattern Recognit.*, 2009, pp. 1597–1604.
+* 论文：[A two-stage approach to saliency detection inimages](https://www.researchgate.net/publication/224312323_A_two-stage_approach_to_saliency_detection_in_images)
+* 相关：
+    * T. Liu, J. Sun, N.-N. Zheng, X. Tang, and H.-Y. Shum, “[Learning to detect a salient object](http://research.microsoft.com/en-us/um/people/jiansun/salientobject/salient_object.htm),” in *Proc. IEEE Conf. Comput. Vis. Pattern Recognit.*, 2007, pp. 1–8.
+    * R. Achanta, S. Hemami, F. Estrada, and S. Süsstrunk, “[Frequency-tuned salient region detection](http://ivrlwww.epfl.ch/supplementary_material/RK_CVPR09/),” in *Proc. IEEE Conf. Comput. Vis. Pattern Recognit.*, 2009, pp. 1597–1604.
 * 下载: <http://download.csdn.net/detail/wanyq07/9839322>
+    * 关于下载的说明：因为基于MSRA的图片数据集, 在孙剑走了之后, MARA上就没了他的页面, 相关的资源也就找不到了. CSDN一篇博客有分享。原图下载地址：[MSRA图像数据集（1000幅含真实标注）](http://download.csdn.net/detail/tuconghuan/8357509)。上面下载到的标注图尺寸被统一改为512*512，所以这里在给个地址：[ASD尺寸一致](http://download.csdn.net/detail/zzb4702/9559378)
 
-这个数据集包含有1000张图（MSRA1000）这个数据库来自于[A two-stage approach to saliency detection inimages](https://www.researchgate.net/publication/224312323_A_two-stage_approach_to_saliency_detection_in_images) 该数据库的说明以及一些算法（IT, MZ, GB, SR, AC,IG ) 的结果可以在[Frequency-tuned Salient Region Detection](http://ivrlwww.epfl.ch/supplementary_material/RK_CVPR09/index.html) (FT算法 => 这里改进的数据集叫做ACSD, 相关可见[ACSD](#ACSD)部分)下载，此外其中还包含了这1000张测试图的真值图。
-
-> 因为基于MSRA的图片数据集, 在孙剑走了之后, MARA上就没了他的页面, 相关的资源也就找不到了. CSDN一篇博客的一个分享:
+> ASD contains 1,000 images with pixel-wise ground-truths. The images are selected from the MSRA-A dataset, where only the bounding boxes around salient regions are provided. The accurate salient masks in ASD are created based on object contours.
 >
-> 原图下载地址：[MSRA图像数据集（1000幅含真实标注）](http://download.csdn.net/detail/tuconghuan/8357509)
->
-> 上面下载到的标注图尺寸被统一改为512*512，所以这里在给个地址：[ASD尺寸一致](http://download.csdn.net/detail/zzb4702/9559378)
+> 这个数据集包含有1000张图（MSRA1000）这个数据库来自于 该数据库的说明以及一些算法（IT, MZ, GB, SR, AC,IG ) 的结果可以在[Frequency-tuned Salient Region Detection](http://ivrlwww.epfl.ch/supplementary_material/RK_CVPR09/index.html) (FT算法 => 这里改进的数据集叫做ACSD, 相关可见[ACSD](#ACSD)部分)下载，此外其中还包含了这1000张测试图的真值图。
 
 #### DUT-OMRON
 
@@ -158,19 +171,32 @@
 >
 > For fair comparison in the future research, the training set of DUTS serves as a good candidate for learning DNNs, while the test set and other public data sets can be used for evaluation.
 
+#### HKU-IS[need some iamges]
+
+* 项目: <https://i.cs.hku.hk/~gbli/deep_saliency.html>
+* 论文: [Visual Saliency Based on Multiscale Deep Features](http://i.cs.hku.hk/~yzyu/publication/mdfsaliency-cvpr15.pdf)
+* 下载:
+    * [Google Drive](https://drive.google.com/open?id=0BxNhBO0S5JCRQ1N6V25VeVh6cHc&authuser=0)
+    * [Baidu Yun](http://pan.baidu.com/s/1c0EpNfM)
+
+> 数据集包含4447个具有显着对象的像素注释的图像
+>
+> 视觉显着性是包括计算机视觉在内的认知和计算科学中的一个基本问题。在本文中，我们发现可以从使用深度卷积神经网络（CNN）提取的多尺度特征中学习高质量的视觉显着性模型。视觉识别任务的成功。为了学习这样的显着性模型，我们引入了一种神经网络结构，它在CNN顶部具有完全连接的层，负责三个不同尺度的特征提取。然后，我们提出一种改进方法来增强我们的显着性结果的空间一致性。最后，针对不同级别的图像分割计算的聚合多个显着性图可以进一步提高性能，从而产生比由单个分割产生的显着性图更好的显着性图。为了促进对视觉显着性模型的进一步研究和评估，**我们还构建了一个新的大型数据库，包括4447个具有挑战性的图像及其像素显着性注释**。
+
 #### SOD
 
 ![img](assets/2019-03-22-18-46-40.png)
 
 * 项目: <http://elderlab.yorku.ca/SOD/>
-* 下载(官方): <http://elderlab.yorku.ca/SOD/SOD.zip>
-* 下载(百度云): <https://pan.baidu.com/s/1IMElTPwD4yTo2TMSRU-keQ>
+* 下载
+    * 官方: <http://elderlab.yorku.ca/SOD/SOD.zip>
+    * 百度云: <https://pan.baidu.com/s/1IMElTPwD4yTo2TMSRU-keQ>
 
 > 此数据集是基于Berkeley Segmentation Dataset（BSD）的显着对象边界的集合。要求七个对象选择BSD中使用的每个图像中的显着对象。每个主题随机显示伯克利分割数据集的子集，作为在相应图像上重叠的边界。然后，可以通过单击选择哪些区域或区段对应于显着对象。
 >
 > 对于BSD中使用的300个图像的每个图像，都有一个.mat文件可以由Matlab打开。加载每个mat文件会将一个名为“SES”的结构读入内存，该结构是从SOD中每个主题的会话中收集的数据数组.
 >
-> Note that the original images are available from the Berkely Segmentation Dataset at: [http://www.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/segbench/](http://www.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/segbench/)
+> :gift_heart: that the original images are available from the Berkely Segmentation Dataset at: [http://www.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/segbench/](http://www.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/segbench/)
 
 #### iCoSeg
 
@@ -231,8 +257,6 @@
 * 下载: <https://mmcheng.net/mftp/Data/THUR15000.zip>
     * 百度云: <https://pan.baidu.com/s/1u-E-8ujnxBz0mdmXsJglvg>
 
-> XPIE contains 10,000 images with pixel-wise masks of salient objects. It covers many complex scenes with different numbers, sizes and positions of salient objects.
-
 > 有效识别大型图像集中的显着对象对于许多应用是必不可少的，包括图像检索，监视，图像注释和对象识别。我们提出了一种简单，快速，有效的算法，通过分析图像集合来定位和分割显着对象。作为一个关键的新颖性，我们通过提取最大化图像间相似性和图像内清晰度的显着对象（在预过滤图像的集合中）来引入群体显着性以实现优越的无监督显着对象分割。为了评估我们的方法，我们构建了一个大型基准数据集，**该数据集包含多个类别的15K图像，适用于显着对象区域的6000多个像素精确的地面实况注释**。在我们的所有测试中， group saliency 始终优于最先进的单图像显着性算法，从而实现更高的精度和更好的回忆。我们的算法成功处理了比任何现有基准数据集更大的订单的图像集合，包括来自各种网络间源的各种异构图像。
 >
 > 我们引入了分类图像的标记数据集，用于评估基于草图的图像检索。我们为5个关键字中的每一个下载了大约3000张图像：“蝴蝶”，“咖啡杯”，“狗跳”，“长颈鹿”和“平面”，一起包括大约15000张图像。**对于每个图像，如果存在具有与查询关键字匹配的正确内容的非模糊对象并且对象的大部分可见，则我们标记这样的对象区域。与MSRA10K类似，显着区域以像素级别标记。我们只标记几乎完全可见的对象的显着对象区域，因为部分遮挡的对象对形状匹配不太有用。与MSRA10K不同，THUR15K数据集不包含为数据集中的每个图像标记的显着区域，即，一些图像可能没有任何显着区域。该数据集用于评估基于形状的图像检索性能。**
@@ -250,10 +274,13 @@
 ![img](https://ccvl.jhu.edu/datasets/assets/pascal_salient_object.jpg)
 
 * 项目: <https://ccvl.jhu.edu/datasets/>
-* 下载: <https://pan.baidu.com/s/1DZcfwCYdeMW4EGawhXQyig>
+* 下载:
+    * 百度云盘：<https://pan.baidu.com/s/1DZcfwCYdeMW4EGawhXQyig>
     * 种子: <http://academictorrents.com/download/6c49defd6f0e417c039637475cde638d1363037e.torrent>
 
 > 对来自PASCAL VOC的850张图像子集的自由修复。收集8个主题，3s观看时间，Eyelink II眼动仪。大多数算法的性能表明PASCAL-S比大多数显着性数据集偏差更小。
+>
+> :broken_heart: 由于其标注的真值有多个值，常见的做法是使用`255/2`值作为阈值进行处理后，再使用该数据集
 
 #### UCSB[need help]
 
@@ -278,20 +305,30 @@
 
 > 我们从[Z. Wang and B. Li. A two-stage approach to saliency detection in images. ICASSP 2008.]中提出的1000个图像中获得了一个真实数据库。[Z. Wang and B. Li. A two-stage approach to saliency detection in images. ICASSP 2008.]中的基本事实是在显着区域周围的用户绘制的矩形。这是不准确的，并将多个对象合二为一。我们手动分割用户绘制的矩形内的显着对象以获得二进制掩码，如下所示。这样的掩膜既准确又允许我们清楚地处理多个显着对象。
 
+### Other Special SOD Datasets
+
 #### XPIE
 
 ![1546137404871](./assets/1546137404871.png)
 
 * 链接: [C.  Xia,  J.  Li,  X.  Chen,  A.  Zheng,  and  Y.  Zhang,  “What  is  and  what is not a salient object? Learning salient object detector by ensembling linear exemplar regressors,” in CVPR , 2017, pp. 4142–4150.](https://www.researchgate.net/publication/320971838_What_is_and_What_is_Not_a_Salient_Object_Learning_Salient_Object_Detector_by_Ensembling_Linear_Exemplar_Regressors)
-* 团队: cvteam
-* 项目: <http://cvteam.net/>
+* 团队: cvteam: <http://cvteam.net/>
+* 项目：<http://cvteam.net/projects/CVPR17-ELE/ELE.html>
 * 下载: <http://cvteam.net/projects/CVPR17-ELE/XPIE.tar.gz>
 
-> 找出什么是什么和什么不是显着对象可以有助于在显着对象检测（SOD）中开发更好的特征和模型。在本文中，我们研究了在构建新的SOD数据集时选择和丢弃的图像，发现许多相似的候选者，复杂形状和低对象性是很多非显着对象的三个主要属性。此外，对象可能具有使其显着的不同属性。因此，我们通过整合lin-ear示例回归量来提出一种新颖的显着物体探测器。我们首先使用边界先验选择可靠的前景和背景种子，然后采用局部线性嵌入（LLE）进行流形保持前景传播。以这种方式，可以对大致突出的对象生成前景图，并且使用类似的候选对象来抑制非显着对象。此外，我们提取形状，前景和注意描述符来表征被提取的对象提议，并且训练线性样本回归器来编码如何检测特定图像中的显着提议。最后，各种线性样本回归器被组合以形成适应各种情况的单个检测器。5个数据集和新SOD数据集的广泛实验结果表明，我们的方法优于9种最先进的方法。
+> 找出什么是什么和什么不是显着对象可以有助于在显着对象检测（SOD）中开发更好的特征和模型。在本文中，我们研究了在构建新的SOD数据集时选择和丢弃的图像，发现许多相似的候选者，复杂形状和低对象性是很多非显着对象的三个主要属性。此外，对象可能具有使其显着的不同属性。
 >
-> 为了全面解释什么是什么和什么不是显着对象，一个可行的解决方案是通过观察包含在数据集中或从数据集中丢弃的图像中的对象的主要特征来研究构建新SOD数据集的整个过程。从这些观察中，我们可以推断显着和非显着对象的关键属性以及基于图像的SOD数据集中可能存在的主观偏差。**为此，我们构建了一个大的SOD数据集（称为XPIE）并记录构建过程中的所有细节。我们首先从三个来源收集三种图像，包括Panoramio，ImageNet和两个固定数据集。该系列是全自动的，以避免引入太多的主观偏见。之后，我们调整每个图像的大小，使其最大边长为300像素，并丢弃所有最小边长小于128像素的灰度或彩色图像。最后，我们在三个图像子集中获得29,600个彩色图像。分别表示为Set-P，Set-I, Set-E. Set-P 包含8,800具有地理信息的感兴趣地点的图像（例如，GPS和标签），具有对象标签的Set-I包含19,600图像，以及Set-E包含1,200个人类固定图像**.
+> 为了全面解释什么是什么和什么不是显着对象，一个可行的解决方案是通过观察包含在数据集中或从数据集中丢弃的图像中的对象的主要特征来研究构建新SOD数据集的整个过程。从这些观察中，我们可以推断显着和非显着对象的关键属性以及基于图像的SOD数据集中可能存在的主观偏差。为此，我们构建了一个大的SOD数据集（称为XPIE）并记录构建过程中的所有细节。
+>
+> 1. 我们首先从三个来源收集三种图像，包括Panoramio，ImageNet和两个fixation数据集。这些操作是全自动的，以避免引入太多的主观偏见。
+> 2. 之后，我们调整每个图像的大小，使其最大边长为300像素，并丢弃所有最小边长小于128像素的灰度或彩色图像。
+> 3. 最后，我们在三个图像子集中获得29,600个彩色图像。分别表示为Set-P，Set-I, Set-E.
+>
+> **Set-P 包含8,800具有地理信息的感兴趣地点的图像（例如，GPS和标签），具有对象标签的Set-I包含19,600图像，以及Set-E包含1,200个human fixations图像**.
 >
 > 对于这些图像，我们要求两位工程师通过两个阶段对其进行注释。在第一阶段，图像被分配一个二进制标记：'是'用于包含非明确对象，否则为'否'。在第一阶段之后，我们将21,002张图片标记为“是”，并且8,598图像标记为“否”。在第二阶段，这两位工程师进一步要求手动标记标记为“是”的10,000张图像中的显着对象的准确边界。注意我们有10名志愿者参与整个过程，以检查注释的质量。**最后，我们获得了10,000张图像的二进制掩码**。
+>
+> 可见论文内容第2节。
 
 #### SOC
 
@@ -308,21 +345,41 @@
     * 1.2K  SOC Validation Set (146.56MB) [Here](http://dpfan.net/wp-content/uploads/ValSet.zip)[Baidu](https://pan.baidu.com/s/1mOmiezCpkr5NCQk8ecvGiQ)[Google](https://drive.google.com/open?id=1vAfP8fCAo2a2KwgsmYLn8r8Rk4Lk7Urr)
     * 1.2K  SOC Test Set (141.86MB) [Here](http://dpfan.net/wp-content/uploads/TestSet.zip)[Baidu](https://pan.baidu.com/s/10y-dx9HCPQm9fnp-Brswgw)[Google](https://drive.google.com/open?id=1ZdKrsk-S4J6KQyjx-cPeL0HoKXy7CCxG)
 
-> 在本文中，我们提供了显着对象检测（SOD）模型的综合评估。我们的分析确定了现有SOD数据集的严重设计偏差，假设每个图像在低杂波中包含至少一个明显突出的显着对象。这是一个不切实际的假设。在现有数据集上进行评估时，设计偏差导致了最先进的SOD模型的饱和高性能。然而，当应用于现实世界的日常场景时，这些模型仍然远远不能令人满意。根据我们的分析，我们首先确定了全面和平衡的数据集应该实现的7个关键方面。然后，我们提出一个新的高质量数据集并更新以前的显着性基准。具体来说，我们的数据集称为SOC，Salient Objects in Clutter，**包括来自日常对象类别的显着和非显着对象的图像**。除了对象类别注释之外，每个突出图像都伴随着反映现实世界场景中常见挑战的属性（例如，外观变化，杂乱），并且可以帮助 1）更深入地了解SOD问题，2）调查专业人员和SOD模型的缺点，3）从不同的角度客观地评估模型。最后，我们在SOC数据集上报告基于属性的性能评估。我们相信，我们的数据集和结果将为未来的显着物体检测研究开辟新的方向。
+> 在本文中，我们提供了显着对象检测（SOD）模型的综合评估。我们的分析确定了现有SOD数据集的严重设计偏差，假设每个图像在低杂波中包含至少一个明显突出的显着对象。这是一个不切实际的假设。在现有数据集上进行评估时，设计偏差导致了最先进的SOD模型的饱和高性能。然而，当应用于现实世界的日常场景时，这些模型仍然远远不能令人满意。根据我们的分析，我们首先确定了全面和平衡的数据集应该实现的7个关键方面。然后，我们提出一个新的高质量数据集并更新以前的显着性基准。
 >
-> 请注意，测试集仅包含图像且没有真值。我们将很快创建SOC Benchmark网站，您可以上传您的结果以获得我们网站的最终得分。此外，您可以先将验证集用作测试集。
-
-#### HKU-IS[need help]
-
-* 项目: <https://i.cs.hku.hk/~gbli/deep_saliency.html>
-* 论文: [Visual Saliency Based on Multiscale Deep Features](http://i.cs.hku.hk/~yzyu/publication/mdfsaliency-cvpr15.pdf)
-* 下载:
-    * [Google Drive](https://drive.google.com/open?id=0BxNhBO0S5JCRQ1N6V25VeVh6cHc&authuser=0)
-    * [Baidu Yun](http://pan.baidu.com/s/1c0EpNfM)
-
-> 数据集包含4447个具有显着对象的像素注释的图像
+> 具体来说，我们的数据集称为SOC，Salient Objects in Clutter，**包括来自日常对象类别的显着和非显着对象的图像**。除了对象类别注释之外，每个突出图像都伴随着反映现实世界场景中常见挑战的属性（例如，外观变化，杂乱），并且可以帮助 1）更深入地了解SOD问题，2）调查专业人员和SOD模型的缺点，3）从不同的角度客观地评估模型。最后，我们在SOC数据集上报告基于属性的性能评估。我们相信，我们的数据集和结果将为未来的显着物体检测研究开辟新的方向。
 >
-> 视觉显着性是包括计算机视觉在内的认知和计算科学中的一个基本问题。在本文中，我们发现可以从使用深度卷积神经网络（CNN）提取的多尺度特征中学习高质量的视觉显着性模型。视觉识别任务的成功。为了学习这样的显着性模型，我们引入了一种神经网络结构，它在CNN顶部具有完全连接的层，负责三个不同尺度的特征提取。然后，我们提出一种改进方法来增强我们的显着性结果的空间一致性。最后，针对不同级别的图像分割计算的聚合多个显着性图可以进一步提高性能，从而产生比由单个分割产生的显着性图更好的显着性图。为了促进对视觉显着性模型的进一步研究和评估，**我们还构建了一个新的大型数据库，包括4447个具有挑战性的图像及其像素显着性注释**。
+> SOC has 6,000 images with 80 common categories. Half of the images contain salient objects and the others contain none. **Each salient-object-contained image is annotated with instance-level SOD ground-truth, object category (e.g., dog, book), and challenging factors** (e.g., big/small object). **The non-salient object subset has 783 texture images and 2,217 real-scene images** (e.g., aurora, sky).
+
+#### SOS/MOS[need some images]
+
+* 项目：<http://cs-people.bu.edu/jmzhang/sos.html>
+* 论文：
+    * SOS: J. Zhang, S. Ma, M. Sameki, S. Sclaroff, M. Betke, Z. Lin, X. Shen, B. Price, and R. Mech, “Salient object subitizing,” in Proc. IEEE Conf. Comput. Vis. Pattern Recognit., 2015, pp. 4045–4054.
+    * MOS: J. Zhang, S. Ma, M. Sameki, S. Sclaroff, M. Betke, Z. Lin, X. Shen, B. Price, and R. Mech, “Salient object subitizing,” in Proc. IEEE Conf. Comput. Vis. Pattern Recognit., 2015, pp. 4045–4054.
+
+> SOS 10 is created for SOD subitizing [115], i.e., to predict the number of salient objects without an expensive detection process. It contains 6,900 images selected from:
+>
+> 1. A large-scale hierarchical image database
+> 2. Sun database: Large-scale scene recognition from abbey to zoo
+> 3. Microsoft coco: Common objects in context
+> 4. The pascal visual object classes (voc) challenge results
+>
+> Each image is labeled as containing 0, 1, 2, 3 or 4+ salient objects. SOS is randomly split into a training (5,520 images) and a test set (1,380 images).
+>
+> **MSO is a subset of the test set of SOS and contains 1,224 images**. It has a more balanced distribution regarding the number of salient objects, and each object is annotated with a bounding box.
+
+#### ILSO[need some images]
+
+* 项目：<http://www.sysu-hcp.net/instance-level-salient-object-segmentation/>
+* 论文：G. Li, Y. Xie, L. Lin, and Y. Yu, “Instance-level salient object segmentation,” in Proc. IEEE Conf. Comput. Vis. Pattern Recognit., 2017, pp. 247–256.
+
+> ILSO has 1,000 images with pixel-wise instancelevel saliency annotations and coarse contour labeling, where the benchmark results are generated using MSRNet [Instance-level salient object segmentation]. Most of the images in ILSO are selected from the following datasets to reduce ambiguity over the salient object regions.
+>
+> 1. Visual saliency based on multiscale deep features
+> 2. Hierarchical saliency detection
+> 3. Saliency detection via graph-based manifold ranking
+> 4. Salient object subitizing
 
 #### HS-SOD
 
@@ -713,7 +770,12 @@ HS-SOD.zip file contains three folders:
 
 ![dataset](./assets/2018-12-27-11-05-49.png)
 
-## More[need help]
+### [Salient Object Detection in the Deep Learning Era: An In-Depth Survey](https://www.researchgate.net/publication/332553805_Salient_Object_Detection_in_the_Deep_Learning_Era_An_In-Depth_Survey)
+
+* 项目：https://github.com/wenguanwang/SODsurvey
+* 说明：本文档于2019年07月07日修改的内容主要参考自该综述论文，感谢作者的工作，总结的非常详细！
+
+## More
 
 ### Similiar Projects
 
@@ -736,3 +798,4 @@ HS-SOD.zip file contains three folders:
 * Datasets for machine learning: <https://www.datasetlist.com/>
 * UCI machine learning repository:<https://archive.ics.uci.edu/ml/datasets.html>
 * Kaggle datasets：<https://www.kaggle.com/datasets>
+* Google Dataset Seaerch: <https://toolbox.google.com/datasetsearch>
