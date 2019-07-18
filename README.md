@@ -6,9 +6,7 @@
 * AI开发者神器！谷歌重磅推出数据集搜索 Dataset Search: https://mp.weixin.qq.com/s/ErbwXAz-_AJrmUGMHZIcwg
 * Making it easier to discover datasets: https://www.blog.google/products/search/making-it-easier-discover-datasets/
 
-> Please **cite related paper** if you **use their dataset**
->
-> Every item need some images, links, and introductions... I need your help... :smile:
+> Please **cite related paper** if you **use their dataset** :smile:
 
 - [Another Awesome Dataset List](#Another-Awesome-Dataset-List)
   - [Saliency](#Saliency)
@@ -56,7 +54,7 @@
       - [DAVIS](#DAVIS)
       - [aNYU](#aNYU)
     - [About Person](#About-Person)
-      - [Supervisely人像数据集](#Supervisely%E4%BA%BA%E5%83%8F%E6%95%B0%E6%8D%AE%E9%9B%86)
+      - [Supervisely人像数据集](#Supervisely人像数据集)
       - [Clothing Parsing](#Clothing-Parsing)
       - [HumanParsing-Dataset](#HumanParsing-Dataset)
       - [Look into Person (LIP)](#Look-into-Person-LIP)
@@ -72,6 +70,7 @@
     - [Deep Automatic Portrait Matting](#Deep-Automatic-Portrait-Matting)
   - [Other](#Other)
     - [Large-scale Fashion (DeepFashion) Database](#Large-scale-Fashion-DeepFashion-Database)
+    - [ML-Image](#ML-Image)
   - [need your help...](#need-your-help)
   - [Reference](#Reference)
     - [Salient Object Detection: A Survey](#Salient-Object-Detection-A-Survey)
@@ -273,10 +272,12 @@
 
 ![img](https://ccvl.jhu.edu/datasets/assets/pascal_salient_object.jpg)
 
-* 项目: <https://ccvl.jhu.edu/datasets/>
+* 项目:
+    * <https://ccvl.jhu.edu/datasets/>
+    * <http://www.cbi.gatech.edu/salobj/>
 * 下载:
     * 百度云盘：<https://pan.baidu.com/s/1DZcfwCYdeMW4EGawhXQyig>
-    * 种子: <http://academictorrents.com/download/6c49defd6f0e417c039637475cde638d1363037e.torrent>
+    * 页面：<http://academictorrents.com/details/6c49defd6f0e417c039637475cde638d1363037e>
 
 > 对来自PASCAL VOC的850张图像子集的自由修复。收集8个主题，3s观看时间，Eyelink II眼动仪。大多数算法的性能表明PASCAL-S比大多数显着性数据集偏差更小。
 >
@@ -743,6 +744,12 @@ HS-SOD.zip file contains three folders:
 >
 > 这些基准的数据和注释也可以用作以下计算机视觉任务的训练和测试集，例如衣服检测，衣服识别和图像检索。请阅读“下载说明”以访问数据集。
 
+### ML-Image
+
+* 项目: <https://github.com/Tencent/tencent-ml-images#download-images-from-open-images>
+
+> ML-Images: the largest open-source multi-label image database, including 17,609,752 training and 88,739 validation image URLs, which are annotated with up to 11,166 categories
+
 ## need your help...
 
 > 有些数据集已经忘记了出处，大家有见过的，希望可以补充下。
@@ -798,4 +805,6 @@ HS-SOD.zip file contains three folders:
 * Datasets for machine learning: <https://www.datasetlist.com/>
 * UCI machine learning repository:<https://archive.ics.uci.edu/ml/datasets.html>
 * Kaggle datasets：<https://www.kaggle.com/datasets>
-* Google Dataset Seaerch: <https://toolbox.google.com/datasetsearch>
+* Google
+    * Dataset Seaerch: <https://toolbox.google.com/datasetsearch>
+    * <https://ai.google/tools/datasets/>
