@@ -8,78 +8,80 @@
 
 > Please **cite related paper** if you **use their dataset** :smile:
 
-- [Another Awesome Dataset List](#Another-Awesome-Dataset-List)
-  - [Saliency](#Saliency)
-    - [RGB-Saliency Detection](#RGB-Saliency-Detection)
-      - [MSRA(MSRA10K/MSRA-B)](#MSRAMSRA10KMSRA-B)
-      - [SED1/2](#SED12)
-      - [ASD(MSRA1000/MSRA1K)[need some images]](#ASDMSRA1000MSRA1Kneed-some-images)
-      - [DUT-OMRON](#DUT-OMRON)
-      - [DUTS](#DUTS)
-      - [HKU-IS[need some iamges]](#HKU-ISneed-some-iamges)
-      - [SOD](#SOD)
-      - [iCoSeg](#iCoSeg)
-      - [Infrared[need help]](#Infraredneed-help)
-      - [ImgSal](#ImgSal)
-      - [ECSSD/CSSD](#ECSSDCSSD)
-      - [THUR15K](#THUR15K)
-      - [Bruce-A[need help]](#Bruce-Aneed-help)
-      - [Judd-A[need help]](#Judd-Aneed-help)
-      - [PASCAL-S](#PASCAL-S)
-      - [UCSB[need help]](#UCSBneed-help)
-      - [OSIE[need help]](#OSIEneed-help)
-      - [ACSD](#ACSD)
-    - [Other Special SOD Datasets](#Other-Special-SOD-Datasets)
-      - [XPIE](#XPIE)
-      - [SOC](#SOC)
-      - [SOS/MOS[need some images]](#SOSMOSneed-some-images)
-      - [ILSO[need some images]](#ILSOneed-some-images)
-      - [HS-SOD](#HS-SOD)
-    - [Video Saliency Detection](#Video-Saliency-Detection)
-      - [RSD(PKU-RSD)](#RSDPKU-RSD)
-      - [STC[need help]](#STCneed-help)
-    - [RGBD-Saliency Detection](#RGBD-Saliency-Detection)
-      - [NLPR/RGBD1000](#NLPRRGBD1000)
-      - [NJU400/2000](#NJU4002000)
-      - [STEREO/SSB](#STEREOSSB)
-      - [LFSD[nead img]](#LFSDnead-img)
-      - [RGBD135/DES](#RGBD135DES)
-    - [RGBT-Saliency Detection [need more information...]](#RGBT-Saliency-Detection-need-more-information)
-      - [VT1000 Dataset](#VT1000-Dataset)
-      - [VT821 Dataset](#VT821-Dataset)
-    - [Other Saliency Dataset](#Other-Saliency-Dataset)
-      - [KAIST Salient Pedestrian Dataset](#KAIST-Salient-Pedestrian-Dataset)
-  - [Segmentation](#Segmentation)
-    - [General[need help]](#Generalneed-help)
-      - [DAVIS](#DAVIS)
-      - [aNYU](#aNYU)
-    - [About Person](#About-Person)
-      - [Supervisely人像数据集](#Supervisely人像数据集)
-      - [Clothing Parsing](#Clothing-Parsing)
-      - [HumanParsing-Dataset](#HumanParsing-Dataset)
-      - [Look into Person (LIP)](#Look-into-Person-LIP)
-      - [Taobao Commodity Dataset](#Taobao-Commodity-Dataset)
-      - [Object Extraction Dataset](#Object-Extraction-Dataset)
-      - [Clothing Co-Parsing (CCP) Dataset](#Clothing-Co-Parsing-CCP-Dataset)
-      - [Baidu People segmentation dataset[need help]](#Baidu-People-segmentation-datasetneed-help)
-  - [Matting](#Matting)
+- [Another Awesome Dataset List](#another-awesome-dataset-list)
+  - [Saliency](#saliency)
+    - [RGB-Saliency Detection](#rgb-saliency-detection)
+      - [MSRA(MSRA10K/MSRA-B)](#msramsra10kmsra-b)
+      - [SED1/2](#sed12)
+      - [ASD(MSRA1000/MSRA1K)[need some images]](#asdmsra1000msra1kneed-some-images)
+      - [DUT-OMRON](#dut-omron)
+      - [DUTS](#duts)
+      - [HKU-IS[need some iamges]](#hku-isneed-some-iamges)
+      - [SOD](#sod)
+      - [iCoSeg](#icoseg)
+      - [Infrared[need help]](#infraredneed-help)
+      - [ImgSal](#imgsal)
+      - [ECSSD/CSSD](#ecssdcssd)
+      - [THUR15K](#thur15k)
+      - [Bruce-A[need help]](#bruce-aneed-help)
+      - [Judd-A[need help]](#judd-aneed-help)
+      - [PASCAL-S](#pascal-s)
+      - [UCSB[need help]](#ucsbneed-help)
+      - [OSIE[need help]](#osieneed-help)
+      - [ACSD](#acsd)
+    - [Other Special SOD Datasets](#other-special-sod-datasets)
+      - [XPIE](#xpie)
+      - [SOC](#soc)
+      - [SOS/MOS[need some images]](#sosmosneed-some-images)
+      - [ILSO[need some images]](#ilsoneed-some-images)
+      - [HS-SOD](#hs-sod)
+    - [Video Saliency Detection](#video-saliency-detection)
+      - [RSD(PKU-RSD)](#rsdpku-rsd)
+      - [STC[need help]](#stcneed-help)
+    - [RGBD-Saliency Detection](#rgbd-saliency-detection)
+      - [NLPR/RGBD1000](#nlprrgbd1000)
+      - [NJU400/2000](#nju4002000)
+      - [STEREO/SSB](#stereossb)
+      - [LFSD[nead img]](#lfsdnead-img)
+      - [RGBD135/DES](#rgbd135des)
+    - [RGBT-Saliency Detection [need more information...]](#rgbt-saliency-detection-need-more-information)
+      - [VT1000 Dataset](#vt1000-dataset)
+      - [VT821 Dataset](#vt821-dataset)
+    - [Other Saliency Dataset](#other-saliency-dataset)
+      - [KAIST Salient Pedestrian Dataset](#kaist-salient-pedestrian-dataset)
+  - [Segmentation](#segmentation)
+    - [General[need help]](#generalneed-help)
+      - [DAVIS](#davis)
+      - [aNYU](#anyu)
+    - [About Person](#about-person)
+      - [Supervisely人像数据集](#supervisely人像数据集)
+      - [Clothing Parsing](#clothing-parsing)
+      - [HumanParsing-Dataset](#humanparsing-dataset)
+      - [Look into Person (LIP)](#look-into-person-lip)
+      - [Taobao Commodity Dataset](#taobao-commodity-dataset)
+      - [Object Extraction Dataset](#object-extraction-dataset)
+      - [Clothing Co-Parsing (CCP) Dataset](#clothing-co-parsing-ccp-dataset)
+      - [Baidu People segmentation dataset[need help]](#baidu-people-segmentation-datasetneed-help)
+  - [Matting](#matting)
     - [alphamatting.com](#alphamattingcom)
-    - [Composition-1k: Deep Image Matting](#Composition-1k-Deep-Image-Matting)
-    - [Semantic Human Matting](#Semantic-Human-Matting)
-    - [PFCN](#PFCN)
-    - [Deep Automatic Portrait Matting](#Deep-Automatic-Portrait-Matting)
-  - [Other](#Other)
-    - [Large-scale Fashion (DeepFashion) Database](#Large-scale-Fashion-DeepFashion-Database)
-    - [ML-Image](#ML-Image)
+    - [Composition-1k: Deep Image Matting](#composition-1k-deep-image-matting)
+    - [Semantic Human Matting](#semantic-human-matting)
+    - [Matting-Human-Datasets](#matting-human-datasets)
+    - [PFCN](#pfcn)
+    - [Deep Automatic Portrait Matting](#deep-automatic-portrait-matting)
+  - [Other](#other)
+    - [Large-scale Fashion (DeepFashion) Database](#large-scale-fashion-deepfashion-database)
+    - [ML-Image](#ml-image)
   - [need your help...](#need-your-help)
-  - [Reference](#Reference)
-    - [Salient Object Detection: A Survey](#Salient-Object-Detection-A-Survey)
-    - [Review of Visual Saliency Detection with Comprehensive Information](#Review-of-Visual-Saliency-Detection-with-Comprehensive-Information)
-    - [Salient Object Detection in the Deep Learning Era: An In-Depth Survey](#Salient-Object-Detection-in-the-Deep-Learning-Era-An-In-Depth-Survey)
-  - [More](#More)
-    - [Similiar Projects](#Similiar-Projects)
-    - [Research Institutes](#Research-Institutes)
-    - [Resource Websites](#Resource-Websites)
+  - [Reference](#reference)
+    - [Salient Object Detection: A Survey](#salient-object-detection-a-survey)
+    - [Review of Visual Saliency Detection with Comprehensive Information](#review-of-visual-saliency-detection-with-comprehensive-information)
+    - [Salient Object Detection in the Deep Learning Era: An In-Depth Survey](#salient-object-detection-in-the-deep-learning-era-an-in-depth-survey)
+  - [More](#more)
+    - [Similiar Projects](#similiar-projects)
+    - [Research Institutes](#research-institutes)
+    - [Resource Websites](#resource-websites)
+  - [About](#about)
 
 ## Saliency
 
@@ -651,13 +653,13 @@ HS-SOD.zip file contains three folders:
 ![1546154705536](./assets/1546154705536.png)
 
 * 项目: <http://alphamatting.com/datasets.php>
-
-
-| Download | Low resolution | High resolution |
-| --- | --- | --- |
-| Input images         | [input_training_lowres.zip](http://alphamatting.com/datasets/zip/input_training_lowres.zip) | [input_training_highres.zip](http://alphamatting.com/datasets/zip/input_training_highres.zip) |
-| User input (trimaps) | [trimap_training_lowres.zip](http://alphamatting.com/datasets/zip/trimap_training_lowres.zip) | [trimap_training_highres.zip](http://alphamatting.com/datasets/zip/trimap_training_highres.zip) |
-| Ground truth alpha   | [gt_training_lowres.zip](http://alphamatting.com/datasets/zip/gt_training_lowres.zip) | [gt_training_highres.zip](http://alphamatting.com/datasets/zip/gt_training_highres.zip) |
+* 下载：
+    * [input_training_lowres.zip](http://alphamatting.com/datasets/zip/input_training_lowres.zip)
+    * [input_training_highres.zip](http://alphamatting.com/datasets/zip/input_training_highres.zip)
+    * [trimap_training_lowres.zip](http://alphamatting.com/datasets/zip/trimap_training_lowres.zip)
+    * [trimap_training_highres.zip](http://alphamatting.com/datasets/zip/trimap_training_highres.zip)
+    * [gt_training_lowres.zip](http://alphamatting.com/datasets/zip/gt_training_lowres.zip)
+    * [gt_training_highres.zip](http://alphamatting.com/datasets/zip/gt_training_highres.zip)
 
 > 这是图像matting方法的现有基准。它**包括8个测试图像，每个图像有3个不同的三维图形**，即“small”，“large”和“user”
 
@@ -691,6 +693,28 @@ HS-SOD.zip file contains three folders:
 > * Our dataset 從電子商務網站中搜集圖片，將35,513個人物透過人工標注他的Annotation，此資料集有遵循DIM的方法收集。
 >
 > https://medium.com/@xiaosean5408/%E6%B7%98%E5%AF%B6%E7%B6%B2%E7%9A%84%E4%BA%BA%E7%89%A9%E6%8F%90%E5%8F%96%E8%AB%96%E6%96%87%E7%B0%A1%E4%BB%8B-semantic-human-matting-52591c3f8e0c
+
+### Matting-Human-Datasets
+
+![](https://github.com/aisegmentcn/matting_human_datasets/raw/master/1.png)
+
+![](https://github.com/aisegmentcn/matting_human_datasets/raw/master/2.png)
+
+* 项目：<https://github.com/aisegmentcn/matting_human_datasets>
+* 下载：
+    * 百度云盘：<https://pan.baidu.com/s/1R9PJJRT-KjSxh-2-3wCGxQ> 提取码：dzsn
+    * mega：<https://mega.nz/#F!Gh8CFAyb!e2ppUh-copP76GbE8IWAEQ>
+    * kaggle：<https://www.kaggle.com/laurentmih/aisegmentcom-matting-human-datasets/>
+
+> 本数据集为目前已知最大的人像matting数据集，包含34427张图像和对应的matting结果图。数据集由北京玩星汇聚科技有限公司高质量标注，使用该数据集所训练的人像软分割模型已商用。
+数据集中的原始图片来源于Flickr、百度、淘宝。经过人脸检测和区域裁剪后生成了600*800的半身人像。
+>
+> * clip_img目录为半身人像图像，格式为jpg；
+> * matting目录为对应的matting文件（方便确认matting质量），格式为png，您训练前应该先从png图像提取alpha图。例如使用opencv可以这样获得alpha图：
+>```python
+>in_image = cv2.imread('png图像文件路径', cv2.IMREAD_UNCHANGED)
+>alpha = in_image[:,:,3]
+> ```
 
 ### PFCN
 
@@ -808,3 +832,10 @@ HS-SOD.zip file contains three folders:
 * Google
     * Dataset Seaerch: <https://toolbox.google.com/datasetsearch>
     * <https://ai.google/tools/datasets/>
+
+## About
+
+* Edited by Lart Pang
+* Tools: VSCode
+* Plugins:
+    * Markdown All in One
