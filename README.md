@@ -279,8 +279,8 @@
     + <https://ccvl.jhu.edu/datasets/>
     + <http://www.cbi.gatech.edu/salobj/>
 * 下载:
-    + 百度云盘:<https://pan.baidu.com/s/1DZcfwCYdeMW4EGawhXQyig>
-    + 页面:<http://academictorrents.com/details/6c49defd6f0e417c039637475cde638d1363037e>
+    + 百度云盘: <https://pan.baidu.com/s/1DZcfwCYdeMW4EGawhXQyig>
+    + 页面: <http://academictorrents.com/details/6c49defd6f0e417c039637475cde638d1363037e>
 
 > 对来自PASCAL VOC的850张图像子集的自由修复. 收集8个主题, 3s观看时间, Eyelink II眼动仪. 大多数算法的性能表明PASCAL-S比大多数显着性数据集偏差更小.
 >
@@ -305,7 +305,7 @@
 * 项目: <https://ivrl.epfl.ch/research-2/research-current/research-saliency/supplementary_material-rk_cvpr09-index-html/>
 * 下载: 官网只提供了[真值标注的下载](https://ivrl.epfl.ch/wp-content/uploads/2018/08/binarymasks.zip).
 
-基于[ASD数据集(MSRA1K)](#ASD(MSRA1000 / MSRA1K))制作.
+基于[ASD数据集(MSRA1K)]制作.
 
 > 我们从[Z. Wang and B. Li. A two-stage approach to saliency detection in images. ICASSP 2008.]中提出的1000个图像中获得了一个真实数据库.[Z. Wang and B. Li. A two-stage approach to saliency detection in images. ICASSP 2008.]中的基本事实是在显着区域周围的用户绘制的矩形. 这是不准确的, 并将多个对象合二为一. 我们手动分割用户绘制的矩形内的显着对象以获得二进制掩码, 如下所示. 这样的掩膜既准确又允许我们清楚地处理多个显着对象.
 
@@ -471,7 +471,7 @@ HS-SOD.zip file contains three folders:
 #### LFSD[nead img]
 
 * 论文: Saliency detection on light field
-* 项目:<https://sites.duke.edu/nianyi/publication/saliency-detection-on-light-field/>
+* 项目: <https://sites.duke.edu/nianyi/publication/saliency-detection-on-light-field/>
 * 下载: 请到主页寻找, 需要联系作者.
 
 > LFSD is a small dataset which contains 100 images with depth information and human labeled ground truths. The depth information was obtained via the Lytro light field camera.
@@ -484,10 +484,10 @@ HS-SOD.zip file contains three folders:
 
 ![mask](assets/2019-05-23-10-44-59.png)
 
-* 论文:[Depth enhanced saliency detection method](http://delivery.acm.org/10.1145/2640000/2632866/p23-cheng.pdf?ip=202.118.97.210&id=2632866&acc=ACTIVE%20SERVICE&key=BF85BBA5741FDC6E%2E5FC7500D8F9CB386%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&__acm__=1557798709_a26e3faff3faccad6d62e02d79d1921a)
-* 项目:<https://github.com/HzFu/DES_code>
+* 论文: [Depth enhanced saliency detection method](http://delivery.acm.org/10.1145/2640000/2632866/p23-cheng.pdf?ip=202.118.97.210&id=2632866&acc=ACTIVE%20SERVICE&key=BF85BBA5741FDC6E%2E5FC7500D8F9CB386%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&__acm__=1557798709_a26e3faff3faccad6d62e02d79d1921a)
+* 项目: <https://github.com/HzFu/DES_code>
 * 下载: 项目主页提供了下面的下载链接诶:
-    + <https://onedrive.live.com/redir?resid=F3A8A31ABFAC51B0!256&authkey=! AC4-yOEjn0bgrCQ&ithint=file%2crar>
+    + <https://onedrive.live.com/redir?resid=F3A8A31ABFAC51B0!256&authkey=!AC4-yOEjn0bgrCQ&ithint=file%2crar>
     + <https://pan.baidu.com/s/1pLv2B8n>
 
 > RGBD135 is also named DES which consists of seven indoor scenes and contains 135 indoor images collected by Microsoft Kinect.
@@ -557,7 +557,7 @@ HS-SOD.zip file contains three folders:
     + NYU: <http://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html>
     + aNYU: <http://www.robots.ox.ac.uk/~szheng/aNYU/aNYU.tar.gz>
 
-> 我们的第一组实验是关于来自NYU V2 dataset的RGB图像. 如图3所示, 我们添加了8个附加属性标签, 即木制, 彩绘, 棉花, 玻璃, 光面, 塑料, 闪亮和纹理. 我们要求3个注释者在每个分割地面真实区域上分配材料, 表面属性属性. Wethen将3名工作者的多数票作为我们的8个附加属性标签. 我们将此扩展数据集称为attribute NYU(aNYU)数据集.**该数据集从28个不同的室内场景中收集了1449个图像.**在我们的实验中, 我们选择了具有足够数量实例的15个对象类和8个属性来训练unary potential. 此外, **我们随机地将数据集分成训练集的725个图像, 验证集的100个, 以及测试集的624个.**
+> 我们的第一组实验是关于来自NYU V2 dataset的RGB图像. 如图3所示, 我们添加了8个附加属性标签, 即木制, 彩绘, 棉花, 玻璃, 光面, 塑料, 闪亮和纹理. 我们要求3个注释者在每个分割地面真实区域上分配材料, 表面属性属性. Wethen将3名工作者的多数票作为我们的8个附加属性标签. 我们将此扩展数据集称为attribute NYU(aNYU)数据集.**该数据集从28个不同的室内场景中收集了1449个图像.** 在我们的实验中, 我们选择了具有足够数量实例的15个对象类和8个属性来训练unary potential. 此外, **我们随机地将数据集分成训练集的725个图像, 验证集的100个, 以及测试集的624个.**
 
 ### About Person
 
@@ -591,7 +591,7 @@ HS-SOD.zip file contains three folders:
     + <http://www.sysu-hcp.net/deep-human-parsing/>
     + <https://vuhcs.github.io/>
 * 组织: <http://sysu-hcp.net/>
-* 下载:  <http://pan.baidu.com/s/1qY8bToS> *passwd:kjgk*
+* 下载:  <http://pan.baidu.com/s/1qY8bToS> (kjgk)
 
 > This human parsing dataset includes the detailed pixel-wise annotations for fashion images, which is proposed in our TPAMI paper "Deep Human Parsing with Active Template Regression", and ICCV 2015 paper "Human Parsing with Contextualized Convolutional Neural Network". This dataset contains 7700 images. We use 6000 images for training, 1000 for testing and 700 as the validation set.
 
@@ -704,12 +704,12 @@ HS-SOD.zip file contains three folders:
 * 项目:<https://github.com/aisegmentcn/matting_human_datasets>
 * 下载:
     + 百度云盘:<https://pan.baidu.com/s/1R9PJJRT-KjSxh-2-3wCGxQ> 提取码:dzsn
-    + mega:<https://mega.nz/#F! Gh8CFAyb!e2ppUh-copP76GbE8IWAEQ>
+    + mega:<https://mega.nz/#F!Gh8CFAyb!e2ppUh-copP76GbE8IWAEQ>
     + kaggle:<https://www.kaggle.com/laurentmih/aisegmentcom-matting-human-datasets/>
 
 > 本数据集为目前已知最大的人像matting数据集, 包含34427张图像和对应的matting结果图. 数据集由北京玩星汇聚科技有限公司高质量标注, 使用该数据集所训练的人像软分割模型已商用.
 >
-> 数据集中的原始图片来源于Flickr、 百度、 淘宝. 经过人脸检测和区域裁剪后生成了600*800的半身人像.
+> 数据集中的原始图片来源于Flickr, 百度, 淘宝. 经过人脸检测和区域裁剪后生成了600*800的半身人像.
 >
 > * clip_img目录为半身人像图像, 格式为jpg;
 > * matting目录为对应的matting文件(方便确认matting质量), 格式为png, 您训练前应该先从png图像提取alpha图. 例如使用opencv可以这样获得alpha图:
@@ -725,7 +725,7 @@ alpha = in_image[:,:,3]
 
 * 项目: <http://xiaoyongshen.me/webpage_portrait/index.html>
 * 论文: [Automatic Portrait Segmentation for Image Stylization](http://xiaoyongshen.me/webpage_portrait/papers/portrait_eg16.pdf)
-* 下载: Please download from [OneDrive](https://1drv.ms/u/s! ApwdOxIIFBH19TzDv7nRfH5ZsMNL) or [Baiduyun](http://pan.baidu.com/s/1bQ4yHC).
+* 下载: Please download from [OneDrive](https://1drv.ms/u/s!ApwdOxIIFBH19TzDv7nRfH5ZsMNL) or [Baiduyun](http://pan.baidu.com/s/1bQ4yHC).
 
 > 肖像画是摄影和绘画的主要艺术形式. 在大多数情况下, 艺术家试图使主体从周围突出, 例如, 使其更亮或更锐利. 在数字世界中, 通过使用适合于图像语义的照相或绘画滤镜处理肖像图像, 可以实现类似的效果. 虽然存在许多成功的用户指导方法来描绘该主题, 但缺乏全自动技术并且产生不令人满意的结果. 我们的论文首先通过引入专用于肖像的新自动分割算法来解决这个问题. 然后, 我们在此结果的基础上, 描述了几个利用我们的自动分割算法生成高质量肖像的肖像滤镜.
 
@@ -739,7 +739,7 @@ alpha = in_image[:,:,3]
     + <http://xiaoyongshen.me/webpages/webpage_automatting/>
 * 下载:
     + [Data(zip, 1.15GB)] Please send Email to <goodshenxy@gmail.com> to request it.
-    + 作者自己公开了: https://1drv.ms/u/s! ApwdOxIIFBH19Ts5EuFd9gVJrKTo
+    + 作者自己公开了: <https://1drv.ms/u/s!ApwdOxIIFBH19Ts5EuFd9gVJrKTo>
 
 > 我们提出了一种用于性状图像的自动图像matting方法. 该方法不需要用户交互, 这在大多数先前的方法中是必不可少的. 为了实现这一目标, 提出了一种新的端到端卷积神经网络(CNN)框架, 其采用肖像图像的输入. 它输出matting的结果. 我们的方法不仅考虑图像语义预测, 还考虑像素级图像matte优化. 一个新的肖像image dataset与我们标记的matting基础事实构成. 我们的自动方法通过最先进的方法获得了可比较的结果, 该方法需要指定的前景和背景区域或像素.
 >
