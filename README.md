@@ -40,14 +40,19 @@
       - [RSD(PKU-RSD)](#rsdpku-rsd)
       - [STC[need help]](#stcneed-help)
     - [RGBD-Saliency Detection](#rgbd-saliency-detection)
+      - [SIP](#sip)
       - [NLPR/RGBD1000](#nlprrgbd1000)
       - [NJU400/2000](#nju4002000)
       - [STEREO/SSB](#stereossb)
       - [LFSD[nead img]](#lfsdnead-img)
       - [RGBD135/DES](#rgbd135des)
+      - [DUT-RGBD](#dut-rgbd)
+      - [SSD100](#ssd100)
     - [RGBT-Saliency Detection [need more information...]](#rgbt-saliency-detection-need-more-information)
       - [VT1000 Dataset](#vt1000-dataset)
       - [VT821 Dataset](#vt821-dataset)
+    - [High-Resolution Saliency Detection](#high-resolution-saliency-detection)
+      - [HRSOD/DAVIS-S](#hrsoddavis-s)
     - [Other Saliency Dataset](#other-saliency-dataset)
       - [KAIST Salient Pedestrian Dataset](#kaist-salient-pedestrian-dataset)
   - [Segmentation](#segmentation)
@@ -92,7 +97,7 @@
 
 ![img](https://mmcheng.net/wp-content/uploads/2014/07/MSRA10K.jpg)
 
-* 论文: [T. Liu, J. Sun, N. Zheng, X. Tang, and H.-Y. Shum, "Learningto detect a salient object, " inCVPR, 2007, pp. 1–8](http://mmlab.ie.cuhk.edu.hk/2007/CVPR07_detect.pdf)
+* 论文: [T. Liu, J. Sun, N. Zheng, X. Tang, and H.-Y. Shum, "Learningto detect a salient object, " inCVPR, 2007, pp.1–8](http://mmlab.ie.cuhk.edu.hk/2007/CVPR07_detect.pdf)
 * 主页: 南开大学媒体计算实验室: <https://mmcheng.net/zh/msra10k/>
 * 下载:
   + MSRA10K(formally named as THUS10000; [195MB](http://mftp.mmcheng.net/Data/MSRA10K_Imgs_GT.zip): images + binary masks):
@@ -102,6 +107,9 @@
   + MSRA-B ([111MB](http://mftp.mmcheng.net/Data/MSRA-B.zip): images + binary masks):
     - Pixel accurate salient object labeling for **5000 images** from MSRA-B dataset.
     - Please cite the corresponding paper [https://mmcheng.net/drfi/] if you use it.
+
+
+
 
 > 我们通过检测输入图像中的显着对象来研究视觉注意力. 我们将显着对象检测表示为图像分割问题, 我们将显着对象与图像背景分开. 我们提出了一系列新颖的特征, 包括多尺度对比度, 中心环绕直方图和颜色空间分布, 以在本地, 区域和全局描述显着对象. 学习条件随机场以有效地组合这些特征以用于显着对象检测. 我们还构建了一个**包含由多个用户标记的数以万计的完全标记图像的图像数据库**. 据我们所知, 它是第一个用于视觉注意算法定量评估的大型图像数据库. 我们在此图像数据库上验证了我们的方法, 该数据库在本文中是公开的.
 >
@@ -129,7 +137,7 @@
 
 ![img](./assets/2018-12-29-18-40-17.png)
 
-* [A. Borji, M.-M. Cheng, H. Jiang, and J. Li, "Salient objectdetection: A benchmark, "IEEE TIP, vol. 24, no. 12, pp. 5706–5722, 2015.](https://arxiv.org/abs/1501.02741)
+* [A. Borji, M.-M. Cheng, H. Jiang, and J. Li, "Salient objectdetection: A benchmark, "IEEE TIP, vol.24, no.12, pp.5706–5722, 2015.](https://arxiv.org/abs/1501.02741)
 * [Image Segmentation by Probabilistic Bottom-Up Aggregation and Cue Integration](http://www.wisdom.weizmann.ac.il/~meirav/Segmentation_Alpert_Galun_Brandt_Basri.pdf)
 * 项目: <http://www.wisdom.weizmann.ac.il/~vision/Seg_Evaluation_DB/index.html>
 * 下载: <http://www.wisdom.weizmann.ac.il/~vision/Seg_Evaluation_DB/dl.html>
@@ -140,8 +148,8 @@
 
 * 论文:[A two-stage approach to saliency detection inimages](https://www.researchgate.net/publication/224312323_A_two-stage_approach_to_saliency_detection_in_images)
 * 相关:
-  + T. Liu, J. Sun, N.-N. Zheng, X. Tang, and H.-Y. Shum, "[Learning to detect a salient object](http://research.microsoft.com/en-us/um/people/jiansun/salientobject/salient_object.htm), " in *Proc. IEEE Conf. Comput. Vis. Pattern Recognit.*, 2007, pp. 1–8.
-  + R. Achanta, S. Hemami, F. Estrada, and S. Süsstrunk, "[Frequency-tuned salient region detection](http://ivrlwww.epfl.ch/supplementary_material/RK_CVPR09/), " in *Proc. IEEE Conf. Comput. Vis. Pattern Recognit.*, 2009, pp. 1597–1604.
+  + T. Liu, J. Sun, N.-N. Zheng, X. Tang, and H.-Y. Shum, "[Learning to detect a salient object](http://research.microsoft.com/en-us/um/people/jiansun/salientobject/salient_object.htm), " in *Proc. IEEE Conf. Comput. Vis. Pattern Recognit.*, 2007, pp.1–8.
+  + R. Achanta, S. Hemami, F. Estrada, and S. Süsstrunk, "[Frequency-tuned salient region detection](http://ivrlwww.epfl.ch/supplementary_material/RK_CVPR09/), " in *Proc. IEEE Conf. Comput. Vis. Pattern Recognit.*, 2009, pp.1597–1604.
 * 下载: <http://download.csdn.net/detail/wanyq07/9839322>
   + 关于下载的说明: 因为基于MSRA的图片数据集, 在孙剑走了之后, MARA上就没了他的页面, 相关的资源也就找不到了. CSDN一篇博客有分享. 原图下载地址:[MSRA图像数据集(1000幅含真实标注)](http://download.csdn.net/detail/tuconghuan/8357509). 上面下载到的标注图尺寸被统一改为512*512, 所以这里在给个地址:[ASD尺寸一致](http://download.csdn.net/detail/zzb4702/9559378)
 
@@ -153,7 +161,7 @@
 
 ![img](assets/2019-03-22-18-45-56.png)
 
-* 论文: C. Yang, L. Zhang, H. Lu, X. Ruan, and M.-H. Yang, "[Saliency detection via graph-based manifold ranking](http://saliencydetection.net/dut-omron/), " in *Proc. IEEE Conf. Comput. Vis. Pattern Recognit.*, 2013, pp. 3166–3173.
+* 论文: C. Yang, L. Zhang, H. Lu, X. Ruan, and M.-H. Yang, "[Saliency detection via graph-based manifold ranking](http://saliencydetection.net/dut-omron/), " in *Proc. IEEE Conf. Comput. Vis. Pattern Recognit.*, 2013, pp.3166–3173.
 * 项目: <http://saliencydetection.net/dut-omron/#outline-container-org0e04792>
 * 下载: <http://saliencydetection.net/dut-omron/download/DUT-OMRON-image.zip>
 
@@ -165,7 +173,7 @@
 
 * 项目: <http://saliencydetection.net/duts/>
 
-> ... we contribute a large scale data set named DUTS, **containing 10, 553 training images and 5, 019 test images**. All training images are collected from the ImageNet DET training/val sets, while test images are collected from the ImageNet DET test set and the SUN data set.
+> ...we contribute a large scale data set named DUTS, **containing 10, 553 training images and 5, 019 test images**. All training images are collected from the ImageNet DET training/val sets, while test images are collected from the ImageNet DET test set and the SUN data set.
 >
 > Both the training and test set contain very challenging scenarios for saliency detection. Accurate pixel-level ground truths are manually annotated by 50 subjects.
 >
@@ -227,7 +235,7 @@
 
 > 数据库的特点
 >
-> 1. 235个彩色图像的集合, 分为六个不同的类别;
+> 1.235个彩色图像的集合, 分为六个不同的类别;
 > 2. 提供人类固定记录(扫视数据)和人类标记结果;
 > 3. 易于使用.
 >
@@ -246,6 +254,9 @@
   + CSSD (200 images)
     - [CSSD images (18.7MB)](http://www.cse.cuhk.edu.hk/leojia/projects/hsaliency/data/CSSD/images.zip)
     - [CSSD groud truth masks (0.75MB)](http://www.cse.cuhk.edu.hk/leojia/projects/hsaliency/data/CSSD/ground_truth_mask.zip)
+
+
+
 
 其中CSSD包含了200张图, 而ECSSD是前者的扩展集包含有1000张图
 
@@ -301,7 +312,7 @@
 
 ![1546135560011](./assets/1546135560011.png)
 
-* 论文: [R. Achanta, S. Hemami, F. Estrada, and S. Ssstrunk, "Frequency-tuned salient region detection, " in CVPR, 2009, pp. 1597–1604](https://infoscience.epfl.ch/record/135217/files/1708.pdf)
+* 论文: [R. Achanta, S. Hemami, F. Estrada, and S. Ssstrunk, "Frequency-tuned salient region detection, " in CVPR, 2009, pp.1597–1604](https://infoscience.epfl.ch/record/135217/files/1708.pdf)
 * 项目: <https://ivrl.epfl.ch/research-2/research-current/research-saliency/supplementary_material-rk_cvpr09-index-html/>
 * 下载: 官网只提供了[真值标注的下载](https://ivrl.epfl.ch/wp-content/uploads/2018/08/binarymasks.zip).
 
@@ -315,7 +326,7 @@
 
 ![1546137404871](./assets/1546137404871.png)
 
-* 链接: [C. Xia, J. Li, X. Chen, A. Zheng, and Y. Zhang, "What  is  and  what is not a salient object? Learning salient object detector by ensembling linear exemplar regressors, " in CVPR , 2017, pp. 4142–4150.](https://www.researchgate.net/publication/320971838_What_is_and_What_is_Not_a_Salient_Object_Learning_Salient_Object_Detector_by_Ensembling_Linear_Exemplar_Regressors)
+* 链接: [C. Xia, J. Li, X. Chen, A. Zheng, and Y. Zhang, "What  is  and  what is not a salient object? Learning salient object detector by ensembling linear exemplar regressors, " in CVPR , 2017, pp.4142–4150.](https://www.researchgate.net/publication/320971838_What_is_and_What_is_Not_a_Salient_Object_Learning_Salient_Object_Detector_by_Ensembling_Linear_Exemplar_Regressors)
 * 团队: cvteam: <http://cvteam.net/>
 * 项目:<http://cvteam.net/projects/CVPR17-ELE/ELE.html>
 * 下载: <http://cvteam.net/projects/CVPR17-ELE/XPIE.tar.gz>
@@ -353,14 +364,14 @@
 >
 > 具体来说, 我们的数据集称为SOC, Salient Objects in Clutter, **包括来自日常对象类别的显着和非显着对象的图像**. 除了对象类别注释之外, 每个突出图像都伴随着反映现实世界场景中常见挑战的属性(例如, 外观变化, 杂乱), 并且可以帮助 1)更深入地了解SOD问题, 2)调查专业人员和SOD模型的缺点, 3)从不同的角度客观地评估模型. 最后, 我们在SOC数据集上报告基于属性的性能评估. 我们相信, 我们的数据集和结果将为未来的显着物体检测研究开辟新的方向.
 >
-> SOC has 6, 000 images with 80 common categories. Half of the images contain salient objects and the others contain none. **Each salient-object-contained image is annotated with instance-level SOD ground-truth, object category (e.g., dog, book), and challenging factors** (e.g., big/small object). **The non-salient object subset has 783 texture images and 2, 217 real-scene images** (e.g., aurora, sky).
+> SOC has 6, 000 images with 80 common categories. Half of the images contain salient objects and the others contain none.**Each salient-object-contained image is annotated with instance-level SOD ground-truth, object category (e.g., dog, book), and challenging factors** (e.g., big/small object).**The non-salient object subset has 783 texture images and 2, 217 real-scene images** (e.g., aurora, sky).
 
 #### SOS/MOS[need some images]
 
 * 项目:<http://cs-people.bu.edu/jmzhang/sos.html>
 * 论文:
-  + SOS: J. Zhang, S. Ma, M. Sameki, S. Sclaroff, M. Betke, Z. Lin, X. Shen, B. Price, and R. Mech, "Salient object subitizing, " in Proc. IEEE Conf. Comput. Vis. Pattern Recognit., 2015, pp. 4045–4054.
-  + MOS: J. Zhang, S. Ma, M. Sameki, S. Sclaroff, M. Betke, Z. Lin, X. Shen, B. Price, and R. Mech, "Salient object subitizing, " in Proc. IEEE Conf. Comput. Vis. Pattern Recognit., 2015, pp. 4045–4054.
+  + SOS: J. Zhang, S. Ma, M. Sameki, S. Sclaroff, M. Betke, Z. Lin, X. Shen, B. Price, and R. Mech, "Salient object subitizing, " in Proc. IEEE Conf. Comput. Vis. Pattern Recognit., 2015, pp.4045–4054.
+  + MOS: J. Zhang, S. Ma, M. Sameki, S. Sclaroff, M. Betke, Z. Lin, X. Shen, B. Price, and R. Mech, "Salient object subitizing, " in Proc. IEEE Conf. Comput. Vis. Pattern Recognit., 2015, pp.4045–4054.
 
 > SOS 10 is created for SOD subitizing [115], i.e., to predict the number of salient objects without an expensive detection process. It contains 6, 900 images selected from:
 >
@@ -376,7 +387,7 @@
 #### ILSO[need some images]
 
 * 项目:<http://www.sysu-hcp.net/instance-level-salient-object-segmentation/>
-* 论文: G. Li, Y. Xie, L. Lin, and Y. Yu, "Instance-level salient object segmentation, " in Proc. IEEE Conf. Comput. Vis. Pattern Recognit., 2017, pp. 247–256.
+* 论文: G. Li, Y. Xie, L. Lin, and Y. Yu, "Instance-level salient object segmentation, " in Proc. IEEE Conf. Comput. Vis. Pattern Recognit., 2017, pp.247–256.
 
 > ILSO has 1, 000 images with pixel-wise instancelevel saliency annotations and coarse contour labeling, where the benchmark results are generated using MSRNet [Instance-level salient object segmentation]. Most of the images in ILSO are selected from the following datasets to reduce ambiguity over the salient object regions.
 >
@@ -405,9 +416,9 @@
 
 HS-SOD.zip file contains three folders:
 
-1. hyperspectral: containing 60 hyperspectral images with #spatial rows:768 #spatial columns:1024 #spectral channels:81 (data only within visible spectrum: 380 nm -720 nm)
-2. color: 60 color images of hyperspectral dataset rendered in sRGB for visualization
-3. ground-truth: 60 ground-truth binary images for salient objects
+1.hyperspectral: containing 60 hyperspectral images with #spatial rows:768 #spatial columns:1024 #spectral channels:81 (data only within visible spectrum: 380 nm -720 nm)
+2.color: 60 color images of hyperspectral dataset rendered in sRGB for visualization
+3.ground-truth: 60 ground-truth binary images for salient objects
 
 ### Video Saliency Detection
 
@@ -415,7 +426,7 @@ HS-SOD.zip file contains three folders:
 
 ![samples of RSD](https://pkuml.org/wp-content/uploads/2014/12/samples-of-RSD-1024x271.png)
 
-* 论文: [J. Li, Y. Tian, T. Huang, and W. Gao, "A dataset and evaluation methodology for visual saliency in video, " in IEEE ICME, 2009, pp. 442–445](https://ieeexplore.ieee.org/document/5202529)
+* 论文: [J. Li, Y. Tian, T. Huang, and W. Gao, "A dataset and evaluation methodology for visual saliency in video, " in IEEE ICME, 2009, pp.442–445](https://ieeexplore.ieee.org/document/5202529)
 * 项目: <https://pkuml.org/resources/dataset.html>
 * 下载: <https://pkuml.org/resources/pku-rsd.html>
 
@@ -423,12 +434,27 @@ HS-SOD.zip file contains three folders:
 
 #### STC[need help]
 
-* 论文: [Y. Wu, N. Zheng, Z. Yuan, H. Jiang, and T. Liu, "Detection of salient objects with focused attention based on spatial and temporal coherence, " Chinese Science Bulletin, vol. 56, pp. 1055–1062, 2011.](https://pdfs.semanticscholar.org/3347/c330ac5586020ebea60823b1fd4e8d68e936.pdf?_ga=2.181072804.269179473.1546092428-61549168.1544104573)
+* 论文: [Y. Wu, N. Zheng, Z. Yuan, H. Jiang, and T. Liu, "Detection of salient objects with focused attention based on spatial and temporal coherence, " Chinese Science Bulletin, vol.56, pp.1055–1062, 2011.](https://pdfs.semanticscholar.org/3347/c330ac5586020ebea60823b1fd4e8d68e936.pdf?_ga=2.181072804.269179473.1546092428-61549168.1544104573)
 * 下载: This dataset is freely available from the author
 
 > 对视频内容的理解和分析对于众多应用程序来说至关重要, 包括视频摘要, 检索, 导航和编辑. 此过程的一个重要部分是检测视频片段中的显着(通常意味着重要和有趣)对象. 与现有方法不同, 我们提出了一种将显着性测量与空间和时间相干性相结合的方法. 空间和时间一致性的整合受到人类视觉中关注焦点的启发. 在所提出的方法中, 低级视觉分组线索的空间相干性(例如外观和运动)有助于每帧对象背景分离, 而对象属性的时间一致性(例如形状和外观)确保一致物体随时间定位, 因此该方法对于意外的环境变化和相机振动是鲁棒的. 在**开发了基于粗到细多尺度动态规划的有效优化策略之后, 我们使用可与本文一起免费获得的具有挑战性的数据集来评估我们的方法**. 我们展示了两种类型的一致性的有效性和互补性, 并证明它们可以显着提高视频中显着对象检测的性能.
 
 ### RGBD-Saliency Detection
+
+> 致谢:
+> * @JXingZhao, 在他的工作中整理并公开了多个数据集: https://github.com/JXingZhao/ContrastPrior
+> * @jiwei0921, 在他的工作中整理并公开了多个数据集: https://github.com/jiwei0921/RGBD-SOD-datasets
+> * **更全面的内容**可见 http://dpfan.net/d3netbenchmark/
+
+#### SIP
+
+![](assets/2019-09-15-16-26-26.png)
+
+* 论文: Rethinking RGB-D Salient Object Detection: Models, Datasets, and Large-Scale Benchmarks:https://arxiv.org/pdf/1907.06781.pdf
+* 项目: http://dpfan.net/d3netbenchmark/
+* 下载: 请见项目主页
+
+> we carefully collect a new salient person (SIP) dataset, which consists of 1K high-resolution images that cover diverse real-world scenes from various viewpoints, poses, occlusion, illumination, and background.
 
 #### NLPR/RGBD1000
 
@@ -492,6 +518,21 @@ HS-SOD.zip file contains three folders:
 
 > RGBD135 is also named DES which consists of seven indoor scenes and contains 135 indoor images collected by Microsoft Kinect.
 
+#### DUT-RGBD
+
+* 论文: Depth-induced Multi-scale Recurrent Attention Network for Saliency Detection
+* 项目: https://github.com/jiwei0921/DMRA_RGBD-SOD
+* 下载: 请见@jiwei0921的RGBD-SOD-datasets仓库
+
+#### SSD100
+
+![](assets/2019-09-15-16-17-12.png)
+
+* 论文: A Three-pathway Psychobiological Framework of Salient Object Detection Using Stereoscopic Technology: http://dpfan.net/wp-content/uploads/SSD_dataset_ICCVW17.pdf
+* 下载: 请见@jiwei0921的RGBD-SOD-datasets仓库
+
+> Our SSD100 dataset is built on three stereo movies. The movies contain both the indoors and outdoors scenes. We pick up one stereo image pair at each hundred frames. It totally has tens of thousands of stereo image pairs. We make the image acquisition and image annotation independent to each other, we can avoid dataset design bias, namely a specific type of bias that is caused by experimenters unnatural selection of dataset images. The chosen stereo image pairs are based on one principle: choose the one which the computer detect the salient objects within the complex scenes where even the human cannot tell the salient objects at once. After picking up the stereo image pairs, we divide the image pairs into left images and right images both in 960x1080 size. When we build the ground truth of salient objects, we adhere to the following rules: 1) we mark the salient objects, taking the advice of most people; 2) disconnected regions of the same object are labeled separately; 3) we use solid regions to approximate hollow objects, such as bike wheels. Besides, we will expand this dataset continually in future.
+
 ### RGBT-Saliency Detection [need more information...]
 
 #### VT1000 Dataset
@@ -519,6 +560,20 @@ HS-SOD.zip file contains three folders:
 * 下载: 具体信息可见项目主页
   + https://drive.google.com/file/d/0B4fH4G1f-jjNR3NtQUkwWjFFREk/view?usp=sharing
   + http://pan.baidu.com/s/1bpEaeQV
+
+### High-Resolution Saliency Detection
+
+#### HRSOD/DAVIS-S
+
+![](assets/2019-09-15-15-54-12.png)
+
+* 论文: Towards High-Resolution Salient Object Detection: https://arxiv.org/pdf/1908.07274.pdf
+* 项目:https://github.com/yi94code/HRSOD
+* 下载: 可见项目主页
+  + HRSOD: https://drive.google.com/open?id=1bmDGlkzqHoduNigi_GO4Qy9sA9sIaZcY
+  + DAVIS-S: https://drive.google.com/open?id=1q1H7yoITLS6i2n-PhgYMIxLdjyhge5AR
+
+> ...we contribute a High-Resolution Salient Object Detection (HRSOD) dataset, containing 1610 training images and 400 test images. The total 2010 images are collected from the website of Flickr with the license of all creative commons. Pixel-level ground truths are manually annotated by 40 subjects. The shortest edge of each image in our HRSOD is more than 1200 pixels.
 
 ### Other Saliency Dataset
 
