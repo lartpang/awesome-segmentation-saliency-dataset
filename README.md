@@ -108,9 +108,6 @@
     - Pixel accurate salient object labeling for **5000 images** from MSRA-B dataset.
     - Please cite the corresponding paper [https://mmcheng.net/drfi/] if you use it.
 
-
-
-
 > 我们通过检测输入图像中的显着对象来研究视觉注意力. 我们将显着对象检测表示为图像分割问题, 我们将显着对象与图像背景分开. 我们提出了一系列新颖的特征, 包括多尺度对比度, 中心环绕直方图和颜色空间分布, 以在本地, 区域和全局描述显着对象. 学习条件随机场以有效地组合这些特征以用于显着对象检测. 我们还构建了一个**包含由多个用户标记的数以万计的完全标记图像的图像数据库**. 据我们所知, 它是第一个用于视觉注意算法定量评估的大型图像数据库. 我们在此图像数据库上验证了我们的方法, 该数据库在本文中是公开的.
 >
 > 人们可能对图像中的显着对象有不同的看法. 为了解决"给定图像中可能是什么样的显着对象"的问题, 我们通过在多个用户的图像中标记"基础事实"显着对象来进行投票策略. 在本文中, 我们关注图像中单个显着对象的情况.
@@ -254,9 +251,6 @@
   + CSSD (200 images)
     - [CSSD images (18.7MB)](http://www.cse.cuhk.edu.hk/leojia/projects/hsaliency/data/CSSD/images.zip)
     - [CSSD groud truth masks (0.75MB)](http://www.cse.cuhk.edu.hk/leojia/projects/hsaliency/data/CSSD/ground_truth_mask.zip)
-
-
-
 
 其中CSSD包含了200张图, 而ECSSD是前者的扩展集包含有1000张图
 
