@@ -1,0 +1,1702 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <style type="text/css">
+      body {
+          -ms-text-size-adjust: 100%;
+          -webkit-text-size-adjust: 100%;
+          line-height: 1.5;
+          color: #333;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+          font-size: 16px;
+          line-height: 1.5;
+          word-wrap: break-word;
+      }
+      
+      .pl-c {
+          color: #969896;
+      }
+      
+      .pl-c1,
+      .pl-s .pl-v {
+          color: #0086b3;
+      }
+      
+      .pl-e,
+      .pl-en {
+          color: #795da3;
+      }
+      
+      .pl-smi,
+      .pl-s .pl-s1 {
+          color: #333;
+      }
+      
+      .pl-ent {
+          color: #63a35c;
+      }
+      
+      .pl-k {
+          color: #a71d5d;
+      }
+      
+      .pl-s,
+      .pl-pds,
+      .pl-s .pl-pse .pl-s1,
+      .pl-sr,
+      .pl-sr .pl-cce,
+      .pl-sr .pl-sre,
+      .pl-sr .pl-sra {
+          color: #183691;
+      }
+      
+      .pl-v {
+          color: #ed6a43;
+      }
+      
+      .pl-id {
+          color: #b52a1d;
+      }
+      
+      .pl-ii {
+          color: #f8f8f8;
+          background-color: #b52a1d;
+      }
+      
+      .pl-sr .pl-cce {
+          font-weight: bold;
+          color: #63a35c;
+      }
+      
+      .pl-ml {
+          color: #693a17;
+      }
+      
+      .pl-mh,
+      .pl-mh .pl-en,
+      .pl-ms {
+          font-weight: bold;
+          color: #1d3e81;
+      }
+      
+      .pl-mq {
+          color: #008080;
+      }
+      
+      .pl-mi {
+          font-style: italic;
+          color: #333;
+      }
+      
+      .pl-mb {
+          font-weight: bold;
+          color: #333;
+      }
+      
+      .pl-md {
+          color: #bd2c00;
+          background-color: #ffecec;
+      }
+      
+      .pl-mi1 {
+          color: #55a532;
+          background-color: #eaffea;
+      }
+      
+      .pl-mdr {
+          font-weight: bold;
+          color: #795da3;
+      }
+      
+      .pl-mo {
+          color: #1d3e81;
+      }
+      
+      .octicon {
+          display: inline-block;
+          vertical-align: text-top;
+          fill: currentColor;
+      }
+      
+      a {
+          background-color: transparent;
+          -webkit-text-decoration-skip: objects;
+      }
+      
+      a:active,
+      a:hover {
+          outline-width: 0;
+      }
+      
+      strong {
+          font-weight: inherit;
+      }
+      
+      strong {
+          font-weight: bolder;
+      }
+      
+      h1 {
+          font-size: 2em;
+          margin: 0.67em 0;
+      }
+      
+      img {
+          border-style: none;
+      }
+      
+      svg:not(:root) {
+          overflow: hidden;
+      }
+      
+      code,
+      kbd,
+      pre {
+          font-family: monospace, monospace;
+          font-size: 1em;
+      }
+      
+      hr {
+          box-sizing: content-box;
+          height: 0;
+          overflow: visible;
+      }
+      
+      input {
+          font: inherit;
+          margin: 0;
+      }
+      
+      input {
+          overflow: visible;
+      }
+      
+      [type="checkbox"] {
+          box-sizing: border-box;
+          padding: 0;
+      }
+      
+      * {
+          box-sizing: border-box;
+      }
+      
+      input {
+          font-family: inherit;
+          font-size: inherit;
+          line-height: inherit;
+      }
+      
+      a {
+          color: #4078c0;
+          text-decoration: none;
+      }
+      
+      a:hover,
+      a:active {
+          text-decoration: underline;
+      }
+      
+      strong {
+          font-weight: 600;
+      }
+      
+      hr {
+          height: 0;
+          margin: 15px 0;
+          overflow: hidden;
+          background: transparent;
+          border: 0;
+          border-bottom: 1px solid #ddd;
+      }
+      
+      hr::before {
+          display: table;
+          content: "";
+      }
+      
+      hr::after {
+          display: table;
+          clear: both;
+          content: "";
+      }
+      
+      table {
+          border-spacing: 0;
+          border-collapse: collapse;
+      }
+      
+      td,
+      th {
+          padding: 0;
+      }
+      
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+          margin-top: 0;
+          margin-bottom: 0;
+      }
+      
+      h1 {
+          font-size: 32px;
+          font-weight: 600;
+      }
+      
+      h2 {
+          font-size: 24px;
+          font-weight: 600;
+      }
+      
+      h3 {
+          font-size: 20px;
+          font-weight: 600;
+      }
+      
+      h4 {
+          font-size: 16px;
+          font-weight: 600;
+      }
+      
+      h5 {
+          font-size: 14px;
+          font-weight: 600;
+      }
+      
+      h6 {
+          font-size: 12px;
+          font-weight: 600;
+      }
+      
+      p {
+          margin-top: 0;
+          margin-bottom: 10px;
+      }
+      
+      blockquote {
+          margin: 0;
+      }
+      
+      ul,
+      ol {
+          padding-left: 0;
+          margin-top: 0;
+          margin-bottom: 0;
+      }
+      
+      ol ol,
+      ul ol {
+          list-style-type: lower-roman;
+      }
+      
+      ul ul ol,
+      ul ol ol,
+      ol ul ol,
+      ol ol ol {
+          list-style-type: lower-alpha;
+      }
+      
+      dd {
+          margin-left: 0;
+      }
+      
+      code {
+          font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+          font-size: 12px;
+      }
+      
+      pre {
+          margin-top: 0;
+          margin-bottom: 0;
+          font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      }
+      
+      .octicon {
+          vertical-align: text-bottom;
+      }
+      
+      input {
+          -webkit-font-feature-settings: "liga" 0;
+          font-feature-settings: "liga" 0;
+      }
+      
+      .markdown-body::before {
+          display: table;
+          content: "";
+      }
+      
+      .markdown-body::after {
+          display: table;
+          clear: both;
+          content: "";
+      }
+      
+      .markdown-body>*:first-child {
+          margin-top: 0 !important;
+      }
+      
+      .markdown-body>*:last-child {
+          margin-bottom: 0 !important;
+      }
+      
+      a:not([href]) {
+          color: inherit;
+          text-decoration: none;
+      }
+      
+      .anchor {
+          float: left;
+          padding-right: 4px;
+          margin-left: -20px;
+          line-height: 1;
+      }
+      
+      .anchor:focus {
+          outline: none;
+      }
+      
+      p,
+      blockquote,
+      ul,
+      ol,
+      dl,
+      table,
+      pre {
+          margin-top: 0;
+          margin-bottom: 16px;
+      }
+      
+      hr {
+          height: 0.25em;
+          padding: 0;
+          margin: 24px 0;
+          background-color: #e7e7e7;
+          border: 0;
+      }
+      
+      blockquote {
+          padding: 0 1em;
+          color: #777;
+          border-left: 0.25em solid #ddd;
+      }
+      
+      blockquote>:first-child {
+          margin-top: 0;
+      }
+      
+      blockquote>:last-child {
+          margin-bottom: 0;
+      }
+      
+      kbd {
+          display: inline-block;
+          padding: 3px 5px;
+          font-size: 11px;
+          line-height: 10px;
+          color: #555;
+          vertical-align: middle;
+          background-color: #fcfcfc;
+          border: solid 1px #ccc;
+          border-bottom-color: #bbb;
+          border-radius: 3px;
+          box-shadow: inset 0 -1px 0 #bbb;
+      }
+      
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+          margin-top: 24px;
+          margin-bottom: 16px;
+          font-weight: 600;
+          line-height: 1.25;
+      }
+      
+      h1 .octicon-link,
+      h2 .octicon-link,
+      h3 .octicon-link,
+      h4 .octicon-link,
+      h5 .octicon-link,
+      h6 .octicon-link {
+          color: #000;
+          vertical-align: middle;
+          visibility: hidden;
+      }
+      
+      h1:hover .anchor,
+      h2:hover .anchor,
+      h3:hover .anchor,
+      h4:hover .anchor,
+      h5:hover .anchor,
+      h6:hover .anchor {
+          text-decoration: none;
+      }
+      
+      h1:hover .anchor .octicon-link,
+      h2:hover .anchor .octicon-link,
+      h3:hover .anchor .octicon-link,
+      h4:hover .anchor .octicon-link,
+      h5:hover .anchor .octicon-link,
+      h6:hover .anchor .octicon-link {
+          visibility: visible;
+      }
+      
+      h1 {
+          padding-bottom: 0.3em;
+          font-size: 2em;
+          border-bottom: 1px solid #eee;
+      }
+      
+      h2 {
+          padding-bottom: 0.3em;
+          font-size: 1.5em;
+          border-bottom: 1px solid #eee;
+      }
+      
+      h3 {
+          font-size: 1.25em;
+      }
+      
+      h4 {
+          font-size: 1em;
+      }
+      
+      h5 {
+          font-size: 0.875em;
+      }
+      
+      h6 {
+          font-size: 0.85em;
+          color: #777;
+      }
+      
+      ul,
+      ol {
+          padding-left: 2em;
+      }
+      
+      ul ul,
+      ul ol,
+      ol ol,
+      ol ul {
+          margin-top: 0;
+          margin-bottom: 0;
+      }
+      
+      li>p {
+          margin-top: 16px;
+      }
+      
+      li+li {
+          margin-top: 0.25em;
+      }
+      
+      dl {
+          padding: 0;
+      }
+      
+      dl dt {
+          padding: 0;
+          margin-top: 16px;
+          font-size: 1em;
+          font-style: italic;
+          font-weight: bold;
+      }
+      
+      dl dd {
+          padding: 0 16px;
+          margin-bottom: 16px;
+      }
+      
+      table {
+          display: block;
+          width: 100%;
+          overflow: auto;
+      }
+      
+      table th {
+          font-weight: bold;
+      }
+      
+      table th,
+      table td {
+          padding: 6px 13px;
+          border: 1px solid #ddd;
+      }
+      
+      table tr {
+          background-color: #fff;
+          border-top: 1px solid #ccc;
+      }
+      
+      table tr:nth-child(2n) {
+          background-color: #f8f8f8;
+      }
+      
+      img {
+          max-width: 100%;
+          box-sizing: content-box;
+          background-color: #fff;
+      }
+      
+      code {
+          padding: 0;
+          padding-top: 0.2em;
+          padding-bottom: 0.2em;
+          margin: 0;
+          font-size: 85%;
+          background-color: rgba(0, 0, 0, 0.04);
+          border-radius: 3px;
+      }
+      
+      code::before,
+      code::after {
+          letter-spacing: -0.2em;
+          content: "\00a0";
+      }
+      
+      pre {
+          word-wrap: normal;
+      }
+      
+      pre>code {
+          padding: 0;
+          margin: 0;
+          font-size: 100%;
+          word-break: normal;
+          white-space: pre;
+          background: transparent;
+          border: 0;
+      }
+      
+      .highlight {
+          margin-bottom: 16px;
+      }
+      
+      .highlight pre {
+          margin-bottom: 0;
+          word-break: normal;
+      }
+      
+      .highlight pre,
+      pre {
+          padding: 16px;
+          overflow: auto;
+          font-size: 85%;
+          line-height: 1.45;
+          background-color: #f7f7f7;
+          border-radius: 3px;
+      }
+      
+      pre code {
+          display: inline;
+          max-width: auto;
+          padding: 0;
+          margin: 0;
+          overflow: visible;
+          line-height: inherit;
+          word-wrap: normal;
+          background-color: transparent;
+          border: 0;
+      }
+      
+      pre code::before,
+      pre code::after {
+          content: normal;
+      }
+      
+      .pl-0 {
+          padding-left: 0 !important;
+      }
+      
+      .pl-1 {
+          padding-left: 3px !important;
+      }
+      
+      .pl-2 {
+          padding-left: 6px !important;
+      }
+      
+      .pl-3 {
+          padding-left: 12px !important;
+      }
+      
+      .pl-4 {
+          padding-left: 24px !important;
+      }
+      
+      .pl-5 {
+          padding-left: 36px !important;
+      }
+      
+      .pl-6 {
+          padding-left: 48px !important;
+      }
+      
+      .full-commit .btn-outline:not(:disabled):hover {
+          color: #4078c0;
+          border: 1px solid #4078c0;
+      }
+      
+      kbd {
+          display: inline-block;
+          padding: 3px 5px;
+          font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+          line-height: 10px;
+          color: #555;
+          vertical-align: middle;
+          background-color: #fcfcfc;
+          border: solid 1px #ccc;
+          border-bottom-color: #bbb;
+          border-radius: 3px;
+          box-shadow: inset 0 -1px 0 #bbb;
+      }
+      
+       :checked+.radio-label {
+          position: relative;
+          z-index: 1;
+          border-color: #4078c0;
+      }
+      
+      .task-list-item {
+          list-style-type: none;
+      }
+      
+      .task-list-item+.task-list-item {
+          margin-top: 3px;
+      }
+      
+      .task-list-item input {
+          margin: 0 0.2em 0.25em -1.6em;
+          vertical-align: middle;
+      }
+      
+      hr {
+          border-bottom-color: #eee;
+      }
+      /** Theming **/
+      
+      body {
+          width: 890px;
+          margin: 0 auto;
+      }
+  </style>
+</head>
+<body>
+<h1 id="another-awesome-dataset-list">Another Awesome Dataset List</h1>
+<p><a href="https://github.com/sindresorhus/awesome"><img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="Awesome" /></a></p>
+<p><span class="emoji" data-emoji="sparkling_heart">💖</span>:</p>
+<ul>
+<li>AI开发者神器! 谷歌重磅推出数据集搜索 Dataset Search: <a href="https://mp.weixin.qq.com/s/ErbwXAz-_AJrmUGMHZIcwg">https://mp.weixin.qq.com/s/ErbwXAz-_AJrmUGMHZIcwg</a></li>
+<li>Making it easier to discover datasets: <a href="https://www.blog.google/products/search/making-it-easier-discover-datasets/">https://www.blog.google/products/search/making-it-easier-discover-datasets/</a></li>
+</ul>
+<blockquote>
+<p>Please <strong>cite related paper</strong> if you <strong>use their dataset</strong> <span class="emoji" data-emoji="smile">😄</span></p>
+</blockquote>
+<ul>
+<li><a href="#another-awesome-dataset-list">Another Awesome Dataset List</a>
+<ul>
+<li><a href="#saliency">Saliency</a>
+<ul>
+<li><a href="#rgb-saliency-detection">RGB-Saliency Detection</a>
+<ul>
+<li><a href="#msramsra10kmsra-b">MSRA(MSRA10K/MSRA-B)</a></li>
+<li><a href="#sed12">SED1/2</a></li>
+<li><a href="#asdmsra1000msra1kneed-some-images">ASD(MSRA1000/MSRA1K)[need some images]</a></li>
+<li><a href="#dut-omron">DUT-OMRON</a></li>
+<li><a href="#duts">DUTS</a></li>
+<li><a href="#hku-isneed-some-iamges">HKU-IS[need some iamges]</a></li>
+<li><a href="#sod">SOD</a></li>
+<li><a href="#icoseg">iCoSeg</a></li>
+<li><a href="#infraredneed-help">Infrared[need help]</a></li>
+<li><a href="#imgsal">ImgSal</a></li>
+<li><a href="#ecssdcssd">ECSSD/CSSD</a></li>
+<li><a href="#thur15k">THUR15K</a></li>
+<li><a href="#bruce-aneed-help">Bruce-A[need help]</a></li>
+<li><a href="#judd-aneed-help">Judd-A[need help]</a></li>
+<li><a href="#pascal-s">PASCAL-S</a></li>
+<li><a href="#ucsbneed-help">UCSB[need help]</a></li>
+<li><a href="#osieneed-help">OSIE[need help]</a></li>
+<li><a href="#acsd">ACSD</a></li>
+</ul></li>
+<li><a href="#other-special-sod-datasets">Other Special SOD Datasets</a>
+<ul>
+<li><a href="#xpie">XPIE</a></li>
+<li><a href="#soc">SOC</a></li>
+<li><a href="#sosmosneed-some-images">SOS/MOS[need some images]</a></li>
+<li><a href="#ilsoneed-some-images">ILSO[need some images]</a></li>
+<li><a href="#hs-sod">HS-SOD</a></li>
+</ul></li>
+<li><a href="#video-saliency-detection">Video Saliency Detection</a>
+<ul>
+<li><a href="#rsdpku-rsd">RSD(PKU-RSD)</a></li>
+<li><a href="#stcneed-help">STC[need help]</a></li>
+</ul></li>
+<li><a href="#rgbd-saliency-detection">RGBD-Saliency Detection</a>
+<ul>
+<li><a href="#sip">SIP</a></li>
+<li><a href="#nlprrgbd1000">NLPR/RGBD1000</a></li>
+<li><a href="#nju4002000">NJU400/2000</a></li>
+<li><a href="#stereossb">STEREO/SSB</a></li>
+<li><a href="#lfsdnead-img">LFSD[nead img]</a></li>
+<li><a href="#rgbd135des">RGBD135/DES</a></li>
+<li><a href="#dut-rgbd">DUT-RGBD</a></li>
+<li><a href="#ssd100">SSD100</a></li>
+</ul></li>
+<li><a href="#rgbt-saliency-detection-need-more-information">RGBT-Saliency Detection [need more information...]</a>
+<ul>
+<li><a href="#vt1000-dataset">VT1000 Dataset</a></li>
+<li><a href="#vt821-dataset">VT821 Dataset</a></li>
+</ul></li>
+<li><a href="#high-resolution-saliency-detection">High-Resolution Saliency Detection</a>
+<ul>
+<li><a href="#hrsoddavis-s">HRSOD/DAVIS-S</a></li>
+</ul></li>
+<li><a href="#other-saliency-dataset">Other Saliency Dataset</a>
+<ul>
+<li><a href="#kaist-salient-pedestrian-dataset">KAIST Salient Pedestrian Dataset</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#segmentation">Segmentation</a>
+<ul>
+<li><a href="#generalneed-help">General[need help]</a>
+<ul>
+<li><a href="#davis">DAVIS</a></li>
+<li><a href="#anyu">aNYU</a></li>
+</ul></li>
+<li><a href="#about-person">About Person</a>
+<ul>
+<li><a href="#supervisely人像数据集">Supervisely人像数据集</a></li>
+<li><a href="#clothing-parsing">Clothing Parsing</a></li>
+<li><a href="#humanparsing-dataset">HumanParsing-Dataset</a></li>
+<li><a href="#look-into-person-lip">Look into Person (LIP)</a></li>
+<li><a href="#taobao-commodity-dataset">Taobao Commodity Dataset</a></li>
+<li><a href="#object-extraction-dataset">Object Extraction Dataset</a></li>
+<li><a href="#clothing-co-parsing-ccp-dataset">Clothing Co-Parsing (CCP) Dataset</a></li>
+<li><a href="#baidu-people-segmentation-datasetneed-help">Baidu People segmentation dataset[need help]</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#matting">Matting</a>
+<ul>
+<li><a href="#alphamattingcom">alphamatting.com</a></li>
+<li><a href="#composition-1k-deep-image-matting">Composition-1k: Deep Image Matting</a></li>
+<li><a href="#semantic-human-matting">Semantic Human Matting</a></li>
+<li><a href="#matting-human-datasets">Matting-Human-Datasets</a></li>
+<li><a href="#pfcn">PFCN</a></li>
+<li><a href="#deep-automatic-portrait-matting">Deep Automatic Portrait Matting</a></li>
+</ul></li>
+<li><a href="#other">Other</a>
+<ul>
+<li><a href="#large-scale-fashion-deepfashion-database">Large-scale Fashion (DeepFashion) Database</a></li>
+<li><a href="#ml-image">ML-Image</a></li>
+</ul></li>
+<li><a href="#need-your-help">need your help...</a></li>
+<li><a href="#reference">Reference</a>
+<ul>
+<li><a href="#salient-object-detection-a-survey">Salient Object Detection: A Survey</a></li>
+<li><a href="#review-of-visual-saliency-detection-with-comprehensive-information">Review of Visual Saliency Detection with Comprehensive Information</a></li>
+<li><a href="#salient-object-detection-in-the-deep-learning-era-an-in-depth-survey">Salient Object Detection in the Deep Learning Era: An In-Depth Survey</a></li>
+</ul></li>
+<li><a href="#more">More</a>
+<ul>
+<li><a href="#similiar-projects">Similiar Projects</a></li>
+<li><a href="#research-institutes">Research Institutes</a></li>
+<li><a href="#resource-websites">Resource Websites</a></li>
+</ul></li>
+<li><a href="#about">About</a></li>
+</ul></li>
+</ul>
+<h2 id="saliency">Saliency</h2>
+<h3 id="rgb-saliency-detection">RGB-Saliency Detection</h3>
+<h4 id="msramsra10kmsra-b">MSRA(MSRA10K/MSRA-B)</h4>
+<p><img src="https://mmcheng.net/wp-content/uploads/2014/07/MSRA10K.jpg" alt="img" /></p>
+<ul>
+<li>论文: <a href="http://mmlab.ie.cuhk.edu.hk/2007/CVPR07_detect.pdf">T. Liu, J. Sun, N. Zheng, X. Tang, and H.-Y. Shum, "Learningto detect a salient object, " inCVPR, 2007, pp.1–8</a></li>
+<li>主页: 南开大学媒体计算实验室: <a href="https://mmcheng.net/zh/msra10k/">https://mmcheng.net/zh/msra10k/</a></li>
+<li>下载:
+<ul>
+<li>MSRA10K(formally named as THUS10000; <a href="http://mftp.mmcheng.net/Data/MSRA10K_Imgs_GT.zip">195MB</a>: images + binary masks):
+<ul>
+<li>Pixel accurate salient object labeling for <strong>10000 images</strong> from MSRA dataset.</li>
+<li>Please cite our paper [https://mmcheng.net/SalObj/] if you use it.</li>
+<li>Saliency maps and salient object region segmentation for other 20+ alternative methods are also available (<a href="http://pan.baidu.com/s/1dEaQqlF#path=%252FShare%252FSalObjRes">百度网盘</a>).</li>
+</ul></li>
+<li>MSRA-B (<a href="http://mftp.mmcheng.net/Data/MSRA-B.zip">111MB</a>: images + binary masks):
+<ul>
+<li>Pixel accurate salient object labeling for <strong>5000 images</strong> from MSRA-B dataset.</li>
+<li>Please cite the corresponding paper [https://mmcheng.net/drfi/] if you use it.</li>
+</ul></li>
+</ul></li>
+</ul>
+<blockquote>
+<p>我们通过检测输入图像中的显着对象来研究视觉注意力. 我们将显着对象检测表示为图像分割问题, 我们将显着对象与图像背景分开. 我们提出了一系列新颖的特征, 包括多尺度对比度, 中心环绕直方图和颜色空间分布, 以在本地, 区域和全局描述显着对象. 学习条件随机场以有效地组合这些特征以用于显着对象检测. 我们还构建了一个<strong>包含由多个用户标记的数以万计的完全标记图像的图像数据库</strong>. 据我们所知, 它是第一个用于视觉注意算法定量评估的大型图像数据库. 我们在此图像数据库上验证了我们的方法, 该数据库在本文中是公开的.</p>
+<p>人们可能对图像中的显着对象有不同的看法. 为了解决"给定图像中可能是什么样的显着对象"的问题, 我们通过在多个用户的图像中标记"基础事实"显着对象来进行投票策略. 在本文中, 我们关注图像中单个显着对象的情况.</p>
+<p>显著性对象表示. 通常, 我们<strong>将给定对象表示为给定image I中的二元mask</strong> $A={a_x}$. 对于每个像素x, $a_x∈{1, 0}$是二进制标签, 以指示像素是否属于显着对象.<strong>为了标记和评估, 我们要求用户绘制一个矩形来指定一个显着对象. 我们的检测算法也输出一个矩形.</strong></p>
+<p>图像来源. 我们收集了一个非常大的图像数据库, 其中130, 099个来自各种来源的高质量图像, 主要来自图像论坛和图像搜索引擎. 然后我们手动选择60, 000多个图像, 每个图像包含一个显着对象或一个独特的前景对象. 我们进一步选择了20, 840张图片进行标记. 在选择过程中, 我们<strong>排除了包含非常大的显着对象的任何图像</strong>, 从而可以更准确地评估检测的性能.</p>
+<p>标记一致性. 对于每个要标记的图像, 我们请用户绘制一个矩形, 该矩形包围图像中最大的对象根据他/她自己的理解. 由不同用户标记的矩形通常不相同. 为了减少标签的不一致性, 我们从多个用户绘制的矩形中选择一个"真实"标签.</p>
+</blockquote>
+<h4 id="sed12">SED1/2</h4>
+<ul>
+<li>单目标</li>
+</ul>
+<p><img src="./assets/2018-12-29-18-38-59.png" alt="img" /></p>
+<ul>
+<li>双目标</li>
+</ul>
+<p><img src="./assets/2018-12-29-18-39-30.png" alt="img" /></p>
+<ul>
+<li>真值</li>
+</ul>
+<p>给出的是每个图像由三个不同的人类对象分割的结果.</p>
+<p><img src="./assets/2018-12-29-18-40-17.png" alt="img" /></p>
+<ul>
+<li><a href="https://arxiv.org/abs/1501.02741">A. Borji, M.-M. Cheng, H. Jiang, and J. Li, "Salient objectdetection: A benchmark, "IEEE TIP, vol.24, no.12, pp.5706–5722, 2015.</a></li>
+<li><a href="http://www.wisdom.weizmann.ac.il/~meirav/Segmentation_Alpert_Galun_Brandt_Basri.pdf">Image Segmentation by Probabilistic Bottom-Up Aggregation and Cue Integration</a></li>
+<li>项目: <a href="http://www.wisdom.weizmann.ac.il/~vision/Seg_Evaluation_DB/index.html">http://www.wisdom.weizmann.ac.il/~vision/Seg_Evaluation_DB/index.html</a></li>
+<li>下载: <a href="http://www.wisdom.weizmann.ac.il/~vision/Seg_Evaluation_DB/dl.html">http://www.wisdom.weizmann.ac.il/~vision/Seg_Evaluation_DB/dl.html</a></li>
+</ul>
+<blockquote>
+<p>这项工作的目的是为图像分割研究提供经验和科学依据. 评估分割算法产生的结果具有挑战性, 因为很难提出提供基础真实分割的规范测试集. 这部分是因为在日常复杂图像中手动描绘片段可能是费力的. 此外, 人们往往倾向于将语义考虑纳入其分段中, 这超出了数据驱动的分割算法的范围. 因此, 许多现有算法仅显示很少的分割结果. 为了评估由不同算法产生的分割, 我们编制了一个数据库, 目前<strong>包含200个灰度图像以及真实标注分割</strong>. 该数据库专门设计用于避免潜在的模糊, 仅通过仅通过强度, 纹理或其他低水平线索合并清晰描绘前景中与其周围环境不同的一个或两个物体的图像. 通过要求人类对象手动地将灰度图像(还提供颜色源)分成两个或三个类别来获得地面真实分割, 其中<strong>每个图像由三个不同的人类对象分割</strong>. 通过评估其与真实分割的一致性及其碎片量来评估分割. 与此数据库评估一起, 我们提供了用于评估给定分割算法的代码. 这样, 不同的分割算法可能具有可比较的结果以获得更多细节, 请参阅"评估测试"部分.</p>
+</blockquote>
+<h4 id="asdmsra1000msra1kneed-some-images">ASD(MSRA1000/MSRA1K)[need some images]</h4>
+<ul>
+<li>论文:<a href="https://www.researchgate.net/publication/224312323_A_two-stage_approach_to_saliency_detection_in_images">A two-stage approach to saliency detection inimages</a></li>
+<li>相关:
+<ul>
+<li>T. Liu, J. Sun, N.-N. Zheng, X. Tang, and H.-Y. Shum, "<a href="http://research.microsoft.com/en-us/um/people/jiansun/salientobject/salient_object.htm">Learning to detect a salient object</a>, " in <em>Proc. IEEE Conf. Comput. Vis. Pattern Recognit.</em>, 2007, pp.1–8.</li>
+<li>R. Achanta, S. Hemami, F. Estrada, and S. Süsstrunk, "<a href="http://ivrlwww.epfl.ch/supplementary_material/RK_CVPR09/">Frequency-tuned salient region detection</a>, " in <em>Proc. IEEE Conf. Comput. Vis. Pattern Recognit.</em>, 2009, pp.1597–1604.</li>
+</ul></li>
+<li>下载: <a href="http://download.csdn.net/detail/wanyq07/9839322">http://download.csdn.net/detail/wanyq07/9839322</a>
+<ul>
+<li>关于下载的说明: 因为基于MSRA的图片数据集, 在孙剑走了之后, MARA上就没了他的页面, 相关的资源也就找不到了. CSDN一篇博客有分享. 原图下载地址:<a href="http://download.csdn.net/detail/tuconghuan/8357509">MSRA图像数据集(1000幅含真实标注)</a>. 上面下载到的标注图尺寸被统一改为512*512, 所以这里在给个地址:<a href="http://download.csdn.net/detail/zzb4702/9559378">ASD尺寸一致</a></li>
+</ul></li>
+</ul>
+<blockquote>
+<p>ASD contains 1, 000 images with pixel-wise ground-truths. The images are selected from the MSRA-A dataset, where only the bounding boxes around salient regions are provided. The accurate salient masks in ASD are created based on object contours.</p>
+<p>这个数据集包含有1000张图(MSRA1000)这个数据库来自于 该数据库的说明以及一些算法(IT, MZ, GB, SR, AC, IG ) 的结果可以在<a href="http://ivrlwww.epfl.ch/supplementary_material/RK_CVPR09/index.html">Frequency-tuned Salient Region Detection</a> (FT算法 =&gt; 这里改进的数据集叫做ACSD, 相关可见<a href="#ACSD">ACSD</a>部分)下载, 此外其中还包含了这1000张测试图的真值图.</p>
+</blockquote>
+<h4 id="dut-omron">DUT-OMRON</h4>
+<p><img src="assets/2019-03-22-18-45-56.png" alt="img" /></p>
+<ul>
+<li>论文: C. Yang, L. Zhang, H. Lu, X. Ruan, and M.-H. Yang, "<a href="http://saliencydetection.net/dut-omron/">Saliency detection via graph-based manifold ranking</a>, " in <em>Proc. IEEE Conf. Comput. Vis. Pattern Recognit.</em>, 2013, pp.3166–3173.</li>
+<li>项目: <a href="http://saliencydetection.net/dut-omron/#outline-container-org0e04792">http://saliencydetection.net/dut-omron/#outline-container-org0e04792</a></li>
+<li>下载: <a href="http://saliencydetection.net/dut-omron/download/DUT-OMRON-image.zip">http://saliencydetection.net/dut-omron/download/DUT-OMRON-image.zip</a></li>
+</ul>
+<blockquote>
+<p>数据库包括从超过140, 000张图像中手动选择的5, 168个高质量图像. 我们将图像的大小调整为宽为400或高为400像素, 其中另一条边小于400. 我们数据库的图像具有一个或多个显着对象和相对复杂的背景. 我们共有25名参与者, 用于汇总真值, 每个图像有五个参与者标签. 他们都有正常或矫正到正常的视力并且意识到我们实验的目标. 我们为提出的数据库构建像素方面的真实标注, 边界框, 和眼睛固定标注真值.</p>
+<p>我们的数据集是唯一一个具有眼睛固定, 边界框和像素方面的大规模真实标注的数据集. 与ASD和MSRA数据集以及其他一些眼睛固定数据集(即MIT和NUSEF数据集)相比, 数据集中的图像更加困难, 因此更具挑战性, 并为相关的显着性研究提供了更多的改进空间.</p>
+</blockquote>
+<h4 id="duts">DUTS</h4>
+<ul>
+<li>项目: <a href="http://saliencydetection.net/duts/">http://saliencydetection.net/duts/</a></li>
+</ul>
+<blockquote>
+<p>...we contribute a large scale data set named DUTS, <strong>containing 10, 553 training images and 5, 019 test images</strong>. All training images are collected from the ImageNet DET training/val sets, while test images are collected from the ImageNet DET test set and the SUN data set.</p>
+<p>Both the training and test set contain very challenging scenarios for saliency detection. Accurate pixel-level ground truths are manually annotated by 50 subjects.</p>
+<p>To our knowledge, DUTS is currently <strong>the largest saliency detection benchmark</strong> with the explicit training/test evaluation protocol.</p>
+<p>For fair comparison in the future research, the training set of DUTS serves as a good candidate for learning DNNs, while the test set and other public data sets can be used for evaluation.</p>
+</blockquote>
+<h4 id="hku-isneed-some-iamges">HKU-IS[need some iamges]</h4>
+<ul>
+<li>项目: <a href="https://i.cs.hku.hk/~gbli/deep_saliency.html">https://i.cs.hku.hk/~gbli/deep_saliency.html</a></li>
+<li>论文: <a href="http://i.cs.hku.hk/~yzyu/publication/mdfsaliency-cvpr15.pdf">Visual Saliency Based on Multiscale Deep Features</a></li>
+<li>下载:
+<ul>
+<li><a href="https://drive.google.com/open?id=0BxNhBO0S5JCRQ1N6V25VeVh6cHc&amp;authuser=0">Google Drive</a></li>
+<li><a href="http://pan.baidu.com/s/1c0EpNfM">Baidu Yun</a></li>
+</ul></li>
+</ul>
+<blockquote>
+<p>数据集包含4447个具有显着对象的像素注释的图像</p>
+<p>视觉显着性是包括计算机视觉在内的认知和计算科学中的一个基本问题. 在本文中, 我们发现可以从使用深度卷积神经网络(CNN)提取的多尺度特征中学习高质量的视觉显着性模型. 视觉识别任务的成功. 为了学习这样的显着性模型, 我们引入了一种神经网络结构, 它在CNN顶部具有完全连接的层, 负责三个不同尺度的特征提取. 然后, 我们提出一种改进方法来增强我们的显着性结果的空间一致性. 最后, 针对不同级别的图像分割计算的聚合多个显着性图可以进一步提高性能, 从而产生比由单个分割产生的显着性图更好的显着性图. 为了促进对视觉显着性模型的进一步研究和评估, <strong>我们还构建了一个新的大型数据库, 包括4447个具有挑战性的图像及其像素显着性注释</strong>.</p>
+</blockquote>
+<h4 id="sod">SOD</h4>
+<p><img src="assets/2019-03-22-18-46-40.png" alt="img" /></p>
+<ul>
+<li>项目: <a href="http://elderlab.yorku.ca/SOD/">http://elderlab.yorku.ca/SOD/</a></li>
+<li>下载
+<ul>
+<li>官方: <a href="http://elderlab.yorku.ca/SOD/SOD.zip">http://elderlab.yorku.ca/SOD/SOD.zip</a></li>
+<li>百度云: <a href="https://pan.baidu.com/s/1IMElTPwD4yTo2TMSRU-keQ">https://pan.baidu.com/s/1IMElTPwD4yTo2TMSRU-keQ</a></li>
+</ul></li>
+</ul>
+<blockquote>
+<p>此数据集是基于Berkeley Segmentation Dataset(BSD)的显着对象边界的集合. 要求七个对象选择BSD中使用的每个图像中的显着对象. 每个主题随机显示伯克利分割数据集的子集, 作为在相应图像上重叠的边界. 然后, 可以通过单击选择哪些区域或区段对应于显着对象.</p>
+<p>对于BSD中使用的300个图像的每个图像, 都有一个.mat文件可以由Matlab打开. 加载每个mat文件会将一个名为"SES"的结构读入内存, 该结构是从SOD中每个主题的会话中收集的数据数组.</p>
+<p><span class="emoji" data-emoji="gift_heart">💝</span> that the original images are available from the Berkely Segmentation Dataset at: <a href="http://www.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/segbench/">http://www.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/segbench/</a></p>
+</blockquote>
+<h4 id="icoseg">iCoSeg</h4>
+<p><img src="./assets/1546085516505.png" alt="1546085516505" /></p>
+<ul>
+<li>论文: <a href="http://chenlab.ece.cornell.edu/projects/touch-coseg/iCoseg_dataset.pdf">http://chenlab.ece.cornell.edu/projects/touch-coseg/iCoseg_dataset.pdf</a></li>
+<li>项目: <a href="http://chenlab.ece.cornell.edu/projects/touch-coseg/">http://chenlab.ece.cornell.edu/projects/touch-coseg/</a></li>
+<li>下载: <a href="http://chenlab.ece.cornell.edu/projects/touch-coseg/CMU_Cornell_iCoseg_dataset.zip">http://chenlab.ece.cornell.edu/projects/touch-coseg/CMU_Cornell_iCoseg_dataset.zip</a></li>
+</ul>
+<blockquote>
+<p>我们引入了38组(643幅图像)中最大的公开可用的 co-segmentation, 以及像素标注真值.</p>
+</blockquote>
+<h4 id="infraredneed-help">Infrared[need help]</h4>
+<ul>
+<li>项目: <a href="https://ivrl.epfl.ch/research-2/research-downloads/supplementary_material-cvpr11-index-html/">https://ivrl.epfl.ch/research-2/research-downloads/supplementary_material-cvpr11-index-html/</a></li>
+<li>论文: <a href="http://infoscience.epfl.ch/record/167478">http://infoscience.epfl.ch/record/167478</a></li>
+<li>下载: <a href="http://ivrgwww.epfl.ch/supplementary_material/cvpr11/nirscene1.zip">http://ivrgwww.epfl.ch/supplementary_material/cvpr11/nirscene1.zip</a></li>
+</ul>
+<blockquote>
+<p>我们使用对传统SLR相机的简单修改来捕获数百个彩色(RGB)和近红外(NIR)场景的图像. 我们表明, 近红外信息的添加导致场景识别任务中的性能显着提高, 并且当使用适当的4维颜色表示时, 改进仍然更大. 特别地, 我们提出了MSIFT-一种多光谱SIFT描述符, 当与基于内核的分类器结合时, 超过了现有技术的场景识别技术(例如GIST)及其多光谱扩展的性能. 我们使用数百个RGB-NIR场景图像的新数据集对我们的算法进行了广泛的测试, 并对Torralba的场景分类数据集进行了基准测试.</p>
+</blockquote>
+<h4 id="imgsal">ImgSal</h4>
+<p><img src="./assets/1546087781641.png" alt="1546087781641" /></p>
+<ul>
+<li>项目: <a href="https://sites.google.com/site/jianlinudt/saliency-database">https://sites.google.com/site/jianlinudt/saliency-database</a></li>
+<li>作者主页: <a href="http://www.escience.cn/people/jianli/DataBase.html">http://www.escience.cn/people/jianli/DataBase.html</a></li>
+</ul>
+<blockquote>
+<p>数据库的特点</p>
+<p>1.235个彩色图像的集合, 分为六个不同的类别; 2. 提供人类固定记录(扫视数据)和人类标记结果; 3. 易于使用.</p>
+<p>我们将同时考虑不同大小的显着区域的检测. 实际上, 可接受的显着性检测器应该检测大的和小的显着区域. 此外, 显着性检测还应该定位杂乱背景中的显着区域和具有重复干扰物的区域. 我们还注意到, 对于任何显着性检测器, 不同的图像呈现不同的难度. 但是, 现有的显着性基准(例如Bruce的数据集, Hou'dataset, Harel的数据集等)是图像集合, 没有尝试对所需分析的难度进行分类. 因此, 我们为显着性模型验证创建了一个新的显着性基准. 该数据库提供REGION基础事实(人类标记)和FIXATION基础事实(通过眼动仪).</p>
+<p>图像集使用Google以及参考最近的文献收集了包含235张图像的数据库. 此数据库中的图像为480 x 640像素, 分为6类:1)50个具有大显着区域的图像; 2)具有中间显着区域的80幅图像; 3)具有小显着区域的60幅图像; 4)背景杂乱的15幅图像; 5)带有重复干扰物的15张图像; 6)具有大和小显着区域的15个图像.</p>
+</blockquote>
+<h4 id="ecssdcssd">ECSSD/CSSD</h4>
+<p><img src="assets/2019-03-22-18-47-32.png" alt="img" /></p>
+<ul>
+<li>下载: <a href="http://www.cse.cuhk.edu.hk/leojia/projects/hsaliency/dataset.html">http://www.cse.cuhk.edu.hk/leojia/projects/hsaliency/dataset.html</a>
+<ul>
+<li>ECSSD (1000 images)
+<ul>
+<li><a href="http://www.cse.cuhk.edu.hk/leojia/projects/hsaliency/data/ECSSD/images.zip">ECSSD images (64.6MB)</a></li>
+<li><a href="http://www.cse.cuhk.edu.hk/leojia/projects/hsaliency/data/ECSSD/ground_truth_mask.zip">ECSSD ground truth masks (1.78MB)</a> (Updated on 9 April, 2015)</li>
+</ul></li>
+<li>CSSD (200 images)
+<ul>
+<li><a href="http://www.cse.cuhk.edu.hk/leojia/projects/hsaliency/data/CSSD/images.zip">CSSD images (18.7MB)</a></li>
+<li><a href="http://www.cse.cuhk.edu.hk/leojia/projects/hsaliency/data/CSSD/ground_truth_mask.zip">CSSD groud truth masks (0.75MB)</a></li>
+</ul></li>
+</ul></li>
+</ul>
+<p>其中CSSD包含了200张图, 而ECSSD是前者的扩展集包含有1000张图</p>
+<blockquote>
+<p>虽然MSRA-1000的图像内容种类繁多, 但背景结构主要是简单而流畅. 为了表示自然图像通常落入的情况, 我们将[1]中的复杂场景显着性数据集(CSSD)扩展到包含1000个图像的更大数据集(ECSSD)[2], 其中包含许多语义上有意义但结构复杂的图像用于评估. 这些图像是从互联网上获取的, 并要求5名助手制作地面真相面具. 上面显示了几个带有相应掩模的例子.</p>
+</blockquote>
+<h4 id="thur15k">THUR15K</h4>
+<p><img src="./assets/1546088375285.png" alt="1546088375285" /></p>
+<ul>
+<li>论文: <a href="https://mmcheng.net/zh/gsal/">https://mmcheng.net/zh/gsal/</a></li>
+<li>下载: <a href="https://mmcheng.net/mftp/Data/THUR15000.zip">https://mmcheng.net/mftp/Data/THUR15000.zip</a>
+<ul>
+<li>百度云: <a href="https://pan.baidu.com/s/1u-E-8ujnxBz0mdmXsJglvg">https://pan.baidu.com/s/1u-E-8ujnxBz0mdmXsJglvg</a></li>
+</ul></li>
+</ul>
+<blockquote>
+<p>有效识别大型图像集中的显着对象对于许多应用是必不可少的, 包括图像检索, 监视, 图像注释和对象识别. 我们提出了一种简单, 快速, 有效的算法, 通过分析图像集合来定位和分割显着对象. 作为一个关键的新颖性, 我们通过提取最大化图像间相似性和图像内清晰度的显着对象(在预过滤图像的集合中)来引入群体显着性以实现优越的无监督显着对象分割. 为了评估我们的方法, 我们构建了一个大型基准数据集, <strong>该数据集包含多个类别的15K图像, 适用于显着对象区域的6000多个像素精确的地面实况注释</strong>. 在我们的所有测试中, group saliency 始终优于最先进的单图像显着性算法, 从而实现更高的精度和更好的回忆. 我们的算法成功处理了比任何现有基准数据集更大的订单的图像集合, 包括来自各种网络间源的各种异构图像.</p>
+<p>我们引入了分类图像的标记数据集, 用于评估基于草图的图像检索. 我们为5个关键字中的每一个下载了大约3000张图像:"蝴蝶", "咖啡杯", "狗跳", "长颈鹿"和"平面", 一起包括大约15000张图像.<strong>对于每个图像, 如果存在具有与查询关键字匹配的正确内容的非模糊对象并且对象的大部分可见, 则我们标记这样的对象区域. 与MSRA10K类似, 显着区域以像素级别标记. 我们只标记几乎完全可见的对象的显着对象区域, 因为部分遮挡的对象对形状匹配不太有用. 与MSRA10K不同, THUR15K数据集不包含为数据集中的每个图像标记的显着区域, 即, 一些图像可能没有任何显着区域. 该数据集用于评估基于形状的图像检索性能.</strong></p>
+</blockquote>
+<h4 id="bruce-aneed-help">Bruce-A[need help]</h4>
+<ul>
+<li>论文: <a href="https://papers.nips.cc/paper/2830-saliency-based-on-information-maximization.pdf">https://papers.nips.cc/paper/2830-saliency-based-on-information-maximization.pdf</a></li>
+</ul>
+<h4 id="judd-aneed-help">Judd-A[need help]</h4>
+<ul>
+<li>论文: <a href="http://people.csail.mit.edu/torralba/publications/wherepeoplelook.pdf">http://people.csail.mit.edu/torralba/publications/wherepeoplelook.pdf</a></li>
+</ul>
+<h4 id="pascal-s">PASCAL-S</h4>
+<p><img src="https://ccvl.jhu.edu/datasets/assets/pascal_salient_object.jpg" alt="img" /></p>
+<ul>
+<li>项目:
+<ul>
+<li><a href="https://ccvl.jhu.edu/datasets/">https://ccvl.jhu.edu/datasets/</a></li>
+<li><a href="http://www.cbi.gatech.edu/salobj/">http://www.cbi.gatech.edu/salobj/</a></li>
+</ul></li>
+<li>下载:
+<ul>
+<li>百度云盘: <a href="https://pan.baidu.com/s/1DZcfwCYdeMW4EGawhXQyig">https://pan.baidu.com/s/1DZcfwCYdeMW4EGawhXQyig</a></li>
+<li>页面: <a href="http://academictorrents.com/details/6c49defd6f0e417c039637475cde638d1363037e">http://academictorrents.com/details/6c49defd6f0e417c039637475cde638d1363037e</a></li>
+</ul></li>
+</ul>
+<blockquote>
+<p>对来自PASCAL VOC的850张图像子集的自由修复. 收集8个主题, 3s观看时间, Eyelink II眼动仪. 大多数算法的性能表明PASCAL-S比大多数显着性数据集偏差更小.</p>
+<p><span class="emoji" data-emoji="broken_heart">💔</span> 由于其标注的真值有多个值, 常见的做法是使用 <code>255/2</code> 值作为阈值进行处理后, 再使用该数据集</p>
+</blockquote>
+<h4 id="ucsbneed-help">UCSB[need help]</h4>
+<ul>
+<li>论文: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3954044/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3954044/</a></li>
+<li>下载: <a href="https://labs.psych.ucsb.edu/eckstein/miguel/research_pages/saliencydata.html">https://labs.psych.ucsb.edu/eckstein/miguel/research_pages/saliencydata.html</a></li>
+</ul>
+<h4 id="osieneed-help">OSIE[need help]</h4>
+<ul>
+<li>论文: <a href="https://jov.arvojournals.org/article.aspx?articleid=2193943">https://jov.arvojournals.org/article.aspx?articleid=2193943</a></li>
+</ul>
+<blockquote>
+<p>大量先前的模型用于预测人们在自然场景中的外观, 侧重于像素级图像属性. 为了弥合计算显着性模型的预测能力与人类行为之间的语义差距, 我们提出了一种新的显着性体系结构, 它将信息分为三个层次: 像素级图像属性, 对象级属性和语义级属性. 通常忽略对象和语义级别信息, 或者仅讨论少数样本对象类别, 其中缩放到大量对象类别是不可行的, 也不是神经合理的. 为了解决这个问题, 这项工作构建了一个基本属性的原则词汇表来描述对象和语义级信息, 从而不限制有限数量的对象类别. 我们<strong>建立了一个包含500个图像的新数据集, 其中包含15个观察者的眼动追踪数据和5, 551个具有精细轮廓和12个语义属性的分段对象的注释数据</strong>(可在论文中公开获得). 实验结果证明了对象和语义级信息在预测视觉注意力方面的重要性.</p>
+</blockquote>
+<h4 id="acsd">ACSD</h4>
+<p><img src="./assets/1546135560011.png" alt="1546135560011" /></p>
+<ul>
+<li>论文: <a href="https://infoscience.epfl.ch/record/135217/files/1708.pdf">R. Achanta, S. Hemami, F. Estrada, and S. Ssstrunk, "Frequency-tuned salient region detection, " in CVPR, 2009, pp.1597–1604</a></li>
+<li>项目: <a href="https://ivrl.epfl.ch/research-2/research-current/research-saliency/supplementary_material-rk_cvpr09-index-html/">https://ivrl.epfl.ch/research-2/research-current/research-saliency/supplementary_material-rk_cvpr09-index-html/</a></li>
+<li>下载: 官网只提供了<a href="https://ivrl.epfl.ch/wp-content/uploads/2018/08/binarymasks.zip">真值标注的下载</a>.</li>
+</ul>
+<p>基于[ASD数据集(MSRA1K)]制作.</p>
+<blockquote>
+<p>我们从[Z. Wang and B. Li. A two-stage approach to saliency detection in images. ICASSP 2008.]中提出的1000个图像中获得了一个真实数据库.[Z. Wang and B. Li. A two-stage approach to saliency detection in images. ICASSP 2008.]中的基本事实是在显着区域周围的用户绘制的矩形. 这是不准确的, 并将多个对象合二为一. 我们手动分割用户绘制的矩形内的显着对象以获得二进制掩码, 如下所示. 这样的掩膜既准确又允许我们清楚地处理多个显着对象.</p>
+</blockquote>
+<h3 id="other-special-sod-datasets">Other Special SOD Datasets</h3>
+<h4 id="xpie">XPIE</h4>
+<p><img src="./assets/1546137404871.png" alt="1546137404871" /></p>
+<ul>
+<li>链接: <a href="https://www.researchgate.net/publication/320971838_What_is_and_What_is_Not_a_Salient_Object_Learning_Salient_Object_Detector_by_Ensembling_Linear_Exemplar_Regressors">C. Xia, J. Li, X. Chen, A. Zheng, and Y. Zhang, "What is and what is not a salient object? Learning salient object detector by ensembling linear exemplar regressors, " in CVPR , 2017, pp.4142–4150.</a></li>
+<li>团队: cvteam: <a href="http://cvteam.net/">http://cvteam.net/</a></li>
+<li>项目:<a href="http://cvteam.net/projects/CVPR17-ELE/ELE.html">http://cvteam.net/projects/CVPR17-ELE/ELE.html</a></li>
+<li>下载: <a href="http://cvteam.net/projects/CVPR17-ELE/XPIE.tar.gz">http://cvteam.net/projects/CVPR17-ELE/XPIE.tar.gz</a></li>
+</ul>
+<blockquote>
+<p>找出什么是什么和什么不是显着对象可以有助于在显着对象检测(SOD)中开发更好的特征和模型. 在本文中, 我们研究了在构建新的SOD数据集时选择和丢弃的图像, 发现许多相似的候选者, 复杂形状和低对象性是很多非显着对象的三个主要属性. 此外, 对象可能具有使其显着的不同属性.</p>
+<p>为了全面解释什么是什么和什么不是显着对象, 一个可行的解决方案是通过观察包含在数据集中或从数据集中丢弃的图像中的对象的主要特征来研究构建新SOD数据集的整个过程. 从这些观察中, 我们可以推断显着和非显着对象的关键属性以及基于图像的SOD数据集中可能存在的主观偏差. 为此, 我们构建了一个大的SOD数据集(称为XPIE)并记录构建过程中的所有细节.</p>
+<ol>
+<li>我们首先从三个来源收集三种图像, 包括Panoramio, ImageNet和两个fixation数据集. 这些操作是全自动的, 以避免引入太多的主观偏见.</li>
+<li>之后, 我们调整每个图像的大小, 使其最大边长为300像素, 并丢弃所有最小边长小于128像素的灰度或彩色图像.</li>
+<li>最后, 我们在三个图像子集中获得29, 600个彩色图像. 分别表示为Set-P, Set-I, Set-E.</li>
+</ol>
+<p><strong>Set-P 包含8, 800具有地理信息的感兴趣地点的图像(例如, GPS和标签), 具有对象标签的Set-I包含19, 600图像, 以及Set-E包含1, 200个human fixations图像</strong>.</p>
+<p>对于这些图像, 我们要求两位工程师通过两个阶段对其进行注释. 在第一阶段, 图像被分配一个二进制标记:'是'用于包含非明确对象, 否则为'否'. 在第一阶段之后, 我们将21, 002张图片标记为"是", 并且8, 598图像标记为"否". 在第二阶段, 这两位工程师进一步要求手动标记标记为"是"的10, 000张图像中的显着对象的准确边界. 注意我们有10名志愿者参与整个过程, 以检查注释的质量.<strong>最后, 我们获得了10, 000张图像的二进制掩码</strong>.</p>
+<p>可见论文内容第2节.</p>
+</blockquote>
+<h4 id="soc">SOC</h4>
+<p><img src="./assets/1546081178458.png" alt="1546081178458" /></p>
+<p><img src="./assets/1546081446332.png" alt="1546081446332" /></p>
+<ul>
+<li>项目: <a href="http://dpfan.net/SOCBenchmark/">http://dpfan.net/SOCBenchmark/</a></li>
+<li>论文:<a href="http://dpfan.net/wp-content/uploads/2018/04/SOCBenchmark.pdf">Salient Objects in Clutter: Bringing Salient Object Detection to the Foreground</a>
+<ul>
+<li>中文: <a href="http://dpfan.net/wp-content/uploads/SOCBenchmarkCN.pdf">http://dpfan.net/wp-content/uploads/SOCBenchmarkCN.pdf</a></li>
+</ul></li>
+<li>下载:
+<ul>
+<li>Overall 6K SOC Dataset (730.2MB) <a href="https://pan.baidu.com/s/1J8_CF7zE1zApqgAR9eS1Dw">Baidu</a><a href="https://drive.google.com/file/d/1hfo33A7diED2dikTpN9o4KnZTxizGdLr/view?usp=sharing">Google</a></li>
+<li>3.6K SOC Training Set (441.32MB) <a href="http://dpfan.net/wp-content/uploads/TrainSet.zip">Here</a><a href="https://pan.baidu.com/s/1Mao0piUuqVXAzmJoNtrtAw">Baidu</a><a href="https://drive.google.com/open?id=16jlzeJJ1tawyBLBN5fRiWbh2y_F0iSyP">Google</a></li>
+<li>1.2K SOC Validation Set (146.56MB) <a href="http://dpfan.net/wp-content/uploads/ValSet.zip">Here</a><a href="https://pan.baidu.com/s/1mOmiezCpkr5NCQk8ecvGiQ">Baidu</a><a href="https://drive.google.com/open?id=1vAfP8fCAo2a2KwgsmYLn8r8Rk4Lk7Urr">Google</a></li>
+<li>1.2K SOC Test Set (141.86MB) <a href="http://dpfan.net/wp-content/uploads/TestSet.zip">Here</a><a href="https://pan.baidu.com/s/10y-dx9HCPQm9fnp-Brswgw">Baidu</a><a href="https://drive.google.com/open?id=1ZdKrsk-S4J6KQyjx-cPeL0HoKXy7CCxG">Google</a></li>
+</ul></li>
+</ul>
+<blockquote>
+<p>在本文中, 我们提供了显着对象检测(SOD)模型的综合评估. 我们的分析确定了现有SOD数据集的严重设计偏差, 假设每个图像在低杂波中包含至少一个明显突出的显着对象. 这是一个不切实际的假设. 在现有数据集上进行评估时, 设计偏差导致了最先进的SOD模型的饱和高性能. 然而, 当应用于现实世界的日常场景时, 这些模型仍然远远不能令人满意. 根据我们的分析, 我们首先确定了全面和平衡的数据集应该实现的7个关键方面. 然后, 我们提出一个新的高质量数据集并更新以前的显着性基准.</p>
+<p>具体来说, 我们的数据集称为SOC, Salient Objects in Clutter, <strong>包括来自日常对象类别的显着和非显着对象的图像</strong>. 除了对象类别注释之外, 每个突出图像都伴随着反映现实世界场景中常见挑战的属性(例如, 外观变化, 杂乱), 并且可以帮助 1)更深入地了解SOD问题, 2)调查专业人员和SOD模型的缺点, 3)从不同的角度客观地评估模型. 最后, 我们在SOC数据集上报告基于属性的性能评估. 我们相信, 我们的数据集和结果将为未来的显着物体检测研究开辟新的方向.</p>
+<p>SOC has 6, 000 images with 80 common categories. Half of the images contain salient objects and the others contain none.<strong>Each salient-object-contained image is annotated with instance-level SOD ground-truth, object category (e.g., dog, book), and challenging factors</strong> (e.g., big/small object).<strong>The non-salient object subset has 783 texture images and 2, 217 real-scene images</strong> (e.g., aurora, sky).</p>
+</blockquote>
+<h4 id="sosmosneed-some-images">SOS/MOS[need some images]</h4>
+<ul>
+<li>项目:<a href="http://cs-people.bu.edu/jmzhang/sos.html">http://cs-people.bu.edu/jmzhang/sos.html</a></li>
+<li>论文:
+<ul>
+<li>SOS: J. Zhang, S. Ma, M. Sameki, S. Sclaroff, M. Betke, Z. Lin, X. Shen, B. Price, and R. Mech, "Salient object subitizing, " in Proc. IEEE Conf. Comput. Vis. Pattern Recognit., 2015, pp.4045–4054.</li>
+<li>MOS: J. Zhang, S. Ma, M. Sameki, S. Sclaroff, M. Betke, Z. Lin, X. Shen, B. Price, and R. Mech, "Salient object subitizing, " in Proc. IEEE Conf. Comput. Vis. Pattern Recognit., 2015, pp.4045–4054.</li>
+</ul></li>
+</ul>
+<blockquote>
+<p>SOS 10 is created for SOD subitizing [115], i.e., to predict the number of salient objects without an expensive detection process. It contains 6, 900 images selected from:</p>
+<ol>
+<li>A large-scale hierarchical image database</li>
+<li>Sun database: Large-scale scene recognition from abbey to zoo</li>
+<li>Microsoft coco: Common objects in context</li>
+<li>The pascal visual object classes (voc) challenge results</li>
+</ol>
+<p>Each image is labeled as containing 0, 1, 2, 3 or 4+ salient objects. SOS is randomly split into a training (5, 520 images) and a test set (1, 380 images).</p>
+<p><strong>MSO is a subset of the test set of SOS and contains 1, 224 images</strong>. It has a more balanced distribution regarding the number of salient objects, and each object is annotated with a bounding box.</p>
+</blockquote>
+<h4 id="ilsoneed-some-images">ILSO[need some images]</h4>
+<ul>
+<li>项目:<a href="http://www.sysu-hcp.net/instance-level-salient-object-segmentation/">http://www.sysu-hcp.net/instance-level-salient-object-segmentation/</a></li>
+<li>论文: G. Li, Y. Xie, L. Lin, and Y. Yu, "Instance-level salient object segmentation, " in Proc. IEEE Conf. Comput. Vis. Pattern Recognit., 2017, pp.247–256.</li>
+</ul>
+<blockquote>
+<p>ILSO has 1, 000 images with pixel-wise instancelevel saliency annotations and coarse contour labeling, where the benchmark results are generated using MSRNet [Instance-level salient object segmentation]. Most of the images in ILSO are selected from the following datasets to reduce ambiguity over the salient object regions.</p>
+<ol>
+<li>Visual saliency based on multiscale deep features</li>
+<li>Hierarchical saliency detection</li>
+<li>Saliency detection via graph-based manifold ranking</li>
+<li>Salient object subitizing</li>
+</ol>
+</blockquote>
+<h4 id="hs-sod">HS-SOD</h4>
+<p><img src="https://github.com/gistairc/HS-SOD/raw/master/images/poster-QoMEX2018.png" alt="img" /></p>
+<p><img src="./assets/2018-12-28-22-16-20.png" alt="eva" /></p>
+<ul>
+<li>项目: <a href="https://github.com/gistairc/HS-SOD">https://github.com/gistairc/HS-SOD</a></li>
+<li>下载: <a href="http://data.airc.aist.go.jp/HS-SOD/HS-SOD.zip">http://data.airc.aist.go.jp/HS-SOD/HS-SOD.zip</a> 5.6G</li>
+<li>论文: <a href="https://arxiv.org/abs/1806.11314">Hyperspectral Image Dataset for Benchmarking on Salient Object Detection</a></li>
+</ul>
+<blockquote>
+<p>使用有监督或无监督的方法对着色对象进行了显着的物体检测. 最近, 一些研究表明, 通过在来自天然景观的高光谱图像的可见光谱中使用光谱特征, 也可以实现有效的显着对象检测. 然而, 这些关于高光谱显着物体检测的模型使用从各种在线公共数据集中选择的极少数数据进行测试, 这些数据不是为了物体检测目的而特别创建的. 因此, 在这里, 我们的目标是通过发布<strong>具有60个高光谱图像的集合的高光谱显着物体检测数据集</strong>以及<strong>相应的地面实况二值图像</strong>和**代表性的彩色图像(sRGB)**来指导该领域. 我们在数据收集过程中考虑了几个方面, 例如对象大小的变化, 对象的数量, 前景-背景对比度, 图像上的对象位置等. 然后, 我们为每个高光谱数据准备了真值二进制图像, 其中显著性目标被标记为图像. 最后, 我们使用曲线下面积(AUC)度量对文献中一些现有的高光谱显着性检测模型进行了性能评估.</p>
+<p>这些数据是在东京港口码头公司的许可下, 在日本东京台场的东京海滨城市公园收集的. 我们在2017年8月至9月期间的几天内收集了数据, 当时天气晴朗或部分多云. 在每个数据收集日, 使用三脚架固定相机以最小化图像上的运动失真. 我们尝试根据日光条件尽可能地保持相机设置的曝光时间和增益, 同时保持像素值饱和度或图像可见性. 作为数据集用户的参考, 我们提供相机设置, 例如文本文件中每个图像的曝光时间和增益值以及相应的数据. 我们也没有对捕获的波段应用标准化. 它可以提高前景和背景区域之间色彩对比度更高的高光谱图像的质量; 但是, 它也可能降低数据集在显着对象检测任务上进行基准测试的难度.</p>
+<p>在获得各种高光谱图像后, 我们从大约50个不同的场景中选择了60个图像, 条件是:i)我们去除了由于场景中的运动引起的失真图像(取决于曝光时间, 一个图像可能需要几秒钟才能用于相机), ii)我们考虑了几个方面, 如显着物体大小的变化, 图像上物体的空间位置, 显着物体的数量, 前景 * 背景对比度, iii)一些图像具有相同的场景但物体位置, 物距或数量对象各不相同.</p>
+<p>为了便于显着物体检测任务, 我们在可见光谱周围裁剪光谱带, 并在传感器暗噪声校正后以".mat"文件格式保存每个场景的超立方体. 如[21]中所定义, 可见光谱具有380-780nm的良好可接受范围, 但也可以使用[3, 4]中的400-700nm范围. 为了保持范围广泛和灵活性, 想要使用数据集的人, 我们在[21]中为我们的数据集选择了380 * 780 nm的定义范围, 尽管在人类视觉系统的这些范围的边界处视觉刺激可能较弱. 然后, 我们使用高光谱图像渲染sRGB彩色图像, 通过标记显着对象的边界来创建地面真实显着对象二进制图像.</p>
+</blockquote>
+<p>HS-SOD.zip file contains three folders:</p>
+<p>1.hyperspectral: containing 60 hyperspectral images with #spatial rows:768 #spatial columns:1024 #spectral channels:81 (data only within visible spectrum: 380 nm -720 nm) 2.color: 60 color images of hyperspectral dataset rendered in sRGB for visualization 3.ground-truth: 60 ground-truth binary images for salient objects</p>
+<h3 id="video-saliency-detection">Video Saliency Detection</h3>
+<h4 id="rsdpku-rsd">RSD(PKU-RSD)</h4>
+<p><img src="https://pkuml.org/wp-content/uploads/2014/12/samples-of-RSD-1024x271.png" alt="samples of RSD" /></p>
+<ul>
+<li>论文: <a href="https://ieeexplore.ieee.org/document/5202529">J. Li, Y. Tian, T. Huang, and W. Gao, "A dataset and evaluation methodology for visual saliency in video, " in IEEE ICME, 2009, pp.442–445</a></li>
+<li>项目: <a href="https://pkuml.org/resources/dataset.html">https://pkuml.org/resources/dataset.html</a></li>
+<li>下载: <a href="https://pkuml.org/resources/pku-rsd.html">https://pkuml.org/resources/pku-rsd.html</a></li>
+</ul>
+<blockquote>
+<p>我们构建了这个PKU-RSD(区域显着性数据集)数据集, 可以捕获时空视觉显着性, 用于评估不同的视频显着性模型. 该数据集包含431个短视频, 其涵盖各种场景(监视, 广告, 新闻, 卡通, 电影等)以及由23个主题手动标记的采样关键帧中的显着对象的相应注释结果.</p>
+</blockquote>
+<h4 id="stcneed-help">STC[need help]</h4>
+<ul>
+<li>论文: <a href="https://pdfs.semanticscholar.org/3347/c330ac5586020ebea60823b1fd4e8d68e936.pdf?_ga=2.181072804.269179473.1546092428-61549168.1544104573">Y. Wu, N. Zheng, Z. Yuan, H. Jiang, and T. Liu, "Detection of salient objects with focused attention based on spatial and temporal coherence, " Chinese Science Bulletin, vol.56, pp.1055–1062, 2011.</a></li>
+<li>下载: This dataset is freely available from the author</li>
+</ul>
+<blockquote>
+<p>对视频内容的理解和分析对于众多应用程序来说至关重要, 包括视频摘要, 检索, 导航和编辑. 此过程的一个重要部分是检测视频片段中的显着(通常意味着重要和有趣)对象. 与现有方法不同, 我们提出了一种将显着性测量与空间和时间相干性相结合的方法. 空间和时间一致性的整合受到人类视觉中关注焦点的启发. 在所提出的方法中, 低级视觉分组线索的空间相干性(例如外观和运动)有助于每帧对象背景分离, 而对象属性的时间一致性(例如形状和外观)确保一致物体随时间定位, 因此该方法对于意外的环境变化和相机振动是鲁棒的. 在<strong>开发了基于粗到细多尺度动态规划的有效优化策略之后, 我们使用可与本文一起免费获得的具有挑战性的数据集来评估我们的方法</strong>. 我们展示了两种类型的一致性的有效性和互补性, 并证明它们可以显着提高视频中显着对象检测的性能.</p>
+</blockquote>
+<h3 id="rgbd-saliency-detection">RGBD-Saliency Detection</h3>
+<blockquote>
+<p>致谢:</p>
+<ul>
+<li>@JXingZhao, 在他的工作中整理并公开了多个数据集: <a href="https://github.com/JXingZhao/ContrastPrior">https://github.com/JXingZhao/ContrastPrior</a></li>
+<li>@jiwei0921, 在他的工作中整理并公开了多个数据集: <a href="https://github.com/jiwei0921/RGBD-SOD-datasets">https://github.com/jiwei0921/RGBD-SOD-datasets</a></li>
+<li><strong>更全面的内容</strong>可见 <a href="http://dpfan.net/d3netbenchmark/">http://dpfan.net/d3netbenchmark/</a></li>
+</ul>
+</blockquote>
+<h4 id="sip">SIP</h4>
+<p><img src="assets/2019-09-15-16-26-26.png" /></p>
+<ul>
+<li>论文: Rethinking RGB-D Salient Object Detection: Models, Datasets, and Large-Scale Benchmarks:<a href="https://arxiv.org/pdf/1907.06781.pdf">https://arxiv.org/pdf/1907.06781.pdf</a></li>
+<li>项目: <a href="http://dpfan.net/d3netbenchmark/">http://dpfan.net/d3netbenchmark/</a></li>
+<li>下载: 请见项目主页</li>
+</ul>
+<blockquote>
+<p>we carefully collect a new salient person (SIP) dataset, which consists of 1K high-resolution images that cover diverse real-world scenes from various viewpoints, poses, occlusion, illumination, and background.</p>
+</blockquote>
+<h4 id="nlprrgbd1000">NLPR/RGBD1000</h4>
+<p><img src="./assets/1546138815074.png" alt="1546138815074" /></p>
+<ul>
+<li>论文: <a href="https://docs.google.com/uc?authuser=0&amp;id=0B1wzzt1_uP1rb250d0t6dVFXWG8&amp;export=download">Rgbd salient object detection: a benchmark and algorithms</a></li>
+<li>项目: <a href="https://sites.google.com/site/rgbdsaliency/home">https://sites.google.com/site/rgbdsaliency/home</a></li>
+<li>下载: <a href="https://sites.google.com/site/rgbdsaliency/dataset">https://sites.google.com/site/rgbdsaliency/dataset</a></li>
+</ul>
+<blockquote>
+<p>NLPR is also called RGBD1000 dataset which including 1, 000 images. There may exist multiple salient objects in each image. The structured light depth images are obtained by the Microsoft Kinect under different illumination conditions.</p>
+<p>虽然深度信息在人类视觉系统中起着重要作用, 但在现有的视觉显着性计算模型中尚未得到很好的探索. 在这项工作中, <strong>我们首先引入了一个大规模的RGBD图像数据集, 以解决目前RGBD显着目标检测研究中数据不足的问题</strong>. 为了确保大多数现有的RGB显着模型在RGBD场景中仍然足够, 我们继续提供一个简单的融合框架, 将现有的RGB产生的显着性与新的深度诱导显着性相结合, 前者是从现有的RGB模型中估算的, 而前者是后者基于提出的多上下文对比模型. 此外, 还提出了一种专门的多阶段RGBD模型, 其考虑了来自低级特征对比度, 中级区域分组和高级先验增强的深度和外观线索. 大量实验表明, 我们的模型能够准确定位RGBD图像中的显着对象, 并为目标对象分配一致的显着性值.</p>
+</blockquote>
+<h4 id="nju4002000">NJU400/2000</h4>
+<p><img src="./assets/1546139249376.png" alt="1546139249376" /></p>
+<ul>
+<li>论文:
+<ul>
+<li><a href="http://mcg.nju.edu.cn/publication/2014/icip14-jur.pdf">NJU400: Depth saliency based on anisotropic center-surround difference</a></li>
+<li><a href="http://mcg.nju.edu.cn/publication/2015/spic15-jur.pdf">NJU2000: Depth-aware salient object detection using anisotropic center-surround difference</a></li>
+</ul></li>
+<li>团队: <a href="http://mcg.nju.edu.cn/index.html">MGG</a></li>
+<li>项目: <a href="http://mcg.nju.edu.cn/publication/2014/icip14-jur/index.html">http://mcg.nju.edu.cn/publication/2014/icip14-jur/index.html</a></li>
+<li>下载:
+<ul>
+<li><a href="http://mcg.nju.edu.cn/resource.html">http://mcg.nju.edu.cn/resource.html</a></li>
+<li><a href="http://mcg.nju.edu.cn/dataset/nju400.zip">http://mcg.nju.edu.cn/dataset/nju400.zip</a></li>
+<li><a href="http://mcg.nju.edu.cn/dataset/nju2000.zip">http://mcg.nju.edu.cn/dataset/nju2000.zip</a></li>
+</ul></li>
+</ul>
+<blockquote>
+<p>NJU2000 contains 2003 stereo image pairs with diverse objects and complex, challenging scenarios, along with ground-truth map. The stereo images are gathered from 3D movies, the Internet, and photographs taken by a Fuji W3 stereo camera.</p>
+</blockquote>
+<h4 id="stereossb">STEREO/SSB</h4>
+<p><img src="assets/2019-05-13-19-48-20.png" /></p>
+<ul>
+<li>论文: <a href="http://web.cecs.pdx.edu/~fliu/papers/cvpr2012.pdf">Leveraging stereopsis for saliency analysis</a></li>
+<li>项目: <a href="http://web.cecs.pdx.edu/~fliu/">http://web.cecs.pdx.edu/~fliu/</a></li>
+<li>下载: 请到主页寻找, 需要联系作者.</li>
+</ul>
+<blockquote>
+<p>SSB is also called STEREO dataset, which consists of 1000 pairs of binocular images.</p>
+</blockquote>
+<h4 id="lfsdnead-img">LFSD[nead img]</h4>
+<ul>
+<li>论文: Saliency detection on light field</li>
+<li>项目: <a href="https://sites.duke.edu/nianyi/publication/saliency-detection-on-light-field/">https://sites.duke.edu/nianyi/publication/saliency-detection-on-light-field/</a></li>
+<li>下载: 请到主页寻找, 需要联系作者.</li>
+</ul>
+<blockquote>
+<p>LFSD is a small dataset which contains 100 images with depth information and human labeled ground truths. The depth information was obtained via the Lytro light field camera.</p>
+</blockquote>
+<h4 id="rgbd135des">RGBD135/DES</h4>
+<p><img src="assets/2019-05-23-10-44-38.png" alt="image" /></p>
+<p><img src="assets/2019-05-23-10-44-15.png" alt="depth" /></p>
+<p><img src="assets/2019-05-23-10-44-59.png" alt="mask" /></p>
+<ul>
+<li>论文: <a href="http://delivery.acm.org/10.1145/2640000/2632866/p23-cheng.pdf?ip=202.118.97.210&amp;id=2632866&amp;acc=ACTIVE%20SERVICE&amp;key=BF85BBA5741FDC6E%2E5FC7500D8F9CB386%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&amp;__acm__=1557798709_a26e3faff3faccad6d62e02d79d1921a">Depth enhanced saliency detection method</a></li>
+<li>项目: <a href="https://github.com/HzFu/DES_code">https://github.com/HzFu/DES_code</a></li>
+<li>下载: 项目主页提供了下面的下载链接诶:
+<ul>
+<li><a href="https://onedrive.live.com/redir?resid=F3A8A31ABFAC51B0!256&amp;authkey=!AC4-yOEjn0bgrCQ&amp;ithint=file%2crar">https://onedrive.live.com/redir?resid=F3A8A31ABFAC51B0!256&amp;authkey=!AC4-yOEjn0bgrCQ&amp;ithint=file%2crar</a></li>
+<li><a href="https://pan.baidu.com/s/1pLv2B8n">https://pan.baidu.com/s/1pLv2B8n</a></li>
+</ul></li>
+</ul>
+<blockquote>
+<p>RGBD135 is also named DES which consists of seven indoor scenes and contains 135 indoor images collected by Microsoft Kinect.</p>
+</blockquote>
+<h4 id="dut-rgbd">DUT-RGBD</h4>
+<ul>
+<li>论文: Depth-induced Multi-scale Recurrent Attention Network for Saliency Detection</li>
+<li>项目: <a href="https://github.com/jiwei0921/DMRA_RGBD-SOD">https://github.com/jiwei0921/DMRA_RGBD-SOD</a></li>
+<li>下载: 请见@jiwei0921的RGBD-SOD-datasets仓库</li>
+</ul>
+<h4 id="ssd100">SSD100</h4>
+<p><img src="assets/2019-09-15-16-17-12.png" /></p>
+<ul>
+<li>论文: A Three-pathway Psychobiological Framework of Salient Object Detection Using Stereoscopic Technology: <a href="http://dpfan.net/wp-content/uploads/SSD_dataset_ICCVW17.pdf">http://dpfan.net/wp-content/uploads/SSD_dataset_ICCVW17.pdf</a></li>
+<li>下载: 请见@jiwei0921的RGBD-SOD-datasets仓库</li>
+</ul>
+<blockquote>
+<p>Our SSD100 dataset is built on three stereo movies. The movies contain both the indoors and outdoors scenes. We pick up one stereo image pair at each hundred frames. It totally has tens of thousands of stereo image pairs. We make the image acquisition and image annotation independent to each other, we can avoid dataset design bias, namely a specific type of bias that is caused by experimenters unnatural selection of dataset images. The chosen stereo image pairs are based on one principle: choose the one which the computer detect the salient objects within the complex scenes where even the human cannot tell the salient objects at once. After picking up the stereo image pairs, we divide the image pairs into left images and right images both in 960x1080 size. When we build the ground truth of salient objects, we adhere to the following rules: 1) we mark the salient objects, taking the advice of most people; 2) disconnected regions of the same object are labeled separately; 3) we use solid regions to approximate hollow objects, such as bike wheels. Besides, we will expand this dataset continually in future.</p>
+</blockquote>
+<h3 id="rgbt-saliency-detection-need-more-information">RGBT-Saliency Detection [need more information...]</h3>
+<h4 id="vt1000-dataset">VT1000 Dataset</h4>
+<p><img src="assets/2019-05-23-10-49-47.png" alt="image" /></p>
+<p><img src="assets/2019-05-23-10-50-23.png" alt="thermal" /></p>
+<p><img src="assets/2019-05-23-10-50-02.png" alt="mask" /></p>
+<ul>
+<li>论文: RGB-T Image Saliency Detection via Collaborative Graph Learning</li>
+<li>项目:<a href="http://chenglongli.cn/people/lcl/dataset-code.html">http://chenglongli.cn/people/lcl/dataset-code.html</a></li>
+<li>下载: 具体信息可见项目主页
+<ul>
+<li><a href="https://drive.google.com/file/d/1NCPFNeiy1n6uY74L0FDInN27p6N_VCSd/view?usp=sharing">https://drive.google.com/file/d/1NCPFNeiy1n6uY74L0FDInN27p6N_VCSd/view?usp=sharing</a></li>
+<li><a href="https://pan.baidu.com/s/1eGQJhvnKnqV1KJ1GY_63NA">https://pan.baidu.com/s/1eGQJhvnKnqV1KJ1GY_63NA</a></li>
+</ul></li>
+</ul>
+<h4 id="vt821-dataset">VT821 Dataset</h4>
+<p><img src="assets/2019-05-23-10-50-42.png" alt="image" /></p>
+<p><img src="assets/2019-05-23-10-51-00.png" alt="mask" /></p>
+<ul>
+<li>论文: A Unified RGB-T Saliency Detection Benchmark: Dataset, Baselines, Analysis and A Novel Approach</li>
+<li>项目:<a href="http://chenglongli.cn/people/lcl/dataset-code.html">http://chenglongli.cn/people/lcl/dataset-code.html</a></li>
+<li>下载: 具体信息可见项目主页
+<ul>
+<li><a href="https://drive.google.com/file/d/0B4fH4G1f-jjNR3NtQUkwWjFFREk/view?usp=sharing">https://drive.google.com/file/d/0B4fH4G1f-jjNR3NtQUkwWjFFREk/view?usp=sharing</a></li>
+<li><a href="http://pan.baidu.com/s/1bpEaeQV">http://pan.baidu.com/s/1bpEaeQV</a></li>
+</ul></li>
+</ul>
+<h3 id="high-resolution-saliency-detection">High-Resolution Saliency Detection</h3>
+<h4 id="hrsoddavis-s">HRSOD/DAVIS-S</h4>
+<p><img src="assets/2019-09-15-15-54-12.png" /></p>
+<ul>
+<li>论文: Towards High-Resolution Salient Object Detection: <a href="https://arxiv.org/pdf/1908.07274.pdf">https://arxiv.org/pdf/1908.07274.pdf</a></li>
+<li>项目:<a href="https://github.com/yi94code/HRSOD">https://github.com/yi94code/HRSOD</a></li>
+<li>下载: 可见项目主页
+<ul>
+<li>HRSOD: <a href="https://drive.google.com/open?id=1bmDGlkzqHoduNigi_GO4Qy9sA9sIaZcY">https://drive.google.com/open?id=1bmDGlkzqHoduNigi_GO4Qy9sA9sIaZcY</a></li>
+<li>DAVIS-S: <a href="https://drive.google.com/open?id=1q1H7yoITLS6i2n-PhgYMIxLdjyhge5AR">https://drive.google.com/open?id=1q1H7yoITLS6i2n-PhgYMIxLdjyhge5AR</a></li>
+</ul></li>
+</ul>
+<blockquote>
+<p>...we contribute a High-Resolution Salient Object Detection (HRSOD) dataset, containing 1610 training images and 400 test images. The total 2010 images are collected from the website of Flickr with the license of all creative commons. Pixel-level ground truths are manually annotated by 40 subjects. The shortest edge of each image in our HRSOD is more than 1200 pixels.</p>
+</blockquote>
+<h3 id="other-saliency-dataset">Other Saliency Dataset</h3>
+<h4 id="kaist-salient-pedestrian-dataset">KAIST Salient Pedestrian Dataset</h4>
+<p><img src="assets/2019-05-23-10-53-57.png" /></p>
+<ul>
+<li>论文: Pedestrian Detection from Thermal Images using Saliency Maps</li>
+<li>项目:<a href="https://github.com/Information-Fusion-Lab-Umass/Salient-Pedestrian-Detection">https://github.com/Information-Fusion-Lab-Umass/Salient-Pedestrian-Detection</a></li>
+<li>下载: 具体详见项目页面</li>
+</ul>
+<blockquote>
+<p>We select 1702 images from the training set of the KAIST Multispectral Pedestrian dataset, by sampling every 15th image from all the images captured during the day and every 10thimage from all the images captured during the night, which contain pedestrians. These images were selected in order to have approximately the same number of images captured on both times of the day (913 day images and 789 night images), containing 4170 instances of pedestrians. We manually annotate these images using the VGG Image Annotator tool to generate the ground truth saliency masks based on the location of the bounding boxes on pedestrians in the original dataset. Additionally, we create a set of 362 images with similar annotations from the test set to validate our deep saliency detection networks, with 193 day images and 169 night images, containing 1029 instances of pedestrians.</p>
+</blockquote>
+<h2 id="segmentation">Segmentation</h2>
+<h3 id="generalneed-help">General[need help]</h3>
+<h4 id="davis">DAVIS</h4>
+<p><img src="assets/2019-03-13-11-01-47.png" alt="img" /></p>
+<ul>
+<li>项目:
+<ul>
+<li>竞赛主页: <a href="https://davischallenge.org/index.html">https://davischallenge.org/index.html</a></li>
+</ul></li>
+<li>论文: <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Perazzi_A_Benchmark_Dataset_CVPR_2016_paper.pdf">A Benchmark Dataset and Evaluation Methodology for Video Object Segmentation</a></li>
+<li>下载:
+<ul>
+<li><a href="https://davischallenge.org/davis2016/code.html">DAVIS 2016</a> In each video sequence a single instance is annotated.</li>
+<li><a href="https://davischallenge.org/davis2017/code.html">DAVIS 2017</a> In each video sequence multiple instances are annotated.</li>
+</ul></li>
+</ul>
+<h4 id="anyu">aNYU</h4>
+<p><img src="./assets/1546153000959.png" alt="img" /></p>
+<ul>
+<li>项目: <a href="https://kylezheng.org/research-projects/densesegattobj/">https://kylezheng.org/research-projects/densesegattobj/</a></li>
+<li>论文: <a href="http://kylezheng.org/densesegattobjdataset/denseseg4objatt_CVPR2014_Kyle.pdf">Dense Semantic Image Segmentation with Objects and Attributes</a></li>
+<li>下载:
+<ul>
+<li>NYU: <a href="http://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html">http://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html</a></li>
+<li>aNYU: <a href="http://www.robots.ox.ac.uk/~szheng/aNYU/aNYU.tar.gz">http://www.robots.ox.ac.uk/~szheng/aNYU/aNYU.tar.gz</a></li>
+</ul></li>
+</ul>
+<blockquote>
+<p>我们的第一组实验是关于来自NYU V2 dataset的RGB图像. 如图3所示, 我们添加了8个附加属性标签, 即木制, 彩绘, 棉花, 玻璃, 光面, 塑料, 闪亮和纹理. 我们要求3个注释者在每个分割地面真实区域上分配材料, 表面属性属性. Wethen将3名工作者的多数票作为我们的8个附加属性标签. 我们将此扩展数据集称为attribute NYU(aNYU)数据集.<strong>该数据集从28个不同的室内场景中收集了1449个图像.</strong> 在我们的实验中, 我们选择了具有足够数量实例的15个对象类和8个属性来训练unary potential. 此外, <strong>我们随机地将数据集分成训练集的725个图像, 验证集的100个, 以及测试集的624个.</strong></p>
+</blockquote>
+<h3 id="about-person">About Person</h3>
+<h4 id="supervisely人像数据集">Supervisely人像数据集</h4>
+<p><img src="https://static.leiphone.com/uploads/new/article/740_740/201804/5acb1719a6252.png?imageMogr2/format/jpg/quality/90" alt="img" /></p>
+<ul>
+<li>项目: <a href="https://supervise.ly/">https://supervise.ly/</a></li>
+</ul>
+<blockquote>
+<ul>
+<li>数据集 <strong>由5711张图片组成, 有6884个高质量的标注的人体实例</strong>.</li>
+<li>下面的所有步骤在Supervisely内部完成的, 没有任何编码.</li>
+<li>更重要的是, 这些步骤是被我内部的注释器执行的, 没有任何机器学习专业知识. 数据科学家仅仅只是控制和管理这过程.</li>
+<li>注释组由两名成员组成并且这整个过程只花了4天.</li>
+</ul>
+</blockquote>
+<h4 id="clothing-parsing">Clothing Parsing</h4>
+<p><img src="http://vision.is.tohoku.ac.jp/~kyamagu/research/clothing_parsing/clothing.png" alt="img" /></p>
+<ul>
+<li>项目 :
+<ul>
+<li><a href="http://vision.is.tohoku.ac.jp/~kyamagu/research/clothing_parsing/">http://vision.is.tohoku.ac.jp/~kyamagu/research/clothing_parsing/</a></li>
+<li><a href="http://vision.is.tohoku.ac.jp/~kyamagu/research/paperdoll/">http://vision.is.tohoku.ac.jp/~kyamagu/research/paperdoll/</a></li>
+</ul></li>
+</ul>
+<blockquote>
+<p>In this paper we demonstrate an effective method for parsing clothing in fashion photographs, an extremely challenging problem due to the large number of possible garment items, variations in configuration, garment appearance, layering, and occlusion. In addition, we provide a large novel dataset and tools for labeling garment items, to enable future research on clothing estimation. Finally, we present intriguing initial results on using clothing estimates to improve pose identification, and demonstrate a prototype application for pose-independent visual garment retrieval.</p>
+</blockquote>
+<h4 id="humanparsing-dataset">HumanParsing-Dataset</h4>
+<p><img src="assets/2019-03-22-19-14-03.png" alt="img" /></p>
+<ul>
+<li>项目:
+<ul>
+<li><a href="https://github.com/lemondan/HumanParsing-Dataset">https://github.com/lemondan/HumanParsing-Dataset</a></li>
+<li><a href="http://www.sysu-hcp.net/deep-human-parsing/">http://www.sysu-hcp.net/deep-human-parsing/</a></li>
+<li><a href="https://vuhcs.github.io/">https://vuhcs.github.io/</a></li>
+</ul></li>
+<li>组织: <a href="http://sysu-hcp.net/">http://sysu-hcp.net/</a></li>
+<li>下载: <a href="http://pan.baidu.com/s/1qY8bToS">http://pan.baidu.com/s/1qY8bToS</a> (kjgk)</li>
+</ul>
+<blockquote>
+<p>This human parsing dataset includes the detailed pixel-wise annotations for fashion images, which is proposed in our TPAMI paper "Deep Human Parsing with Active Template Regression", and ICCV 2015 paper "Human Parsing with Contextualized Convolutional Neural Network". This dataset contains 7700 images. We use 6000 images for training, 1000 for testing and 700 as the validation set.</p>
+</blockquote>
+<h4 id="look-into-person-lip">Look into Person (LIP)</h4>
+<p><img src="assets/2019-03-12-11-18-29.png" alt="img" /></p>
+<ul>
+<li>项目: <a href="http://sysu-hcp.net/lip/overview.php">http://sysu-hcp.net/lip/overview.php</a></li>
+<li>下载: 不同任务有不同部分, 具体可见<a href="http://sysu-hcp.net/lip/overview.php">Dataset</a>页面</li>
+</ul>
+<blockquote>
+<p>Look into Person (LIP) is a new large-scale dataset, focus on semantic understanding of person. Following are the detailed descriptions.</p>
+<p>The dataset contains 50, 000 images with elaborated pixel-wise annotations with 19 semantic human part labels and 2D human poses with 16 key points.</p>
+<p>The annotated 50, 000 images are cropped person instances from COCO dataset with size larger than 50 * 50. The images collected from the real-world scenarios contain human appearing with challenging poses and views, heavily occlusions, various appearances and low-resolutions. We are working on collecting and annotating more images to increase diversity.</p>
+</blockquote>
+<h4 id="taobao-commodity-dataset">Taobao Commodity Dataset</h4>
+<p><img src="assets/2019-03-22-19-09-55.png" alt="img" /></p>
+<ul>
+<li>项目: <a href="http://www.sysu-hcp.net/taobao-commodity-dataset/">http://www.sysu-hcp.net/taobao-commodity-dataset/</a></li>
+<li>下载:
+<ul>
+<li><a href="http://www.sysu-hcp.net/wp-content/uploads/2016/03/Imgs_TCD.zip">http://www.sysu-hcp.net/wp-content/uploads/2016/03/Imgs_TCD.zip</a></li>
+<li><a href="http://www.sysu-hcp.net/wp-content/uploads/2016/03/Mask_TCD.zip">http://www.sysu-hcp.net/wp-content/uploads/2016/03/Mask_TCD.zip</a></li>
+</ul></li>
+</ul>
+<blockquote>
+<p>TCD contains 800 commodity images (dresses, jeans, T-shirts, shoes and hats) from the shops on the Taobao website. The ground truth masks of the TCD dataset are obtained by inviting common sellers of Taobao website to annotate their commodities, i.e., masking salient objects that they want to show from their exhibition. These images include all kind s of commodity with and without human models, thus having complex backgrounds and scenes with highly complex foregrounds. Pixel-accurate ground truth masks are given. These images including all kinds of commodities with and without human models have complex backgrounds and scenes with large foregrounds for evaluation. Figure 1 illustrates some of them.</p>
+</blockquote>
+<h4 id="object-extraction-dataset">Object Extraction Dataset</h4>
+<p><img src="https://objectextraction.github.io/imgs/images_masks.png" alt="img" /></p>
+<ul>
+<li>项目: <a href="https://objectextraction.github.io/">https://objectextraction.github.io/</a></li>
+</ul>
+<blockquote>
+<p>This Object Extraction newly collected by us contains 10183 images with groundtruth segmentation masks. We selected the images from the PASCAL, iCoseg, Internet dataset as well as other data (most of them are about people and clothes) from the web. We randomly split the dataset with 8230 images for training and 1953 images for testing.</p>
+</blockquote>
+<h4 id="clothing-co-parsing-ccp-dataset">Clothing Co-Parsing (CCP) Dataset</h4>
+<p><img src="assets/2019-03-12-11-12-28.png" alt="img" /></p>
+<ul>
+<li>项目: <a href="https://github.com/bearpaw/clothing-co-parsing">https://github.com/bearpaw/clothing-co-parsing</a></li>
+</ul>
+<blockquote>
+<p>Clothing Co-Parsing (CCP) dataset is a new clothing database including elaborately annotated clothing items. 2, 098 high-resolution street fashion photos with totally 59 tags Wide range of styles, accessaries, garments, and pose All images are with image-level annotations 1000+ images are with pixel-level annotations</p>
+</blockquote>
+<h4 id="baidu-people-segmentation-datasetneed-help">Baidu People segmentation dataset[need help]</h4>
+<ul>
+<li>下载: <a href="http://www.cbsr.ia.ac.cn/users/ynyu/dataset/">http://www.cbsr.ia.ac.cn/users/ynyu/dataset/</a></li>
+</ul>
+<blockquote>
+<p>这个数据集主要是用于人体整体分割. 它由5387张训练图片组成, 但是测试图片没有公布. 因此训练时可以从5387中随机挑选500张作为验证集, 然后4887张作为训练集. 参考论文《Early Hierarchical Contexts Learned by CNN for image segmentation》.</p>
+<p>原文:<a href="https://blog.csdn.net/mou_it/article/details/82225505">https://blog.csdn.net/mou_it/article/details/82225505</a></p>
+</blockquote>
+<h2 id="matting">Matting</h2>
+<h3 id="alphamattingcom">alphamatting.com</h3>
+<p><img src="./assets/1546154705536.png" alt="1546154705536" /></p>
+<ul>
+<li>项目: <a href="http://alphamatting.com/datasets.php">http://alphamatting.com/datasets.php</a></li>
+<li>下载:
+<ul>
+<li><a href="http://alphamatting.com/datasets/zip/input_training_lowres.zip">input_training_lowres.zip</a></li>
+<li><a href="http://alphamatting.com/datasets/zip/input_training_highres.zip">input_training_highres.zip</a></li>
+<li><a href="http://alphamatting.com/datasets/zip/trimap_training_lowres.zip">trimap_training_lowres.zip</a></li>
+<li><a href="http://alphamatting.com/datasets/zip/trimap_training_highres.zip">trimap_training_highres.zip</a></li>
+<li><a href="http://alphamatting.com/datasets/zip/gt_training_lowres.zip">gt_training_lowres.zip</a></li>
+<li><a href="http://alphamatting.com/datasets/zip/gt_training_highres.zip">gt_training_highres.zip</a></li>
+</ul></li>
+</ul>
+<blockquote>
+<p>这是图像matting方法的现有基准. 它<strong>包括8个测试图像, 每个图像有3个不同的三维图形</strong>, 即"small", "large"和"user"</p>
+</blockquote>
+<h3 id="composition-1k-deep-image-matting">Composition-1k: Deep Image Matting</h3>
+<p><img src="./assets/1546154519720.png" alt="1546154519720" /></p>
+<ul>
+<li>项目: <a href="https://sites.google.com/view/deepimagematting">https://sites.google.com/view/deepimagematting</a></li>
+<li>论文: <a href="https://arxiv.org/abs/1703.03872">https://arxiv.org/abs/1703.03872</a></li>
+<li>下载: Please contact Brian Price (<a href="mailto:bprice@adobe.com">bprice@adobe.com</a>) for the dataset.</li>
+</ul>
+<blockquote>
+<p>抠图是一个基本的计算机视觉问题, 有许多应用. 当图像具有相似的前景色和背景色或复杂的纹理时, 先前的算法具有差的性能. 主要原因是先前的方法 1)仅使用低级功能和2)缺乏高级上下文. 在本文中, 我们提出了一种新的基于深度学习的算法, 可以解决这两个问题. 我们的深层模型有两个部分. 第一部分是深度卷积编码器 * 解码器网络, 它将图像和相应的trimap作为输入并预测图像的alpha遮罩. 第二部分是一个小的卷积网络, 它改进了第一个网络的alpha遮罩预测, 以获得更准确的alpha值和更清晰的边缘. 此外, <strong>我们还创建了一个大型图像抠图数据集, 包括49300个训练图像和1000个测试图像</strong>. 我们在抠图基准, 我们的测试集和各种真实图像上评估我们的算法. 实验结果清楚地证明了我们的算法优于以前的方法.</p>
+<p>我们使用合成创建一个大规模的matting数据集. 仔细提取具有简单背景上的对象的图像并将其合成到新的背景图像上以创建具有49300(45500)个训练图像和1000个测试图像的数据集.</p>
+<p>......</p>
+<p>我们将评估3个数据集上的方法.1)我们评估alphamatting.com数据集, 这是图像matting方法的现有基准. 它<strong>包括8个测试图像, 每个图像有3个不同的三维图形</strong>, 即"小", "大"和"用户".2)由于alphamatting.com数据集中对象的大小和范围有限, **我们提出了Composition-1k测试集. 我们基于作品的数据集包括1000个图像和50个独特的前景. 此数据集具有更广泛的对象类型和背景场景.**3)为了测量我们在自然图像上的表现, 我们还收集了包括31个自然图像的第三个数据集.</p>
+</blockquote>
+<h3 id="semantic-human-matting">Semantic Human Matting</h3>
+<p><img src="./assets/1546156688347.png" alt="1546156688347" /></p>
+<p><img src="./assets/2018-12-27-11-47-26.png" alt="dataset" /></p>
+<ul>
+<li>论文: <a href="https://arxiv.org/abs/1809.01354">https://arxiv.org/abs/1809.01354</a></li>
+</ul>
+<blockquote>
+<ul>
+<li>alpha matting 的資料庫樣本過少, 對於深度學習來說首要條件就是資料樣本要多</li>
+<li>Shen et al. 此資料庫是透過 CF 以及 KNN 的方式所製造的, 因此有可能該資料庫有bias, 不採用.(這部分可搜尋幾個關鍵字: deep learning dataset bias).</li>
+<li>DIM 的資料庫雖然有 493 個物件, 但是物件中包含人物的只有 202 個.</li>
+<li>Our dataset 從電子商務網站中搜集圖片, 將35, 513個人物透過人工標注他的Annotation, 此資料集有遵循DIM的方法收集.</li>
+</ul>
+<p><a href="https://medium.com/@xiaosean5408/%E6%B7%98%E5%AF%B6%E7%B6%B2%E7%9A%84%E4%BA%BA%E7%89%A9%E6%8F%90%E5%8F%96%E8%AB%96%E6%96%87%E7%B0%A1%E4%BB%8B-semantic-human-matting-52591c3f8e0c">https://medium.com/@xiaosean5408/%E6%B7%98%E5%AF%B6%E7%B6%B2%E7%9A%84%E4%BA%BA%E7%89%A9%E6%8F%90%E5%8F%96%E8%AB%96%E6%96%87%E7%B0%A1%E4%BB%8B-semantic-human-matting-52591c3f8e0c</a></p>
+</blockquote>
+<h3 id="matting-human-datasets">Matting-Human-Datasets</h3>
+<p><img src="https://github.com/aisegmentcn/matting_human_datasets/raw/master/1.png" /></p>
+<p><img src="https://github.com/aisegmentcn/matting_human_datasets/raw/master/2.png" /></p>
+<ul>
+<li>项目:<a href="https://github.com/aisegmentcn/matting_human_datasets">https://github.com/aisegmentcn/matting_human_datasets</a></li>
+<li>下载:
+<ul>
+<li>百度云盘:<a href="https://pan.baidu.com/s/1R9PJJRT-KjSxh-2-3wCGxQ">https://pan.baidu.com/s/1R9PJJRT-KjSxh-2-3wCGxQ</a> 提取码:dzsn</li>
+<li>mega:<a href="https://mega.nz/#F!Gh8CFAyb!e2ppUh-copP76GbE8IWAEQ">https://mega.nz/#F!Gh8CFAyb!e2ppUh-copP76GbE8IWAEQ</a></li>
+<li>kaggle:<a href="https://www.kaggle.com/laurentmih/aisegmentcom-matting-human-datasets/">https://www.kaggle.com/laurentmih/aisegmentcom-matting-human-datasets/</a></li>
+</ul></li>
+</ul>
+<blockquote>
+<p>本数据集为目前已知最大的人像matting数据集, 包含34427张图像和对应的matting结果图. 数据集由北京玩星汇聚科技有限公司高质量标注, 使用该数据集所训练的人像软分割模型已商用.</p>
+<p>数据集中的原始图片来源于Flickr, 百度, 淘宝. 经过人脸检测和区域裁剪后生成了600*800的半身人像.</p>
+<ul>
+<li>clip_img目录为半身人像图像, 格式为jpg;</li>
+<li>matting目录为对应的matting文件(方便确认matting质量), 格式为png, 您训练前应该先从png图像提取alpha图. 例如使用opencv可以这样获得alpha图:</li>
+</ul>
+</blockquote>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>in_image <span class="op">=</span> cv2.imread(<span class="st">&#39;png图像文件路径&#39;</span>, cv2.IMREAD_UNCHANGED)</span>
+<span id="cb1-2"><a href="#cb1-2"></a>alpha <span class="op">=</span> in_image[:,:,<span class="dv">3</span>]</span></code></pre></div>
+<h3 id="pfcn">PFCN</h3>
+<p><img src="assets/1546173669466.png" alt="1546173669466" /></p>
+<ul>
+<li>项目: <a href="http://xiaoyongshen.me/webpage_portrait/index.html">http://xiaoyongshen.me/webpage_portrait/index.html</a></li>
+<li>论文: <a href="http://xiaoyongshen.me/webpage_portrait/papers/portrait_eg16.pdf">Automatic Portrait Segmentation for Image Stylization</a></li>
+<li>下载: Please download from <a href="https://1drv.ms/u/s!ApwdOxIIFBH19TzDv7nRfH5ZsMNL">OneDrive</a> or <a href="http://pan.baidu.com/s/1bQ4yHC">Baiduyun</a>.</li>
+</ul>
+<blockquote>
+<p>肖像画是摄影和绘画的主要艺术形式. 在大多数情况下, 艺术家试图使主体从周围突出, 例如, 使其更亮或更锐利. 在数字世界中, 通过使用适合于图像语义的照相或绘画滤镜处理肖像图像, 可以实现类似的效果. 虽然存在许多成功的用户指导方法来描绘该主题, 但缺乏全自动技术并且产生不令人满意的结果. 我们的论文首先通过引入专用于肖像的新自动分割算法来解决这个问题. 然后, 我们在此结果的基础上, 描述了几个利用我们的自动分割算法生成高质量肖像的肖像滤镜.</p>
+</blockquote>
+<h3 id="deep-automatic-portrait-matting">Deep Automatic Portrait Matting</h3>
+<p><img src="assets/2019-01-01-19-31-55.png" alt="img" /></p>
+<ul>
+<li>论文: <a href="http://www.cse.cuhk.edu.hk/~leojia/projects/automatting/papers/deepmatting.pdf">http://www.cse.cuhk.edu.hk/~leojia/projects/automatting/papers/deepmatting.pdf</a></li>
+<li>项目:
+<ul>
+<li><a href="http://www.cse.cuhk.edu.hk/~leojia/projects/automatting/">http://www.cse.cuhk.edu.hk/~leojia/projects/automatting/</a></li>
+<li><a href="http://xiaoyongshen.me/webpages/webpage_automatting/">http://xiaoyongshen.me/webpages/webpage_automatting/</a></li>
+</ul></li>
+<li>下载:
+<ul>
+<li>[Data(zip, 1.15GB)] Please send Email to <a href="mailto:goodshenxy@gmail.com">goodshenxy@gmail.com</a> to request it.</li>
+<li>作者自己公开了: <a href="https://1drv.ms/u/s!ApwdOxIIFBH19Ts5EuFd9gVJrKTo">https://1drv.ms/u/s!ApwdOxIIFBH19Ts5EuFd9gVJrKTo</a></li>
+</ul></li>
+</ul>
+<blockquote>
+<p>我们提出了一种用于性状图像的自动图像matting方法. 该方法不需要用户交互, 这在大多数先前的方法中是必不可少的. 为了实现这一目标, 提出了一种新的端到端卷积神经网络(CNN)框架, 其采用肖像图像的输入. 它输出matting的结果. 我们的方法不仅考虑图像语义预测, 还考虑像素级图像matte优化. 一个新的肖像image dataset与我们标记的matting基础事实构成. 我们的自动方法通过最先进的方法获得了可比较的结果, 该方法需要指定的前景和背景区域或像素.</p>
+<p>我们从Flickr收集了肖像图像. 然后选择它们以确保肖像具有各种年龄, 颜色, 衣服, 配饰, 发型, 头部位置, 背景场景等.matting区域主要是由于景深引起的头发和柔软边缘. 裁剪所有图像, 使得面部矩形具有相似的尺寸. 通过选定的肖像图像, 我们创建了具有密集用户交互的alpha matte, 以确保它们具有高质量.</p>
+<p>首先, 我们标记每个图像放大到局部区域的三元组.</p>
+<p>然后我们计算mattes, 使用闭式matting[1]和KNN matting[2].</p>
+<p>每个图像的两个计算遮罩覆盖背景图像以手动检查质量. 我们为数据集选择更好的一个. 如果两个mattes都不符合我们的高标准, 结果将被丢弃. 必要时, 小错误可以通过Photoshop[31]来解决. 在此标签处理后, 我们收集了2, 000张高质量遮罩图像. 这些图像被随机分成训练和测试集, 分别具有1, 700和300个图像.</p>
+</blockquote>
+<h2 id="other">Other</h2>
+<h3 id="large-scale-fashion-deepfashion-database">Large-scale Fashion (DeepFashion) Database</h3>
+<p><img src="assets/2019-03-22-18-57-36.png" alt="img" /></p>
+<ul>
+<li>项目: <a href="http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion.html">http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion.html</a></li>
+<li>组织:
+<ul>
+<li><a href="http://mmlab.ie.cuhk.edu.hk/">Multimedia Laboratory</a></li>
+<li><a href="http://www.cuhk.edu.hk/english/index.html">The Chinese University of Hong Kong</a></li>
+</ul></li>
+<li>下载: <a href="http://pan.baidu.com/s/1i43pnZR">http://pan.baidu.com/s/1i43pnZR</a> (更多细节请见项目主页)</li>
+</ul>
+<blockquote>
+<p>我们提供DeepFashion数据库, 这是一个大型服装数据库, 它有几个吸引人的特性:</p>
+<ul>
+<li>首先, DeepFashion包含超过800, 000种不同的时尚图像, 从精美的商店图像到无约束的消费者照片.</li>
+<li>其次, DeepFashion注释了丰富的服装商品信息. 此数据集中的每个图像都标有50个类别, 1, 000个描述性属性, 边界框和服装标记.</li>
+<li>第三, DeepFashion包含超过300, 000个交叉姿势/跨域图像对. 使用DeepFashion数据库开发了四个基准, 包括属性预测, 消费者到商店的衣服检索, 店内衣服检索和地标检测.</li>
+</ul>
+<p>这些基准的数据和注释也可以用作以下计算机视觉任务的训练和测试集, 例如衣服检测, 衣服识别和图像检索. 请阅读"下载说明"以访问数据集.</p>
+</blockquote>
+<h3 id="ml-image">ML-Image</h3>
+<ul>
+<li>项目: <a href="https://github.com/Tencent/tencent-ml-images#download-images-from-open-images">https://github.com/Tencent/tencent-ml-images#download-images-from-open-images</a></li>
+</ul>
+<blockquote>
+<p>ML-Images: the largest open-source multi-label image database, including 17, 609, 752 training and 88, 739 validation image URLs, which are annotated with up to 11, 166 categories</p>
+</blockquote>
+<h2 id="need-your-help">need your help...</h2>
+<blockquote>
+<p>有些数据集已经忘记了出处, 大家有见过的, 希望可以补充下.</p>
+</blockquote>
+<ul>
+<li>Image Pair</li>
+<li>Cosal2015</li>
+<li>INCT2016</li>
+<li>RGBDCoseg183</li>
+<li>06RGBDCosal150</li>
+<li>SegTrackV1/V2</li>
+<li>ViSal</li>
+<li>MCL</li>
+<li>UVSD</li>
+<li>VOS</li>
+</ul>
+<h2 id="reference">Reference</h2>
+<h3 id="salient-object-detection-a-survey"><a href="https://arxiv.org/abs/1411.5878">Salient Object Detection: A Survey</a></h3>
+<p><img src="./assets/2018-12-29-17-06-42.png" alt="img" /></p>
+<p>详细评估: <a href="https://mmcheng.net/zh/salobjbenchmark/">https://mmcheng.net/zh/salobjbenchmark/</a> (这里展示了{THUR15K, JuddDB, DUT-OMRON, SED2, MSRA10K, ECSSD}六种数据集的一个榜单).</p>
+<h3 id="review-of-visual-saliency-detection-with-comprehensive-information"><a href="https://arxiv.org/abs/1803.03391">Review of Visual Saliency Detection with Comprehensive Information</a></h3>
+<p><img src="./assets/2018-12-27-11-05-49.png" alt="dataset" /></p>
+<h3 id="salient-object-detection-in-the-deep-learning-era-an-in-depth-survey"><a href="https://www.researchgate.net/publication/332553805_Salient_Object_Detection_in_the_Deep_Learning_Era_An_In-Depth_Survey">Salient Object Detection in the Deep Learning Era: An In-Depth Survey</a></h3>
+<ul>
+<li>项目: <a href="https://github.com/wenguanwang/SODsurvey">https://github.com/wenguanwang/SODsurvey</a></li>
+<li>说明: 本文档于2019年07月07日修改的内容主要参考自该综述论文, 感谢作者的工作, 总结的非常详细!</li>
+</ul>
+<h2 id="more">More</h2>
+<h3 id="similiar-projects">Similiar Projects</h3>
+<ul>
+<li><a href="https://github.com/mrgloom/awesome-semantic-segmentation">awesome-semantic-segmentation</a></li>
+</ul>
+<h3 id="research-institutes">Research Institutes</h3>
+<ul>
+<li>百度研究院: <a href="https://ai.baidu.com/broad/introduction">https://ai.baidu.com/broad/introduction</a></li>
+<li>中山大学人机物智能融合实验室: <a href="http://www.sysu-hcp.net/resources/">http://www.sysu-hcp.net/resources/</a></li>
+<li>大连理工大学IIAU-LAB: <a href="http://ice.dlut.edu.cn/lu/publications.html">http://ice.dlut.edu.cn/lu/publications.html</a></li>
+<li>CUHK Multimedia Laboratory: <a href="http://mmlab.ie.cuhk.edu.hk/datasets.html">http://mmlab.ie.cuhk.edu.hk/datasets.html</a></li>
+</ul>
+<h3 id="resource-websites">Resource Websites</h3>
+<ul>
+<li>TC-11 Online Resources: <a href="http://tc11.cvc.uab.es/datasets/type/">http://tc11.cvc.uab.es/datasets/type/</a></li>
+<li>CVonline: Image Databases: <a href="http://homepages.inf.ed.ac.uk/rbf/CVonline/Imagedbase.htm">http://homepages.inf.ed.ac.uk/rbf/CVonline/Imagedbase.htm</a>
+<ul>
+<li>中文: <a href="https://blog.csdn.net/zhaoliang027/article/details/83376167">https://blog.csdn.net/zhaoliang027/article/details/83376167</a></li>
+</ul></li>
+<li>MediaEval Benchmark: <a href="http://www.multimediaeval.org/datasets/">http://www.multimediaeval.org/datasets/</a></li>
+<li>Mit Saliency Benchmark: <a href="http://saliency.mit.edu/datasets.html">http://saliency.mit.edu/datasets.html</a></li>
+<li>Datasets for machine learning: <a href="https://www.datasetlist.com/">https://www.datasetlist.com/</a></li>
+<li>UCI machine learning repository:<a href="https://archive.ics.uci.edu/ml/datasets.html">https://archive.ics.uci.edu/ml/datasets.html</a></li>
+<li>Kaggle datasets:<a href="https://www.kaggle.com/datasets">https://www.kaggle.com/datasets</a></li>
+<li>Google
+<ul>
+<li>Dataset Seaerch: <a href="https://toolbox.google.com/datasetsearch">https://toolbox.google.com/datasetsearch</a></li>
+<li><a href="https://ai.google/tools/datasets/">https://ai.google/tools/datasets/</a></li>
+</ul></li>
+</ul>
+<h2 id="about">About</h2>
+<ul>
+<li>Edited by Lart Pang</li>
+<li>Tools: VSCode</li>
+<li>Plugins:
+<ul>
+<li>Markdown All in One</li>
+<li>markdown-formatter(随着不断地提了一些issue(<a href="https://github.com/sumnow/markdown-formatter/issues/5">#5</a>, <a href="https://github.com/sumnow/markdown-formatter/issues/6">#6</a>, <a href="https://github.com/sumnow/markdown-formatter/issues/7">#7</a>, <a href="https://github.com/sumnow/markdown-formatter/issues/8">#8</a>, <a href="https://github.com/sumnow/markdown-formatter/issues/9">#9</a>), 越来越好用了, 强烈推荐)</li>
+<li>Paste Image</li>
+</ul></li>
+</ul>
+</body>
+</html>
