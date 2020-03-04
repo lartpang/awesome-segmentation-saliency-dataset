@@ -8,6 +8,8 @@
 * Making it easier to discover datasets: https://www.blog.google/products/search/making-it-easier-discover-datasets/
 
 > Please **cite related paper** if you **use their dataset** :smile:
+>
+> I list some other datasets in the issue <https://github.com/lartpang/awesome-segmentation-saliency-dataset/issues/15>. I hope it works for you.
 
 - [Another Awesome Dataset List](#another-awesome-dataset-list)
   - [Saliency](#saliency)
