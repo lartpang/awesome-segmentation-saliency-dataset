@@ -1,13 +1,9 @@
 # Another Awesome Dataset List
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-
 ![GitHub last commit](https://img.shields.io/github/last-commit/lartpang/awesome-segmentation-saliency-dataset?style=flat-square)
-
 ![GitHub issues](https://img.shields.io/github/issues/lartpang/awesome-segmentation-saliency-dataset?style=flat-square)
-
 ![GitHub stars](https://img.shields.io/github/stars/lartpang/awesome-segmentation-saliency-dataset?style=flat-square)
-
 ![Badge](https://img.shields.io/badge/-As%20awesome%20as%20you%20think!-red?style=flat-square)
 
 :sparkling_heart: Some Great Tools :sparkling_heart::
