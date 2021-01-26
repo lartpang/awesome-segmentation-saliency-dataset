@@ -1,11 +1,20 @@
 # Another Awesome Dataset List
 
-[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+
+![GitHub last commit](https://img.shields.io/github/last-commit/lartpang/awesome-segmentation-saliency-dataset?style=flat-square)
+
+![GitHub issues](https://img.shields.io/github/issues/lartpang/awesome-segmentation-saliency-dataset?style=flat-square)
+
+![GitHub stars](https://img.shields.io/github/stars/lartpang/awesome-segmentation-saliency-dataset?style=flat-square)
+
+![Badge](https://img.shields.io/badge/-As%20awesome%20as%20you%20think!-red?style=flat-square)
 
 :sparkling_heart: Some Great Tools :sparkling_heart::
+
 * :star::star: `Google Dataset Search`: https://datasetsearch.research.google.com/
-    * AI开发者神器! 谷歌重磅推出数据集搜索 Dataset Search: https://mp.weixin.qq.com/s/ErbwXAz-_AJrmUGMHZIcwg
-    * Making it easier to discover datasets: https://www.blog.google/products/search/making-it-easier-discover-datasets/
+    - AI开发者神器! 谷歌重磅推出数据集搜索 Dataset Search: https://mp.weixin.qq.com/s/ErbwXAz-_AJrmUGMHZIcwg
+    - Making it easier to discover datasets: https://www.blog.google/products/search/making-it-easier-discover-datasets/
 * :star::star::star: `Yet Another Computer Vision Index To Datasets (YACVID)`: http://yacvid.hayko.at/
 
 > Please **cite related paper** if you **use their dataset** :smile:
@@ -59,8 +68,10 @@
     - [Other Saliency Dataset](#other-saliency-dataset)
       - [KAIST Salient Pedestrian Dataset](#kaist-salient-pedestrian-dataset)
   - [Segmentation](#segmentation)
-    - [General[need help]](#generalneed-help)
+    - [Video Object Segmentation](#video-object-segmentation)
       - [DAVIS](#davis)
+      - [TAO-VOS](#tao-vos)
+    - [Semantic Image Segmentation](#semantic-image-segmentation)
       - [aNYU](#anyu)
     - [About Person](#about-person)
       - [Supervisely人像数据集](#supervisely人像数据集)
@@ -235,8 +246,8 @@
 
 > 数据库的特点
 >
-> 1.235个彩色图像的集合, 分为六个不同的类别;
-> 2. 提供人类固定记录(扫视数据)和人类标记结果;
+> 1.235个彩色图像的集合, 分为六个不同的类别; 
+> 2. 提供人类固定记录(扫视数据)和人类标记结果; 
 > 3. 易于使用.
 >
 > 我们将同时考虑不同大小的显着区域的检测. 实际上, 可接受的显着性检测器应该检测大的和小的显着区域. 此外, 显着性检测还应该定位杂乱背景中的显着区域和具有重复干扰物的区域. 我们还注意到, 对于任何显着性检测器, 不同的图像呈现不同的难度. 但是, 现有的显着性基准(例如Bruce的数据集, Hou'dataset, Harel的数据集等)是图像集合, 没有尝试对所需分析的难度进行分类. 因此, 我们为显着性模型验证创建了一个新的显着性基准. 该数据库提供REGION基础事实(人类标记)和FIXATION基础事实(通过眼动仪).
@@ -586,7 +597,7 @@ HS-SOD.zip file contains three folders:
 
 ## Segmentation
 
-### General[need help]
+### Video Object Segmentation
 
 #### DAVIS
 
@@ -598,6 +609,20 @@ HS-SOD.zip file contains three folders:
 * 下载:
   + [DAVIS 2016](https://davischallenge.org/davis2016/code.html) In each video sequence a single instance is annotated.
   + [DAVIS 2017](https://davischallenge.org/davis2017/code.html) In each video sequence multiple instances are annotated.
+
+#### TAO-VOS
+
+![](assets/2021-01-26-21-32-47.png)
+
+* 项目: <https://www.vision.rwth-aachen.de/page/taovos>
+* 论文: <https://arxiv.org/abs/2011.01142>
+* 下载: [Mask Annotations (train + val), 113MB](https://www.vision.rwth-aachen.de/media/resource_files/taovos_v1_annotations_only.zip)
+
+> We annotated 126 validation sequences of the Tracking Any Object (TAO) dataset with segmentation masks for video object segmentation. Additionally, we annotated all 500 training sequences semi-automatically while ensuring a high quality (for details see paper below).
+>
+> Compared to existing VOS datasets, sequences in TAO-VOS are significantly longer, cover more objects per sequence, and cover more different classes.
+
+### Semantic Image Segmentation
 
 #### aNYU
 
@@ -763,7 +788,7 @@ HS-SOD.zip file contains three folders:
 >
 > 数据集中的原始图片来源于Flickr, 百度, 淘宝. 经过人脸检测和区域裁剪后生成了600*800的半身人像.
 >
-> * clip_img目录为半身人像图像, 格式为jpg;
+> * clip_img目录为半身人像图像, 格式为jpg; 
 > * matting目录为对应的matting文件(方便确认matting质量), 格式为png, 您训练前应该先从png图像提取alpha图. 例如使用opencv可以这样获得alpha图:
 
 ``` python
