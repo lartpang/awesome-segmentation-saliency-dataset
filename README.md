@@ -1,14 +1,8 @@
-# Another Awesome Dataset List
+# Another Awesome Dataset List ![Badge](https://img.shields.io/badge/-As%20awesome%20as%20you%20think!-red?style=flat-square)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-
-![GitHub last commit](https://img.shields.io/github/last-commit/lartpang/awesome-segmentation-saliency-dataset?style=flat-square)
-
-![GitHub issues](https://img.shields.io/github/issues/lartpang/awesome-segmentation-saliency-dataset?style=flat-square)
-
-![GitHub stars](https://img.shields.io/github/stars/lartpang/awesome-segmentation-saliency-dataset?style=flat-square)
-
-![Badge](https://img.shields.io/badge/-As%20awesome%20as%20you%20think!-red?style=flat-square)
+| License                                                                                                    | Last Commit                                                                                                                       | Issues                                                                                                                  | Stars                                                                                                                 |
+| ---------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT) | ![GitHub last commit](https://img.shields.io/github/last-commit/lartpang/awesome-segmentation-saliency-dataset?style=flat-square) | ![GitHub issues](https://img.shields.io/github/issues/lartpang/awesome-segmentation-saliency-dataset?style=flat-square) | ![GitHub stars](https://img.shields.io/github/stars/lartpang/awesome-segmentation-saliency-dataset?style=flat-square) |
 
 :sparkling_heart: Some Great Tools :sparkling_heart::
 
@@ -21,7 +15,8 @@
 >
 > I list some other datasets in the issue <https://github.com/lartpang/awesome-segmentation-saliency-dataset/issues/15>. I hope it works for you.
 
-- [Another Awesome Dataset List](#another-awesome-dataset-list)
+
+- [Another Awesome Dataset List !Badge](#another-awesome-dataset-list-)
   - [Saliency](#saliency)
     - [RGB Saliency](#rgb-saliency)
       - [MSRA(MSRA10K/MSRA-B)](#msramsra10kmsra-b)
@@ -29,8 +24,9 @@
       - [ASD(MSRA1000/MSRA1K)](#asdmsra1000msra1k)
       - [DUT-OMRON](#dut-omron)
       - [DUTS](#duts)
+      - [SOC (Salient Objects in Clutter)](#soc-salient-objects-in-clutter)
       - [HKU-IS](#hku-is)
-      - [SOD](#sod)
+      - [SOD (Salient Object Dataset)](#sod-salient-object-dataset)
       - [Infrared](#infrared)
       - [ImgSal](#imgsal)
       - [ECSSD/CSSD](#ecssdcssd)
@@ -50,16 +46,19 @@
       - [RGBD135/DES](#rgbd135des)
       - [DUT-RGBD/DUTLF-Depth](#dut-rgbddutlf-depth)
       - [SSD/SSD100](#ssdssd100)
+      - [ReDWeb-S](#redweb-s)
+      - [COME15K](#come15k)
     - [RGB-T Saliency](#rgb-t-saliency)
       - [VT5000](#vt5000)
       - [VT1000](#vt1000)
       - [VT821](#vt821)
-    - [Camouflaged Object Detection (COD)](#camouflaged-object-detection-cod)
+    - [COD (Camouflaged Object Detection)](#cod-camouflaged-object-detection)
       - [NC4K](#nc4k)
       - [COD10K](#cod10k)
       - [CAMO](#camo)
       - [CHAMELEON](#chameleon)
       - [CPD1K: Camouflaged People Dataset](#cpd1k-camouflaged-people-dataset)
+      - [MoCA-Mask](#moca-mask)
     - [High-Resolution Saliency](#high-resolution-saliency)
       - [HRSOD/DAVIS-S](#hrsoddavis-s)
     - [Co-Saliency](#co-saliency)
@@ -75,7 +74,6 @@
       - [STC](#stc)
     - [Other](#other)
       - [XPIE](#xpie)
-      - [SOC: Salient Objects in Clutter](#soc-salient-objects-in-clutter)
       - [SOS](#sos)
       - [MSO](#mso)
       - [ILSO-1K/2K](#ilso-1k2k)
@@ -83,7 +81,7 @@
       - [KAIST Salient Pedestrian Dataset](#kaist-salient-pedestrian-dataset)
       - [Grayscale-Thermal Foreground Detection Dataset](#grayscale-thermal-foreground-detection-dataset)
   - [Segmentation](#segmentation)
-    - [Video Object Segmentation (VOS)](#video-object-segmentation-vos)
+    - [VOS (Video Object Segmentation)](#vos-video-object-segmentation)
       - [DAVIS](#davis)
       - [TAO-VOS](#tao-vos)
     - [Image Segmentation](#image-segmentation)
@@ -114,7 +112,7 @@
     - [Similiar Projects](#similiar-projects)
     - [Research Institutes](#research-institutes)
     - [Resource Websites](#resource-websites)
-  - [About](#about)
+
 
 ## Saliency
 
@@ -145,19 +143,11 @@
 
 #### SED1/2
 
-* 单目标
-
-![img](./assets/2018-12-29-18-38-59.png)
-
-* 双目标
-
-![img](./assets/2018-12-29-18-39-30.png)
-
-* 真值
-
-给出的是每个图像由三个不同的人类对象分割的结果.
-
-![img](./assets/2018-12-29-18-40-17.png)
+| 数据类型                                           | 示例                                     |
+| -------------------------------------------------- | ---------------------------------------- |
+| 单目标                                             | ![img](./assets/2018-12-29-18-38-59.png) |
+| 双目标                                             | ![img](./assets/2018-12-29-18-39-30.png) |
+| 真值给出的是每个图像由三个不同的人类对象分割的结果 | ![img](./assets/2018-12-29-18-40-17.png) |
 
 * [A. Borji, M.-M. Cheng, H. Jiang, and J. Li, "Salient objectdetection: A benchmark, "IEEE TIP, vol.24, no.12, pp.5706–5722, 2015.](https://arxiv.org/abs/1501.02741)
 * [Image Segmentation by Probabilistic Bottom-Up Aggregation and Cue Integration](http://www.wisdom.weizmann.ac.il/~meirav/Segmentation_Alpert_Galun_Brandt_Basri.pdf)
@@ -200,6 +190,23 @@ Both the training and test set contain very challenging scenarios for saliency d
 To our knowledge, DUTS is currently **the largest saliency detection benchmark** with the explicit training/test evaluation protocol.
 For fair comparison in the future research, the training set of DUTS serves as a good candidate for learning DNNs, while the test set and other public data sets can be used for evaluation.
 
+#### SOC (Salient Objects in Clutter)
+
+![1546081178458](./assets/1546081178458.png)
+
+![1546081446332](./assets/1546081446332.png)
+
+* Paper: [Salient Objects in Clutter](https://arxiv.org/abs/2105.03053)
+  * Chinese Version: <https://dengpingfan.github.io/papers/[2022][TPAMI]SOC_Chinese.pdf>
+* Project:
+  * <https://github.com/DengPingFan/SOC-DataAug>
+  * <https://mmcheng.net/socbenchmark/>
+* Download: See <https://mmcheng.net/socbenchmark/>
+
+We propose a new high-quality dataset and update the previous saliency benchmark. Specifically, our dataset called SOC, Salient Objects in Clutter, includes images with salient and non-salient objects from daily object categories. Beyond object category annotations, each salient image is accompanied by attributes (e.g., appearance change, clutter) that reflect common challenges in real-world scenes, and can help 1) gain a deeper insight into the SOD problem, 2) investigate the pros and cons of the SOD models, and 3) objectively assess models from different perspectives. Finally, we report attribute-based performance assessment on our SOC dataset. We believe that our dataset and results will open new directions for future research on salient object detection.
+
+SOC has 6,000 images with 80 common categories. Half of the images contain salient objects and the others contain none.**Each salient-object-contained image is annotated with instance-level SOD ground-truth, object category (e.g., dog, book), and challenging factors** (e.g., big/small object).**The non-salient object subset has 783 texture images and 2, 217 real-scene images** (e.g., aurora, sky).
+
 #### HKU-IS
 
 * Project: <https://i.cs.hku.hk/~gbli/deep_saliency.html>
@@ -211,7 +218,7 @@ For fair comparison in the future research, the training set of DUTS serves as a
 数据集包含4447个具有显着对象的像素注释的图像
 视觉显着性是包括计算机视觉在内的认知和计算科学中的一个基本问题. 在本文中, 我们发现可以从使用深度卷积神经网络(CNN)提取的多尺度特征中学习高质量的视觉显着性模型. 视觉识别任务的成功. 为了学习这样的显着性模型, 我们引入了一种神经网络结构, 它在CNN顶部具有完全连接的层, 负责三个不同尺度的特征提取. 然后, 我们提出一种改进方法来增强我们的显着性结果的空间一致性. 最后, 针对不同级别的图像分割计算的聚合多个显着性图可以进一步提高性能, 从而产生比由单个分割产生的显着性图更好的显着性图. 为了促进对视觉显着性模型的进一步研究和评估, **我们还构建了一个新的大型数据库, 包括4447个具有挑战性的图像及其像素显着性注释**.
 
-#### SOD
+#### SOD (Salient Object Dataset)
 
 ![img](assets/2019-03-22-18-46-40.png)
 
@@ -427,6 +434,22 @@ And we split the dataset including 800 training set and 400 test set.
 
 Our SSD100 dataset is built on three stereo movies. The movies contain both the indoors and outdoors scenes. We pick up one stereo image pair at each hundred frames. It totally has tens of thousands of stereo image pairs. We make the image acquisition and image annotation independent to each other, we can avoid dataset design bias, namely a specific type of bias that is caused by experimenters unnatural selection of dataset images. The chosen stereo image pairs are based on one principle: choose the one which the computer detect the salient objects within the complex scenes where even the human cannot tell the salient objects at once. After picking up the stereo image pairs, we divide the image pairs into left images and right images both in 960x1080 size. When we build the ground truth of salient objects, we adhere to the following rules: 1) we mark the salient objects, taking the advice of most people; 2) disconnected regions of the same object are labeled separately; 3) we use solid regions to approximate hollow objects, such as bike wheels. Besides, we will expand this dataset continually in future.
 
+#### ReDWeb-S
+
+* Paper: [SMAC: Learning Selective Mutual Attention and Contrast for RGB-D Saliency Detection](https://arxiv.org/abs/2010.05537)
+* Download: See <https://github.com/nnizhang/SMAC#redweb-s>
+* Home: <https://github.com/nnizhang/SMAC>
+
+We construct a new large-scale challenging dataset ReDWeb-S and it has totally 3179 images with various real-world scenes and high-quality depth maps. We split the dataset into a training set with 2179 RGB-D image pairs and a testing set with the remaining 1000 image pairs.
+
+#### COME15K
+
+* Paper: [Cascaded RGB-D SOD with COME15K dataset](https://arxiv.org/abs/2109.07246)
+* Download: See <https://github.com/JingZhang617/cascaded_rgbd_sod#come15k-rgb-d-sod-dataset>
+* Home: <https://github.com/JingZhang617/cascaded_rgbd_sod>
+
+Our new COME15K dataset is based on Holo50K, which is a stereo dataset, including scenarios from both indoor and outdoor. We first filter the Holo50K dataset and then obtain 16,000 stereo image pairs for labelling (the candidate labeled set) and another 5,000 image pairs as the unlabeled set. Note that the stereo pairs in Holo50K dataset are directly captured by a stereo camera without rectification, we use a modified version of a SOTA off-the-shelf stereo matching algorithm to compute the depth for both the candidate labeled set and unlabeled set with the left-right view images as input.
+
 ### RGB-T Saliency
 
 #### VT5000
@@ -469,7 +492,7 @@ Existing RGB-T image benchmark dataset for saliency detection has several limita
 
 This work contributes such a RGB-T image dataset, which includes 821 spatially aligned RGB-T image pairs and their ground truth annotations for saliency detection purpose. The image pairs are with high diversity recorded under different scenes and environmental conditions, and we annotate 11 challenges on these image pairs for performing the challengesensitive analysis for different saliency detection algorithms.
 
-### Camouflaged Object Detection (COD)
+### COD (Camouflaged Object Detection)
 
 More details can be found at: <http://dpfan.net/Camouflage/>
 
@@ -531,6 +554,19 @@ The online survey was prepared using the Google forms. The users were requested 
 To build the dataset, we initially collected the video clips of 20 groups, which included the people with different kinds of camouflage patterns. These videos are captured by a fixed camera to evaluate the camouflage performance of different camouflage patterns in each corresponding natural scenes. At the same time, they are naturally suitable for the evaluation of camouflaged people detection methods.
 
 We take into account several factors that influence camouflage performance comprehensively. They include different styles of camouflage patterns, abundant natural scenes, different illumination and occlusion conditions, and different scales and postures of people. At last, 1000 images of size 480 × 854 are selected from the video clips. All the images are labeled as the pixel-level ground-truth annotation.
+
+#### MoCA-Mask
+
+![](https://xueliancheng.github.io/SLT-Net-project/images/samples.png)
+
+* Paper: [Implicit Motion Handling for Video Camouflaged Object Detection](http://arxiv.org/abs/2203.07363)
+* Project:
+  * <https://xueliancheng.github.io/SLT-Net-project/>
+  * <https://github.com/XuelianCheng/SLT-Net>
+* Download: <https://drive.google.com/file/d/1FB24BGVrPOeUpmYbKZJYL5ermqUvBo_6/view?usp=sharing>
+  * More details can be found at <https://xueliancheng.github.io/SLT-Net-project/>
+
+The new dataset, or MoCA-Mask for short, contains 87 video sequences with 22,939 frames in total with pixel-wise ground truth masks. MoCA-Mask encapsulates a variety of challenges, such as complex backgrounds and tiny and well camouflaged objects. We provide annotations, bounding boxes, and dense segmentation masks for every five frames for all the videos in the dataset.
 
 ### High-Resolution Saliency
 
@@ -656,22 +692,6 @@ To demonstrate quantitatively the advantages of using spatial and temporal coher
 **Set-P 包含8, 800具有地理信息的感兴趣地点的图像(例如, GPS和标签), 具有对象标签的Set-I包含19, 600图像, 以及Set-E包含1, 200个human fixations图像**.
 对于这些图像, 我们要求两位工程师通过两个阶段对其进行注释. 在第一阶段, 图像被分配一个二进制标记:'是'用于包含非明确对象, 否则为'否'. 在第一阶段之后, 我们将21, 002张图片标记为"是", 并且8, 598图像标记为"否". 在第二阶段, 这两位工程师进一步要求手动标记标记为"是"的10, 000张图像中的显着对象的准确边界. 注意我们有10名志愿者参与整个过程, 以检查注释的质量.**最后, 我们获得了10, 000张图像的二进制掩码**.
 
-#### SOC: Salient Objects in Clutter
-
-![1546081178458](./assets/1546081178458.png)
-
-![1546081446332](./assets/1546081446332.png)
-
-* Paper: [Salient Objects in Clutter: Bringing Salient Object Detection to the Foreground](http://dpfan.net/wp-content/uploads/2018/04/SOCBenchmark.pdf)
-  + Chinese Version: <http://dpfan.net/wp-content/uploads/SOCBenchmarkCN.pdf>
-* Project: <http://dpfan.net/SOCBenchmark/>
-* Download: See <http://dpfan.net/SOCBenchmark/>
-
-在本文中, 我们提供了显着对象检测(SOD)模型的综合评估. 我们的分析确定了现有SOD数据集的严重设计偏差, 假设每个图像在低杂波中包含至少一个明显突出的显着对象. 这是一个不切实际的假设. 在现有数据集上进行评估时, 设计偏差导致了最先进的SOD模型的饱和高性能. 然而, 当应用于现实世界的日常场景时, 这些模型仍然远远不能令人满意. 根据我们的分析, 我们首先确定了全面和平衡的数据集应该实现的7个关键方面. 然后, 我们提出一个新的高质量数据集并更新以前的显着性基准.
-具体来说, 我们的数据集称为SOC, Salient Objects in Clutter, **包括来自日常对象类别的显着和非显着对象的图像**. 除了对象类别注释之外, 每个突出图像都伴随着反映现实世界场景中常见挑战的属性(例如, 外观变化, 杂乱), 并且可以帮助 1)更深入地了解SOD问题, 2)调查专业人员和SOD模型的缺点, 3)从不同的角度客观地评估模型. 最后, 我们在SOC数据集上报告基于属性的性能评估. 我们相信, 我们的数据集和结果将为未来的显着物体检测研究开辟新的方向.
-
-SOC has 6, 000 images with 80 common categories. Half of the images contain salient objects and the others contain none.**Each salient-object-contained image is annotated with instance-level SOD ground-truth, object category (e.g., dog, book), and challenging factors** (e.g., big/small object).**The non-salient object subset has 783 texture images and 2, 217 real-scene images** (e.g., aurora, sky).
-
 #### SOS
 
 * Paper: Salient object subitizing
@@ -750,7 +770,7 @@ The following main aspects are taken into account in creating the grayscale-ther
 
 ## Segmentation
 
-### Video Object Segmentation (VOS)
+### VOS (Video Object Segmentation)
 
 #### DAVIS
 
@@ -986,14 +1006,16 @@ ML-Images: the largest open-source multi-label image database, including 17, 609
 
 ### Survey
 
-* [Salient Object Detection: A Survey](https://arxiv.org/abs/1411.5878)
-  * 详细评估: <https://mmcheng.net/zh/salobjbenchmark/> (这里展示了{THUR15K, JuddDB, DUT-OMRON, SED2, MSRA10K, ECSSD}六种数据集的一个榜单).
-* [Review of Visual Saliency Detection with Comprehensive Information](https://arxiv.org/abs/1803.03391)
-* [Salient Object Detection in the Deep Learning Era: An In-Depth Survey](https://www.researchgate.net/publication/332553805_Salient_Object_Detection_in_the_Deep_Learning_Era_An_In-Depth_Survey)
+* [Salient Object Detection: A Survey](https://link.springer.com/article/10.1007/s41095-019-0149-9)
+* [Review of Visual Saliency Detection With Comprehensive Information](https://ieeexplore.ieee.org/document/8466906/)
+* [Salient Object Detection in the Deep Learning Era: An In-Depth Survey](https://pubmed.ncbi.nlm.nih.gov/33434124/)
+* [RGB-D salient object detection: A survey](https://link.springer.com/article/10.1007/s41095-020-0199-z)
+* [Salient Objects in Clutter](https://arxiv.org/abs/2105.03053)
 
 ### Project
 
-- <https://github.com/wenguanwang/SODsurvey> 本文档于2019年07月07日修改的内容主要参考自该综述论文, 感谢作者的工作, 总结的非常详细!
+- <https://github.com/wenguanwang/SODsurvey>
+  - 本文档于部分内容参考自该综述论文, 感谢作者的工作, 总结的非常详细!
 
 ## More
 
@@ -1022,12 +1044,3 @@ ML-Images: the largest open-source multi-label image database, including 17, 609
   + Dataset Seaerch: <https://toolbox.google.com/datasetsearch>
   + <https://ai.google/tools/datasets/>
 * Yet Another Computer Vision Index To Datasets (YACVID): This website provides a list of frequently used computer vision datasets. Wait, there is more! There is also a description containing common problems, pitfalls and characteristics and now a searchable TAG cloud.: <http://yacvid.hayko.at/>
-
-## About
-
-* Edited by Lart Pang
-* Tools: VSCode
-* Plugins:
-  + Markdown All in One
-  + markdown-formatter(随着不断地提了一些issue([#5](https://github.com/sumnow/markdown-formatter/issues/5), [#6](https://github.com/sumnow/markdown-formatter/issues/6), [#7](https://github.com/sumnow/markdown-formatter/issues/7), [#8](https://github.com/sumnow/markdown-formatter/issues/8), [#9](https://github.com/sumnow/markdown-formatter/issues/9)), 越来越好用了, 强烈推荐)
-  + Paste Image
