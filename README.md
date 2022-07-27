@@ -94,6 +94,9 @@
       - [Object Extraction Dataset](#object-extraction-dataset)
       - [Clothing Co-Parsing (CCP) Dataset](#clothing-co-parsing-ccp-dataset)
       - [People segmentation dataset](#people-segmentation-dataset)
+  - [AD (Anomaly Detection)](#ad-anomaly-detection)
+    - [MVTec AD](#mvtec-ad)
+    - [MPDD](#mpdd)
   - [Matting](#matting)
     - [alphamatting.com](#alphamattingcom)
     - [Composition-1k: Deep Image Matting](#composition-1k-deep-image-matting)
@@ -895,6 +898,29 @@ Clothing Co-Parsing (CCP) dataset is a new clothing database including elaborate
 * Download: See <http://www.cbsr.ia.ac.cn/users/ynyu/dataset/>
 
 The dataset used in this paper is finely labeled manually for the purpose of foreground segmentation. There are 5,389 images in the training set. The task is to segment the most salient person in an image, including his/her clothing, e.g., long dresses and hats, and any objects in his/her hands such as handbags. The images have various sources such as street-shots, advertisements and news. The persons in these images vary greatly in terms of scales and poses. To train our model, we randomly pick out 500 images from the training set for validation. The test set is not public so that no model can be trained using these data.
+
+## AD (Anomaly Detection)
+
+### MVTec AD
+
+![](https://www.mvtec.com/fileadmin/Redaktion/mvtec.com/company/research/datasets/dataset_overview_large.png)
+
+* Paper:
+  * [MVTec AD – A Comprehensive Real-World Dataset for Unsupervised Anomaly Detection](https://www.mvtec.com/fileadmin/Redaktion/mvtec.com/company/research/datasets/mvtec_ad.pdf)
+  * [The MVTec Anomaly Detection Dataset: A Comprehensive Real-World Dataset for Unsupervised Anomaly Detection](https://link.springer.com/content/pdf/10.1007/s11263-020-01400-4.pdf)
+* Project: <https://www.mvtec.com/company/research/datasets/mvtec-ad>
+
+MVTec AD is a dataset for benchmarking anomaly detection methods with a focus on industrial inspection. It contains over 5000 high-resolution images divided into fifteen different object and texture categories. Each category comprises a set of defect-free training images and a test set of images with various kinds of defects as well as images without defects. Pixel-precise annotations of all anomalies are also provided.
+
+### MPDD
+
+![](https://github.com/stepanje/MPDD/raw/main/samples.png)
+
+* Paper: [Deep learning-based defect detection of metal parts: evaluating current methods in complex conditions](https://ieeexplore.ieee.org/document/9631567)
+* Project: <https://github.com/stepanje/mpdd>
+
+It is focused on a domain of metal fabrication and it reflects real-world situations encountered on a human-operated production lines. The proposed dataset contains 6 classes of metal parts. For training, only samples without defects should be used, because it is assumed that semi-supervised or unsupervised AD methods will be used, as we cannot know all types of defects in advance. Testing samples contain parts with and without defects. Anomalous samples are provided with pixel-precise ground truth masks to enable evaluation of defect segmentation. All images were resized to 1024 x 1024 pixels. There are various types of defects available in the dataset, and overall they are intended to cover a wide range of scenarios that can be encountered in metal fabrication and painting industry.
+All images in the dataset were taken using standard consumer-grade camera, we used two LED light sources to illuminate the scene from two separate positions to reduce shadows. In most cases, we also placed a neutral green screen in the background to make the samples more suitable for machine vision tasks, assuming that placing a background, e.g. on the real production line, is usually not an issue. To mimic complex conditions that must be faced when acquiring visual data in some industrial applications, we rotated and moved the components during image acquisition.
 
 ## Matting
 
