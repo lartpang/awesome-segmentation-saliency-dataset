@@ -4,12 +4,7 @@
 | ---------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
 | [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT) | ![GitHub last commit](https://img.shields.io/github/last-commit/lartpang/awesome-segmentation-saliency-dataset?style=flat-square) | ![GitHub issues](https://img.shields.io/github/issues/lartpang/awesome-segmentation-saliency-dataset?style=flat-square) | ![GitHub stars](https://img.shields.io/github/stars/lartpang/awesome-segmentation-saliency-dataset?style=flat-square) |
 
-:sparkling_heart: Some Great Tools :sparkling_heart::
-
-* :star::star: `Google Dataset Search`: https://datasetsearch.research.google.com/
-    - AI开发者神器! 谷歌重磅推出数据集搜索 Dataset Search: https://mp.weixin.qq.com/s/ErbwXAz-_AJrmUGMHZIcwg
-    - Making it easier to discover datasets: https://www.blog.google/products/search/making-it-easier-discover-datasets/
-* :star::star::star: `Yet Another Computer Vision Index To Datasets (YACVID)`: http://yacvid.hayko.at/
+:sparkling_heart: Some great tools can be found at [resource websites](#resource-websites).
 
 > Please **cite the related paper** if you **use their dataset** :smile:
 >
@@ -84,6 +79,7 @@
     - [VOS (Video Object Segmentation)](#vos-video-object-segmentation)
       - [DAVIS](#davis)
       - [TAO-VOS](#tao-vos)
+      - [OVOS](#ovos)
     - [Image Segmentation](#image-segmentation)
       - [aNYU](#anyu)
       - [Supervisely人像数据集](#supervisely人像数据集)
@@ -797,6 +793,15 @@ We annotated 126 validation sequences of the Tracking Any Object (TAO) dataset w
 
 Compared to existing VOS datasets, sequences in TAO-VOS are significantly longer, cover more objects per sequence, and cover more different classes.
 
+#### OVOS
+
+![](assets/20220728234603.png)
+
+* Project: <https://ieee-dataport.org/documents/ovos-occluded-video-object-segmentation-dataset>
+* Paper: [Region Aware Video Object Segmentation with Deep Motion Modeling](https://arxiv.org/abs/2207.10258)
+
+OVOS is an extension of the training set of OVIS dataset in video instance segmentation since the segmentation of the first frame is not available for the validation set. To meet the format of DAVIS for convenient evaluation, we only select the objects that appear in the first frame as targets and resize videos to make their shortest size 480 pixels. OVOS comes with accurate annotations and includes severe object occlusions. The presented OVOS dataset contains 607 video sequences with a total of 42149 frames and 2034 objects, which is larger than the current largest YouTube-VOS 2019 validation set (507 videos with a total of 13710 frames).
+
 ### Image Segmentation
 
 #### aNYU
@@ -1066,7 +1071,11 @@ ML-Images: the largest open-source multi-label image database, including 17, 609
 * Datasets for machine learning: <https://www.datasetlist.com/>
 * UCI machine learning repository: <https://archive.ics.uci.edu/ml/datasets.html>
 * Kaggle datasets: <https://www.kaggle.com/datasets>
-* Google
-  + Dataset Seaerch: <https://toolbox.google.com/datasetsearch>
+* Google Dataset Seaerch:
+  + <https://toolbox.google.com/datasetsearch>
   + <https://ai.google/tools/datasets/>
-* Yet Another Computer Vision Index To Datasets (YACVID): This website provides a list of frequently used computer vision datasets. Wait, there is more! There is also a description containing common problems, pitfalls and characteristics and now a searchable TAG cloud.: <http://yacvid.hayko.at/>
+  + <https://datasetsearch.research.google.com/>
+  + AI开发者神器! 谷歌重磅推出数据集搜索 Dataset Search: <https://mp.weixin.qq.com/s/ErbwXAz-_AJrmUGMHZIcwg>
+  + Making it easier to discover datasets: <https://www.blog.google/products/search/making-it-easier-discover-datasets/>
+* :star::star::star: Yet Another Computer Vision Index To Datasets (YACVID): This website provides a list of frequently used computer vision datasets. Wait, there is more! There is also a description containing common problems, pitfalls and characteristics and now a searchable TAG cloud.: <http://yacvid.hayko.at/>
+* :star::star::star: IEEE DataPort provides a sustainable platform to all data owners in support of research and IEEE’s overall mission of Advancing Technology for Humanity: <https://ieee-dataport.org/>
