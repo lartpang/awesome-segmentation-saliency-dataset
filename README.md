@@ -44,6 +44,7 @@
       - [ReDWeb-S](#redweb-s)
       - [COME15K](#come15k)
     - [RGB-T Saliency](#rgb-t-saliency)
+      - [VT723](#vt723)
       - [VT5000](#vt5000)
       - [VT1000](#vt1000)
       - [VT821](#vt821)
@@ -54,6 +55,8 @@
       - [CHAMELEON](#chameleon)
       - [CPD1K: Camouflaged People Dataset](#cpd1k-camouflaged-people-dataset)
       - [MoCA-Mask](#moca-mask)
+    - [Dichotomous Image Segmentation](#dichotomous-image-segmentation)
+      - [DIS5K](#dis5k)
     - [High-Resolution Saliency](#high-resolution-saliency)
       - [HRSOD/DAVIS-S](#hrsoddavis-s)
     - [Co-Saliency](#co-saliency)
@@ -451,6 +454,14 @@ Our new COME15K dataset is based on Holo50K, which is a stereo dataset, includin
 
 ### RGB-T Saliency
 
+#### VT723
+
+* Paper: [Mirror Complementary Transformer Network for RGB-thermal Salient Object Detection](https://arxiv.org/abs/2207.03558)
+* Download: See <https://github.com/jxr326/SwinMCNet#the-proposed-dataset>
+* Hoem: <https://github.com/jxr326/SwinMCNet>
+
+To further validate the robustness of the proposed model under common challenging scenes in real world, we build a more challenging RGB-T SOD dataset VT723 based on a large public semantic segmentation RGB-T dataset used in the autonomous driving domain. We pick image pairs in which the salient objects are significant in at least one of their color and thermal modalities. After careful screening, we collectd 723 sets of RGB-thermal image pairs in which 473 are taken during daytime and 250 are taken at night. The SOD ground truths are obtained by professional annotators looking at both modalities, selecting common salient regions, and manually marking pixel by pixel on the original segmentation ground truths.
+
 #### VT5000
 
 * Paper: [RGBT Salient Object Detection: A Large-scale Dataset and Benchmark](https://arxiv.org/pdf/2007.03262.pdf)
@@ -566,6 +577,19 @@ We take into account several factors that influence camouflage performance compr
   * More details can be found at <https://xueliancheng.github.io/SLT-Net-project/>
 
 The new dataset, or MoCA-Mask for short, contains 87 video sequences with 22,939 frames in total with pixel-wise ground truth masks. MoCA-Mask encapsulates a variety of challenges, such as complex backgrounds and tiny and well camouflaged objects. We provide annotations, bounding boxes, and dense segmentation masks for every five frames for all the videos in the dataset.
+
+### Dichotomous Image Segmentation
+
+#### DIS5K
+
+![](https://github.com/xuebinqin/DIS/raw/main/figures/DIS5k-dataset-v1-sailship.png)
+
+* Paper: [Highly Accurate Dichotomous Image Segmentation](https://arxiv.org/abs/2203.03041)
+* Project: <https://xuebinqin.github.io/dis/index.html>
+* Download: See <https://github.com/xuebinqin/DIS#11-dis-dataset-v10-dis5k>
+
+We first manually collected over 12,000 images from Flickr based on our pre-designed keywords. Then, according to the structural complexities of the objects, we obtained 5,470 images covering 225 categories (Fig.2) in 22 groups. Note that the adopted selection strategy is similar to Zhou et al. [119]. Most selected images only contain single objects  to obtain rich and highly accurate structures and details. Meanwhile, the segmentation and labeling confusions caused by the co-occurrence of multiple objects from different categories are avoided to the greatest extent. Therefore, the labeled targets in our DIS5K are mainly the “foreground objects of the images defined by the predesigned keywords” regardless of their characteristics e.g., salient, common, camouflaged, meticulous, etc.
+Each image of DIS5K is manually labeled with pixel-wise accuracy using GIMP The average per-image labeling time is ∼30 minutes and some images cost up to 10 hours. It is worth mentioning that some of our labeled ground truth (GT) masks are visually close to the image matting GT. The labeled targets, including transparent and translucent, are binary masks with one pixel’s highest accuracy.
 
 ### High-Resolution Saliency
 
