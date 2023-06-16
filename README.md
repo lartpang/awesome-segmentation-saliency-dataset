@@ -1,8 +1,9 @@
 # Another Awesome Dataset List ![Badge](https://img.shields.io/badge/-As%20awesome%20as%20you%20think!-red?style=flat-square)
 
-| License                                                                                               | Last Commit                                                                                                                     | Issues                                                                                                                | Stars                                                                                                               |
-| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT) | ![GitHub last commit](https://img.shields.io/github/last-commit/lartpang/awesome-segmentation-saliency-dataset?style=flat-square) | ![GitHub issues](https://img.shields.io/github/issues/lartpang/awesome-segmentation-saliency-dataset?style=flat-square) | ![GitHub stars](https://img.shields.io/github/stars/lartpang/awesome-segmentation-saliency-dataset?style=flat-square) |
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+![GitHub last commit](https://img.shields.io/github/last-commit/lartpang/awesome-segmentation-saliency-dataset?style=flat-square)
+![GitHub issues](https://img.shields.io/github/issues/lartpang/awesome-segmentation-saliency-dataset?style=flat-square)
+![GitHub stars](https://img.shields.io/github/stars/lartpang/awesome-segmentation-saliency-dataset?style=flat-square)
 
 💖 Some great tools can be found at [resource websites](#resource-websites).
 
@@ -125,7 +126,7 @@
 
 ![img](https://mmcheng.net/wp-content/uploads/2014/07/MSRA10K.jpg)
 
-* Paper: [T. Liu, J. Sun, N. Zheng, X. Tang, and H.-Y. Shum, &#34;Learningto detect a salient object, &#34; inCVPR, 2007, pp.1–8](http://mmlab.ie.cuhk.edu.hk/2007/CVPR07_detect.pdf)
+* Paper: [Learningto detect a salient object](http://mmlab.ie.cuhk.edu.hk/2007/CVPR07_detect.pdf)
 * 主页: 南开大学媒体计算实验室: [https://mmcheng.net/zh/msra10k/](https://mmcheng.net/zh/msra10k/)
 * Download:
   + MSRA10K(formally named as THUS10000; [195MB](http://mftp.mmcheng.net/Data/MSRA10K_Imgs_GT.zip): images + binary masks):
@@ -146,13 +147,13 @@
 
 #### SED1/2
 
-| 数据类型                                           | 示例                                   |
-| -------------------------------------------------- | -------------------------------------- |
+| 数据类型                                           | 示例                                     |
+| -------------------------------------------------- | ---------------------------------------- |
 | 单目标                                             | ![img](./assets/2018-12-29-18-38-59.png) |
 | 双目标                                             | ![img](./assets/2018-12-29-18-39-30.png) |
 | 真值给出的是每个图像由三个不同的人类对象分割的结果 | ![img](./assets/2018-12-29-18-40-17.png) |
 
-* [A. Borji, M.-M. Cheng, H. Jiang, and J. Li, &#34;Salient objectdetection: A benchmark, &#34;IEEE TIP, vol.24, no.12, pp.5706–5722, 2015.](https://arxiv.org/abs/1501.02741)
+* [Salient objectdetection: A benchmark](https://arxiv.org/abs/1501.02741)
 * [Image Segmentation by Probabilistic Bottom-Up Aggregation and Cue Integration](http://www.wisdom.weizmann.ac.il/~meirav/Segmentation_Alpert_Galun_Brandt_Basri.pdf)
 * Project: [http://www.wisdom.weizmann.ac.il/~vision/Seg_Evaluation_DB/index.html](http://www.wisdom.weizmann.ac.il/~vision/Seg_Evaluation_DB/index.html)
 * Download: [http://www.wisdom.weizmann.ac.il/~vision/Seg_Evaluation_DB/dl.html](http://www.wisdom.weizmann.ac.il/~vision/Seg_Evaluation_DB/dl.html)
@@ -513,25 +514,22 @@ This work contributes such a RGB-T image dataset, which includes 821 spatially a
 
 ### COD (Camouflaged Object Detection)
 
-More details can be found at: [http://dpfan.net/Camouflage/](http://dpfan.net/Camouflage/)
-
 #### NC4K
 
 * Paper: [Simultaneously Localize, Segment and Rank the Camouflaged Objects](https://arxiv.org/abs/2103.04011)
 * Project: [https://github.com/JingZhang617/COD-Rank-Localize-and-Segment](https://github.com/JingZhang617/COD-Rank-Localize-and-Segment)
 * Download:
-  * Baidu Pan: [https://pan.baidu.com/s/1bG4F2KJ_4UJG_7XG6ZNBHA](https://pan.baidu.com/s/1bG4F2KJ_4UJG_7XG6ZNBHA) (d581)
-  * Google Drive: [https://drive.google.com/file/d/1kzpX_U3gbgO9MuwZIWTuRVpiB7V6yrAQ/view?usp=sharing](https://drive.google.com/file/d/1kzpX_U3gbgO9MuwZIWTuRVpiB7V6yrAQ/view?usp=sharing)
+  + Baidu Pan: [https://pan.baidu.com/s/1bG4F2KJ_4UJG_7XG6ZNBHA](https://pan.baidu.com/s/1bG4F2KJ_4UJG_7XG6ZNBHA) (d581)
+  + Google Drive: [https://drive.google.com/file/d/1kzpX_U3gbgO9MuwZIWTuRVpiB7V6yrAQ/view?usp=sharing](https://drive.google.com/file/d/1kzpX_U3gbgO9MuwZIWTuRVpiB7V6yrAQ/view?usp=sharing)
 
 As far as we know, there only exists one large camouflaged object testing dataset, the COD10K, while the sizes of other testing datasets are less than 300. We then contribute another camouflaged object testing dataset, namely NC4K, which includes 4,121 images downloaded from the Internet. The new testing dataset can be used to evaluate the generalization ability of existing models.
 
 #### COD10K
 
 * Paper: [Camouflaged Object Detection](https://openaccess.thecvf.com/content_CVPR_2020/papers/Fan_Camouflaged_Object_Detection_CVPR_2020_paper.pdf)
-* Project:
-  * [http://dpfan.net/Camouflage/](http://dpfan.net/Camouflage/)
-  * [https://github.com/DengPingFan/SINet/](https://github.com/DengPingFan/SINet/)
-* Download: See [http://dpfan.net/Camouflage/](http://dpfan.net/Camouflage/)
+* Project: [https://dengpingfan.github.io/pages/COD.html](https://dengpingfan.github.io/pages/COD.html)
+* Download:
+  + Google Drive: [https://drive.google.com/file/d/1vRYAie0JcNStcSwagmCq55eirGyMYGm5/view?usp=sharing](https://drive.google.com/file/d/1vRYAie0JcNStcSwagmCq55eirGyMYGm5/view?usp=sharing)
 
 We elaborately collect a novel dataset, called COD10K, which comprises 10,000 images covering camouflaged objects in various natural scenes, over 78 object categories. All the images are densely annotated with category, bounding-box, object-/instance-level, and mattinglevel labels. This dataset could serve as a catalyst for progressing many vision tasks, e.g., localization, segmentation, and alpha-matting, etc.
 
@@ -543,7 +541,6 @@ We elaborately collect a novel dataset, called COD10K, which comprises 10,000 im
   * [https://github.com/ltnghia/ANet](https://github.com/ltnghia/ANet)
 * Download:
   * Official: [https://drive.google.com/open?id=1h-OqZdwkuPhBvGcVAwmh0f1NGqlH_4B6](https://drive.google.com/open?id=1h-OqZdwkuPhBvGcVAwmh0f1NGqlH_4B6)
-  * See [http://dpfan.net/Camouflage/](http://dpfan.net/Camouflage/)
 
 Camouflaged Object (CAMO) dataset specifically designed for the task of camouflaged object segmentation. We focus on two categories, i.e., naturally camouflaged objects and artificially camouflaged objects, which usually correspond to animals and humans in the real world, respectively.
 
@@ -553,12 +550,8 @@ CAMO has objectness mask ground-truth.
 
 #### CHAMELEON
 
-* Project: [Animal Camouflage Analysis: CHAMELEON Database](http://kgwisc.aei.polsl.pl/index.php/en/dataset/63-animal-camouflage-analysis)
-* Download:
-  * Official:
-    * [http://kgwisc.aei.polsl.pl/datasets/CamouflageBase/animals.7z](http://kgwisc.aei.polsl.pl/datasets/CamouflageBase/animals.7z)
-    * [http://kgwisc.aei.polsl.pl/datasets/CamouflageBase/masks.7z](http://kgwisc.aei.polsl.pl/datasets/CamouflageBase/masks.7z)
-  * See [http://dpfan.net/Camouflage/](http://dpfan.net/Camouflage/)
+* Project: [Animal Camouflage Analysis: CHAMELEON Database](https://www.polsl.pl/rau6/chameleon-database-animal-camouflage-analysis/)
+* Download: Unavailable
 
 The data set was crafted manually. In order to avoid personal bias, authors five fellow students were asked to collect a pool of camouflaged animals images and manually annotate its areas. The images were taken from the Internet, selected using Google image search using the 'camouflaged animal ' keyword. They were selected in order to present various camouflage efficiency – from animals clearly visible to almost invisible. Thanks to this a test pool was gathered, containing 76 photos (Fig. 2), which were taken by independent photographers who marked these as good examples of camouflaged animals. Next, image segments were annotated (Fig. 3) into four categories – C0 non-masking background (blue), C1 masking background (green), C2 masked foreground (black), C3 non-masked foreground (red).
 
@@ -597,8 +590,8 @@ The new dataset, or MoCA-Mask for short, contains 87 video sequences with 22,939
 * Project: [https://xuebinqin.github.io/dis/index.html](https://xuebinqin.github.io/dis/index.html)
 * Download: See [https://github.com/xuebinqin/DIS#11-dis-dataset-v10-dis5k](https://github.com/xuebinqin/DIS#11-dis-dataset-v10-dis5k)
 
-We first manually collected over 12,000 images from Flickr based on our pre-designed keywords. Then, according to the structural complexities of the objects, we obtained 5,470 images covering 225 categories (Fig.2) in 22 groups. Note that the adopted selection strategy is similar to Zhou et al. [119]. Most selected images only contain single objects  to obtain rich and highly accurate structures and details. Meanwhile, the segmentation and labeling confusions caused by the co-occurrence of multiple objects from different categories are avoided to the greatest extent. Therefore, the labeled targets in our DIS5K are mainly the “foreground objects of the images defined by the predesigned keywords” regardless of their characteristics e.g., salient, common, camouflaged, meticulous, etc.
-Each image of DIS5K is manually labeled with pixel-wise accuracy using GIMP The average per-image labeling time is ∼30 minutes and some images cost up to 10 hours. It is worth mentioning that some of our labeled ground truth (GT) masks are visually close to the image matting GT. The labeled targets, including transparent and translucent, are binary masks with one pixel’s highest accuracy.
+We first manually collected over 12,000 images from Flickr based on our pre-designed keywords. Then, according to the structural complexities of the objects, we obtained 5,470 images covering 225 categories in 22 groups. Note that the adopted selection strategy is similar to Zhou et al. Most selected images only contain single objects  to obtain rich and highly accurate structures and details. Meanwhile, the segmentation and labeling confusions caused by the co-occurrence of multiple objects from different categories are avoided to the greatest extent. Therefore, the labeled targets in our DIS5K are mainly the "foreground objects of the images defined by the predesigned keywords" regardless of their characteristics e.g., salient, common, camouflaged, meticulous, etc.
+Each image of DIS5K is manually labeled with pixel-wise accuracy using GIMP The average per-image labeling time is ∼30 minutes and some images cost up to 10 hours. It is worth mentioning that some of our labeled ground truth (GT) masks are visually close to the image matting GT. The labeled targets, including transparent and translucent, are binary masks with one pixel's highest accuracy.
 
 ### High-Resolution Saliency
 
@@ -700,7 +693,7 @@ In this dataset, we collected 21 image groups containing totally 150 images from
 #### RGBDCoseg183
 
 * Paper: [Object-based RGBD image co-segmentation with mutex constraint](http://www.cv-foundation.org/openaccess/content_cvpr_2015/html/Fu_Object-Based_RGBD_Image_2015_CVPR_paper.html)
-* Download: 
+* Download:
   * OneDrive: https://onedrive.live.com/redir?resid=F3A8A31ABFAC51B0!269&authkey=!AHUBN0lk5kQLWzQ&ithint=file%2czip
   * BaiduYun: https://pan.baidu.com/s/1cAMin0
 
@@ -820,7 +813,7 @@ We select 1702 images from the training set of the KAIST Multispectral Pedestria
   * [http://www.sysu-hcp.net/resources/datasets/index.html](http://www.sysu-hcp.net/resources/datasets/index.html)
   * [http://vision.sysu.edu.cn/projects/grayscale_thermal_detection/](http://vision.sysu.edu.cn/projects/grayscale_thermal_detection/)
 
-It is urgent need to study the multi-model moving object detection due to its own shortness of inadequate of single model videos. However, almost no complete good multi-model datasets to use, thus, we proposed a multi-model moving object detection dataset and the specific details as followings.Our multi-model moving object detection dataset mainly considered 7 challenges, i.e. interminttent motion, low illumination, bad weather, intense shadow, dynamic scene, background clutter, thermal crossover et al.
+It is urgent need to study the multi-model moving object detection due to its own shortness of inadequate of single model videos. However, almost no complete good multi-model datasets to use, thus, we proposed a multi-model moving object detection dataset and the specific details as followings. Our multi-model moving object detection dataset mainly considered 7 challenges, i.e. interminttent motion, low illumination, bad weather, intense shadow, dynamic scene, background clutter, thermal crossover et al.
 
 The following main aspects are taken into account in creating the grayscale-thermal video: 1. Scene category. Including laboratory rooms, campus roads, playgrounds and water pools et al. 2. Object category. Including rigid and non-rigid objects, such as vehicles, pedestrians and animals. 3. Intermittent motion. 4. Shadow effect. 5. Illumination condition. 6. Background factor.
 
@@ -888,7 +881,7 @@ We have released this dataset (1449 Images in total, with train/validation split
 * Project: [http://vision.is.tohoku.ac.jp/~kyamagu/research/clothing_parsing/](http://vision.is.tohoku.ac.jp/~kyamagu/research/clothing_parsing/)
 * Download: See [http://vision.is.tohoku.ac.jp/~kyamagu/research/clothing_parsing/](http://vision.is.tohoku.ac.jp/~kyamagu/research/clothing_parsing/)
 
-We introduce a novel dataset, useful for training and testing clothing estimation techniques. This dataset consists of 158,235 photographs collected from Chictopia.com, a social networking website for fashion bloggers. On this website, fashionistas upload “outfit of the day” type pictures, designed to draw attention to their fashion choices or as a form of social interaction with peers. Because these are people who particularly care about their clothes they tend to display a wide range of styles, accessories, and garments. However, pictures are also often depicted in relatively simple poses (mostly standing), against relatively clean backgrounds, and without many other people in the picture. This makes for an ideal scenario for studying clothing! In addition, users also provide additional outfit information in the form of tags, comments, and links, etc (e.g. Fig 3). We make use of the tag portion of this meta-data to extract useful information about what clothing items might be present in each photo (but can also ignore this information if we want to study clothing parsing with no prior knowledge of items). Sometimes the tags are noisy or  incomplete, but often they cover the items in an outfit well. As a training and evaluation set, we select 685 photos with good visibility of the full body and covering a variety of clothing items. For this carefully selected subset, we design and make use of 2 Amazon Mechanical Turk jobs to gather annotations. The first Turk job gathers ground truth pose annotations for the usual 14 body parts. The second Turk job gathers ground truth clothing labels on superpixel regions. All annotations are verified and corrected if necessary to obtain high quality annotations.
+We introduce a novel dataset, useful for training and testing clothing estimation techniques. This dataset consists of 158,235 photographs collected from Chictopia.com, a social networking website for fashion bloggers. On this website, fashionistas upload "outfit of the day" type pictures, designed to draw attention to their fashion choices or as a form of social interaction with peers. Because these are people who particularly care about their clothes they tend to display a wide range of styles, accessories, and garments. However, pictures are also often depicted in relatively simple poses (mostly standing), against relatively clean backgrounds, and without many other people in the picture. This makes for an ideal scenario for studying clothing! In addition, users also provide additional outfit information in the form of tags, comments, and links, etc (e.g. Fig 3). We make use of the tag portion of this meta-data to extract useful information about what clothing items might be present in each photo (but can also ignore this information if we want to study clothing parsing with no prior knowledge of items). Sometimes the tags are noisy or  incomplete, but often they cover the items in an outfit well. As a training and evaluation set, we select 685 photos with good visibility of the full body and covering a variety of clothing items. For this carefully selected subset, we design and make use of 2 Amazon Mechanical Turk jobs to gather annotations. The first Turk job gathers ground truth pose annotations for the usual 14 body parts. The second Turk job gathers ground truth clothing labels on superpixel regions. All annotations are verified and corrected if necessary to obtain high quality annotations.
 
 #### HumanParsing-Dataset
 
@@ -1059,10 +1052,8 @@ After this labeling process, we collect 2,000 images with high-quality mattes. T
 
 * Paper: [DeepFashion: Powering Robust Clothes Recognition and Retrieval with Rich Annotations](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Liu_DeepFashion_Powering_Robust_CVPR_2016_paper.pdf)
 * Project:
-
   * [https://liuziwei7.github.io/projects/DeepFashion.html](https://liuziwei7.github.io/projects/DeepFashion.html)
   * [http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion.html](http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion.html)
-
   + [Multimedia Laboratory](http://mmlab.ie.cuhk.edu.hk/)
   + mmfashion: [https://github.com/open-mmlab/mmfashion](https://github.com/open-mmlab/mmfashion)
 * Download: See [http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion.html](http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion.html)
@@ -1134,4 +1125,4 @@ ML-Images: the largest open-source multi-label image database, including 17, 609
   + AI开发者神器! 谷歌重磅推出数据集搜索 Dataset Search: [https://mp.weixin.qq.com/s/ErbwXAz-_AJrmUGMHZIcwg](https://mp.weixin.qq.com/s/ErbwXAz-_AJrmUGMHZIcwg)
   + Making it easier to discover datasets: [https://www.blog.google/products/search/making-it-easier-discover-datasets/](https://www.blog.google/products/search/making-it-easier-discover-datasets/)
 * ⭐️⭐️⭐️ Yet Another Computer Vision Index To Datasets (YACVID): This website provides a list of frequently used computer vision datasets. Wait, there is more! There is also a description containing common problems, pitfalls and characteristics and now a searchable TAG cloud.: [http://yacvid.hayko.at/](http://yacvid.hayko.at/)
-* ⭐️⭐️⭐️ IEEE DataPort provides a sustainable platform to all data owners in support of research and IEEE’s overall mission of Advancing Technology for Humanity: [https://ieee-dataport.org/](https://ieee-dataport.org/)
+* ⭐️⭐️⭐️ IEEE DataPort provides a sustainable platform to all data owners in support of research and IEEE's overall mission of Advancing Technology for Humanity: [https://ieee-dataport.org/](https://ieee-dataport.org/)
