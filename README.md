@@ -50,13 +50,6 @@
       - [VT5000](#vt5000)
       - [VT1000](#vt1000)
       - [VT821](#vt821)
-    - [COD (Camouflaged Object Detection)](#cod-camouflaged-object-detection)
-      - [NC4K](#nc4k)
-      - [COD10K](#cod10k)
-      - [CAMO](#camo)
-      - [CHAMELEON](#chameleon)
-      - [CPD1K: Camouflaged People Dataset](#cpd1k-camouflaged-people-dataset)
-      - [MoCA-Mask](#moca-mask)
     - [Dichotomous Image Segmentation](#dichotomous-image-segmentation)
       - [DIS5K](#dis5k)
     - [High-Resolution Saliency](#high-resolution-saliency)
@@ -83,6 +76,20 @@
       - [HS-SOD](#hs-sod)
       - [KAIST Salient Pedestrian Dataset](#kaist-salient-pedestrian-dataset)
       - [Grayscale-Thermal Foreground Detection Dataset](#grayscale-thermal-foreground-detection-dataset)
+  - [COD (Camouflaged/Concealed Object Detection)](#cod-camouflagedconcealed-object-detection)
+    - [RGB Image COD](#rgb-image-cod)
+      - [NC4K](#nc4k)
+      - [COD10K](#cod10k)
+      - [CAMO](#camo)
+      - [CHAMELEON](#chameleon)
+      - [CPD1K: Camouflaged People Dataset](#cpd1k-camouflaged-people-dataset)
+    - [RGB Video COD](#rgb-video-cod)
+      - [MoCA-Mask](#moca-mask)
+      - [CAD (Camouflaged Animation Dataset)](#cad-camouflaged-animation-dataset)
+    - [RGB-D Image COD](#rgb-d-image-cod)
+      - [CODD](#codd)
+    - [Open-Vocabulary Camouflaged Object Segmentation](#open-vocabulary-camouflaged-object-segmentation)
+      - [OVCamo](#ovcamo)
   - [Segmentation](#segmentation)
     - [VOS (Video Object Segmentation)](#vos-video-object-segmentation)
       - [DAVIS](#davis)
@@ -530,74 +537,6 @@ Existing RGB-T image benchmark dataset for saliency detection has several limita
 
 This work contributes such a RGB-T image dataset, which includes 821 spatially aligned RGB-T image pairs and their ground truth annotations for saliency detection purpose. The image pairs are with high diversity recorded under different scenes and environmental conditions, and we annotate 11 challenges on these image pairs for performing the challengesensitive analysis for different saliency detection algorithms.
 
-### COD (Camouflaged Object Detection)
-
-#### NC4K
-
-* Paper: [Simultaneously Localize, Segment and Rank the Camouflaged Objects](https://arxiv.org/abs/2103.04011)
-* Project: [https://github.com/JingZhang617/COD-Rank-Localize-and-Segment](https://github.com/JingZhang617/COD-Rank-Localize-and-Segment)
-* Download:
-  + Baidu Pan: [https://pan.baidu.com/s/1bG4F2KJ_4UJG_7XG6ZNBHA](https://pan.baidu.com/s/1bG4F2KJ_4UJG_7XG6ZNBHA) (d581)
-  + Google Drive: [https://drive.google.com/file/d/1kzpX_U3gbgO9MuwZIWTuRVpiB7V6yrAQ/view?usp=sharing](https://drive.google.com/file/d/1kzpX_U3gbgO9MuwZIWTuRVpiB7V6yrAQ/view?usp=sharing)
-
-As far as we know, there only exists one large camouflaged object testing dataset, the COD10K, while the sizes of other testing datasets are less than 300. We then contribute another camouflaged object testing dataset, namely NC4K, which includes 4,121 images downloaded from the Internet. The new testing dataset can be used to evaluate the generalization ability of existing models.
-
-#### COD10K
-
-* Paper: [Camouflaged Object Detection](https://openaccess.thecvf.com/content_CVPR_2020/papers/Fan_Camouflaged_Object_Detection_CVPR_2020_paper.pdf)
-* Project: [https://dengpingfan.github.io/pages/COD.html](https://dengpingfan.github.io/pages/COD.html)
-* Download:
-  + Google Drive: [https://drive.google.com/file/d/1vRYAie0JcNStcSwagmCq55eirGyMYGm5/view?usp=sharing](https://drive.google.com/file/d/1vRYAie0JcNStcSwagmCq55eirGyMYGm5/view?usp=sharing)
-
-We elaborately collect a novel dataset, called COD10K, which comprises 10,000 images covering camouflaged objects in various natural scenes, over 78 object categories. All the images are densely annotated with category, bounding-box, object-/instance-level, and mattinglevel labels. This dataset could serve as a catalyst for progressing many vision tasks, e.g., localization, segmentation, and alpha-matting, etc.
-
-#### CAMO
-
-* Paper: [Anabranch network for camouflaged object segmentation](https://doi.org/10.1016/j.cviu.2019.04.006)
-* Project:
-  * [https://sites.google.com/view/ltnghia/research/camo](https://sites.google.com/view/ltnghia/research/camo)
-  * [https://github.com/ltnghia/ANet](https://github.com/ltnghia/ANet)
-* Download:
-  * Official: [https://drive.google.com/open?id=1h-OqZdwkuPhBvGcVAwmh0f1NGqlH_4B6](https://drive.google.com/open?id=1h-OqZdwkuPhBvGcVAwmh0f1NGqlH_4B6)
-
-Camouflaged Object (CAMO) dataset specifically designed for the task of camouflaged object segmentation. We focus on two categories, i.e., naturally camouflaged objects and artificially camouflaged objects, which usually correspond to animals and humans in the real world, respectively.
-
-Camouflaged object images consists of 1250 images (1000 images for the training set and 250 images for the testing set). Non-camouflaged object images are collected from the MS-COCO dataset (1000 images for the training set and 250 images for the testing set).
-
-CAMO has objectness mask ground-truth.
-
-#### CHAMELEON
-
-* Project: [Animal Camouflage Analysis: CHAMELEON Database](https://www.polsl.pl/rau6/chameleon-database-animal-camouflage-analysis/)
-* Download: Unavailable
-
-The data set was crafted manually. In order to avoid personal bias, authors five fellow students were asked to collect a pool of camouflaged animals images and manually annotate its areas. The images were taken from the Internet, selected using Google image search using the 'camouflaged animal ' keyword. They were selected in order to present various camouflage efficiency – from animals clearly visible to almost invisible. Thanks to this a test pool was gathered, containing 76 photos (Fig. 2), which were taken by independent photographers who marked these as good examples of camouflaged animals. Next, image segments were annotated (Fig. 3) into four categories – C0 non-masking background (blue), C1 masking background (green), C2 masked foreground (black), C3 non-masked foreground (red).
-
-The online survey was prepared using the Google forms. The users were requested to evaluate the visibility of a hidden animal with a numerical scale from 1 to 5, where ends of the scale were described as 'animal is in plain sight' and 'what animal'. The questionnaire form allowed to collect 191 answers from different countries. Then, in order to compensate personal bias, the raw responses were standardized using z-scores per person and then re-scaled backward to 1 to 5 scale. Z-scoring is computed as (where: i denotes user index, j denotes image index):
-
-#### CPD1K: Camouflaged People Dataset
-
-* Paper: [Detection of People With Camouflage Pattern Via Dense Deconvolution Network](https://ieeexplore.ieee.org/document/8336933)
-* Project: [https://github.com/xfflyer/Camouflaged-people-detection](https://github.com/xfflyer/Camouflaged-people-detection)
-* Download: [https://github.com/xfflyer/Camouflaged-Data](https://github.com/xfflyer/Camouflaged-Data)
-
-To build the dataset, we initially collected the video clips of 20 groups, which included the people with different kinds of camouflage patterns. These videos are captured by a fixed camera to evaluate the camouflage performance of different camouflage patterns in each corresponding natural scenes. At the same time, they are naturally suitable for the evaluation of camouflaged people detection methods.
-
-We take into account several factors that influence camouflage performance comprehensively. They include different styles of camouflage patterns, abundant natural scenes, different illumination and occlusion conditions, and different scales and postures of people. At last, 1000 images of size 480 × 854 are selected from the video clips. All the images are labeled as the pixel-level ground-truth annotation.
-
-#### MoCA-Mask
-
-![](https://xueliancheng.github.io/SLT-Net-project/images/samples.png)
-
-* Paper: [Implicit Motion Handling for Video Camouflaged Object Detection](http://arxiv.org/abs/2203.07363)
-* Project:
-  * [https://xueliancheng.github.io/SLT-Net-project/](https://xueliancheng.github.io/SLT-Net-project/)
-  * [https://github.com/XuelianCheng/SLT-Net](https://github.com/XuelianCheng/SLT-Net)
-* Download: [https://drive.google.com/file/d/1FB24BGVrPOeUpmYbKZJYL5ermqUvBo_6/view?usp=sharing](https://drive.google.com/file/d/1FB24BGVrPOeUpmYbKZJYL5ermqUvBo_6/view?usp=sharing)
-  * More details can be found at [https://xueliancheng.github.io/SLT-Net-project/](https://xueliancheng.github.io/SLT-Net-project/)
-
-The new dataset, or MoCA-Mask for short, contains 87 video sequences with 22,939 frames in total with pixel-wise ground truth masks. MoCA-Mask encapsulates a variety of challenges, such as complex backgrounds and tiny and well camouflaged objects. We provide annotations, bounding boxes, and dense segmentation masks for every five frames for all the videos in the dataset.
-
 ### Dichotomous Image Segmentation
 
 #### DIS5K
@@ -834,6 +773,105 @@ We select 1702 images from the training set of the KAIST Multispectral Pedestria
 It is urgent need to study the multi-model moving object detection due to its own shortness of inadequate of single model videos. However, almost no complete good multi-model datasets to use, thus, we proposed a multi-model moving object detection dataset and the specific details as followings. Our multi-model moving object detection dataset mainly considered 7 challenges, i.e. interminttent motion, low illumination, bad weather, intense shadow, dynamic scene, background clutter, thermal crossover et al.
 
 The following main aspects are taken into account in creating the grayscale-thermal video: 1. Scene category. Including laboratory rooms, campus roads, playgrounds and water pools et al. 2. Object category. Including rigid and non-rigid objects, such as vehicles, pedestrians and animals. 3. Intermittent motion. 4. Shadow effect. 5. Illumination condition. 6. Background factor.
+
+## COD (Camouflaged/Concealed Object Detection)
+
+### RGB Image COD
+
+#### NC4K
+
+* Paper: [Simultaneously Localize, Segment and Rank the Camouflaged Objects](https://arxiv.org/abs/2103.04011)
+* Project: [https://github.com/JingZhang617/COD-Rank-Localize-and-Segment](https://github.com/JingZhang617/COD-Rank-Localize-and-Segment)
+* Download:
+  + Baidu Pan: [https://pan.baidu.com/s/1bG4F2KJ_4UJG_7XG6ZNBHA](https://pan.baidu.com/s/1bG4F2KJ_4UJG_7XG6ZNBHA) (d581)
+  + Google Drive: [https://drive.google.com/file/d/1kzpX_U3gbgO9MuwZIWTuRVpiB7V6yrAQ/view?usp=sharing](https://drive.google.com/file/d/1kzpX_U3gbgO9MuwZIWTuRVpiB7V6yrAQ/view?usp=sharing)
+
+As far as we know, there only exists one large camouflaged object testing dataset, the COD10K, while the sizes of other testing datasets are less than 300. We then contribute another camouflaged object testing dataset, namely NC4K, which includes 4,121 images downloaded from the Internet. The new testing dataset can be used to evaluate the generalization ability of existing models.
+
+#### COD10K
+
+* Paper: [Camouflaged Object Detection](https://openaccess.thecvf.com/content_CVPR_2020/papers/Fan_Camouflaged_Object_Detection_CVPR_2020_paper.pdf)
+* Project: [https://dengpingfan.github.io/pages/COD.html](https://dengpingfan.github.io/pages/COD.html)
+* Download:
+  + Google Drive: [https://drive.google.com/file/d/1vRYAie0JcNStcSwagmCq55eirGyMYGm5/view?usp=sharing](https://drive.google.com/file/d/1vRYAie0JcNStcSwagmCq55eirGyMYGm5/view?usp=sharing)
+
+We elaborately collect a novel dataset, called COD10K, which comprises 10,000 images covering camouflaged objects in various natural scenes, over 78 object categories. All the images are densely annotated with category, bounding-box, object-/instance-level, and mattinglevel labels. This dataset could serve as a catalyst for progressing many vision tasks, e.g., localization, segmentation, and alpha-matting, etc.
+
+#### CAMO
+
+* Paper: [Anabranch network for camouflaged object segmentation](https://doi.org/10.1016/j.cviu.2019.04.006)
+* Project:
+  * [https://sites.google.com/view/ltnghia/research/camo](https://sites.google.com/view/ltnghia/research/camo)
+  * [https://github.com/ltnghia/ANet](https://github.com/ltnghia/ANet)
+* Download:
+  * Official: [https://drive.google.com/open?id=1h-OqZdwkuPhBvGcVAwmh0f1NGqlH_4B6](https://drive.google.com/open?id=1h-OqZdwkuPhBvGcVAwmh0f1NGqlH_4B6)
+
+Camouflaged Object (CAMO) dataset specifically designed for the task of camouflaged object segmentation. We focus on two categories, i.e., naturally camouflaged objects and artificially camouflaged objects, which usually correspond to animals and humans in the real world, respectively.
+
+Camouflaged object images consists of 1250 images (1000 images for the training set and 250 images for the testing set). Non-camouflaged object images are collected from the MS-COCO dataset (1000 images for the training set and 250 images for the testing set).
+
+CAMO has objectness mask ground-truth.
+
+#### CHAMELEON
+
+* Project: [Animal Camouflage Analysis: CHAMELEON Database](https://www.polsl.pl/rau6/chameleon-database-animal-camouflage-analysis/)
+* Download: Unavailable
+
+The data set was crafted manually. In order to avoid personal bias, authors five fellow students were asked to collect a pool of camouflaged animals images and manually annotate its areas. The images were taken from the Internet, selected using Google image search using the 'camouflaged animal ' keyword. They were selected in order to present various camouflage efficiency – from animals clearly visible to almost invisible. Thanks to this a test pool was gathered, containing 76 photos (Fig. 2), which were taken by independent photographers who marked these as good examples of camouflaged animals. Next, image segments were annotated (Fig. 3) into four categories – C0 non-masking background (blue), C1 masking background (green), C2 masked foreground (black), C3 non-masked foreground (red).
+
+The online survey was prepared using the Google forms. The users were requested to evaluate the visibility of a hidden animal with a numerical scale from 1 to 5, where ends of the scale were described as 'animal is in plain sight' and 'what animal'. The questionnaire form allowed to collect 191 answers from different countries. Then, in order to compensate personal bias, the raw responses were standardized using z-scores per person and then re-scaled backward to 1 to 5 scale. Z-scoring is computed as (where: i denotes user index, j denotes image index):
+
+#### CPD1K: Camouflaged People Dataset
+
+* Paper: [Detection of People With Camouflage Pattern Via Dense Deconvolution Network](https://ieeexplore.ieee.org/document/8336933)
+* Project: [https://github.com/xfflyer/Camouflaged-people-detection](https://github.com/xfflyer/Camouflaged-people-detection)
+* Download: [https://github.com/xfflyer/Camouflaged-Data](https://github.com/xfflyer/Camouflaged-Data)
+
+To build the dataset, we initially collected the video clips of 20 groups, which included the people with different kinds of camouflage patterns. These videos are captured by a fixed camera to evaluate the camouflage performance of different camouflage patterns in each corresponding natural scenes. At the same time, they are naturally suitable for the evaluation of camouflaged people detection methods.
+
+We take into account several factors that influence camouflage performance comprehensively. They include different styles of camouflage patterns, abundant natural scenes, different illumination and occlusion conditions, and different scales and postures of people. At last, 1000 images of size 480 × 854 are selected from the video clips. All the images are labeled as the pixel-level ground-truth annotation.
+
+### RGB Video COD
+
+#### MoCA-Mask
+
+![](https://xueliancheng.github.io/SLT-Net-project/images/samples.png)
+
+* Paper: [Implicit Motion Handling for Video Camouflaged Object Detection](http://arxiv.org/abs/2203.07363)
+* Project:
+  * [https://xueliancheng.github.io/SLT-Net-project/](https://xueliancheng.github.io/SLT-Net-project/)
+  * [https://github.com/XuelianCheng/SLT-Net](https://github.com/XuelianCheng/SLT-Net)
+* Download: [https://drive.google.com/file/d/1FB24BGVrPOeUpmYbKZJYL5ermqUvBo_6/view?usp=sharing](https://drive.google.com/file/d/1FB24BGVrPOeUpmYbKZJYL5ermqUvBo_6/view?usp=sharing)
+  * More details can be found at [https://xueliancheng.github.io/SLT-Net-project/](https://xueliancheng.github.io/SLT-Net-project/)
+
+The new dataset, or MoCA-Mask for short, contains 87 video sequences with 22,939 frames in total with pixel-wise ground truth masks. MoCA-Mask encapsulates a variety of challenges, such as complex backgrounds and tiny and well camouflaged objects. We provide annotations, bounding boxes, and dense segmentation masks for every five frames for all the videos in the dataset.
+
+#### CAD (Camouflaged Animation Dataset)
+
+* Paper: [It's Moving! A Probabilistic Model for Causal Motion Segmentation in Moving Camera Videos](https://arxiv.org/abs/1604.00136)
+* Project: [Causal Motion Segmentation in Moving Camera Videos](https://vis-www.cs.umass.edu/motionSegmentation/)
+* Download:
+  * [Camouflaged Animal Dataset](http://vis-www.cs.umass.edu/motionSegmentation/data/CamouflagedAnimalDataset.zip)
+  * [Binary Mask from SLT-Net](https://drive.google.com/file/d/1LwswF3axQ0BSC6DllTpyL77Ktruy-6M6/view?usp=sharing)
+
+### RGB-D Image COD
+
+#### CODD
+
+* Paper: [A new benchmark for camouflaged object detection: RGB-D camouflaged object detection dataset](https://www.degruyter.com/document/doi/10.1515/phys-2024-0060/html)
+* Download: [CODD-Dateset](https://github.com/zcc0616/CODD-Dateset)
+
+This dataset is obtained by converting the existing salient object detection RGB-D datasets by image-to-image translation techniques, which is comparable to the current widely used camouflaged object detection dataset in terms of diversity and complexity.
+
+### Open-Vocabulary Camouflaged Object Segmentation
+
+#### OVCamo
+
+* Paper: [Open-Vocabulary Camouflaged Object Segmentation](https://arxiv.org/abs/2311.11241)
+* Project: [OVCOS: Open-Vocabulary Camouflaged Object Segmentation](https://lartpang.github.io/docs/ovcamo.html)
+* Download: [Github Releases](https://github.com/lartpang/OVCamo/releases/tag/dataset-v1.0)
+
+Our data is collected from existing CSU datasets that have finely annotated segmentation maps. Specifically, the OVCamo integrates 11,483 hand-selected images covering 75 object classes reconstructed from several public datasets.
 
 ## Segmentation
 
