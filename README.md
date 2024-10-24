@@ -87,6 +87,7 @@
       - [MoCA-Mask](#moca-mask)
       - [CAD (Camouflaged Animation Dataset)](#cad-camouflaged-animation-dataset)
     - [RGB-D Image COD](#rgb-d-image-cod)
+      - [ACOD-12K](#acod-12k)
       - [CODD](#codd)
     - [Open-Vocabulary Camouflaged Object Segmentation](#open-vocabulary-camouflaged-object-segmentation)
       - [OVCamo](#ovcamo)
@@ -855,6 +856,26 @@ The new dataset, or MoCA-Mask for short, contains 87 video sequences with 22,939
   * [Binary Mask from SLT-Net](https://drive.google.com/file/d/1LwswF3axQ0BSC6DllTpyL77Ktruy-6M6/view?usp=sharing)
 
 ### RGB-D Image COD
+
+#### ACOD-12K
+
+* Paper: [Depth-Aware Concealed Crop Detection in Dense Agricultural Scenes](https://openaccess.thecvf.com/content/CVPR2024/papers/Wang_Depth-Aware_Concealed_Crop_Detection_in_Dense_Agricultural_Scenes_CVPR_2024_paper.pdf)
+* Project: [RISNet](https://github.com/Kki2Eve/RISNet)
+* Download: <https://github.com/Kki2Eve/RISNet?tab=readme-ov-file#datasets>
+
+In this paper, we introduce a new benchmark named Concealed Crop Detection (CCD), designed for identifying concealed objects in dense agricultural scenes.
+We observe that unimodal information lacks the capacity to discern subtle distinctions between objects and backgrounds.
+To overcome this limitation, we integrate depth maps to supplement spatial information absent in RGB data.
+The geometric priors from depth maps effectively mitigate interference caused by noise, thereby enhancing CCD performance.
+To facilitate research on CCD, we have curated an extensive RGB-D dataset, ACOD-12K.
+Leveraging the ZED2i depth camera during fieldwork, we capture 6092 images of concealed objects within dense agricultural scenes, simultaneously recording corresponding depth images.
+In comparison to the existing COD datasets, ACOD-12K exhibits several advantages:
+* ACOD-12K is the sole existing multi-modal COD dataset.
+* ACOD-12K is the largest-scale COD dataset with the
+highest image resolution among the existing datasets.
+* ACOD-12K boasts a higher object density, with these objects situated in diverse scenes and distributed randomly
+across different positions within the images.
+* In contrast to the current COD datasets, ACOD-12K focuses on the distinctive challenges presented by concealed objects in dense agricultural scenes.
 
 #### CODD
 
