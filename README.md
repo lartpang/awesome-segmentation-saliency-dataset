@@ -1,15 +1,12 @@
 # Another Awesome Dataset List ![Badge](https://img.shields.io/badge/-As%20awesome%20as%20you%20think!-red?style=flat-square)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-![GitHub last commit](https://img.shields.io/github/last-commit/lartpang/awesome-segmentation-saliency-dataset?style=flat-square)
-![GitHub issues](https://img.shields.io/github/issues/lartpang/awesome-segmentation-saliency-dataset?style=flat-square)
-![GitHub stars](https://img.shields.io/github/stars/lartpang/awesome-segmentation-saliency-dataset?style=flat-square)
+| [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT) | ![GitHub last commit](https://img.shields.io/github/last-commit/lartpang/awesome-segmentation-saliency-dataset?style=flat-square) | ![GitHub issues](https://img.shields.io/github/issues/lartpang/awesome-segmentation-saliency-dataset?style=flat-square) | ![GitHub stars](https://img.shields.io/github/stars/lartpang/awesome-segmentation-saliency-dataset?style=flat-square) |
+| ---------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
 
-💖 Some great tools can be found at [resource websites](#resource-websites).
-
-> [!note] Please **cite the related paper** if you **use their dataset** 😄
->
-> I list some other datasets in the issue [https://github.com/lartpang/awesome-segmentation-saliency-dataset/issues/15](https://github.com/lartpang/awesome-segmentation-saliency-dataset/issues/15). I hope it works for you.
+> [!note]
+> - 💖 Some great tools can be found at [resource websites](#resource-websites).
+> - 😄 Please **cite the related paper** if you **use their dataset**
+> - 🌜 I list some other datasets in the issue [https://github.com/lartpang/awesome-segmentation-saliency-dataset/issues/15](https://github.com/lartpang/awesome-segmentation-saliency-dataset/issues/15). I hope it works for you.
 
 - [Another Awesome Dataset List ](#another-awesome-dataset-list-)
   - [Saliency](#saliency)
@@ -91,6 +88,17 @@
       - [CODD](#codd)
     - [Open-Vocabulary Camouflaged Object Segmentation](#open-vocabulary-camouflaged-object-segmentation)
       - [OVCamo](#ovcamo)
+  - [Industrial Scene](#industrial-scene)
+    - [Crack Detection](#crack-detection)
+      - [T-CRACK \& C-CRACK](#t-crack--c-crack)
+    - [AD (Anomaly Detection)](#ad-anomaly-detection)
+      - [MVTec AD](#mvtec-ad)
+      - [MPDD](#mpdd)
+  - [Medical Scene](#medical-scene)
+    - [Trichomonas Vaginalis Segmentation](#trichomonas-vaginalis-segmentation)
+      - [TVMI3K](#tvmi3k)
+    - [Vessel Segmentation](#vessel-segmentation)
+      - [XCAD](#xcad)
   - [Segmentation](#segmentation)
     - [VOS (Video Object Segmentation)](#vos-video-object-segmentation)
       - [DAVIS](#davis)
@@ -106,9 +114,6 @@
       - [Object Extraction Dataset](#object-extraction-dataset)
       - [Clothing Co-Parsing (CCP) Dataset](#clothing-co-parsing-ccp-dataset)
       - [People segmentation dataset](#people-segmentation-dataset)
-  - [AD (Anomaly Detection)](#ad-anomaly-detection)
-    - [MVTec AD](#mvtec-ad)
-    - [MPDD](#mpdd)
   - [Matting](#matting)
     - [alphamatting.com](#alphamattingcom)
     - [Composition-1k: Deep Image Matting](#composition-1k-deep-image-matting)
@@ -894,6 +899,70 @@ This dataset is obtained by converting the existing salient object detection RGB
 
 Our data is collected from existing CSU datasets that have finely annotated segmentation maps. Specifically, the OVCamo integrates 11,483 hand-selected images covering 75 object classes reconstructed from several public datasets.
 
+## Industrial Scene
+
+### Crack Detection
+
+* Target Characteristic: Tubular/Curvilinear Structure
+
+#### T-CRACK & C-CRACK
+
+* Paper: [EAFNet: Extraction-amplification-fusion network for tiny cracks detection](https://doi.org/10.1016/j.engappai.2024.108691)
+* Project: <https://github.com/EAFNet/EAFNet>
+
+T-CRACK dataset consists of six backgrounds: bituminous road surface, cement road surface, wall surface, bridge surface, glass surface and stone surface. There are 1898 images in the dataset, of which 1334 images are used for training, 197 images are used for validation and 367 images are used for testing. The images from the different datasets are taken at different angles, with different light resolutions and other conditions. Moreover, the distribution and shape of tiny cracks vary from one background to another. These make T-CRACK dataset challenging.
+
+To verify the generalization ability of models, we add images with large cracks and images without cracks to T-CRACK dataset to form C-CRACK dataset. 2698 images in total are included in C-CRACK dataset, of which 1934 images are used for training, 487 images for validation and 277 images for testing.
+
+### AD (Anomaly Detection)
+
+* Target Characteristic: Small, Multiple Types
+
+#### MVTec AD
+
+![](https://www.mvtec.com/fileadmin/Redaktion/mvtec.com/company/research/datasets/dataset_overview_large.png)
+
+* Paper:
+  * [MVTec AD – A Comprehensive Real-World Dataset for Unsupervised Anomaly Detection](https://www.mvtec.com/fileadmin/Redaktion/mvtec.com/company/research/datasets/mvtec_ad.pdf)
+  * [The MVTec Anomaly Detection Dataset: A Comprehensive Real-World Dataset for Unsupervised Anomaly Detection](https://link.springer.com/content/pdf/10.1007/s11263-020-01400-4.pdf)
+* Project: [https://www.mvtec.com/company/research/datasets/mvtec-ad](https://www.mvtec.com/company/research/datasets/mvtec-ad)
+
+MVTec AD is a dataset for benchmarking anomaly detection methods with a focus on industrial inspection. It contains over 5000 high-resolution images divided into fifteen different object and texture categories. Each category comprises a set of defect-free training images and a test set of images with various kinds of defects as well as images without defects. Pixel-precise annotations of all anomalies are also provided.
+
+#### MPDD
+
+![](https://github.com/stepanje/MPDD/raw/main/samples.png)
+
+* Paper: [Deep learning-based defect detection of metal parts: evaluating current methods in complex conditions](https://ieeexplore.ieee.org/document/9631567)
+* Project: [https://github.com/stepanje/mpdd](https://github.com/stepanje/mpdd)
+
+It is focused on a domain of metal fabrication and it reflects real-world situations encountered on a human-operated production lines. The proposed dataset contains 6 classes of metal parts. For training, only samples without defects should be used, because it is assumed that semi-supervised or unsupervised AD methods will be used, as we cannot know all types of defects in advance. Testing samples contain parts with and without defects. Anomalous samples are provided with pixel-precise ground truth masks to enable evaluation of defect segmentation. All images were resized to 1024 x 1024 pixels. There are various types of defects available in the dataset, and overall they are intended to cover a wide range of scenarios that can be encountered in metal fabrication and painting industry.
+All images in the dataset were taken using standard consumer-grade camera, we used two LED light sources to illuminate the scene from two separate positions to reduce shadows. In most cases, we also placed a neutral green screen in the background to make the samples more suitable for machine vision tasks, assuming that placing a background, e.g. on the real production line, is usually not an issue. To mimic complex conditions that must be faced when acquiring visual data in some industrial applications, we rotated and moved the components during image acquisition.
+
+## Medical Scene
+
+### Trichomonas Vaginalis Segmentation
+
+* Target Characteristic: Small, Multiple, Sparse, Subcircular
+
+#### TVMI3K
+
+- Paper: [Trichomonas Vaginalis Segmentation in Microscope Images](https://arxiv.org/abs/2207.00973)
+- Project: <https://github.com/CellRecog/cellRecog>
+
+In this work, we collect the first large-scale Microscopic Image dataset of Trichomonas Vaginalis, called TVMI3K, which consists of 3,158 images covering Trichomonas of various appearances in diverse backgrounds, with high-quality annotations including object-level mask labels, object boundaries, and challenging attributes.
+
+### Vessel Segmentation
+
+* Target Characteristic: Tubular/Curvilinear Structure
+
+#### XCAD
+
+- Paper: [Self-Supervised Vessel Segmentation via Adversarial Learning](https://doi.org/10.1109/ICCV48922.2021.00744)
+- Project: <https://github.com/AISIGSJTU/SSVS>
+
+We build an X-ray angiography coronary artery disease (XCAD) dataset with coronary angiography images obtained during stent placement using a General Electric Innova IGS 520 system. Each image has a resolution of 512x512 pixels with one channel. The train ing set contains 1621 mask frames and 1621 coronary an giograms. The testing set contains 126 independent coronary angiograms with vessel segmentation maps annotated by experienced radiologists. Note that the training set and the testing set have no shared samples.
+
 ## Segmentation
 
 ### VOS (Video Object Segmentation)
@@ -1030,29 +1099,6 @@ Clothing Co-Parsing (CCP) dataset is a new clothing database including elaborate
 * Download: See [http://www.cbsr.ia.ac.cn/users/ynyu/dataset/](http://www.cbsr.ia.ac.cn/users/ynyu/dataset/)
 
 The dataset used in this paper is finely labeled manually for the purpose of foreground segmentation. There are 5,389 images in the training set. The task is to segment the most salient person in an image, including his/her clothing, e.g., long dresses and hats, and any objects in his/her hands such as handbags. The images have various sources such as street-shots, advertisements and news. The persons in these images vary greatly in terms of scales and poses. To train our model, we randomly pick out 500 images from the training set for validation. The test set is not public so that no model can be trained using these data.
-
-## AD (Anomaly Detection)
-
-### MVTec AD
-
-![](https://www.mvtec.com/fileadmin/Redaktion/mvtec.com/company/research/datasets/dataset_overview_large.png)
-
-* Paper:
-  * [MVTec AD – A Comprehensive Real-World Dataset for Unsupervised Anomaly Detection](https://www.mvtec.com/fileadmin/Redaktion/mvtec.com/company/research/datasets/mvtec_ad.pdf)
-  * [The MVTec Anomaly Detection Dataset: A Comprehensive Real-World Dataset for Unsupervised Anomaly Detection](https://link.springer.com/content/pdf/10.1007/s11263-020-01400-4.pdf)
-* Project: [https://www.mvtec.com/company/research/datasets/mvtec-ad](https://www.mvtec.com/company/research/datasets/mvtec-ad)
-
-MVTec AD is a dataset for benchmarking anomaly detection methods with a focus on industrial inspection. It contains over 5000 high-resolution images divided into fifteen different object and texture categories. Each category comprises a set of defect-free training images and a test set of images with various kinds of defects as well as images without defects. Pixel-precise annotations of all anomalies are also provided.
-
-### MPDD
-
-![](https://github.com/stepanje/MPDD/raw/main/samples.png)
-
-* Paper: [Deep learning-based defect detection of metal parts: evaluating current methods in complex conditions](https://ieeexplore.ieee.org/document/9631567)
-* Project: [https://github.com/stepanje/mpdd](https://github.com/stepanje/mpdd)
-
-It is focused on a domain of metal fabrication and it reflects real-world situations encountered on a human-operated production lines. The proposed dataset contains 6 classes of metal parts. For training, only samples without defects should be used, because it is assumed that semi-supervised or unsupervised AD methods will be used, as we cannot know all types of defects in advance. Testing samples contain parts with and without defects. Anomalous samples are provided with pixel-precise ground truth masks to enable evaluation of defect segmentation. All images were resized to 1024 x 1024 pixels. There are various types of defects available in the dataset, and overall they are intended to cover a wide range of scenarios that can be encountered in metal fabrication and painting industry.
-All images in the dataset were taken using standard consumer-grade camera, we used two LED light sources to illuminate the scene from two separate positions to reduce shadows. In most cases, we also placed a neutral green screen in the background to make the samples more suitable for machine vision tasks, assuming that placing a background, e.g. on the real production line, is usually not an issue. To mimic complex conditions that must be faced when acquiring visual data in some industrial applications, we rotated and moved the components during image acquisition.
 
 ## Matting
 
