@@ -88,6 +88,14 @@
       - [CODD](#codd)
     - [Open-Vocabulary Camouflaged Object Segmentation](#open-vocabulary-camouflaged-object-segmentation)
       - [OVCamo](#ovcamo)
+  - [DBD (Defocus Blur Detection)](#dbd-defocus-blur-detection)
+    - [CUHK](#cuhk)
+    - [DUT](#dut)
+      - [Real-V1](#real-v1)
+      - [Real-V2](#real-v2)
+      - [Simulated Dataset](#simulated-dataset)
+    - [CTCUG](#ctcug)
+    - [EBD](#ebd)
   - [Industrial Scene](#industrial-scene)
     - [Crack Detection](#crack-detection)
       - [T-CRACK \& C-CRACK](#t-crack--c-crack)
@@ -898,6 +906,47 @@ This dataset is obtained by converting the existing salient object detection RGB
 * Download: [Github Releases](https://github.com/lartpang/OVCamo/releases/tag/dataset-v1.0)
 
 Our data is collected from existing CSU datasets that have finely annotated segmentation maps. Specifically, the OVCamo integrates 11,483 hand-selected images covering 75 object classes reconstructed from several public datasets.
+
+## DBD (Defocus Blur Detection)
+
+### CUHK
+
+- Paper: [Discriminative Blur Detection Features](https://ieeexplore.ieee.org/document/6909775)
+- Project: <https://www.cse.cuhk.edu.hk/leojia/projects/dblurdetect/>
+- Download: <https://www.cse.cuhk.edu.hk/leojia/projects/dblurdetect/dataset.html>
+
+We build a new blur detection dataset that contains 1000 images with human labeled ground-truth blur regions. These data provide useful resource to understand blur with respect to structure diversity in natural images. It enables training and testing, which is traditionally hard to implement without suitable data. Ground truth masks are produced by 10 helpers. These images are collected from internet. They consist of images with out-of-focus blur and partial motion blur. Some sample images are shown in the above figure.
+
+### DUT
+
+#### Real-V1
+
+- Paper: [Defocus Blur Detection via Multi-stream Bottom-Top-Bottom Fully Convolutional Network](https://www.computer.org/csdl/proceedings-article/cvpr/2018/642000d080/17D45WUj90B)
+
+To facilitate the study and evaluation of defo cus blur detection (DBD) methods, we construct a new DBD dataset consisting of 500 images with pixel-wise annotations. We note that the proposed dataset is very challenging since numerous images contain homogeneous regions, low contrast focal regions and background clutter.
+
+#### Real-V2
+
+- Paper: [Defocus Blur Detection via Multi-Stream Bottom-Top-Bottom Network](https://ieeexplore.ieee.org/document/8673588)
+
+We extend the previous dataset [Defocus Blur Detection via Multi-stream Bottom-Top-Bottom Fully Convolutional Network] by adding a training part with 600 challenging images with pixel-level annotations and thereby achieving the first attempt to construct a defocus blur dataset consisting of training and testing parts. There exist several characteristics for the images in our dataset: (1) There are various scenes; (2) Images contain the homogeneous regions with different scales; (3) The background (unfocused area) is complex; and (4) The focused area has low contrast. To improve label accuracy, we demand three volunteers to annotate focused areas in all 1100 images individually using a custom designed interactive segmentation tool. In addition, our dataset is divided into two parts: 600 training images and 500 testing images.
+
+#### Simulated Dataset
+
+We collect 2000 clear images from the Berkeley segmentation dataset [45] and uncompressed colour image dataset [46]. To simulate the blur images for the DBD task, we first adopt a Gaussian filter for each image to smooth half of the image as the out-of-focus blur region, and the remaining half as the in-focus region. Then, four blurred versions can be obtained by smoothing regions of different positions (up, down, left and right) for each image. For each blurred version, we use a Gaussian filter with a standard deviation of 2 and a window of 7x7 to repeatedly blur the image five times. Therefore, for each image, we can obtain 20 simulated images (four blurred versions and five different blurring levels for each version).
+
+### CTCUG
+
+- Paper: [DeFusionNET: Defocus Blur Detection via Recurrently Fusing and Refining Discriminative Multi-Scale Deep Features](https://ieeexplore.ieee.org/document/9161280)
+
+Based on our observations, in most of the images of above mentioned two datasets, the foreground objects are usually in-focus while the background is usually blurry, which leads to the fact that the blur detection methods may be biased to object regions and reduce to foreground/background segmentation. In reality, foreground objects with strong semantic meaning may also be defocused. In addition, the content contained in the images of previous datasets are easy, nearly no complex background or foreground. With these points in mind, we collect a new dataset (referred to as CTCUG) which contains 150 images with manual pixel-wise annotations. We invite five students to manually annotate the defocus areas from each image and the final annotated ground truths are obtained by averaging the results from the five independently labelled masks.
+
+### EBD
+
+- Paper: [Depth and DOF Cues Make A Better Defocus Blur Detector](https://arxiv.org/abs/2306.11334)
+- Project: <https://github.com/yuxinjin-whu/d-dffnet>
+
+The test datasets mentioned above have several limitations, including a lack of high-resolution images and a limited number of images with wide or shallow depth of field. In response, we collected a new DBD test dataset (EBD) composed of 1605 high-resolution images, selected from the EBB! (Rendering natural camera bokeh effect with deep learning) dataset and manually annotated with pixel-wise labels to produce defocus maps. As for the images in the EBD dataset, 1305 have a shallow depth of field (achieved using an aperture size of f/1.8), resulting in a strong bokeh effect. The remaining 300 images have a wide depth of field (achieved using an aperture size of f/16), resulting in sharp photos. All images have a resolution around 1600x1024.
 
 ## Industrial Scene
 
