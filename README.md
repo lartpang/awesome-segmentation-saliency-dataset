@@ -29,6 +29,7 @@
       - [UCSB](#ucsb)
       - [OSIE](#osie)
       - [ACSD](#acsd)
+      - [WXSOD](#wxsod)
     - [RGB-D Saliency](#rgb-d-saliency)
       - [SIP](#sip)
       - [NLPR/RGBD1000](#nlprrgbd1000)
@@ -356,6 +357,17 @@ SOC has 6,000 images with 80 common categories. Half of the images contain salie
 
 基于ASD数据集(MSRA1K)制作.
 我们从[Z. Wang and B. Li. A two-stage approach to saliency detection in images. ICASSP 2008.]中提出的1000个图像中获得了一个真实数据库. [Z. Wang and B. Li. A two-stage approach to saliency detection in images. ICASSP 2008.]中的基本事实是在显着区域周围的用户绘制的矩形. 这是不准确的, 并将多个对象合二为一. 我们手动分割用户绘制的矩形内的显着对象以获得二进制掩码, 如下所示. 这样的掩膜既准确又允许我们清楚地处理多个显着对象.
+
+#### WXSOD
+
+* Paper: [WXSOD: A Benchmark for Robust Salient Object Detection in Adverse Weather Conditions](https://arxiv.org/abs/2508.12250)
+* Project: [https://github.com/C-water/WXSOD](https://github.com/C-water/WXSOD)
+* Download: [https://github.com/C-water/WXSOD?tab=readme-ov-file#--dataset-access](https://github.com/C-water/WXSOD?tab=readme-ov-file#--dataset-access)
+
+WXSOD dataset provides a large-scale dataset (14,945 RGB images) for salient object detection under extreme weather conditions. Distinguishing itself from existing RGB-SOD benchmarks, it provides images with ​​diverse degradation​​ patterns and ​​pixel-wise annotations​​. Our dataset contains:
+- A synthetic training set consisting of 12,891 images, including 8 types of weather noise and a small amount of clean images.
+- A composite test set consisting of 1,500 images, including 8 types of weather noise and a small amount of clean images.
+- A real test set consisting of 554 images, including 5 types of weather noise.
 
 ### RGB-D Saliency
 
