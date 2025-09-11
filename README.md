@@ -173,11 +173,9 @@
 
 #### SED1/2
 
-| 数据类型                                           | 示例                                     |
-| -------------------------------------------------- | ---------------------------------------- |
-| 单目标                                             | ![img](./assets/2018-12-29-18-38-59.png) |
-| 双目标                                             | ![img](./assets/2018-12-29-18-39-30.png) |
-| 真值给出的是每个图像由三个不同的人类对象分割的结果 | ![img](./assets/2018-12-29-18-40-17.png) |
+| 单目标                                   | 双目标                                   | 真值给出的是每个图像由三个不同的人类对象分割的结果 |
+| ---------------------------------------- | ---------------------------------------- | -------------------------------------------------- |
+| ![img](./assets/2018-12-29-18-38-59.png) | ![img](./assets/2018-12-29-18-39-30.png) | ![img](./assets/2018-12-29-18-40-17.png)           |
 
 * [Salient objectdetection: A benchmark](https://arxiv.org/abs/1501.02741)
 * [Image Segmentation by Probabilistic Bottom-Up Aggregation and Cue Integration](http://www.wisdom.weizmann.ac.il/~meirav/Segmentation_Alpert_Galun_Brandt_Basri.pdf)
@@ -222,9 +220,9 @@ For fair comparison in the future research, the training set of DUTS serves as a
 
 #### SOC (Salient Objects in Clutter)
 
-![1546081178458](./assets/1546081178458.png)
-
-![1546081446332](./assets/1546081446332.png)
+|                                    |                                    |
+| ---------------------------------- | ---------------------------------- |
+| ![img](./assets/1546081178458.png) | ![img](./assets/1546081446332.png) |
 
 * Paper: [Salient Objects in Clutter](https://arxiv.org/abs/2105.03053)
   * Chinese Version: [https://dengpingfan.github.io/papers/[2022][TPAMI]SOC_Chinese.pdf](https://dengpingfan.github.io/papers/%5B2022%5D%5BTPAMI%5DSOC_Chinese.pdf)
@@ -272,7 +270,7 @@ SOC has 6,000 images with 80 common categories. Half of the images contain salie
 
 #### ImgSal
 
-![1546087781641](./assets/1546087781641.png)
+![img](./assets/1546087781641.png)
 
 * Project: [https://sites.google.com/site/jianlinudt/saliency-database](https://sites.google.com/site/jianlinudt/saliency-database)
 * 作者主页: [http://www.escience.cn/people/jianli/DataBase.html](http://www.escience.cn/people/jianli/DataBase.html)
@@ -304,7 +302,7 @@ SOC has 6,000 images with 80 common categories. Half of the images contain salie
 
 #### THUR15K
 
-![1546088375285](./assets/1546088375285.png)
+![img](./assets/1546088375285.png)
 
 * Paper: [https://mmcheng.net/zh/gsal/](https://mmcheng.net/zh/gsal/)
 * Download: [https://mmcheng.net/mftp/Data/THUR15000.zip](https://mmcheng.net/mftp/Data/THUR15000.zip)
@@ -349,7 +347,7 @@ SOC has 6,000 images with 80 common categories. Half of the images contain salie
 
 #### ACSD
 
-![1546135560011](./assets/1546135560011.png)
+![img](./assets/1546135560011.png)
 
 * Paper: [Frequency-tuned salient region detection](https://infoscience.epfl.ch/record/135217/files/1708.pdf)
 * Project: [https://ivrl.epfl.ch/research-2/research-current/research-saliency/supplementary_material-rk_cvpr09-index-html/](https://ivrl.epfl.ch/research-2/research-current/research-saliency/supplementary_material-rk_cvpr09-index-html/)
@@ -379,7 +377,7 @@ Thanks:
 
 #### SIP
 
-![](assets/2019-09-15-16-26-26.png)
+![img](assets/2019-09-15-16-26-26.png)
 
 * Paper: Rethinking RGB-D Salient Object Detection: Models, Datasets, and Large-Scale Benchmarks:https://arxiv.org/pdf/1907.06781.pdf
 * Project: [http://dpfan.net/d3netbenchmark/](http://dpfan.net/d3netbenchmark/)
@@ -389,7 +387,7 @@ We carefully collect a new salient person (SIP) dataset, which consists of 1K hi
 
 #### NLPR/RGBD1000
 
-![1546138815074](./assets/1546138815074.png)
+![img](./assets/1546138815074.png)
 
 * Paper: [Rgbd salient object detection: a benchmark and algorithms](https://docs.google.com/uc?authuser=0&id=0B1wzzt1_uP1rb250d0t6dVFXWG8&export=download)
 * Project: [https://sites.google.com/site/rgbdsaliency/home](https://sites.google.com/site/rgbdsaliency/home)
@@ -399,7 +397,7 @@ NLPR is also called RGBD1000 dataset which including 1,000 images. There may exi
 
 #### NJU400/2000
 
-![1546139249376](./assets/1546139249376.png)
+![img](./assets/1546139249376.png)
 
 * Paper:
 
@@ -422,7 +420,7 @@ NJU2000 contains 2003 stereo image pairs with diverse objects and complex, chall
 
 #### STEREO/SSB
 
-![](assets/2019-05-13-19-48-20.png)
+![img](assets/2019-05-13-19-48-20.png)
 
 * Paper: [Leveraging stereopsis for saliency analysis](http://web.cecs.pdx.edu/~fliu/papers/cvpr2012.pdf)
 * Project: [http://web.cecs.pdx.edu/~fliu/](http://web.cecs.pdx.edu/~fliu/)
@@ -444,20 +442,16 @@ To get a valid ground-truth, we ask three individuals to manually segment the sa
 
 #### RGBD135/DES
 
-![image](assets/2019-05-23-10-44-38.png)
-
-![depth](assets/2019-05-23-10-44-15.png)
-
-![mask](assets/2019-05-23-10-44-59.png)
+| Image                                  | Depth                                  | Mask                                   |
+| -------------------------------------- | -------------------------------------- | -------------------------------------- |
+| ![img](assets/2019-05-23-10-44-38.png) | ![img](assets/2019-05-23-10-44-15.png) | ![img](assets/2019-05-23-10-44-59.png) |
 
 * Paper: [Depth Enhanced Saliency Detection Method](https://dl.acm.org/doi/pdf/10.1145/2632856.2632866)
 * Project: [https://github.com/HzFu/DES_code](https://github.com/HzFu/DES_code)
 * Download:
-
   * Official:
     + Baidu Pan: [https://pan.baidu.com/s/1pLv2B8n](https://pan.baidu.com/s/1pLv2B8n)
     + Google Drive: [https://onedrive.live.com/redir?resid=F3A8A31ABFAC51B0!256&amp;authkey=!AC4-yOEjn0bgrCQ&amp;ithint=file%2crar](https://onedrive.live.com/redir?resid=F3A8A31ABFAC51B0!256&authkey=!AC4-yOEjn0bgrCQ&ithint=file%2Crar)
-
   + See [http://dpfan.net/d3netbenchmark/](http://dpfan.net/d3netbenchmark/)
 
 In our experiments, we provide a new RGB-D saliency detection dataset. We take 135 RGB-D indoor images by Kinect with the resolution 640×480. Then, three users are asked to mark the salient object of each image. We employ the overlapping areas of the manually labelled object as the ground truth.
@@ -476,7 +470,7 @@ And we split the dataset including 800 training set and 400 test set.
 
 #### SSD/SSD100
 
-![](assets/2019-09-15-16-17-12.png)
+![img](assets/2019-09-15-16-17-12.png)
 
 * Paper: [A Three-Pathway Psychobiological Framework of Salient Object Detection Using Stereoscopic Technology](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8265566)
 * Download: See [http://dpfan.net/d3netbenchmark/](http://dpfan.net/d3netbenchmark/)
@@ -537,11 +531,9 @@ This work contributes such a RGBT image dataset named VT5000, including 5000 spa
 
 #### VT1000
 
-![image](assets/2019-05-23-10-49-47.png)
-
-![thermal](assets/2019-05-23-10-50-23.png)
-
-![mask](assets/2019-05-23-10-50-02.png)
+| Image                                  | Thermal                                | Mask                                   |
+| -------------------------------------- | -------------------------------------- | -------------------------------------- |
+| ![img](assets/2019-05-23-10-49-47.png) | ![img](assets/2019-05-23-10-50-23.png) | ![img](assets/2019-05-23-10-50-02.png) |
 
 * Paper: [RGB-T Image Saliency Detection via Collaborative Graph Learning](https://ieeexplore.ieee.org/document/8744296)
 * Project: [http://chenglongli.cn/code-dataset/](http://chenglongli.cn/code-dataset/)
@@ -552,10 +544,6 @@ This work contributes such a RGBT image dataset named VT5000, including 5000 spa
 Existing RGB-T image benchmark dataset for saliency detection has several limitations: i) The alignment errors might be large. The used RGB and thermal cameras have totally different imaging parameters and are mounted on tripods, and they use a homography matrix to approximate the transformations of two images. ii) The aligned method introduces blank boundaries in some modality, which might destroy the boundary prior to some extent. iii) Most of scenes are very simple, which makes the dataset less challenge and diverse. In this paper, we contribute a larger dataset for the purpose of RGB-T image saliency detection. The imaging hardware includes highly aligned RGB and thermal cameras, and the  transformation between two modal images are thus only translation and scale. This setup makes the images of different modalities highly aligned, and have no blank boundaries. Furthermore, we take more challenges and diversities into account when building up the dataset and collect 1000 RGB-T image pairs
 
 #### VT821
-
-![image](assets/2019-05-23-10-50-42.png)
-
-![mask](assets/2019-05-23-10-51-00.png)
 
 * Paper: [A Unified RGB-T Saliency Detection Benchmark: Dataset, Baselines, Analysis and A Novel Approach](https://arxiv.org/pdf/1701.02829.pdf)
 * Project: [http://chenglongli.cn/code-dataset/](http://chenglongli.cn/code-dataset/)
@@ -569,7 +557,7 @@ This work contributes such a RGB-T image dataset, which includes 821 spatially a
 
 #### DIS5K
 
-![](https://github.com/xuebinqin/DIS/raw/main/figures/DIS5k-dataset-v1-sailship.png)
+![img](https://github.com/xuebinqin/DIS/raw/main/figures/DIS5k-dataset-v1-sailship.png)
 
 * Paper: [Highly Accurate Dichotomous Image Segmentation](https://arxiv.org/abs/2203.03041)
 * Project: [https://xuebinqin.github.io/dis/index.html](https://xuebinqin.github.io/dis/index.html)
@@ -582,7 +570,7 @@ Each image of DIS5K is manually labeled with pixel-wise accuracy using GIMP The 
 
 #### HRSOD/DAVIS-S
 
-![](assets/2019-09-15-15-54-12.png)
+![img](assets/2019-09-15-15-54-12.png)
 
 * Paper: [Towards High-Resolution Salient Object Detection](https://arxiv.org/pdf/1908.07274.pdf)
 * Project: [https://github.com/yi94code/HRSOD](https://github.com/yi94code/HRSOD)
@@ -628,7 +616,7 @@ Since most existing image datasets used for saliency detection do not consider t
 
 #### iCoSeg
 
-![1546085516505](./assets/1546085516505.png)
+![img](./assets/1546085516505.png)
 
 * Paper: [iCoseg: Interactive Co-segmentation with Intelligent Scribble Guidance](http://users.ece.cmu.edu/~dbatra/publications/assets/bkpcl_cvpr10.pdf)
 * Project: [http://chenlab.ece.cornell.edu/projects/touch-coseg/](http://chenlab.ece.cornell.edu/projects/touch-coseg/)
@@ -694,7 +682,7 @@ INCT2016 is a more challenging dataset with larger appearance variation, indefin
 
 #### RSD(PKU-RSD)
 
-![samples of RSD](https://pkuml.org/wp-content/uploads/2014/12/samples-of-RSD-1024x271.png)
+![img](https://pkuml.org/wp-content/uploads/2014/12/samples-of-RSD-1024x271.png)
 
 * Paper: [A dataset and evaluation methodology for visual saliency in video](https://ieeexplore.ieee.org/document/5202529)
 * Project: [https://pkuml.org/resources/dataset.html](https://pkuml.org/resources/dataset.html)
@@ -713,7 +701,7 @@ To demonstrate quantitatively the advantages of using spatial and temporal coher
 
 #### XPIE
 
-![1546137404871](./assets/1546137404871.png)
+![img](./assets/1546137404871.png)
 
 * Paper: [What is and what is not a salient object? Learning salient object detector by ensembling linear exemplar regressors](https://www.researchgate.net/publication/320971838_What_is_and_What_is_Not_a_Salient_Object_Learning_Salient_Object_Detector_by_Ensembling_Linear_Exemplar_Regressors)
 * Project:
@@ -722,7 +710,7 @@ To demonstrate quantitatively the advantages of using spatial and temporal coher
 * Download: [http://cvteam.net/projects/CVPR17-ELE/XPIE.tar.gz](http://cvteam.net/projects/CVPR17-ELE/XPIE.tar.gz)
 
 找出什么是什么和什么不是显着对象可以有助于在显着对象检测(SOD)中开发更好的特征和模型. 在本文中, 我们研究了在构建新的SOD数据集时选择和丢弃的图像, 发现许多相似的候选者, 复杂形状和低对象性是很多非显着对象的三个主要属性. 此外, 对象可能具有使其显着的不同属性.
-为了全面解释什么是什么和什么不是显着对象, 一个可行的解决方案是通过观察包含在数据集中或从数据集中丢弃的图像中的对象的主要特征来研究构建新SOD数据集的整个过程. 从这些观察中, 我们可以推断显着和非显着对象的关键属性以及基于图像的SOD数据集中可能存在的主观偏差. 为此, 我们构建了一个大的SOD数据集(称为XPIE)并记录构建过程中的所有细节. 1) 我们首先从三个来源收集三种图像, 包括Panoramio, ImageNet和两个fixation数据集. 这些操作是全自动的, 以避免引入太多的主观偏见. 2) 之后, 我们调整每个图像的大小, 使其最大边长为300像素, 并丢弃所有最小边长小于128像素的灰度或彩色图像. 3) 最后, 我们在三个图像子集中获得29, 600个彩色图像. 分别表示为Set-P, Set-I, Set-E.
+为了全面解释什么是和什么不是显着对象, 一个可行的解决方案是通过观察包含在数据集中或从数据集中丢弃的图像中的对象的主要特征来研究构建新SOD数据集的整个过程. 从这些观察中, 我们可以推断显着和非显着对象的关键属性以及基于图像的SOD数据集中可能存在的主观偏差. 为此, 我们构建了一个大的SOD数据集(称为XPIE)并记录构建过程中的所有细节. 1) 我们首先从三个来源收集三种图像, 包括Panoramio, ImageNet和两个fixation数据集. 这些操作是全自动的, 以避免引入太多的主观偏见. 2) 之后, 我们调整每个图像的大小, 使其最大边长为300像素, 并丢弃所有最小边长小于128像素的灰度或彩色图像. 3) 最后, 我们在三个图像子集中获得29, 600个彩色图像. 分别表示为Set-P, Set-I, Set-E.
 **Set-P 包含8, 800具有地理信息的感兴趣地点的图像(例如, GPS和标签), 具有对象标签的Set-I包含19, 600图像, 以及Set-E包含1, 200个human fixations图像**.
 对于这些图像, 我们要求两位工程师通过两个阶段对其进行注释. 在第一阶段, 图像被分配一个二进制标记:'是'用于包含非明确对象, 否则为'否'. 在第一阶段之后, 我们将21, 002张图片标记为"是", 并且8, 598图像标记为"否". 在第二阶段, 这两位工程师进一步要求手动标记标记为"是"的10, 000张图像中的显着对象的准确边界. 注意我们有10名志愿者参与整个过程, 以检查注释的质量.**最后, 我们获得了10, 000张图像的二进制掩码**.
 
@@ -769,8 +757,6 @@ than 4 salient object instances in the extended 1000 images (173) is larger than
 
 ![img](https://github.com/gistairc/HS-SOD/raw/master/images/poster-QoMEX2018.png)
 
-![eva](./assets/2018-12-28-22-16-20.png)
-
 * Paper: [Hyperspectral Image Dataset for Benchmarking on Salient Object Detection](https://arxiv.org/abs/1806.11314)
 * Project: [https://github.com/gistairc/HS-SOD](https://github.com/gistairc/HS-SOD)
 * Download: [http://data.airc.aist.go.jp/HS-SOD/HS-SOD.zip](http://data.airc.aist.go.jp/HS-SOD/HS-SOD.zip)
@@ -782,7 +768,7 @@ For the convenience of salient object detection task, we cropped spectral bands 
 
 #### KAIST Salient Pedestrian Dataset
 
-![](assets/2019-05-23-10-53-57.png)
+![img](assets/2019-05-23-10-53-57.png)
 
 * Paper: [Pedestrian Detection in Thermal Images Using Saliency Maps](https://ieeexplore.ieee.org/document/9025382)
 * Project:
@@ -863,7 +849,7 @@ We take into account several factors that influence camouflage performance compr
 
 #### MoCA-Mask
 
-![](https://xueliancheng.github.io/SLT-Net-project/images/samples.png)
+![img](https://xueliancheng.github.io/SLT-Net-project/images/samples.png)
 
 * Paper: [Implicit Motion Handling for Video Camouflaged Object Detection](http://arxiv.org/abs/2203.07363)
 * Project:
@@ -992,7 +978,7 @@ We collected three kinds of typical defects as the benchmark database (i.e., SD-
 
 #### MVTec AD
 
-![](https://www.mvtec.com/fileadmin/Redaktion/mvtec.com/company/research/datasets/dataset_overview_large.png)
+![img](https://www.mvtec.com/fileadmin/Redaktion/mvtec.com/company/research/datasets/dataset_overview_large.png)
 
 * Paper:
   * [MVTec AD – A Comprehensive Real-World Dataset for Unsupervised Anomaly Detection](https://www.mvtec.com/fileadmin/Redaktion/mvtec.com/company/research/datasets/mvtec_ad.pdf)
@@ -1003,7 +989,7 @@ MVTec AD is a dataset for benchmarking anomaly detection methods with a focus on
 
 #### MPDD
 
-![](https://github.com/stepanje/MPDD/raw/main/samples.png)
+![img](https://github.com/stepanje/MPDD/raw/main/samples.png)
 
 * Paper: [Deep learning-based defect detection of metal parts: evaluating current methods in complex conditions](https://ieeexplore.ieee.org/document/9631567)
 * Project: [https://github.com/stepanje/mpdd](https://github.com/stepanje/mpdd)
@@ -1051,7 +1037,7 @@ We build an X-ray angiography coronary artery disease (XCAD) dataset with corona
 
 #### TAO-VOS
 
-![](assets/2021-01-26-21-32-47.png)
+![img](assets/2021-01-26-21-32-47.png)
 
 * Project: [https://www.vision.rwth-aachen.de/page/taovos](https://www.vision.rwth-aachen.de/page/taovos)
 * Paper: [Reducing the Annotation Effort for Video Object Segmentation Datasets](https://arxiv.org/abs/2011.01142)
@@ -1063,7 +1049,7 @@ Compared to existing VOS datasets, sequences in TAO-VOS are significantly longer
 
 #### OVOS
 
-![](assets/20220728234603.png)
+![img](assets/20220728234603.png)
 
 * Project: [https://ieee-dataport.org/documents/ovos-occluded-video-object-segmentation-dataset](https://ieee-dataport.org/documents/ovos-occluded-video-object-segmentation-dataset)
 * Paper: [Region Aware Video Object Segmentation with Deep Motion Modeling](https://arxiv.org/abs/2207.10258)
@@ -1174,9 +1160,13 @@ The dataset used in this paper is finely labeled manually for the purpose of for
 
 ## Matting
 
+![img](./assets/2018-12-27-11-47-26.png)
+
+*From [Semantic Human Matting](https://arxiv.org/abs/1809.01354)*
+
 ### alphamatting.com
 
-![1546154705536](./assets/1546154705536.png)
+![img](./assets/1546154705536.png)
 
 * Project: [http://alphamatting.com/datasets.php](http://alphamatting.com/datasets.php)
 * Download: See [http://alphamatting.com/datasets.php](http://alphamatting.com/datasets.php)
@@ -1185,7 +1175,7 @@ The dataset used in this paper is finely labeled manually for the purpose of for
 
 ### Composition-1k: Deep Image Matting
 
-![1546154519720](./assets/1546154519720.png)
+![img](./assets/1546154519720.png)
 
 * Paper: [Deep Image Matting](https://arxiv.org/abs/1703.03872)
 * Project: [https://sites.google.com/view/deepimagematting](https://sites.google.com/view/deepimagematting)
@@ -1195,9 +1185,7 @@ We create a large-scale matting dataset using composition. Images with objects o
 
 ### Semantic Human Matting
 
-![1546156688347](./assets/1546156688347.png)
-
-![dataset](./assets/2018-12-27-11-47-26.png)
+![img](./assets/1546156688347.png)
 
 * Paper: [Semantic Human Matting](https://arxiv.org/abs/1809.01354)
 
@@ -1205,9 +1193,7 @@ We propose a novel fusion strategy which naturally gives a probabilistic estimat
 
 ### Matting-Human-Datasets
 
-![](https://github.com/aisegmentcn/matting_human_datasets/raw/master/1.png)
-
-![](https://github.com/aisegmentcn/matting_human_datasets/raw/master/2.png)
+![img](https://github.com/aisegmentcn/matting_human_datasets/raw/master/1.png)
 
 * Project: [https://github.com/aisegmentcn/matting_human_datasets](https://github.com/aisegmentcn/matting_human_datasets)
 * Download:
@@ -1220,7 +1206,7 @@ We propose a novel fusion strategy which naturally gives a probabilistic estimat
 
 ### PFCN
 
-![1546173669466](assets/1546173669466.png)
+![img](assets/1546173669466.png)
 
 * Paper: [Automatic Portrait Segmentation for Image Stylization](https://onlinelibrary.wiley.com/doi/10.1111/cgf.12814)
 * Download:
