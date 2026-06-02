@@ -66,6 +66,8 @@
     - [Video Saliency](#video-saliency)
       - [RSD(PKU-RSD)](#rsdpku-rsd)
       - [STC](#stc)
+    - [Reasoning SOD](#reasoning-sod)
+      - [OC-SODBench](#oc-sodbench)
     - [Other](#other)
       - [XPIE](#xpie)
       - [SOS](#sos)
@@ -700,6 +702,18 @@ INCT2016 is a more challenging dataset with larger appearance variation, indefin
 * Download: This dataset is freely available from the author.
 
 To demonstrate quantitatively the advantages of using spatial and temporal coherence, we carried out our experiments on 32 video segments with a total of 4820 frames collected from the internet. Each video segment contains a single salient object, which ranges from humans performing various activities and animals in the wild, to vehicles both on the ground and in the air. All the frames are annotated with object bounding boxes, and the detection performance is evaluated in terms of mean precision (P), recall (R), F-measure (F0.5), and boundary displacement errors (BDE).
+
+### Reasoning SOD
+
+#### OC-SODBench
+
+* Paper: [Revisiting Salient Object Detection from an Observer-Centric Perspective](https://arxiv.org/abs/2602.06369)
+* Project: [https://github.com/Dustzx/OC_SOD](https://github.com/Dustzx/OC_SOD)
+* Download: See [https://github.com/Dustzx/OC_SOD](https://github.com/Dustzx/OC_SOD)
+
+OC-SODBench is a reasoning-oriented salient object detection benchmark introduced by the Observer-Centric Salient Object Detection (OC-SOD) formulation. Instead of assuming a single objective salient region for each image, OC-SOD predicts salient regions conditioned on observer-specific factors such as preferences or intents. The paper reports that OC-SODBench contains 33k training, validation, and test images with 152k textual prompts and object pairs.
+
+The OC-SODAgent is an iterative framework that first performs initial segmentation with SAM2, then uses a Vision Language Model (VLM) to evaluate quality and semantic alignment, and finally refines the segmentation mask according to VLM feedback. The repository also includes a dataset generation pipeline organized around intent, saliency, and preference.
 
 ### Other
 
