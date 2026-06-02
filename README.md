@@ -84,6 +84,10 @@
     - [RGB Video COD](#rgb-video-cod)
       - [MoCA-Mask](#moca-mask)
       - [CAD (Camouflaged Animation Dataset)](#cad-camouflaged-animation-dataset)
+      - [YUV20K](#yuv20k)
+      - [CAMotion](#camotion)
+    - [RGB-T Image COD](#rgb-t-image-cod)
+      - [Camo-M3FD](#camo-m3fd)
     - [RGB-D Image COD](#rgb-d-image-cod)
       - [ACOD-12K](#acod-12k)
       - [CODD](#codd)
@@ -867,6 +871,43 @@ The new dataset, or MoCA-Mask for short, contains 87 video sequences with 22,939
 * Download:
   * [Camouflaged Animal Dataset](http://vis-www.cs.umass.edu/motionSegmentation/data/CamouflagedAnimalDataset.zip)
   * [Binary Mask from SLT-Net](https://drive.google.com/file/d/1LwswF3axQ0BSC6DllTpyL77Ktruy-6M6/view?usp=sharing)
+
+#### YUV20K
+
+* Paper: [YUV20K: A Complexity-Driven Benchmark and Trajectory-Aware Alignment Model for Video Camouflaged Object Detection](https://arxiv.org/abs/2604.09985)
+* Project: [https://github.com/K1NSA/YUV20K](https://github.com/K1NSA/YUV20K)
+* Download: See [https://github.com/K1NSA/YUV20K](https://github.com/K1NSA/YUV20K)
+
+YUV20K is a pixel-level annotated, complexity-driven benchmark for video camouflaged object detection (VCOD). It contains 24,295 annotated frames from 91 scenes and 47 species, focusing on challenging spatiotemporal scenarios such as large-displacement motion, camera motion, occlusion, multiple objects, hunting, and tiny objects. The project also introduces Motion Feature Stabilization (MFS) and Trajectory-Aware Alignment (TAA) modules for handling motion-induced appearance instability and temporal feature misalignment.
+
+The dataset is planned to be released through Baidu Netdisk and Google Drive. According to the project page, users need to complete a CC BY-NC 4.0 data access agreement and email it to obtain the unzip password.
+
+#### CAMotion
+
+* Paper: [CAMotion: A High-Quality Benchmark for Camouflaged Moving Object Detection in the Wild](https://arxiv.org/abs/2604.08287)
+* Project:
+  * [https://www.camotion.focuslab.net.cn/](https://www.camotion.focuslab.net.cn/)
+  * [https://github.com/Garyson1204/CAMotion](https://github.com/Garyson1204/CAMotion)
+* Download:
+  * Google Drive: [https://drive.google.com/file/d/1YzNdlDhsfgXTZ-Ya1w9wn3SjTXwU2xFs/view?usp=drive_link](https://drive.google.com/file/d/1YzNdlDhsfgXTZ-Ya1w9wn3SjTXwU2xFs/view?usp=drive_link)
+  * Baidu Netdisk: See [https://www.camotion.focuslab.net.cn/](https://www.camotion.focuslab.net.cn/)
+  * Depth and Optical Flow: [Google Drive](https://drive.google.com/file/d/1xEx1BMHFJaOGl_SJ8r5vRsNTfbRURRjs/view?usp=sharing) / Baidu NetDisk: See [https://www.camotion.focuslab.net.cn/](https://www.camotion.focuslab.net.cn/)
+
+CAMotion is a high-quality benchmark for camouflaged moving object detection in the wild. It contains 149,319 image frames, 30,028 annotated frames, and 151 species, making it substantially larger than MoCA-Mask in both frame count and species coverage. CAMotion provides pixel-level annotations and sequence-level/frame-level statistics for analyzing motion characteristics in challenging VCOD scenarios.
+
+The benchmark labels eight attributes for detailed evaluation: uncertain edge (UE), big object (BO), multiple objects (MO), small object (SO), occlusion (OC), shape complexity (SC), out-of-view (OV), and motion blur (MB). The project also reports evaluations of 18 COD/VCOD models with metrics including S-measure, weighted F-measure, mean E-measure, MAE, mean Dice, and mean IoU.
+
+### RGB-T Image COD
+
+#### Camo-M3FD
+
+* Paper: [Camo-M3FD: A New Benchmark Dataset for Cross-Spectral Camouflaged Pedestrian Detection](https://arxiv.org/abs/2604.16582)
+* Project: [https://cod-espol.github.io/Camo-M3FD/](https://cod-espol.github.io/Camo-M3FD/)
+* Download: [https://www.kaggle.com/datasets/hvelesaca/camo-m3fd](https://www.kaggle.com/datasets/hvelesaca/camo-m3fd)
+
+Camo-M3FD is a benchmark for cross-spectral camouflaged pedestrian detection derived from the M3FD dataset. It consists of 614 registered visible-thermal image pairs with high-quality pixel-level masks, focusing on safety-critical pedestrian cases where foreground and background have high visual similarity.
+
+The dataset is curated from pedestrian-centric M3FD samples using quantitative camouflage metrics for foreground-background similarity in color, texture, and boundary consistency. The final split follows an 80/10/10 protocol: 492 pairs for training, 61 for validation, and 61 for testing. The project benchmarks state-of-the-art COD methods on visible, thermal, and visible+thermal inputs, showing that thermal cues improve localization while multispectral fusion helps refine structural details.
 
 ### RGB-D Image COD
 
