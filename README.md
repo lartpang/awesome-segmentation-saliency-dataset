@@ -16,6 +16,7 @@
       - [ASD(MSRA1000/MSRA1K)](#asdmsra1000msra1k)
       - [DUT-OMRON](#dut-omron)
       - [DUTS](#duts)
+      - [DUTS-MM/DUTS-MQ](#duts-mmduts-mq)
       - [SOC (Salient Objects in Clutter)](#soc-salient-objects-in-clutter)
       - [HKU-IS](#hku-is)
       - [SOD (Salient Object Dataset)](#sod-salient-object-dataset)
@@ -83,6 +84,7 @@
       - [CAMO](#camo)
       - [CHAMELEON](#chameleon)
       - [CPD1K: Camouflaged People Dataset](#cpd1k-camouflaged-people-dataset)
+      - [CPD-UAV](#cpd-uav)
     - [RGB Video COD](#rgb-video-cod)
       - [MoCA-Mask](#moca-mask)
       - [CAD (Camouflaged Animation Dataset)](#cad-camouflaged-animation-dataset)
@@ -223,6 +225,17 @@ We contribute a large scale data set named DUTS, **containing 10, 553 training i
 Both the training and test set contain very challenging scenarios for saliency detection. Accurate pixel-level ground truths are manually annotated by 50 subjects.
 To our knowledge, DUTS is currently **the largest saliency detection benchmark** with the explicit training/test evaluation protocol.
 For fair comparison in the future research, the training set of DUTS serves as a good candidate for learning DNNs, while the test set and other public data sets can be used for evaluation.
+
+#### DUTS-MM/DUTS-MQ
+
+* Paper:
+  * [Pluralistic Salient Object Detection](https://ieeexplore.ieee.org/document/10960495)
+  * [arXiv](https://arxiv.org/abs/2409.02368)
+* Download: Not specified in the paper page.
+
+Pluralistic Salient Object Detection (PSOD) is proposed for generating multiple plausible salient segmentation results for a given image, instead of forcing conventional SOD into a single-mask setting.
+
+DUTS-MM builds upon DUTS and enriches the ground-truth mask annotations by improving mask quality, reducing annotation inconsistency, and providing multiple ground-truth masks for images with saliency ambiguity. DUTS-MQ contains about 100K image-mask pairs with human-annotated preference scores, supporting human-aligned learning and evaluation of mask quality.
 
 #### SOC (Salient Objects in Clutter)
 
@@ -862,6 +875,15 @@ The online survey was prepared using the Google forms. The users were requested 
 To build the dataset, we initially collected the video clips of 20 groups, which included the people with different kinds of camouflage patterns. These videos are captured by a fixed camera to evaluate the camouflage performance of different camouflage patterns in each corresponding natural scenes. At the same time, they are naturally suitable for the evaluation of camouflaged people detection methods.
 
 We take into account several factors that influence camouflage performance comprehensively. They include different styles of camouflage patterns, abundant natural scenes, different illumination and occlusion conditions, and different scales and postures of people. At last, 1000 images of size 480 × 854 are selected from the video clips. All the images are labeled as the pixel-level ground-truth annotation.
+
+#### CPD-UAV
+
+* Paper: [CPD-UAV: A Benchmark Dataset for Detecting Personnel Visually Blended with the Environment Under UAV Perspective](https://doi.org/10.3390/drones10060447)
+* Download: Not specified in the paper page.
+
+CPD-UAV is a UAV-perspective camouflaged object detection benchmark for detecting visually blended individuals in aerial monitoring and search-and-rescue scenarios. It contains 1061 high-resolution images with pixel-level masks, covering diverse terrains and flight altitudes.
+
+The dataset focuses on the domain gap between conventional natural-scene COD benchmarks and practical UAV scenarios, where artificial camouflage, top-down or oblique views, extreme scale variation, tiny targets, and vanishing boundaries make precise segmentation difficult. The paper reports that CPD-UAV is constructed from UAV videos and web-sourced images, followed by SAM-assisted annotation and expert cross-validation.
 
 ### RGB Video COD
 
