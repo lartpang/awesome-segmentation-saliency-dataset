@@ -49,6 +49,12 @@
       - [VT5000](#vt5000)
       - [VT1000](#vt1000)
       - [VT821](#vt821)
+    - [Underwater Salient Object Detection](#underwater-salient-object-detection)
+      - [USOD](#usod)
+      - [USOD10K](#usod10k)
+      - [CSOD10K for Condition-Constrained SOD](#csod10k-for-condition-constrained-sod)
+      - [MAS3K for Marine Animal Segmentation](#mas3k-for-marine-animal-segmentation)
+      - [RMAS for Marine Animal Segmentation](#rmas-for-marine-animal-segmentation)
     - [Dichotomous Image Segmentation](#dichotomous-image-segmentation)
       - [DIS5K](#dis5k)
     - [High-Resolution Saliency](#high-resolution-saliency)
@@ -67,6 +73,8 @@
     - [Video Saliency](#video-saliency)
       - [RSD(PKU-RSD)](#rsdpku-rsd)
       - [STC](#stc)
+    - [RGB-D Video Saliency](#rgb-d-video-saliency)
+      - [RDVSv2](#rdvsv2)
     - [Reasoning SOD](#reasoning-sod)
       - [OC-SODBench](#oc-sodbench)
     - [Other](#other)
@@ -85,6 +93,8 @@
       - [CHAMELEON](#chameleon)
       - [CPD1K: Camouflaged People Dataset](#cpd1k-camouflaged-people-dataset)
       - [CPD-UAV](#cpd-uav)
+      - [COD10K-C for Robustness](#cod10k-c-for-robustness)
+      - [OPC16K for Realistic COD](#opc16k-for-realistic-cod)
     - [RGB Video COD](#rgb-video-cod)
       - [MoCA-Mask](#moca-mask)
       - [CAD (Camouflaged Animation Dataset)](#cad-camouflaged-animation-dataset)
@@ -806,6 +816,83 @@ This work contributes such a RGB-T image dataset, which includes 821 spatially a
 
 </details>
 
+### Underwater Salient Object Detection
+
+#### USOD
+
+* Paper: [SVAM: Saliency-guided Visual Attention Modeling by Autonomous Underwater Robots](https://arxiv.org/abs/2011.06252)
+* Project: [http://irvlab.cs.umn.edu/visual-attention-modeling/svam](http://irvlab.cs.umn.edu/visual-attention-modeling/svam)
+* Download: See the [official dataset page](http://irvlab.cs.umn.edu/resources/usod-dataset).
+
+USOD is a test dataset for underwater salient object detection containing 300 natural underwater images at a resolution of 640 × 480, each paired with a pixel-level ground-truth mask. The images were selected from existing underwater enhancement and super-resolution datasets as well as field trials, with an emphasis on diversity in object categories, water bodies, optical distortions, and salient-object aspect ratios. Four participants independently annotated the salient pixels.
+
+<details>
+<summary>中文介绍</summary>
+
+USOD 是一个水下显著性目标检测测试数据集，包含 300 张分辨率为 640 × 480 的自然水下图像，每张图像都配有像素级真值掩码。图像来自现有的水下增强与超分辨率数据集以及实地试验，重点覆盖不同的目标类别、水体、光学畸变和显著目标宽高比。显著像素由四名参与者独立标注。
+
+</details>
+
+#### USOD10K
+
+* Paper: [USOD10K: A New Benchmark Dataset for Underwater Salient Object Detection](https://ieeexplore.ieee.org/document/10102831/)
+* Project: [https://github.com/LinHong-HIT/USOD10K](https://github.com/LinHong-HIT/USOD10K)
+* Download: See the [official repository](https://github.com/LinHong-HIT/USOD10K) for Google Drive and Baidu Netdisk links.
+
+USOD10K is a large-scale underwater salient object detection dataset containing 10,255 images with pixel-level ground truths and estimated depth maps. Its official split contains 7,178 training images, 2,051 validation images, and 1,026 test images, following an approximately 7:2:1 protocol. The release also provides object-boundary annotations for the training and validation sets and uses annotation standards different from the earlier USOD dataset.
+
+<details>
+<summary>中文介绍</summary>
+
+USOD10K 是一个大规模水下显著性目标检测数据集，包含 10,255 张图像，并提供像素级真值和估计深度图。其官方划分包括 7,178 张训练图像、2,051 张验证图像和 1,026 张测试图像，比例约为 7:2:1。该数据集还为训练集和验证集提供目标边界标注，并采用了与早期 USOD 数据集不同的标注标准。
+
+</details>
+
+#### CSOD10K for Condition-Constrained SOD
+
+* Paper: [Breaking Barriers, Localizing Saliency: A Large-scale Benchmark and Baseline for Condition-Constrained Salient Object Detection](https://ieeexplore.ieee.org/document/11297835)
+* Project: [https://rmcong.github.io/proj_CSOD.html](https://rmcong.github.io/proj_CSOD.html) / [https://github.com/ettof/CSOD](https://github.com/ettof/CSOD)
+* Download: See the dataset material on the [official project page](https://rmcong.github.io/proj_CSOD.html).
+
+CSOD10K is a condition-constrained salient object detection benchmark with 10,000 pixel-level annotated images and 101 object categories. It is organized around three main constraint types and eight real-world conditions: low light, fog, rain, snow, underwater scenes, reflections, blur, and overexposure. Because underwater imagery is one condition within a broader benchmark, CSOD10K is useful for cross-condition robustness evaluation rather than being an exclusively underwater dataset.
+
+<details>
+<summary>中文介绍</summary>
+
+CSOD10K 是一个条件受限显著性目标检测基准，包含 10,000 张像素级标注图像和 101 个目标类别。数据集围绕三类主要约束以及八种真实环境条件组织，包括低光、雾、雨、雪、水下、反射、模糊和过曝。由于水下场景只是这一综合基准中的一种条件，CSOD10K 更适合跨条件鲁棒性评估，而不是一个纯水下数据集。
+
+</details>
+
+#### MAS3K for Marine Animal Segmentation
+
+* Paper: [MAS3K: An Open Dataset for Marine Animal Segmentation](https://link.springer.com/chapter/10.1007/978-3-030-71058-3_12)
+* Project: [https://github.com/LinLi-DL/MAS](https://github.com/LinLi-DL/MAS)
+* Download: See the [official repository](https://github.com/LinLi-DL/MAS).
+
+MAS3K is an open marine animal segmentation dataset containing 3,103 underwater images with high-quality masks. It includes camouflaged marine animals, commonly visible marine animals, and underwater scenes without marine animals, spanning varied lighting, water turbidity, photographic distortion, and animal appearance. In addition to object-level masks, the dataset provides category and attribute information for marine-animal analysis.
+
+<details>
+<summary>中文介绍</summary>
+
+MAS3K 是一个开放的海洋动物分割数据集，包含 3,103 张具有高质量掩码的水下图像。数据覆盖伪装海洋动物、普通可见海洋动物以及不含海洋动物的水下场景，并涵盖不同的光照、水体浑浊度、拍摄畸变和动物外观。除目标级掩码外，该数据集还提供用于海洋动物分析的类别和属性信息。
+
+</details>
+
+#### RMAS for Marine Animal Segmentation
+
+* Paper: [MASNet: A Robust Deep Marine Animal Segmentation Network](https://ieeexplore.ieee.org/document/10113781)
+* Project: [https://github.com/zhenqifu/MASNet](https://github.com/zhenqifu/MASNet)
+* Download: See the dataset link in the [official repository](https://github.com/zhenqifu/MASNet).
+
+RMAS is a real-world marine animal segmentation dataset with 3,014 underwater images collected from multiple underwater image-processing datasets, including SUIM, UFO, DeepFish, and URPC. Every image has a pixel-level mask and a class label. The annotations group marine animals into five broad categories: sea products, big fish, small fish, turtles, and other animals, while the images cover diverse scenes and degradation patterns.
+
+<details>
+<summary>中文介绍</summary>
+
+RMAS 是一个真实世界海洋动物分割数据集，包含 3,014 张水下图像，图像来自 SUIM、UFO、DeepFish 和 URPC 等多个水下图像处理数据集。每张图像都具有像素级掩码和类别标签。标注将海洋动物划分为海产品、大型鱼类、小型鱼类、海龟和其他动物五个大类，同时覆盖多样场景和不同的图像退化模式。
+
+</details>
+
 ### Dichotomous Image Segmentation
 
 #### DIS5K
@@ -1031,6 +1118,27 @@ To demonstrate quantitatively the advantages of using spatial and temporal coher
 <summary>中文介绍</summary>
 
 为了定量地展示使用空间和时间相干性的优势，我们对从互联网收集的 32 个视频片段（总共 4820 帧）进行了实验。每个视频片段都包含一个显著对象，范围从进行各种活动的人类和野外动物，到地面和空中的车辆。所有帧都用对象边界框进行注释，并根据平均精度（P）、召回率（R）、F-measure（F0.5）和边界位移误差（BDE）来评估检测性能。
+
+</details>
+
+### RGB-D Video Saliency
+
+#### RDVSv2
+
+* Paper: [RDVSv2: A Large-scale Benchmark for RGB-D Video Salient Object Detection](https://arxiv.org/abs/2607.25392)
+* Project: [https://github.com/ltynick/RDVSv2](https://github.com/ltynick/RDVSv2)
+* Download: See the Google Drive and Baidu Netdisk links in the [official repository](https://github.com/ltynick/RDVSv2).
+
+RDVSv2 is a large-scale benchmark for RGB-D video salient object detection, designed to capture dynamic saliency transitions and support long-term temporal modeling. It contains 249 video sequences and 29,077 densely annotated frames sourced from publicly accessible stereoscopic online videos. The release provides RGB video URLs, stereo-derived depth maps, optical-flow maps, pixel-level ground-truth masks, and eye-fixation heatmaps. Its data preparation script can download the source videos and split them into frames.
+
+Eye-tracking data were collected at 90 Hz from 22 participants on a 1920 × 1080 display. The participants viewed RGB frames without depth cues; their gaze points were converted into fixation heatmaps using Gaussian filtering. Segmentation masks were generated with SAM2 assistance and then manually refined. The benchmark also supplies 16 challenge attributes covering object heterogeneity, occlusion, out-of-view events, fast motion, motion blur, deformation, shape complexity, scale variation, appearance change, background clutter, object size, indoor/outdoor scenes, saliency shifts, and multiple objects, with training and test distributions organized at approximately 7:3.
+
+<details>
+<summary>中文介绍</summary>
+
+RDVSv2 是一个面向 RGB-D 视频显著性目标检测的大规模基准，旨在刻画动态显著性转移并支持长期时序建模。它包含 249 个视频序列和 29,077 个密集标注帧，源视频来自公开可访问的在线立体视频。发布内容包括 RGB 视频来源、由立体视频生成的深度图、光流图、像素级真值掩码和眼动注视热图，数据准备脚本可下载源视频并将其拆分为帧。
+
+眼动数据由 22 名参与者在 1920 × 1080 显示器上以 90 Hz 采集。参与者只观看不含深度提示的 RGB 帧，其注视点经过高斯滤波生成注视热图。分割掩码先由 SAM2 辅助生成，再进行人工细化。该基准还提供 16 项挑战属性，覆盖异质目标、遮挡、出视野、快速运动、运动模糊、形变、形状复杂度、尺度变化、外观变化、背景杂乱、目标大小、室内/室外场景、显著性转移和多目标等情况，训练集与测试集的分布比例约为 7:3。
 
 </details>
 
@@ -1316,6 +1424,43 @@ The dataset focuses on the domain gap between conventional natural-scene COD ben
 CPD-UAV 是一种无人机视角伪装物体检测基准，用于在空中监控和搜救场景中检测视觉混合个体。它包含 1061 张具有像素级掩模的高分辨率图像，涵盖不同的地形和飞行高度。
 
 该数据集重点关注传统自然场景 COD 基准与实际无人机场景之间的领域差距，其中人工伪装、自上而下或倾斜视图、极端尺度变化、微小目标和消失边界使得精确分割变得困难。该论文报告称，CPD-UAV 由无人机视频和网络来源的图像构建而成，然后进行 SAM 辅助注释和专家交叉验证。
+
+</details>
+
+#### COD10K-C for Robustness
+
+* Paper: [COD10K-C: Benchmarking Robustness of Camouflaged Object Detection Under Natural Image Corruptions](https://arxiv.org/abs/2606.02603)
+* Download: Not yet released; the paper states that a GitHub release is planned.
+
+COD10K-C is a corruption-based robustness benchmark built from the 2,026-image COD10K test subset. It applies eight natural image corruptions at five severity levels, producing 40 evaluation conditions and 81,040 corrupted image-mask pairs. The geometric corruptions are Gaussian noise, motion blur, and Gaussian blur; the photometric corruptions are brightness reduction, contrast reduction, fog, JPEG compression, and rain.
+
+The benchmark keeps the original segmentation masks unchanged and varies only the image degradation, enabling controlled measurement of how COD models fail as corruption severity increases. It is intended for robustness evaluation rather than model training and complements clean-set accuracy with degradation-specific performance analysis.
+
+<details>
+<summary>中文介绍</summary>
+
+COD10K-C 是一个基于图像退化的伪装目标检测鲁棒性基准，由 COD10K 的 2,026 张测试图像构建。它对图像施加八类自然退化，每类设置五个严重程度，共形成 40 种评估条件和 81,040 对退化图像与掩码。几何类退化包括高斯噪声、运动模糊和高斯模糊；光度类退化包括亮度降低、对比度降低、雾、JPEG 压缩和雨。
+
+该基准保持原始分割掩码不变，只改变图像的退化程度，从而可以受控测量 COD 模型随退化加剧而出现的性能下降。它主要用于鲁棒性评估而非模型训练，并通过针对不同退化类型的分析补充干净测试集上的精度评价。
+
+</details>
+
+#### OPC16K for Realistic COD
+
+* Paper: [Is There Really a Camouflaged Object? Towards Realistic Camouflaged Object Detection](https://arxiv.org/abs/2608.11135)
+* Project: [https://github.com/2231122/OPCOD](https://github.com/2231122/OPCOD)
+* Download: The paper states that the dataset and code will be released through the project repository.
+
+OPC16K is an open-world, presence-aware camouflaged object detection benchmark containing 16,245 images collected from 14 sources. Unlike conventional COD datasets that assume every image contains a camouflaged object, OPC16K includes 9,000 camouflaged-object (CO) images, 3,050 pure-background (BG) images, and 4,195 non-camouflaged-object (NOCOD) images. Exact and near-duplicate samples were removed, and the negative subsets were selected to align their scene and category distributions with the positive data.
+
+The official split contains 8,035 training images—3,790 CO, 2,050 BG, and 2,195 NOCOD—and 8,210 test images—5,210 CO, 1,000 BG, and 2,000 NOCOD. CO images retain their camouflaged-object masks, BG images use all-background masks, and NOCOD masks were produced through retained annotations or SAM3-assisted segmentation followed by manual refinement. This structure supports joint evaluation of object presence recognition and pixel-level segmentation while exposing false-positive behavior on realistic negative images.
+
+<details>
+<summary>中文介绍</summary>
+
+OPC16K 是一个面向开放世界、具备目标存在性感知的伪装目标检测基准，包含来自 14 个来源的 16,245 张图像。不同于默认每张图像都含有伪装目标的传统 COD 数据集，OPC16K 包含 9,000 张伪装目标图像、3,050 张纯背景图像以及 4,195 张非伪装目标图像。数据构建过程中移除了完全重复和近重复样本，并使负样本子集的场景与类别分布尽可能对齐正样本数据。
+
+官方划分包含 8,035 张训练图像，其中有 3,790 张伪装目标图像、2,050 张纯背景图像和 2,195 张非伪装目标图像；测试集包含 8,210 张图像，其中有 5,210 张伪装目标图像、1,000 张纯背景图像和 2,000 张非伪装目标图像。伪装目标图像保留目标掩码，纯背景图像采用全背景掩码，非伪装目标图像的掩码来自保留标注，或由 SAM3 辅助分割后再人工细化。该结构能够联合评估目标存在性识别与像素级分割，并揭示模型在真实负样本上的误报行为。
 
 </details>
 
