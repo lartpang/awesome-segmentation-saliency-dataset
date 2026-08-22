@@ -1,7 +1,15 @@
 # Another Awesome Dataset List ![Badge](https://img.shields.io/badge/-As%20awesome%20as%20you%20think!-red?style=flat-square)
 
-| [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT) | ![GitHub last commit](https://img.shields.io/github/last-commit/lartpang/awesome-segmentation-saliency-dataset?style=flat-square) | ![GitHub issues](https://img.shields.io/github/issues/lartpang/awesome-segmentation-saliency-dataset?style=flat-square) | ![GitHub stars](https://img.shields.io/github/stars/lartpang/awesome-segmentation-saliency-dataset?style=flat-square) |
-| ---------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+<div align="center">
+  <img src="assets/header.png" alt="Another Awesome Dataset List header" width="100%">
+  <p><sub>Header artwork generated with <a href="https://github.com/lartpang/semantic-field-editorial">semantic-field-editorial</a>.</sub></p>
+  <p>
+    <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT"></a>
+    <img src="https://img.shields.io/github/last-commit/lartpang/awesome-segmentation-saliency-dataset?style=flat-square" alt="GitHub last commit">
+    <img src="https://img.shields.io/github/issues/lartpang/awesome-segmentation-saliency-dataset?style=flat-square" alt="GitHub issues">
+    <img src="https://img.shields.io/github/stars/lartpang/awesome-segmentation-saliency-dataset?style=flat-square" alt="GitHub stars">
+  </p>
+</div>
 
 > [!note]
 > - 💖 Some great tools can be found at [resource websites](#resource-websites).
