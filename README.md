@@ -101,6 +101,7 @@
       - [CHAMELEON](#chameleon)
       - [CPD1K: Camouflaged People Dataset](#cpd1k-camouflaged-people-dataset)
       - [CPD-UAV](#cpd-uav)
+      - [UAV-CPD](#uav-cpd)
       - [COD10K-C for Robustness](#cod10k-c-for-robustness)
       - [OPC16K for Realistic COD](#opc16k-for-realistic-cod)
     - [RGB Video COD](#rgb-video-cod)
@@ -1432,6 +1433,21 @@ The dataset focuses on the domain gap between conventional natural-scene COD ben
 CPD-UAV 是一种无人机视角伪装物体检测基准，用于在空中监控和搜救场景中检测视觉混合个体。它包含 1061 张具有像素级掩模的高分辨率图像，涵盖不同的地形和飞行高度。
 
 该数据集重点关注传统自然场景 COD 基准与实际无人机场景之间的领域差距，其中人工伪装、自上而下或倾斜视图、极端尺度变化、微小目标和消失边界使得精确分割变得困难。该论文报告称，CPD-UAV 由无人机视频和网络来源的图像构建而成，然后进行 SAM 辅助注释和专家交叉验证。
+
+</details>
+
+#### UAV-CPD
+
+* Paper: [UAV-CPD: A benchmark dataset with a frequency-aware detector for camouflaged person detection from UAV views](https://doi.org/10.1051/jeos/2026059)
+* Project: [https://github.com/ironmanfcf/UAV-CPD](https://github.com/ironmanfcf/UAV-CPD)
+* Download: See the [project repository](https://github.com/ironmanfcf/UAV-CPD).
+
+UAV-CPD is a real-world RGB benchmark for camouflaged person detection from UAV views. It contains 2,204 images and 3,117 annotated camouflaged-person instances collected in outdoor scenes with DJI UAV platforms. The dataset includes bare land, rocky terrain, bushland, woodland, built-up areas, and waterside environments, with varied camouflage outfits, poses, viewpoints, and flight altitudes of approximately 20–120 m. Images have native resolutions of 1920×1080 (1,025 images) and 4000×3000 (1,179 images). Each instance is annotated with a tight bounding box in the single category "camouflaged person". The benchmark split contains 1,763 training images with 2,499 boxes and 441 test images with 618 boxes.
+
+<details>
+<summary>中文介绍</summary>
+
+UAV-CPD 是一个面向无人机视角伪装人员检测的真实世界 RGB 基准数据集，使用 DJI 无人机在户外场景中采集，共包含 2,204 张图像和 3,117 个伪装人员实例。数据集覆盖裸地、岩石地、灌木地、林地、建筑区和水边等场景，包含不同的迷彩服装、姿态、视角和约 20–120 米的飞行高度。图像保留两种原始分辨率：1920×1080（1,025 张）和 4000×3000（1,179 张）。每个实例都以紧致边界框标注，类别只有“伪装人员”。基准划分包含 1,763 张训练图像（2,499 个框）和 441 张测试图像（618 个框）。
 
 </details>
 
