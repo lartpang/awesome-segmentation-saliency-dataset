@@ -82,6 +82,11 @@
     - [Video Saliency](#video-saliency)
       - [RSD(PKU-RSD)](#rsdpku-rsd)
       - [STC](#stc)
+      - [SegTrackV1/V2](#segtrackv1v2)
+      - [ViSal](#visal)
+      - [MCL](#mcl)
+      - [UVSD](#uvsd)
+      - [VOS](#vos)
     - [RGB-D Video Saliency](#rgb-d-video-saliency)
       - [RDVSv2](#rdvsv2)
     - [Reasoning SOD](#reasoning-sod)
@@ -165,7 +170,6 @@
   - [Other](#other-1)
     - [Large-scale Fashion (DeepFashion) Database](#large-scale-fashion-deepfashion-database)
     - [Tencent ML-Images](#tencent-ml-images)
-  - [need your help...](#need-your-help)
   - [Reference](#reference)
     - [Survey](#survey)
     - [Project](#project)
@@ -173,6 +177,7 @@
     - [Similiar Projects](#similiar-projects)
     - [Research Institutes](#research-institutes)
     - [Resource Websites](#resource-websites)
+
 
 ## Saliency
 
@@ -1144,6 +1149,85 @@ To demonstrate quantitatively the advantages of using spatial and temporal coher
 <summary>中文介绍</summary>
 
 为了定量地展示使用空间和时间相干性的优势，我们对从互联网收集的 32 个视频片段（总共 4820 帧）进行了实验。每个视频片段都包含一个显著对象，范围从进行各种活动的人类和野外动物，到地面和空中的车辆。所有帧都用对象边界框进行注释，并根据平均精度（P）、召回率（R）、F-measure（F0.5）和边界位移误差（BDE）来评估检测性能。
+
+</details>
+
+#### SegTrackV1/V2
+
+* Paper:
+  + V1: [Motion Coherent Tracking with Multi-label MRF Optimization](https://www.bmva-archive.org.uk/bmvc/2010/conference/paper56/index.html)
+  + V2: [Video Segmentation by Tracking Many Figure-Ground Segments](https://ieeexplore.ieee.org/document/6751383)
+* Project and Download:
+  + V1: <https://cpl.cc.gatech.edu/projects/SegTrack/>
+  + V2: <https://web.engr.oregonstate.edu/~lif/SegTrack2/dataset.html>
+
+SegTrack was originally introduced for evaluating segmentation accuracy in video tracking and was later adopted for video salient object detection. SegTrack V1 contains six short video sequences with pixel-level foreground annotations. SegTrack V2 extends it to 14 sequences and provides separate pixel-level annotations for multiple objects in each frame. The sequences cover motion blur, appearance changes, deformation, occlusion, and interacting objects. Video saliency benchmarks may exclude the penguin sequence, so the evaluated subset should be stated explicitly.
+
+<details>
+<summary>中文介绍</summary>
+
+SegTrack 最初用于评估视频跟踪中的分割精度，后来被用于视频显著性目标检测。SegTrack V1 包含六个短视频序列及像素级前景标注。SegTrack V2 将其扩展到 14 个序列，并为每帧中的多个目标分别提供像素级标注。视频涵盖运动模糊、外观变化、形变、遮挡和目标交互等情况。部分视频显著性评测会排除 penguin 序列，因此使用时应明确所采用的评测子集。
+
+</details>
+
+#### ViSal
+
+* Paper: [Consistent Video Saliency Using Local Gradient Flow Optimization and Global Refinement](https://ieeexplore.ieee.org/document/7164324)
+* Home: [Wenguan Wang's homepage](https://sites.google.com/view/wenguanwang)
+* Download: See the ViSal dataset entry under the 2015 paper on the [author's homepage](https://sites.google.com/view/wenguanwang), or the dataset links in the [DAVSOD benchmark repository](https://github.com/DengPingFan/DAVSOD).
+
+ViSal is designed for video salient object detection and contains 17 video sequences, with 193 annotated frames used in standard benchmarks. The videos were collected from existing video databases and YouTube, with each sequence containing 30 to 100 frames. They cover complex color distributions, cluttered backgrounds, varied object motion, rapid shape changes, and camera motion.
+
+<details>
+<summary>中文介绍</summary>
+
+ViSal 面向视频显著性目标检测，包含 17 个视频序列，标准评测使用其中 193 个标注帧。视频来自已有视频数据库和 YouTube，每个序列包含 30 至 100 帧，涵盖复杂颜色分布、杂乱背景、多样的目标运动、快速形状变化和相机运动等情况。
+
+</details>
+
+#### MCL
+
+* Paper: [Spatiotemporal Saliency Detection for Video Sequences Based on Random Walk with Restart](https://doi.org/10.1109/TIP.2015.2425544)
+* Project: <https://mcl.korea.ac.kr/database/saliency/>
+* Download: See the MCL dataset link in the Downloads section of the [project page](https://mcl.korea.ac.kr/database/saliency/).
+
+MCL contains nine video sequences for evaluating spatiotemporal saliency detection: Ball, Car, Campus, Court, Crowd, Hall2, Road, Square, and Stair. Standard video saliency benchmarks use 463 annotated frames. The original project also evaluates MPEG and NTT sequences; these are listed separately from the nine-sequence MCL dataset.
+
+<details>
+<summary>中文介绍</summary>
+
+MCL 包含九个用于时空显著性检测评测的视频序列：Ball、Car、Campus、Court、Crowd、Hall2、Road、Square 和 Stair。标准视频显著性评测使用其中 463 个标注帧。原始项目还评测了 MPEG 和 NTT 视频序列，这两组数据与包含九个序列的 MCL 数据集分别列出。
+
+</details>
+
+#### UVSD
+
+* Paper: [Saliency Detection for Unconstrained Videos Using Superpixel-Level Graph and Spatiotemporal Propagation](https://ieeexplore.ieee.org/document/7523922)
+* Project: <https://github.com/ivpshu/Saliency-Detection-for-Unconstrained-Videos-Using-Superpixel-level-Graph-and-Spatiotemporal-Propagat>
+* Download:
+  + [Official laboratory download page](https://ivp.shu.edu.cn/Downloads.htm)
+
+UVSD (Unconstrained Video Saliency Detection) contains 18 unconstrained video sequences with complicated motion and complex scenes. Standard video saliency benchmarks report 3,262 pixel-wise annotated frames. The dataset supports evaluation of video salient object detection under challenging conditions such as small objects, changing backgrounds, and motion blur.
+
+<details>
+<summary>中文介绍</summary>
+
+UVSD（Unconstrained Video Saliency Detection）包含 18 个具有复杂运动和场景的非受限视频序列，标准视频显著性评测统计为 3,262 个像素级标注帧。该数据集用于评估小目标、背景变化和运动模糊等复杂条件下的视频显著性目标检测性能。
+
+</details>
+
+#### VOS
+
+* Paper: [A Benchmark Dataset and Saliency-Guided Stacked Autoencoders for Video-Based Salient Object Detection](https://arxiv.org/abs/1611.00135)
+* Home: [Beihang University CVTEAM publications](https://cvteam.buaa.edu.cn/papers.html)
+* Download: [Official laboratory page](http://cvteam.net/projects/TIP18-VOS/VOS-Dataset.zip), or the dataset links in the [DAVSOD benchmark repository](https://github.com/DengPingFan/DAVSOD).
+
+VOS is a video salient object detection dataset containing 200 indoor and outdoor videos, totaling about 64 minutes and 116,103 frames. Its construction combines manual object and region annotations on 7,650 sampled keyframes with eye-tracking data from 23 viewers. Salient objects are identified by their consistently high fixation density throughout a video. After filtering unsuitable keyframes, the dataset provides 7,467 binary saliency masks. It includes an easy subset, VOS-E (97 videos), and a normal subset, VOS-N (103 videos).
+
+<details>
+<summary>中文介绍</summary>
+
+VOS 是一个视频显著性目标检测数据集，包含 200 个室内外视频，总时长约 64 分钟，共 116,103 帧。构建时对采样的 7,650 个关键帧进行目标和区域的人工标注，并采集 23 名观看者的眼动数据，以目标在整个视频中持续获得较高注视密度作为确定显著目标的依据。过滤不适合的关键帧后，数据集提供 7,467 个二值显著性掩码，并划分为包含 97 个视频的简单子集 VOS-E 和包含 103 个视频的普通子集 VOS-N。
 
 </details>
 
@@ -2227,16 +2311,6 @@ ML-Images: the largest open-source multi-label image database, including 17, 609
 ML-Images：最大的开源多标签图像数据库，包括 17、609、752 个训练图像 URL 和 88、739 个验证图像 URL，标注了多达 11、166 个类别
 
 </details>
-
-## need your help...
-
-> I have forgotten the source of some data sets. If you have seen them, I hope you can add them.
-
-* SegTrackV1/V2
-* ViSal
-* MCL
-* UVSD
-* VOS
 
 ## Reference
 
