@@ -1123,6 +1123,8 @@ INCT2016是一个更具挑战性的数据集，具有较大的外观变化、不
 
 ### Video Saliency
 
+> Dataset backups: The [DAVSOD Downloads section](https://github.com/DengPingFan/DAVSOD#downloads) provides backup download links for multiple video saliency datasets.
+
 #### RSD(PKU-RSD)
 
 * Paper: [A dataset and evaluation methodology for visual saliency in video](https://ieeexplore.ieee.org/document/5202529)
