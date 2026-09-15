@@ -51,6 +51,7 @@
       - [ReDWeb-S](#redweb-s)
       - [COME15K](#come15k)
     - [RGB-T Saliency](#rgb-t-saliency)
+      - [VT-IMAG](#vt-imag)
       - [UVT2000](#uvt2000)
       - [un-VT821/1000/5000](#un-vt82110005000)
       - [VT723](#vt723)
@@ -728,6 +729,22 @@ Our new COME15K dataset is based on Holo50K, which is a stereo dataset, includin
 </details>
 
 ### RGB-T Saliency
+
+#### VT-IMAG
+
+* Paper: [Divide-and-Conquer: Confluent Triple-Flow Network for RGB-T Salient Object Detection](https://arxiv.org/abs/2412.01556)
+* Download: [Google Drive](https://drive.google.com/drive/folders/19hoSOwss0usTPOmT8pCv50-T-kbV-YkL?usp=sharing)
+* Project: <https://cser-tang-hao.github.io/contrinet.html>
+* Code: <https://github.com/CSer-Tang-hao/ConTriNet_RGBT-SOD>
+
+VT-IMAG contains **536 aligned RGB-thermal image pairs with pixel-wise saliency masks**, curated from RGB-T semantic segmentation and object detection datasets for autonomous driving. It covers daytime and nighttime scenes, including vehicles, pedestrians, and roadblocks. Seven challenging attributes are annotated: thermal crossover, image clutter, out of focus, rainy day, foggy day, strong noise, and similar appearance. The benchmark evaluates zero-shot robustness: models are trained on the VT5000 training set and tested on VT-IMAG.
+
+<details>
+<summary>中文介绍</summary>
+
+VT-IMAG 包含 **536 对空间对齐的 RGB-热红外图像及像素级显著性掩码**，从自动驾驶领域的 RGB-T 语义分割和目标检测数据集中筛选构建。数据集涵盖白天和夜间场景，包含车辆、行人和路障等目标，并标注了七种挑战属性：热交叉、图像杂乱、失焦、雨天、雾天、强噪声和外观相似。该基准用于评估零样本鲁棒性：模型在 VT5000 训练集上训练，在 VT-IMAG 上测试。
+
+</details>
 
 #### UVT2000
 
