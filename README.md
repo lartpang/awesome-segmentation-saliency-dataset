@@ -120,6 +120,8 @@
     - [RGB-D Image COD](#rgb-d-image-cod)
       - [ACOD-12K](#acod-12k)
       - [CODD](#codd)
+    - [Spectral-Polarization-Infrared Image COD](#spectral-polarization-infrared-image-cod)
+      - [Multimodal Camouflaged Vehicle Dataset](#multimodal-camouflaged-vehicle-dataset)
     - [Terahertz Image COS/COD](#terahertz-image-coscod)
       - [Active Terahertz Imaging Datasets](#active-terahertz-imaging-datasets)
     - [Open-Vocabulary Camouflaged Object Segmentation](#open-vocabulary-camouflaged-object-segmentation)
@@ -1735,6 +1737,26 @@ This dataset is obtained by converting the existing salient object detection RGB
 <summary>中文介绍</summary>
 
 该数据集是通过图像到图像转换技术转换现有的显著目标检测RGB-D数据集而获得的，在多样性和复杂性方面与当前广泛使用的伪装目标检测数据集相当。
+
+</details>
+
+### Spectral-Polarization-Infrared Image COD
+
+#### Multimodal Camouflaged Vehicle Dataset
+
+* Paper: [Multispectral-Polarization-Infrared Multi-Aperture Camouflaged Vehicle Detection](https://arxiv.org/abs/2611.22246)
+* Download: Not specified in the paper.
+
+This dataset is presented as the first spectral-polarization-infrared benchmark for camouflaged vehicle detection from a UAV perspective. It contains 3,726 temporally synchronized multimodal samples captured by a UAV-mounted multi-aperture imaging system with an overlapping field of view. Each sample includes a 25-band spectral image (2048×1088, 665–960 nm), a 4-channel polarimetric image (2448×2048), and a thermal infrared image (640×512), indexed one-to-one across modalities.
+
+The dataset covers five camouflaged vehicle categories: metal tank, plastic tank, metal missile vehicle, plastic missile vehicle, and jeep, appearing in vegetated areas, urban road/building surroundings, and open bare ground. All targets are tiny, occupying only 0.0139%–0.0305% of the polarimetric image area. Because target boundaries differ across imaging mechanisms, bounding-box annotations are made independently for each modality. The dataset is split into training and test sets at a ratio of 4:1.
+
+<details>
+<summary>中文介绍</summary>
+
+该数据集是首个面向无人机视角伪装车辆检测的光谱-偏振-红外多模态基准。它包含 3,726 组时间同步的多模态样本，由搭载在无人机上、视场相互重叠的多孔径成像系统采集。每组样本包括一张 25 波段光谱图像（2048×1088，665–960 nm）、一张 4 通道偏振图像（2448×2048）和一张热红外图像（640×512），各模态之间一一对应。
+
+数据集涵盖五类伪装车辆：金属坦克、塑料坦克、金属导弹车、塑料导弹车和吉普车，场景包括植被区域、城市道路/建筑周边以及开阔裸地。所有目标均为极小目标，在偏振图像中仅占 0.0139%–0.0305% 的面积。由于不同成像机理下目标边界表现不同，各模态的边界框标注是独立完成的。数据集按 4:1 的比例划分为训练集和测试集。
 
 </details>
 
